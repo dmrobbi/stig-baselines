@@ -5,6 +5,8 @@ ready to open in **DISA STIG Viewer 2.x / 3.x**. Each VULN carries the full rule
 content (check, fix, SRG group, CCI refs) with status `Not_Reviewed` — the starting
 point for assessment work.
 
+**Repo:** https://idm.wezzel.com/crab-meat-repos/stig-baselines
+
 ## Baselines
 
 | Platform | STIG release | Benchmark date | Rules | CKL |

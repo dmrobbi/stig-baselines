@@ -20,6 +20,19 @@ point for assessment work.
 | RHEL 9 + Firefox (merged) | V2R9 + V6R8 | — | 478 | `baselines/rhel9/U_RHEL_9_V2R9_plus_Firefox_V6R8-baseline.ckl` |
 | VMware ESXi 6.7 | V1R3 | 2023-07-26 | 74 | `baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl` |
 | VMware vCenter 6.7 | V1R4 | 2023-07-26 | 62 | `baselines/vsphere67/U_VMW_vSphere_6-7_vCenter_STIG_V1R4_Manual-baseline.ckl` |
+| Canonical Ubuntu 20.04 LTS | V2R2† | 2025-04-02 | 164 | `baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R2_Manual-baseline.ckl` |
+| Canonical Ubuntu 22.04 LTS | V2R4† | 2025-04-02 | 179 | `baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R4_Manual-baseline.ckl` |
+| Canonical Ubuntu 24.04 LTS | V1R1† | 2025-01-28 | 188 | `baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R1_Manual-baseline.ckl` |
+| Apple macOS 26 (Tahoe) | V1R1† | 2025-09-11 | 160 | `baselines/macos/Apple_macOS_26_Tahoe_STIG_V1R1_Manual-baseline.ckl` |
+| Apple macOS 15 (Sequoia) | V1R6 | 2026-01-05 | 160 | `baselines/macos/Apple_macOS_15_Sequoia_STIG_V1R6_Manual-baseline.ckl` |
+| Microsoft Windows 10 | V3R6 | 2026-01-05 | 267 | `baselines/windows/MS_Windows_10_STIG_V3R6_Manual-baseline.ckl` |
+| Microsoft Windows 11 | V2R9 | 2026-08-10 | 257 | `baselines/windows/MS_Windows_11_STIG_V2R9_Manual-baseline.ckl` |
+| Microsoft Windows Server 2019 | V3R9 | 2026-07-01 | 282 | `baselines/windows/MS_Windows_Server_2019_STIG_V3R9_Manual-baseline.ckl` |
+| Microsoft Windows Server 2022 | V2R10 | 2026-08-10 | 278 | `baselines/windows/MS_Windows_Server_2022_STIG_V2R10_Manual-baseline.ckl` |
+
+† latest release per trackr is newer (Ubuntu 20.04 V2R4 / 22.04 V2R9 / 24.04 V1R6,
+macOS 26 V1R3) — DISA's portal now gates downloads and those exact zips are not yet in
+any public archive; refresh when you have cyber.mil auth (see `sources/README.md`).
 
 Merged CKLs contain two `<iSTIG>` blocks (RHEL OS STIG + Firefox STIG) in one
 checklist — DISA STIG Viewer shows both via the STIG dropdown.

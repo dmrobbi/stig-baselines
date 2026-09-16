@@ -8,11 +8,24 @@ that opens in DISA STIG Viewer 3.x.
 
 Everything the workflow needs is committed: baseline CKLs, source XCCDFs, the
 original DISA bundles with PDFs (`sources/zips/`), the SCAP benchmark XMLs
-(`sources/scap/`), the CKL schema (`tools/schema/`), and all tools. Clone the
-repo (from the IDM GitLab over the LAN) and no internet access is required —
-the only external items are the **STIG Viewer installer** (2.x/3.x, DoD-gated
-download — side-load it) and a Java runtime. Regeneration and validation work
-fully offline: `make baselines && make validate`.
+(`sources/scap/`), the CKL schema (`tools/schema/`), and all tools. No internet
+access is required — the only external items are the **STIG Viewer installer**
+(2.x/3.x, DoD-gated download — side-load it) and a Java runtime.
+
+**Transfer via USB:** a zip/tgz of the working tree works as-is (nothing needs
+git history). `make dist` produces a clean archive of the committed tree plus a
+sha256 for the integrity check on the destination:
+
+```bash
+make dist          # -> dist/stig-baselines.tar.gz + .sha256
+sha256sum -c dist/stig-baselines.tar.gz.sha256   # on the destination
+```
+
+Requirements on the destination: python3 (>= 3.9, stdlib-only tools), xmllint
+(libxml2, for `make validate`), and GNU make. Executable bits don't matter —
+`make baselines` invokes the build via `bash tools/build.sh`.
+
+Regeneration and validation work fully offline: `make baselines && make validate`.
 
 | CKL | STIG | Automated check source |
 |-----|------|------------------------|

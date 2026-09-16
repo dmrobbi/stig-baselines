@@ -1,0 +1,59 @@
+---
+# stig_eval — dispatch by OS family across a mixed cluster.
+- name: Gather OS facts
+  ansible.builtin.setup:
+    filter:
+      - ansible_distribution*
+      - ansible_os_family
+      - ansible_hostname
+      - ansible_default_ipv4
+
+- name: Resolve the platform + workflow for this host
+  ansible.builtin.set_fact:
+    stig_platform: "{{ stig_platform_override | default(stig_detected_platform) }}"
+    stig_workflow: "{{ stig_platform_override | default(stig_detected_workflow) }}"
+  vars:
+    stig_detected_workflow: >-
+      {{ {'RedHat': 'rhel',
+          'Debian': 'debian',
+          'Windows': 'windows',
+          'Darwin': 'macos'}[ansible_os_family] | default('other') }}
+    stig_detected_platform: >-
+      {{ {'RedHat': 'rhel' ~ (ansible_distribution_major_version | int),
+          'Debian': 'debian',
+          'Windows': 'windows',
+          'Darwin': 'macos'}[ansible_os_family] | default('other') }}
+
+- name: Prepare the eval artifact directory (copy module needs parents)
+  ansible.builtin.file:
+    path: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}"
+    state: directory
+    mode: "0755"
+  delegate_to: localhost
+  become: false
+  changed_when: false
+
+- name: Include the workflow for this platform
+  ansible.builtin.include_tasks: "workflow_{{ stig_workflow }}.yml"
+  when: stig_workflow in ['rhel', 'debian', 'windows', 'macos']
+
+- name: Unmapped platform — record and continue
+  when: stig_workflow not in ['rhel', 'debian', 'windows', 'macos']
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      No automated or baseline mapping for platform {{ stig_platform }}
+      ({{ ansible_distribution }} {{ ansible_distribution_version }}) —
+      not part of this repo yet. See docs/SCANNING.md.
+
+- name: Record the mapping for the run summary
+  ansible.builtin.copy:
+    content: >-
+      {{ inventory_hostname }}: platform={{ stig_platform }}
+      workflow={{ stig_workflow }} distribution={{ ansible_distribution }}
+      {{ ansible_distribution_version }}
+      {% if stig_eval_note is defined %}note={{ stig_eval_note }}{% endif %}
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}-mapping.txt"
+    mode: "0644"
+  delegate_to: localhost
+  become: false
+  changed_when: false

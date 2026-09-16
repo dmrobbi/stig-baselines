@@ -1,0 +1,17 @@
+---
+# stig-baselines evaluation across a mixed-OS cluster.
+#
+#   ansible-playbook -i inventory-cluster-example.yml stig-eval.yml
+#
+# Each host is mapped by its detected OS family to the matching
+# stig-baselines artifacts (see roles/stig_eval/tasks/):
+#   RedHat family (incl. Rocky/Alma) -> automated OpenSCAP evaluation
+#     with the committed DISA SCAP benchmark, then a populated CKL.
+#   Debian/Ubuntu, Windows, macOS -> baseline-CKL handoff (manual
+#     assessment in STIG Viewer; bulk-apply with tools/csv2ckl.py).
+# Artifacts land in ../stig-eval-results/ (outside the repo).
+- name: stig-baselines evaluation across a mixed-OS cluster
+  hosts: all
+  gather_facts: true
+  roles:
+    - role: stig_eval

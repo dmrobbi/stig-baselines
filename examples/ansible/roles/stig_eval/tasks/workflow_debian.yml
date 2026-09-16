@@ -1,0 +1,36 @@
+---
+# Debian/Ubuntu: DISA publishes no SCAP datastream for the Canonical
+# Ubuntu STIGs — manual assessment only. The role hands the evaluator
+# the matching baseline CKL (which opens in STIG Viewer); the per-rule
+# checks and statuses are then recorded there.
+
+- name: Map the baseline by major version
+  ansible.builtin.set_fact:
+    stig_baseline_ckl: >-
+      {{ {20: 'baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R2_Manual-baseline.ckl',
+          22: 'baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R4_Manual-baseline.ckl',
+          24: 'baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R1_Manual-baseline.ckl'}[ansible_distribution_major_version | int] | default('') }}
+
+- name: No baseline for this Ubuntu/Debian release — record it
+  when: stig_baseline_ckl | trim == ''
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      No Ubuntu/Debian baseline in the repo for major version
+      {{ ansible_distribution_major_version }} ({{ ansible_distribution }}) —
+      see sources/README.md for refresh guidance.
+
+- name: Hand the assessor the baseline CKL (manual workflow)
+  when: stig_baseline_ckl | trim != ''
+  ansible.builtin.copy:
+    src: "{{ stig_eval_repo_root }}/{{ stig_baseline_ckl | trim }}"
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/baseline.ckl"
+    mode: "0644"
+  delegate_to: localhost
+  become: false
+
+- name: Set the manual-only note
+  when: stig_baseline_ckl | trim != ''
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      DISA Ubuntu STIG is manual-only (no SCAP content) — assess with the
+      baseline CKL in STIG Viewer; bulk-apply results with tools/csv2ckl.py.

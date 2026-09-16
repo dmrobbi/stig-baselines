@@ -1,0 +1,22 @@
+---
+# Windows: the DISA Windows STIGs are manual checklists (registry /
+# GPO / services checks). This workflow is a control-node handoff — the
+# assessor opens the baseline CKL in STIG Viewer and works it there.
+# Automating Windows STIG checks needs the ansible.windows collection
+# plus WinRM setup; add win_shell evidence-collection tasks here when
+# you need them (out of scope for this example).
+
+- name: Hand the assessor the Windows baseline CKL
+  ansible.builtin.copy:
+    src: "{{ stig_eval_baselines_dir }}/windows/MS_Windows_Server_2022_STIG_V2R10_Manual-baseline.ckl"
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/baseline.ckl"
+    mode: "0644"
+  delegate_to: localhost
+  become: false
+
+- name: Note the manual workflow + where the other Windows baselines live
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      DISA Windows STIGs are manual — see the platform CKLs under
+      {{ stig_eval_baselines_dir }}/windows/ (10, 11, Server 2019, 2022);
+      bulk-apply results with tools/csv2ckl.py.

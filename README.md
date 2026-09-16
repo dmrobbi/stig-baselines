@@ -42,9 +42,10 @@ any public archive; refresh when you have cyber.mil auth (see `sources/README.md
 Merged CKLs contain two `<iSTIG>` blocks (RHEL OS STIG + Firefox STIG) in one
 checklist — DISA STIG Viewer shows both via the STIG dropdown.
 
-**Running scans:** see [docs/SCANNING.md](docs/SCANNING.md) — manual assessment,
-OpenSCAP automation (SCAP datastreams committed under `sources/scap/`), and
-Tenable SecurityCenter/Nessus audit-file workflows.
+**Ansible:** see [examples/ansible/README.md](examples/ansible/README.md) —
+the `stig_eval` role maps a mixed-OS cluster (RHEL family automated via
+the committed SCAP benchmarks; Debian/Ubuntu, Windows, macOS baseline
+handoffs) and produces populated, schema-valid CKLs per host.
 
 ## Layout
 

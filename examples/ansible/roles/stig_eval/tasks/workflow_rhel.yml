@@ -1,0 +1,117 @@
+---
+# RedHat family: automated OpenSCAP evaluation with the committed DISA
+# SCAP benchmark, results fetched back, then a populated CKL generated
+# on the control node via tools/xccdf2ckl.py --results. Works for
+# rhel7/rhel8/rhel9 (and RHEL-compatible rebuilds — Rocky, Alma).
+#
+# Version skew: the committed SCAP datastreams lag their manual STIGs
+# (RHEL 8 SCAP V2R2 vs manual V2R8; RHEL 9 V2R5 vs V2R9; RHEL 7 SCAP
+# stopped at V3R2) — see sources/README.md. Rules added after those
+# releases grade Not_Reviewed; finish them in STIG Viewer.
+
+- name: Check for oscap on the target
+  ansible.builtin.command: command -v oscap
+  changed_when: false
+  failed_when: false
+  register: stig_oscap_path
+
+- name: Set the version-mapped paths for this major version
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.set_fact:
+    stig_scap_file: "{{ {7: 'U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.xml',
+                          8: 'U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.xml',
+                          9: 'U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml'}[ansible_distribution_major_version | int] }}"
+    stig_xccdf_source: "{{ stig_eval_repo_root }}/sources/rhel{{ ansible_distribution_major_version }}/U_RHEL_{{ ansible_distribution_major_version }}_V{{ {7: '3R15', 8: '2R8', 9: '2R9'}[ansible_distribution_major_version | int] }}_Manual_STIG/U_RHEL_{{ ansible_distribution_major_version }}_STIG_V{{ {7: '3R15', 8: '2R8', 9: '2R9'}[ansible_distribution_major_version | int] }}_Manual-xccdf.xml"
+
+- name: No oscap — record and skip automated scan
+  when: stig_oscap_path.rc != 0
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      openscap-scanner not installed — run the baseline CKL manually in
+      STIG Viewer ({{ stig_eval_baselines_dir }}/rhel{{ ansible_distribution_major_version }}/)
+
+- name: Copy the SCAP datastream to the target
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.copy:
+    src: "{{ stig_eval_scap_dir }}/{{ stig_scap_file }}"
+    dest: "/tmp/{{ inventory_hostname }}-stig-ds.xml"
+    mode: "0644"
+  become: true
+
+- name: Build the oscap eval command
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.set_fact:
+    stig_oscap_cmd: >-
+      {{ stig_oscap_path.stdout }} xccdf eval
+      --profile {{ stig_eval_profile }}
+      {% for r in stig_eval_rules %}--rule {{ r }}{% endfor %}
+      --results /tmp/{{ inventory_hostname }}-results.xml
+      --report /tmp/{{ inventory_hostname }}-report.html
+      /tmp/{{ inventory_hostname }}-stig-ds.xml
+
+- name: Evaluate (single rules or full profile)
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.command:
+    cmd: "{{ stig_oscap_cmd }}"
+  changed_when: true
+  become: true
+  register: stig_oscap_run
+  # oscap returns 2 when any rule fails — for an assessment that is a
+  # success, not an ansible failure.
+  failed_when: stig_oscap_run.rc not in [0, 2]
+
+- name: Fetch results + report to the control node
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.fetch:
+    src: "/tmp/{{ inventory_hostname }}-{{ item }}"
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/"
+    flat: true
+  become: true
+  loop:
+    - results.xml
+    - report.html
+
+- name: Clean the target-side working files
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.file:
+    path: "/tmp/{{ inventory_hostname }}-{{ item }}"
+    state: absent
+  become: true
+  loop:
+    - stig-ds.xml
+    - results.xml
+    - report.html
+
+- name: Generate the populated CKL on the control node
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.command:
+    cmd: >-
+      python3 {{ stig_eval_repo_root }}/tools/xccdf2ckl.py
+      {{ stig_xccdf_source }}
+      {{ stig_eval_dest_dir }}/{{ inventory_hostname }}/{{ inventory_hostname }}-eval.ckl
+      --results {{ stig_eval_dest_dir }}/{{ inventory_hostname }}/{{ inventory_hostname }}-results.xml
+      --hostname {{ inventory_hostname }}
+      {{ ('--ip ' ~ ansible_default_ipv4.address) if ansible_default_ipv4.address else '' }}
+  delegate_to: localhost
+  become: false
+  changed_when: true
+  register: stig_ckl_gen
+
+- name: Validate the generated CKL against the DISA schema
+  when: stig_ckl_gen is not skipped
+  ansible.builtin.command:
+    cmd: >-
+      xmllint --noout --schema {{ stig_eval_repo_root }}/tools/schema/U_Checklist_Schema_V2.xsd
+      {{ stig_eval_dest_dir }}/{{ inventory_hostname }}/{{ inventory_hostname }}-eval.ckl
+  delegate_to: localhost
+  become: false
+  changed_when: false
+
+- name: Copy the baseline CKL alongside the evaluated one (manual reference)
+  when: stig_oscap_path.rc == 0
+  ansible.builtin.copy:
+    src: "{{ stig_eval_baselines_dir }}/rhel{{ ansible_distribution_major_version }}/U_RHEL_{{ ansible_distribution_major_version }}_STIG_V{{ {7: '3R15', 8: '2R8', 9: '2R9'}[ansible_distribution_major_version | int] }}_Manual-baseline.ckl"
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/baseline.ckl"
+    mode: "0644"
+  delegate_to: localhost
+  become: false

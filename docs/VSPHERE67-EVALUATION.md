@@ -26,9 +26,13 @@ to turn any of them into a CKL.
   git clone http://idm.wezzel.com:8080/crab-meat-repos/stig-baselines.git
   # or: git clone https://github.com/dmrobbi/stig-baselines.git
   ```
+  Everything is committed — baseline CKLs, source XCCDFs, the original DISA
+  bundles (`sources/zips/`, PDFs included), schema, tools — so the clone works
+  **offline**; see [docs/SCANNING.md](docs/SCANNING.md) for the air-gapped notes.
 - **DISA STIG Viewer 2.18** (Java 8+) from
   `public.cyber.mil/stigs/stig-viewing-tools/` (DoD auth) — any 2.x/3.x
-  works; the committed CKLs are schema-valid per DISA Checklist v2.5.
+  works; the committed CKLs are schema-valid per DISA Checklist v2.5. This is
+  the one artifact NOT in the repo — side-load the installer.
 - **Targets**: your ESXi 6.7 host(s) and the vCenter 6.7 instance
   (identify the form factor: VCSA appliance or Windows vCenter —
   several vCenter rules differ between the two).

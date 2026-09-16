@@ -1,7 +1,33 @@
 # Source XCCDFs
 
 Official DISA STIG XCCDF files; the CKLs in `baselines/` are generated from these.
-Only the XCCDF XMLs are committed; zips/PDFs stay local (see .gitignore).
+The original DISA bundles (XCCDF + PDFs) are **committed under `sources/zips/`** so
+the whole kit works offline; only the SCAP benchmark zips are absent — their
+benchmark XMLs are committed directly under `sources/scap/`.
+
+## Original bundles (sources/zips/)
+
+| Zip | Matches baseline | Fetched from |
+|-----|------------------|--------------|
+| `U_RHEL_7_V3R15_Manual_STIG.zip` | RHEL 7 V3R15 | cyber.trackr.live companion (V3R15) |
+| `U_RHEL_8_V2R8_Manual_STIG.zip` | RHEL 8 V2R8 | cyber.trackr.live companion (V2R8) |
+| `U_RHEL_9_V2R9_Manual_STIG.zip` | RHEL 9 V2R9 | cyber.trackr.live companion (V2R9) |
+| `U_MOZ_Firefox_V6R8_Manual_STIG.zip` | Firefox V6R8 | cyber.trackr.live companion (V6R8) |
+| `U_MS_Windows_10_V3R6_Manual_STIG.zip` | Windows 10 V3R6 | cyber.trackr.live companion (V3R6) |
+| `U_MS_Windows_11_V2R9_Manual_STIG.zip` | Windows 11 V2R9 | cyber.trackr.live companion (V2R9) |
+| `U_MS_Windows_Server_2019_V3R9_Manual_STIG.zip` | Server 2019 V3R9 | cyber.trackr.live companion (V3R9) |
+| `U_MS_Windows_Server_2022_V2R10_Manual_STIG.zip` | Server 2022 V2R10 | cyber.trackr.live companion (V2R10) |
+| `U_VMW_vSphere_6-7_Y23M07_STIG.zip` | ESXi 6.7 V1R3 / vCenter 6.7 V1R4 (+ 10 component STIGs) | web.archive.org replay of `dl.dod.cyber.mil/.../U_VMW_vSphere_6-7_Y23M07_STIG.zip` (snapshot 2025-02-12) |
+| `U_Apple_macOS_26_V1R1_STIG.zip` | macOS 26 V1R1 | web.archive.org replay (2025 route) |
+| `U_Apple_macOS_15_V1R6_STIG.zip` | macOS 15 V1R6 | web.archive.org replay (2025 route) |
+| `U_CAN_Ubuntu_20-04_LTS_V2R2_STIG.zip` | Ubuntu 20.04 V2R2 | web.archive.org replay (2025 route) |
+| `U_CAN_Ubuntu_22-04_LTS_V2R4_STIG.zip` | Ubuntu 22.04 V2R4 | web.archive.org replay (2025 route) |
+| `U_CAN_Ubuntu_24-04_LTS_V1R1_STIG.zip` | Ubuntu 24.04 V1R1 | web.archive.org replay (2025 route) |
+
+Every zip was verified to contain the exact XCCDF the baseline was generated
+from. Trackr only keeps companions for the latest release, so the older
+macOS/Ubuntu releases came from Wayback replays of the original
+`dl.dod.cyber.mil/wp-content/uploads/stigs/zip/…` URLs.
 
 | Platform | File | Release | Obtained from |
 |----------|------|---------|---------------|

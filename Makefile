@@ -12,8 +12,8 @@ baselines:
 	tools/build.sh
 
 validate:
-	@set -e; for f in baselines/*/*.ckl; do xmllint --noout $$f; done
-	@echo "all CKLs well-formed"
+	@set -e; for f in baselines/*/*.ckl; do xmllint --noout --schema tools/schema/U_Checklist_Schema_V2.xsd $$f; done
+	@echo "all CKLs schema-valid (DISA Checklist v2.5)"
 
 check-tool:
 	python3 -m py_compile tools/xccdf2ckl.py tools/merge_ckl.py

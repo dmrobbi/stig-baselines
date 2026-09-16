@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>2</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_RHEL_8_STIG_V2R8_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_RHEL_8_STIG_V2R8_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>cf63787f-6803-5275-9bf0-810bafc85c00</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 8 Benchmark Date: 01 Jul 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>cf63787f-6803-5275-9bf0-810bafc85c00</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230221</ATTRIBUTE_DATA>
@@ -192,6 +190,10 @@ If the release is not supported by the vendor, this is a finding.</ATTRIBUTE_DAT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230222</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -312,6 +314,10 @@ If the operating system is in non-compliance with the Information Assurance Vuln
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230223</ATTRIBUTE_DATA>
@@ -455,6 +461,10 @@ $ sudo reboot</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230224</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -571,6 +581,10 @@ Encrypting a partition in an already installed system is more difficult, because
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230225</ATTRIBUTE_DATA>
@@ -749,6 +763,10 @@ The SSH service must be restarted for changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230226</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -891,6 +909,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230227</ATTRIBUTE_DATA>
@@ -1049,6 +1071,10 @@ By using this IS (which includes any device attached to this IS), you consent to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230228</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1169,6 +1195,10 @@ $ sudo systemctl restart rsyslog.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230229</ATTRIBUTE_DATA>
@@ -1302,6 +1332,10 @@ Obtain a valid copy of the DoD root CA file from the PKI CA certificate bundle a
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230230</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1409,6 +1443,10 @@ $ sudo ssh-keygen -p -f /path/to/file</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230231</ATTRIBUTE_DATA>
@@ -1525,6 +1563,10 @@ ENCRYPT_METHOD SHA512</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230232</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1632,6 +1674,10 @@ If any interactive user password hash does not begin with "$6$", this is a findi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230233</ATTRIBUTE_DATA>
@@ -1743,6 +1789,10 @@ SHA_CRYPT_MIN_ROUNDS 100000</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230234</ATTRIBUTE_DATA>
@@ -1857,6 +1907,10 @@ Confirm password:</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230235</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1970,6 +2024,10 @@ Confirm password:</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230236</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2076,6 +2134,10 @@ ExecStart=-/usr/lib/systemd/systemd-sulogin-shell rescue</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230237</ATTRIBUTE_DATA>
@@ -2191,6 +2253,10 @@ password sufficient pam_unix.so sha512</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230238</ATTRIBUTE_DATA>
@@ -2308,6 +2374,10 @@ Remove any files with the .keytab extension from the operating system.</ATTRIBUT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230239</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2423,6 +2493,10 @@ $ sudo yum remove krb5-workstation</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230240</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2537,6 +2611,10 @@ A reboot is required for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230241</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2645,6 +2723,10 @@ $ sudo yum install policycoreutils</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230243</ATTRIBUTE_DATA>
@@ -2760,6 +2842,10 @@ $ sudo chmod 1777 [World-Writable Directory]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230244</ATTRIBUTE_DATA>
@@ -2886,6 +2972,10 @@ For the changes to take effect, the SSH daemon must be restarted:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230245</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2994,6 +3084,10 @@ $ sudo chmod 0640 /var/log/messages</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230246</ATTRIBUTE_DATA>
@@ -3104,6 +3198,10 @@ $ sudo chown root /var/log/messages</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230247</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3212,6 +3310,10 @@ $ sudo chgrp root /var/log/messages</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230248</ATTRIBUTE_DATA>
@@ -3322,6 +3424,10 @@ $ sudo chmod 0755 /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230249</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3431,6 +3537,10 @@ $ sudo chown root /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230250</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3539,6 +3649,10 @@ $ sudo chgrp root /var/log</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230251</ATTRIBUTE_DATA>
@@ -3667,6 +3781,10 @@ Note: Systemwide crypto policies are applied on application startup. It is recom
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230252</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3793,6 +3911,10 @@ Note: Systemwide crypto policies are applied on application startup. It is recom
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230253</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3912,6 +4034,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230257</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4020,6 +4146,10 @@ $ sudo chmod 755 [FILE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230258</ATTRIBUTE_DATA>
@@ -4130,6 +4260,10 @@ $ sudo chown root [FILE]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230259</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4238,6 +4372,10 @@ $ sudo chgrp root [FILE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230260</ATTRIBUTE_DATA>
@@ -4348,6 +4486,10 @@ $ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' -perm /022 -ex
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230261</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4455,6 +4597,10 @@ $ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -user root -
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230262</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4561,6 +4707,10 @@ $ sudo find /lib /lib64 /usr/lib /usr/lib64 -type f -name '*.so*' ! -group root 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230263</ATTRIBUTE_DATA>
@@ -4701,6 +4851,10 @@ Note: Per requirement RHEL-08-010358, the "mailx" package must be installed on t
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230264</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4819,6 +4973,10 @@ If there is no process to validate certificates that is approved by the organiza
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230265</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4932,6 +5090,10 @@ localpkg_gpgcheck=1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230266</ATTRIBUTE_DATA>
@@ -5059,6 +5221,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230267</ATTRIBUTE_DATA>
@@ -5191,6 +5357,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230268</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5321,6 +5491,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230269</ATTRIBUTE_DATA>
@@ -5453,6 +5627,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230270</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5584,6 +5762,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230271</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5695,6 +5877,10 @@ If any occurrences of "NOPASSWD" are returned from the command and have not been
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230272</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5803,6 +5989,10 @@ If any occurrences of "!authenticate" return from the command, this is a finding
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230273</ATTRIBUTE_DATA>
@@ -5918,6 +6108,10 @@ $ sudo yum install openssl-pkcs11</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230274</ATTRIBUTE_DATA>
@@ -6044,6 +6238,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230275</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6163,6 +6361,10 @@ $ sudo yum install opensc</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230276</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6276,6 +6478,10 @@ If "flags" does not contain the "nx" flag, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230277</ATTRIBUTE_DATA>
@@ -6402,6 +6608,10 @@ GRUB_CMDLINE_LINUX="page_poison=1"</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230278</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6527,6 +6737,10 @@ GRUB_CMDLINE_LINUX="vsyscall=none"</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230279</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6648,6 +6862,10 @@ $ sudo reboot</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230280</ATTRIBUTE_DATA>
@@ -6788,6 +7006,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230281</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6898,6 +7120,10 @@ clean_requirements_on_remove=True</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230282</ATTRIBUTE_DATA>
@@ -7031,6 +7257,10 @@ A reboot is required for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230283</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7136,6 +7366,10 @@ $ sudo rm /etc/ssh/shosts.equiv</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230284</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7240,6 +7474,10 @@ $ sudo rm /[path]/[to]/[file]/.shosts</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230285</ATTRIBUTE_DATA>
@@ -7358,6 +7596,10 @@ If the service is not "enabled" and "active", this is a finding.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230286</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7473,6 +7715,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230287</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7584,6 +7830,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230288</ATTRIBUTE_DATA>
@@ -7697,6 +7947,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230290</ATTRIBUTE_DATA>
@@ -7813,6 +8067,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230291</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7928,6 +8186,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230292</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8035,6 +8297,10 @@ If a separate entry for "/var" is not in use, this is a finding.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230293</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8141,6 +8407,10 @@ If a separate entry for "/var/log" is not in use, this is a finding.</ATTRIBUTE_
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230294</ATTRIBUTE_DATA>
@@ -8251,6 +8521,10 @@ If a separate file system/partition does not exist for the system audit data pat
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230295</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8355,6 +8629,10 @@ If a separate entry for the file system/partition "/tmp" does not exist, this is
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230296</ATTRIBUTE_DATA>
@@ -8473,6 +8751,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230298</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8587,6 +8869,10 @@ $ sudo systemctl enable rsyslog.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230299</ATTRIBUTE_DATA>
@@ -8704,6 +8990,10 @@ If a file system found in "/etc/fstab" refers to the user home directory file sy
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230300</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8811,6 +9101,10 @@ If the /boot file system does not have the "nosuid" option set, this is a findin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230301</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8913,6 +9207,10 @@ If any output is produced, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230302</ATTRIBUTE_DATA>
@@ -9030,6 +9328,10 @@ If a file system found in "/etc/fstab" refers to the user home directory file sy
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230303</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9134,6 +9436,10 @@ If a file system found in "/etc/fstab" refers to removable media and it does not
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230304</ATTRIBUTE_DATA>
@@ -9240,6 +9546,10 @@ If a file system found in "/etc/fstab" refers to removable media and it does not
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230305</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9344,6 +9654,10 @@ If a file system found in "/etc/fstab" refers to removable media and it does not
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230306</ATTRIBUTE_DATA>
@@ -9452,6 +9766,10 @@ If a file system found in "/etc/fstab" refers to NFS and it does not have the "n
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230307</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9559,6 +9877,10 @@ If a file system found in "/etc/fstab" refers to NFS and it does not have the "n
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230308</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9665,6 +9987,10 @@ If a file system found in "/etc/fstab" refers to NFS and it does not have the "n
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230310</ATTRIBUTE_DATA>
@@ -9780,6 +10106,10 @@ If kernel core dumps are required, document the need with the ISSO.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230311</ATTRIBUTE_DATA>
@@ -9904,6 +10234,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230312</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10027,6 +10361,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230313</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10146,6 +10484,10 @@ Remove or comment out any entries for users or groups with a value set to anythi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230314</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10259,6 +10601,10 @@ Storage=none</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230315</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10371,6 +10717,10 @@ ProcessSizeMax=0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230316</ATTRIBUTE_DATA>
@@ -10504,6 +10854,10 @@ $ sudo echo -n &gt; /etc/resolv.conf</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230317</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10610,6 +10964,10 @@ If a local interactive user requires path variables to reference a directory own
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230318</ATTRIBUTE_DATA>
@@ -10720,6 +11078,10 @@ $ sudo chown [root or system account] [Public Directory]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230319</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10824,6 +11186,10 @@ If there is output, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230320</ATTRIBUTE_DATA>
@@ -10937,6 +11303,10 @@ If any interactive users do not have a home directory assigned, this is a findin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230321</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11047,6 +11417,10 @@ $ sudo chmod 0750 /home/smithj</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230322</ATTRIBUTE_DATA>
@@ -11164,6 +11538,10 @@ Note: The example will be for the user "smithj", who has a home directory of "/h
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230323</ATTRIBUTE_DATA>
@@ -11285,6 +11663,10 @@ $ sudo chmod 0750 /home/smithj</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230324</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11391,6 +11773,10 @@ CREATE_HOME yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230325</ATTRIBUTE_DATA>
@@ -11505,6 +11891,10 @@ Note: The example will be for the smithj user, who has a home directory of "/hom
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230326</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11610,6 +12000,10 @@ $ sudo chown &lt;user&gt; &lt;file&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230327</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11714,6 +12108,10 @@ $ sudo chgrp &lt;group&gt; &lt;file&gt;</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230328</ATTRIBUTE_DATA>
@@ -11833,6 +12231,10 @@ If a separate entry for the file system/partition containing the nonprivileged i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230329</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11946,6 +12348,10 @@ AutomaticLoginEnable=false</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230330</ATTRIBUTE_DATA>
@@ -12061,6 +12467,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230332</ATTRIBUTE_DATA>
@@ -12199,6 +12609,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230333</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12315,6 +12729,10 @@ deny = 3</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230334</ATTRIBUTE_DATA>
@@ -12449,6 +12867,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230335</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12565,6 +12987,10 @@ fail_interval = 900</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230336</ATTRIBUTE_DATA>
@@ -12699,6 +13125,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230337</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12813,6 +13243,10 @@ unlock_time = 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230338</ATTRIBUTE_DATA>
@@ -12949,6 +13383,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230339</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13065,6 +13503,10 @@ dir = /var/log/faillock</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230340</ATTRIBUTE_DATA>
@@ -13199,6 +13641,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230341</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13315,6 +13761,10 @@ silent</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230342</ATTRIBUTE_DATA>
@@ -13451,6 +13901,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230343</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13567,6 +14021,10 @@ audit</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230344</ATTRIBUTE_DATA>
@@ -13703,6 +14161,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230345</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13820,6 +14282,10 @@ even_deny_root</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230346</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13932,6 +14398,10 @@ Add the following line to the top of the /etc/security/limits.conf or in a ".con
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230347</ATTRIBUTE_DATA>
@@ -14059,6 +14529,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230351</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14184,6 +14658,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230352</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14307,6 +14785,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230354</ATTRIBUTE_DATA>
@@ -14447,6 +14929,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230355</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14579,6 +15065,10 @@ $ sudo systemctl restart sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230356</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14693,6 +15183,10 @@ Add the following line to the "/etc/pam.d/password-auth" file (or modify the lin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230357</ATTRIBUTE_DATA>
@@ -14810,6 +15304,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230358</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14925,6 +15423,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230359</ATTRIBUTE_DATA>
@@ -15042,6 +15544,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230360</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15157,6 +15663,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230361</ATTRIBUTE_DATA>
@@ -15274,6 +15784,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230362</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15389,6 +15903,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230363</ATTRIBUTE_DATA>
@@ -15506,6 +16024,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230364</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15610,6 +16132,10 @@ $ sudo chage -m 1 [user]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230365</ATTRIBUTE_DATA>
@@ -15721,6 +16247,10 @@ PASS_MIN_DAYS 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230366</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15829,6 +16359,10 @@ PASS_MAX_DAYS 60</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230367</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15935,6 +16469,10 @@ $ sudo chage -M 60 [user]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230369</ATTRIBUTE_DATA>
@@ -16058,6 +16596,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230370</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16171,6 +16713,10 @@ PASS_MIN_LEN 15</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230371</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16283,6 +16829,10 @@ If output is produced, and the accounts listed are interactive user accounts, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230372</ATTRIBUTE_DATA>
@@ -16419,6 +16969,10 @@ The "sssd" service must be restarted for the changes to take effect. To restart 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230373</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16534,6 +17088,10 @@ DoD recommendation is 35 days, but a lower value is acceptable. The value "-1" w
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230374</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16647,6 +17205,10 @@ If any temporary accounts have no expiration date set or do not expire within 72
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230375</ATTRIBUTE_DATA>
@@ -16763,6 +17325,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230376</ATTRIBUTE_DATA>
@@ -16885,6 +17451,10 @@ Add or change the following line in "/etc/sssd/sssd.conf" just below the line "[
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230377</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16999,6 +17569,10 @@ Remove any configurations that conflict with the above value.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230378</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17109,6 +17683,10 @@ FAIL_DELAY 4</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230379</ATTRIBUTE_DATA>
@@ -17225,6 +17803,10 @@ $ sudo userdel &lt;unauthorized_user&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230380</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17337,6 +17919,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230382</ATTRIBUTE_DATA>
@@ -17451,6 +18037,10 @@ The SSH service must be restarted for changes to "sshd_config" to take effect.</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230383</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17564,6 +18154,10 @@ UMASK 077</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230384</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17674,6 +18268,10 @@ If the account is for an application, the requirement for a umask less restricti
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230385</ATTRIBUTE_DATA>
@@ -17792,6 +18390,10 @@ UMASK 077</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230386</ATTRIBUTE_DATA>
@@ -17916,6 +18518,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230387</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18036,6 +18642,10 @@ $ sudo systemctl restart rsyslog.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230388</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18151,6 +18761,10 @@ action_mail_acct = root</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230389</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18263,6 +18877,10 @@ postmaster: root</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230390</ATTRIBUTE_DATA>
@@ -18380,6 +18998,10 @@ If availability has been determined to be more important, and this decision is d
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230392</ATTRIBUTE_DATA>
@@ -18500,6 +19122,10 @@ If availability has been determined to be more important, and this decision is d
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230393</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18610,6 +19236,10 @@ local_events = yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230394</ATTRIBUTE_DATA>
@@ -18726,6 +19356,10 @@ The audit daemon must be restarted for changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230395</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18838,6 +19472,10 @@ The audit daemon must be restarted for changes to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230396</ATTRIBUTE_DATA>
@@ -18958,6 +19596,10 @@ $ sudo chmod 0600 /var/log/audit/audit.log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230397</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19077,6 +19719,10 @@ Replace "[audit_log_file]" to the correct audit log path, by default this locati
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230398</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19193,6 +19839,10 @@ log_group = root</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230399</ATTRIBUTE_DATA>
@@ -19315,6 +19965,10 @@ Replace "[audit_log_directory]" with the correct audit log directory path, by de
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230400</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19436,6 +20090,10 @@ Replace "[audit_log_directory]" with the correct audit log directory path, by de
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230401</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19555,6 +20213,10 @@ Replace "[audit_log_directory]" to the correct audit log directory path, by defa
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230402</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19670,6 +20332,10 @@ Note: Once set, the system must be rebooted for auditing to be changed.  It is r
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230403</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19782,6 +20448,10 @@ If the login UIDs are not set to be immutable by adding the "--loginuid-immutabl
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230404</ATTRIBUTE_DATA>
@@ -19900,6 +20570,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230405</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20016,6 +20690,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230406</ATTRIBUTE_DATA>
@@ -20134,6 +20812,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230407</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20250,6 +20932,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230408</ATTRIBUTE_DATA>
@@ -20368,6 +21054,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230409</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20484,6 +21174,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230410</ATTRIBUTE_DATA>
@@ -20602,6 +21296,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230411</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20717,6 +21415,10 @@ $ sudo yum install audit</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230412</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20831,6 +21533,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230413</ATTRIBUTE_DATA>
@@ -20964,6 +21670,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230418</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21078,6 +21788,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230419</ATTRIBUTE_DATA>
@@ -21194,6 +21908,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230421</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21308,6 +22026,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230422</ATTRIBUTE_DATA>
@@ -21424,6 +22146,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230423</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21539,6 +22265,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230424</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21653,6 +22383,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230425</ATTRIBUTE_DATA>
@@ -21771,6 +22505,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230426</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21885,6 +22623,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230427</ATTRIBUTE_DATA>
@@ -22001,6 +22743,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230428</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22115,6 +22861,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230429</ATTRIBUTE_DATA>
@@ -22231,6 +22981,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230430</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22345,6 +23099,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230431</ATTRIBUTE_DATA>
@@ -22461,6 +23219,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230432</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22575,6 +23337,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230433</ATTRIBUTE_DATA>
@@ -22691,6 +23457,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230434</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22805,6 +23575,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230435</ATTRIBUTE_DATA>
@@ -22921,6 +23695,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230436</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23036,6 +23814,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230437</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23150,6 +23932,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230438</ATTRIBUTE_DATA>
@@ -23269,6 +24055,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230439</ATTRIBUTE_DATA>
@@ -23394,6 +24184,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230444</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23508,6 +24302,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230446</ATTRIBUTE_DATA>
@@ -23626,6 +24424,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230447</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23741,6 +24543,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230448</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23855,6 +24661,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230449</ATTRIBUTE_DATA>
@@ -23988,6 +24798,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230455</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24111,6 +24925,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230456</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24233,6 +25051,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230462</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24347,6 +25169,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230463</ATTRIBUTE_DATA>
@@ -24463,6 +25289,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230464</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24577,6 +25407,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230465</ATTRIBUTE_DATA>
@@ -24702,6 +25536,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230466</ATTRIBUTE_DATA>
@@ -24844,6 +25682,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230467</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24968,6 +25810,10 @@ The audit daemon must be restarted for the changes to take effect.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230468</ATTRIBUTE_DATA>
@@ -25106,6 +25952,10 @@ GRUB_CMDLINE_LINUX="audit=1"</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230469</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25230,6 +26080,10 @@ GRUB_CMDLINE_LINUX="audit_backlog_limit=8192"</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230470</ATTRIBUTE_DATA>
@@ -25360,6 +26214,10 @@ AuditBackend=LinuxAudit</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230471</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25470,6 +26328,10 @@ $ sudo chmod 0600 /etc/audit/auditd.conf</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230472</ATTRIBUTE_DATA>
@@ -25591,6 +26453,10 @@ Replace "[audit_tool]" with the audit tool that does not have the correct permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230473</ATTRIBUTE_DATA>
@@ -25715,6 +26581,10 @@ Replace "[audit_tool]" with each audit tool not owned by "root".</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230474</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25837,6 +26707,10 @@ Replace "[audit_tool]" with each audit tool not group-owned by "root".</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230475</ATTRIBUTE_DATA>
@@ -25968,6 +26842,10 @@ If any of the audit tools listed above do not have an appropriate selection line
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230476</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26092,6 +26970,10 @@ If audit records are not stored on a partition made specifically for audit recor
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230477</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26210,6 +27092,10 @@ $ sudo yum install rsyslog</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230478</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26327,6 +27213,10 @@ $ sudo yum install rsyslog-gnutls</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230479</ATTRIBUTE_DATA>
@@ -26454,6 +27344,10 @@ For TCP:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230480</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26570,6 +27464,10 @@ The audit daemon must be restarted for changes to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230481</ATTRIBUTE_DATA>
@@ -26695,6 +27593,10 @@ $ActionSendStreamDriverMode 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230482</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26818,6 +27720,10 @@ $ActionSendStreamDriverAuthMode x509/name</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230483</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26928,6 +27834,10 @@ Note: Option names and values in the auditd.conf file are case insensitive.</ATT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230484</ATTRIBUTE_DATA>
@@ -27057,6 +27967,10 @@ server [ntp.server.name] iburst maxpoll 16</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230485</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27171,6 +28085,10 @@ port 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230486</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27284,6 +28202,10 @@ cmdport 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230487</ATTRIBUTE_DATA>
@@ -27400,6 +28322,10 @@ $ sudo yum remove telnet-server</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230488</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27511,6 +28437,10 @@ $ sudo yum remove abrt*</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230489</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27621,6 +28551,10 @@ $ sudo yum remove sendmail</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230491</ATTRIBUTE_DATA>
@@ -27749,6 +28683,10 @@ GRUB_CMDLINE_LINUX="pti=on"</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230492</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27862,6 +28800,10 @@ $ sudo dnf config-manager --set-disabled epel</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230493</ATTRIBUTE_DATA>
@@ -27992,6 +28934,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230494</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28108,6 +29054,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230495</ATTRIBUTE_DATA>
@@ -28226,6 +29176,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230496</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28342,6 +29296,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230497</ATTRIBUTE_DATA>
@@ -28460,6 +29418,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230498</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28577,6 +29539,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230499</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28691,6 +29657,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230500</ATTRIBUTE_DATA>
@@ -28815,6 +29785,10 @@ If there are additional ports, protocols, or services that are not in the PPSM C
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230502</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28931,6 +29905,10 @@ $ sudo systemctl disable autofs</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230503</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29045,6 +30023,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230504</ATTRIBUTE_DATA>
@@ -29186,6 +30168,10 @@ Reload the firewall rules for changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230505</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29298,6 +30284,10 @@ $ sudo yum install firewalld.noarch</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230506</ATTRIBUTE_DATA>
@@ -29419,6 +30409,10 @@ $ sudo nmcli radio all off</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230507</ATTRIBUTE_DATA>
@@ -29553,6 +30547,10 @@ Reboot the system for the settings to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230508</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29672,6 +30670,10 @@ tmpfs /dev/shm tmpfs defaults,nodev,nosuid,noexec 0 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230509</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29788,6 +30790,10 @@ tmpfs /dev/shm tmpfs defaults,nodev,nosuid,noexec 0 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230510</ATTRIBUTE_DATA>
@@ -29908,6 +30914,10 @@ tmpfs /dev/shm tmpfs defaults,nodev,nosuid,noexec 0 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230511</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30027,6 +31037,10 @@ If results are returned and the "nodev" option is missing, or if /tmp is mounted
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230512</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30143,6 +31157,10 @@ If results are returned and the "nosuid" option is missing, or if /tmp is mounte
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230513</ATTRIBUTE_DATA>
@@ -30263,6 +31281,10 @@ If results are returned and the "noexec" option is missing, or if /tmp is mounte
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230514</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30381,6 +31403,10 @@ If results are returned and the "nodev" option is missing, or if /var/log is mou
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230515</ATTRIBUTE_DATA>
@@ -30501,6 +31527,10 @@ If results are returned and the "nosuid" option is missing, or if /var/log is mo
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230516</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30619,6 +31649,10 @@ If results are returned and the "noexec" option is missing, or if /var/log is mo
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230517</ATTRIBUTE_DATA>
@@ -30739,6 +31773,10 @@ If results are returned and the "nodev" option is missing, or if /var/log/audit 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230518</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30857,6 +31895,10 @@ If results are returned and the "nosuid" option is missing, or if /var/log/audit
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230519</ATTRIBUTE_DATA>
@@ -30977,6 +32019,10 @@ If results are returned and the "noexec" option is missing, or if /var/log/audit
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230520</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31095,6 +32141,10 @@ If results are returned and the "nodev" option is missing, or if /var/tmp is mou
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230521</ATTRIBUTE_DATA>
@@ -31215,6 +32265,10 @@ If results are returned and the "nosuid" option is missing, or if /var/tmp is mo
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230522</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31333,6 +32387,10 @@ If results are returned and the "noexec" option is missing, or if /var/tmp is mo
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230523</ATTRIBUTE_DATA>
@@ -31453,6 +32511,10 @@ $ sudo yum install fapolicyd.x86_64</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230524</ATTRIBUTE_DATA>
@@ -31578,6 +32640,10 @@ $ sudo systemctl restart usbguard</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230525</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31693,6 +32759,10 @@ Establish rate-limiting rules based on organization-defined types of DoS attacks
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230526</ATTRIBUTE_DATA>
@@ -31811,6 +32881,10 @@ $ sudo systemctl enable sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230527</ATTRIBUTE_DATA>
@@ -31933,6 +33007,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230529</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32049,6 +33127,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230530</ATTRIBUTE_DATA>
@@ -32168,6 +33250,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230531</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32284,6 +33370,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230532</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32399,6 +33489,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230533</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32506,6 +33600,10 @@ $ sudo yum remove tftp-server</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230534</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32610,6 +33708,10 @@ If the account is associated with system commands or applications, the UID shoul
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230535</ATTRIBUTE_DATA>
@@ -32754,6 +33856,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230536</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32897,6 +34003,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230537</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33038,6 +34148,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230538</ATTRIBUTE_DATA>
@@ -33182,6 +34296,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230539</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33325,6 +34443,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230540</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33467,6 +34589,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230541</ATTRIBUTE_DATA>
@@ -33613,6 +34739,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230542</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33758,6 +34888,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230543</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33900,6 +35034,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230544</ATTRIBUTE_DATA>
@@ -34044,6 +35182,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230545</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -34181,6 +35323,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230546</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -34303,6 +35449,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230547</ATTRIBUTE_DATA>
@@ -34428,6 +35578,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230548</ATTRIBUTE_DATA>
@@ -34568,6 +35722,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230549</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -34695,6 +35853,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230550</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -34811,6 +35973,10 @@ $ sudo postconf -e 'smtpd_client_restrictions = permit_mynetworks,reject'</ATTRI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230551</ATTRIBUTE_DATA>
@@ -34932,6 +36098,10 @@ If AIDE is installed, ensure the "xattrs" rule is present on all uncommented fil
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230552</ATTRIBUTE_DATA>
@@ -35057,6 +36227,10 @@ If AIDE is installed, ensure the "acl" rule is present on all file and directory
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230553</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -35168,6 +36342,10 @@ A reboot is required for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230554</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -35278,6 +36456,10 @@ $ sudo ip link set dev &lt;devicename&gt; multicast off promisc off</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230555</ATTRIBUTE_DATA>
@@ -35396,6 +36578,10 @@ $ sudo systemctl restart sshd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230556</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -35508,6 +36694,10 @@ X11UseLocalhost yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230557</ATTRIBUTE_DATA>
@@ -35631,6 +36821,10 @@ $ sudo systemctl restart tftp.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230558</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -35737,6 +36931,10 @@ $ sudo yum remove vsftpd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230559</ATTRIBUTE_DATA>
@@ -35851,6 +37049,10 @@ $ sudo yum remove gssproxy</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230560</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -35962,6 +37164,10 @@ $ sudo yum remove iprutils</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-230561</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -36072,6 +37278,10 @@ $ sudo yum remove tuned</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-237640</ATTRIBUTE_DATA>
@@ -36188,6 +37398,10 @@ $ sudo yum remove krb5-server</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-237641</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -36294,6 +37508,10 @@ ALL     ALL=(ALL:ALL) ALL</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-237642</ATTRIBUTE_DATA>
@@ -36413,6 +37631,10 @@ Remove any configurations that conflict with the above from the following locati
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-237643</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -36530,6 +37752,10 @@ Remove any duplicate or conflicting lines from /etc/sudoers and /etc/sudoers.d/ 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244519</ATTRIBUTE_DATA>
@@ -36660,6 +37886,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244521</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -36778,6 +38008,10 @@ $ sudo grub2-mkconfig -o /boot/efi/EFI/redhat/grub.cfg</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244522</ATTRIBUTE_DATA>
@@ -36898,6 +38132,10 @@ $ sudo grub2-mkconfig -o /boot/grub2/grub.cfg</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244523</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -37004,6 +38242,10 @@ ExecStart=-/usr/lib/systemd/systemd-sulogin-shell emergency</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244524</ATTRIBUTE_DATA>
@@ -37119,6 +38361,10 @@ password sufficient pam_unix.so sha512</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244525</ATTRIBUTE_DATA>
@@ -37245,6 +38491,10 @@ For the changes to take effect, the SSH daemon must be restarted.
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244527</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -37355,6 +38605,10 @@ $ sudo yum install rng-tools</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244528</ATTRIBUTE_DATA>
@@ -37471,6 +38725,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244529</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -37578,6 +38836,10 @@ If a separate entry for "/var/tmp" is not in use, this is a finding.</ATTRIBUTE_
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244530</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -37684,6 +38946,10 @@ If the /boot/efi file system does not have the "nosuid" option set, this is a fi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244531</ATTRIBUTE_DATA>
@@ -37797,6 +39063,10 @@ $ sudo chmod 0750 /home/smithj/&lt;file or directory&gt;</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244532</ATTRIBUTE_DATA>
@@ -37917,6 +39187,10 @@ $ sudo chgrp smithj /home/smithj/&lt;file or directory&gt;</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244533</ATTRIBUTE_DATA>
@@ -38043,6 +39317,10 @@ account required pam_faillock.so</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244534</ATTRIBUTE_DATA>
@@ -38172,6 +39450,10 @@ account required pam_faillock.so</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244535</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -38298,6 +39580,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244536</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -38413,6 +39699,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244538</ATTRIBUTE_DATA>
@@ -38553,6 +39843,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244539</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -38692,6 +39986,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244541</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -38796,6 +40094,10 @@ Note: Manual changes to the listed file may be overwritten by the "authselect" p
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244542</ATTRIBUTE_DATA>
@@ -38914,6 +40216,10 @@ $ sudo systemctl start auditd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244543</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -39024,6 +40330,10 @@ Note: Option names and values in the auditd.conf file are case insensitive.</ATT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244544</ATTRIBUTE_DATA>
@@ -39136,6 +40446,10 @@ $ sudo systemctl enable firewalld</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244545</ATTRIBUTE_DATA>
@@ -39255,6 +40569,10 @@ $ sudo systemctl enable --now fapolicyd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244546</ATTRIBUTE_DATA>
@@ -39393,6 +40711,10 @@ permissive = 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244547</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -39507,6 +40829,10 @@ $ sudo yum install usbguard.x86_64</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244548</ATTRIBUTE_DATA>
@@ -39633,6 +40959,10 @@ Note: Enabling and starting usbguard without properly configuring it for an indi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244549</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -39745,6 +41075,10 @@ $ sudo yum install openssh-server.x86_64</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244550</ATTRIBUTE_DATA>
@@ -39887,6 +41221,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244551</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40027,6 +41365,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244552</ATTRIBUTE_DATA>
@@ -40169,6 +41511,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244553</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40310,6 +41656,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-244554</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40449,6 +41799,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-250315</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40580,6 +41934,10 @@ $ sudo restorecon -R -v /var/log/faillock</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-250316</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40707,6 +42065,10 @@ $ sudo restorecon -R -v /var/log/faillock</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-250317</ATTRIBUTE_DATA>
@@ -40848,6 +42210,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251706</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -40956,6 +42322,10 @@ $ sudo passwd -l [username]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251707</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -41062,6 +42432,10 @@ $ sudo chmod 755 [DIRECTORY]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251708</ATTRIBUTE_DATA>
@@ -41172,6 +42546,10 @@ $ sudo chown root [DIRECTORY]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251709</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -41280,6 +42658,10 @@ $ sudo chgrp root [DIRECTORY]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251710</ATTRIBUTE_DATA>
@@ -41432,6 +42814,10 @@ Done.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251711</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -41554,6 +42940,10 @@ Add or modify the following line:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251712</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -41667,6 +43057,10 @@ Remove any occurrences of "pam_succeed_if" in the file.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251713</ATTRIBUTE_DATA>
@@ -41782,6 +43176,10 @@ Add the following line to the "/etc/pam.d/system-auth" file (or modify the line 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251716</ATTRIBUTE_DATA>
@@ -41901,6 +43299,10 @@ retry = 3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251718</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -42010,6 +43412,10 @@ A reboot is required for the changes to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254520</ATTRIBUTE_DATA>
@@ -42161,6 +43567,10 @@ This must be documented with the information system security officer (ISSO) as a
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-256973</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -42305,6 +43715,10 @@ Using the steps listed in the Check Text, confirm the newly imported keys show a
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-256974</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -42417,6 +43831,10 @@ If "mailx" package is not installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257258</ATTRIBUTE_DATA>
@@ -42533,6 +43951,10 @@ $ sudo systemctl restart systemd-logind</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-268322</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -42637,6 +44059,10 @@ Note: Manual changes to the listed file may be overwritten by the "authselect" p
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-272482</ATTRIBUTE_DATA>
@@ -42760,6 +44186,10 @@ Note: Systemwide crypto policies are applied on application startup. It is recom
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-272483</ATTRIBUTE_DATA>
@@ -42888,6 +44318,10 @@ Note: Systemwide crypto policies are applied on application startup. It is recom
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-272484</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -43011,6 +44445,10 @@ Remove any configurations that conflict with the above from the following locati
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-274877</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -43126,6 +44564,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279929</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -43239,6 +44681,10 @@ declare -xr TMOUT=600</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279930</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -43350,6 +44796,10 @@ include /etc/crypto-policies/back-ends/libreswan.config</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279931</ATTRIBUTE_DATA>
@@ -43467,6 +44917,10 @@ include "/etc/crypto-policies/back-ends/bind.config";</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279932</ATTRIBUTE_DATA>
@@ -43589,6 +45043,10 @@ Note: Systemwide crypto policies are applied on application startup. It is recom
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279933</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -43699,6 +45157,10 @@ $ sudo dnf -y install crypto-policies</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-284947</ATTRIBUTE_DATA>
@@ -43826,6 +45288,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-284948</ATTRIBUTE_DATA>
@@ -43961,6 +45427,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Red Hat Enterprise Linux 8 Security Technical Implementation Guide :: v2r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-284949</ATTRIBUTE_DATA>
@@ -44103,8 +45573,12 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
           <SID_DATA>6</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MOZ_Firefox_STIG_V6R8_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -44115,35 +45589,27 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MOZ_Firefox_STIG_V6R8_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>e6a70339-100f-5b62-9d98-e04bf951f91a</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 8 Benchmark Date: 01 Jul 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>e6a70339-100f-5b62-9d98-e04bf951f91a</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251545</ATTRIBUTE_DATA>
@@ -44245,6 +45711,10 @@ If the Firefox version is not a supported version, this is a finding.</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251546</ATTRIBUTE_DATA>
@@ -44360,6 +45830,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251547</ATTRIBUTE_DATA>
@@ -44495,6 +45969,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251548</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -44629,6 +46107,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251549</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -44743,6 +46225,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251550</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -44849,6 +46335,10 @@ If an extension exists and the entry in the Action column is associated with an 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251551</ATTRIBUTE_DATA>
@@ -44964,6 +46454,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251552</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -45077,6 +46571,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251553</ATTRIBUTE_DATA>
@@ -45217,6 +46715,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251554</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -45350,6 +46852,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251555</ATTRIBUTE_DATA>
@@ -45485,6 +46991,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251557</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -45603,6 +47113,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251558</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -45717,6 +47231,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251559</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -45830,6 +47348,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251560</ATTRIBUTE_DATA>
@@ -45948,6 +47470,10 @@ On Windows, import certificates from the operating system by using Certificates 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251562</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -46061,6 +47587,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251563</ATTRIBUTE_DATA>
@@ -46176,6 +47706,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251564</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -46289,6 +47823,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251565</ATTRIBUTE_DATA>
@@ -46414,6 +47952,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251566</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -46527,6 +48069,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251567</ATTRIBUTE_DATA>
@@ -46649,6 +48195,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251568</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -46769,6 +48319,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251569</ATTRIBUTE_DATA>
@@ -46910,6 +48464,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251570</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -47043,6 +48601,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251571</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -47161,6 +48723,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251572</ATTRIBUTE_DATA>
@@ -47282,6 +48848,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251573</ATTRIBUTE_DATA>
@@ -47446,6 +49016,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251577</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -47567,6 +49141,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251578</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -47686,6 +49264,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251580</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -47804,6 +49386,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251581</ATTRIBUTE_DATA>
@@ -47936,6 +49522,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252881</ATTRIBUTE_DATA>
@@ -48081,6 +49671,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252909</ATTRIBUTE_DATA>

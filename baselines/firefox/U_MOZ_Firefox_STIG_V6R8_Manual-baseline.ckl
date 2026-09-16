@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Application</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>6</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MOZ_Firefox_STIG_V6R8_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MOZ_Firefox_STIG_V6R8_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>e6a70339-100f-5b62-9d98-e04bf951f91a</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 8 Benchmark Date: 01 Jul 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>e6a70339-100f-5b62-9d98-e04bf951f91a</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251545</ATTRIBUTE_DATA>
@@ -162,6 +160,10 @@ If the Firefox version is not a supported version, this is a finding.</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251546</ATTRIBUTE_DATA>
@@ -277,6 +279,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251547</ATTRIBUTE_DATA>
@@ -412,6 +418,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251548</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -546,6 +556,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251549</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -660,6 +674,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251550</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -766,6 +784,10 @@ If an extension exists and the entry in the Action column is associated with an 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251551</ATTRIBUTE_DATA>
@@ -881,6 +903,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251552</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -994,6 +1020,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251553</ATTRIBUTE_DATA>
@@ -1134,6 +1164,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251554</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1267,6 +1301,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251555</ATTRIBUTE_DATA>
@@ -1402,6 +1440,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251557</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1520,6 +1562,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251558</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1634,6 +1680,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251559</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1747,6 +1797,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251560</ATTRIBUTE_DATA>
@@ -1865,6 +1919,10 @@ On Windows, import certificates from the operating system by using Certificates 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251562</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1978,6 +2036,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251563</ATTRIBUTE_DATA>
@@ -2093,6 +2155,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251564</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2206,6 +2272,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251565</ATTRIBUTE_DATA>
@@ -2331,6 +2401,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251566</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2444,6 +2518,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251567</ATTRIBUTE_DATA>
@@ -2566,6 +2644,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251568</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2686,6 +2768,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251569</ATTRIBUTE_DATA>
@@ -2827,6 +2913,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251570</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2960,6 +3050,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251571</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3078,6 +3172,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251572</ATTRIBUTE_DATA>
@@ -3199,6 +3297,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251573</ATTRIBUTE_DATA>
@@ -3363,6 +3465,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251577</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3484,6 +3590,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251578</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3603,6 +3713,10 @@ Add the following in the policies section:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251580</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3721,6 +3835,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251581</ATTRIBUTE_DATA>
@@ -3853,6 +3971,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252881</ATTRIBUTE_DATA>
@@ -3998,6 +4120,10 @@ Add the following in the policies section:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Mozilla Firefox Security Technical Implementation Guide :: v6r8</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252909</ATTRIBUTE_DATA>

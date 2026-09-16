@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>Member Server</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>2</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MS_Windows_Server_2022_STIG_V2R10_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of War (DoW) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MS_Windows_Server_2022_STIG_V2R10_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>78c7275e-bcd7-597c-a3f6-3740b3691e13</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 10 Benchmark Date: 10 Aug 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>78c7275e-bcd7-597c-a3f6-3740b3691e13</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254238</ATTRIBUTE_DATA>
@@ -162,6 +160,10 @@ If users with administrative privileges do not have separate accounts for admini
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254239</ATTRIBUTE_DATA>
@@ -286,6 +288,10 @@ https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview#win
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254240</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -407,6 +413,10 @@ Document any exceptions to technical enforcement with the ISSO.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254241</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -510,6 +520,10 @@ If users with accounts in the Backup Operators group do not have separate accoun
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254242</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -612,6 +626,10 @@ If such a policy does not exist or has not been implemented, this is a finding.<
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254243</ATTRIBUTE_DATA>
@@ -736,6 +754,10 @@ It is recommended that system-managed service accounts be used whenever possible
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254244</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -840,6 +862,10 @@ Document required shared accounts with the ISSO. Documentation must include the 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254245</ATTRIBUTE_DATA>
@@ -974,6 +1000,10 @@ https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defe
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254246</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1087,6 +1117,10 @@ Run "tpm.msc" for configuration options in Windows.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254247</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1191,6 +1225,10 @@ Preview versions must not be used in a production environment.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254248</ATTRIBUTE_DATA>
@@ -1317,6 +1355,10 @@ Enter "Uninstall-WindowsFeature -Name Windows-Defender".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254249</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1419,6 +1461,10 @@ If a HIDS and HIPS are not installed on the system, this is a finding.</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254250</ATTRIBUTE_DATA>
@@ -1527,6 +1573,10 @@ This does not apply to system partitions such the Recovery and EFI System Partit
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254251</ATTRIBUTE_DATA>
@@ -1687,6 +1737,10 @@ CREATOR OWNER - Full Control - Subfolders and files only</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254252</ATTRIBUTE_DATA>
@@ -1862,6 +1916,10 @@ ALL RESTRICTED APPLICATION PACKAGES - Read &amp; execute - This folder, subfolde
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254253</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2033,6 +2091,10 @@ ALL RESTRICTED APPLICATION PACKAGES - Read &amp; execute - This folder, subfolde
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254254</ATTRIBUTE_DATA>
@@ -2221,6 +2283,10 @@ S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254255</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2337,6 +2403,10 @@ The default is for the "Everyone" group to be given "Print" permission.
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254256</ATTRIBUTE_DATA>
@@ -2472,6 +2542,10 @@ Inactive accounts that have been reviewed and deemed to be required must be docu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254257</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2590,6 +2664,10 @@ The password required flag can be set by entering the following on a command lin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254258</ATTRIBUTE_DATA>
@@ -2710,6 +2788,10 @@ Uncheck "Password never expires" for all enabled user accounts in Active Directo
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254259</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2812,6 +2894,10 @@ An approved and properly configured solution will contain both a list of baselin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254260</ATTRIBUTE_DATA>
@@ -2930,6 +3016,10 @@ Remove any unnecessary nonsystem-created shares.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254261</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3034,6 +3124,10 @@ Note: This does not apply to server-based applications that have a requirement f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254262</ATTRIBUTE_DATA>
@@ -3144,6 +3238,10 @@ The encryption method implemented must use FIPS-compliant algorithms.</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254263</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3251,6 +3349,10 @@ If protection methods have not been implemented, this is a finding.</ATTRIBUTE_D
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254264</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3356,6 +3458,10 @@ The PowerShell command "Get-WindowsFeature | Where-Object {$_. installstate -eq 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254265</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3460,6 +3566,10 @@ The configuration requirements will be determined by the applicable firewall STI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254267</ATTRIBUTE_DATA>
@@ -3590,6 +3700,10 @@ Delete any temporary user accounts that are no longer necessary.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254268</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3717,6 +3831,10 @@ Local accounts can be configured to expire with the command "Net user [username]
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254269</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3835,6 +3953,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254270</ATTRIBUTE_DATA>
@@ -3959,6 +4081,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254271</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4077,6 +4203,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254272</ATTRIBUTE_DATA>
@@ -4197,6 +4327,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254273</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4316,6 +4450,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254274</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4434,6 +4572,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254275</ATTRIBUTE_DATA>
@@ -4563,6 +4705,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254276</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4676,6 +4822,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254277</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4788,6 +4938,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254278</ATTRIBUTE_DATA>
@@ -4908,6 +5062,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254279</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5027,6 +5185,10 @@ Select "Disabled" under "Actions".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254280</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5135,6 +5297,10 @@ If the site includes any system areas such as root of the drive, Program Files, 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254281</ATTRIBUTE_DATA>
@@ -5258,6 +5424,10 @@ The US Naval Observatory operates stratum 1 time servers, identified at https://
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254282</ATTRIBUTE_DATA>
@@ -5387,6 +5557,10 @@ S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420 - NT Service\WdiS
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254283</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5491,6 +5665,10 @@ Under "System Summary", if "BIOS Mode" does not display "UEFI", this is a findin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254284</ATTRIBUTE_DATA>
@@ -5600,6 +5778,10 @@ If a value of "True" is not returned, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254285</ATTRIBUTE_DATA>
@@ -5716,6 +5898,10 @@ A value of "0" is also acceptable, requiring an administrator to unlock the acco
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254286</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5826,6 +6012,10 @@ If "LockoutBadCount" equals "0" or is greater than "3" in the file, this is a fi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254287</ATTRIBUTE_DATA>
@@ -5938,6 +6128,10 @@ If "ResetLockoutCount" is less than "15" in the file, this is a finding.</ATTRIB
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254288</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6048,6 +6242,10 @@ If "PasswordHistorySize" is less than "24" in the file, this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254289</ATTRIBUTE_DATA>
@@ -6162,6 +6360,10 @@ If "MaximumPasswordAge" is greater than "60" or equal to "0" in the file, this i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254290</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6273,6 +6475,10 @@ If "MinimumPasswordAge" equals "0" in the file, this is a finding.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254291</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6383,6 +6589,10 @@ If "MinimumPasswordLength" is less than "14" in the file, this is a finding.</AT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254292</ATTRIBUTE_DATA>
@@ -6499,6 +6709,10 @@ Note: If an external password filter is in use that enforces all four character 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254293</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6610,6 +6824,10 @@ If "ClearTextPassword" equals "1" in the file, this is a finding.</ATTRIBUTE_DAT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254294</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6711,6 +6929,10 @@ If it has not, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254295</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6811,6 +7033,10 @@ If they are not, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254296</ATTRIBUTE_DATA>
@@ -6929,6 +7155,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254297</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7046,6 +7276,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254298</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7162,6 +7396,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254299</ATTRIBUTE_DATA>
@@ -7282,6 +7520,10 @@ The default location is the "%SystemRoot%\System32" folder.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254300</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7395,6 +7637,10 @@ Account Logon &gt;&gt; Credential Validation - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254301</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7507,6 +7753,10 @@ Account Logon &gt;&gt; Credential Validation - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254302</ATTRIBUTE_DATA>
@@ -7623,6 +7873,10 @@ Account Management &gt;&gt; Other Account Management Events - Success</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254303</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7737,6 +7991,10 @@ Account Management &gt;&gt; Security Group Management - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254304</ATTRIBUTE_DATA>
@@ -7853,6 +8111,10 @@ Account Management &gt;&gt; User Account Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254305</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7968,6 +8230,10 @@ Account Management &gt;&gt; User Account Management - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254306</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8080,6 +8346,10 @@ Detailed Tracking &gt;&gt; Plug and Play Events - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254307</ATTRIBUTE_DATA>
@@ -8196,6 +8466,10 @@ Detailed Tracking &gt;&gt; Process Creation - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254309</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8311,6 +8585,10 @@ Logon/Logoff &gt;&gt; Account Lockout - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254310</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8424,6 +8702,10 @@ Logon/Logoff &gt;&gt; Group Membership - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254311</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8536,6 +8818,10 @@ Logon/Logoff &gt;&gt; Logoff - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254312</ATTRIBUTE_DATA>
@@ -8652,6 +8938,10 @@ Logon/Logoff &gt;&gt; Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254313</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8766,6 +9056,10 @@ Logon/Logoff &gt;&gt; Logon - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254314</ATTRIBUTE_DATA>
@@ -8882,6 +9176,10 @@ Logon/Logoff &gt;&gt; Special Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254315</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8995,6 +9293,10 @@ Object Access &gt;&gt; Other Object Access Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254316</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9107,6 +9409,10 @@ Object Access &gt;&gt; Other Object Access Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254317</ATTRIBUTE_DATA>
@@ -9223,6 +9529,10 @@ Virtual machines or systems that use network attached storage may generate exces
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254318</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9337,6 +9647,10 @@ Virtual machines or systems that use network attached storage may generate exces
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254319</ATTRIBUTE_DATA>
@@ -9453,6 +9767,10 @@ Policy Change &gt;&gt; Audit Audit Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254320</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9567,6 +9885,10 @@ Policy Change &gt;&gt; Audit Audit Policy Change - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254321</ATTRIBUTE_DATA>
@@ -9683,6 +10005,10 @@ Policy Change &gt;&gt; Authentication Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254322</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9797,6 +10123,10 @@ Policy Change &gt;&gt; Authorization Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254323</ATTRIBUTE_DATA>
@@ -9913,6 +10243,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254324</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10027,6 +10361,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254325</ATTRIBUTE_DATA>
@@ -10143,6 +10481,10 @@ System &gt;&gt; IPsec Driver - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254326</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10257,6 +10599,10 @@ System &gt;&gt; IPsec Driver - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254327</ATTRIBUTE_DATA>
@@ -10373,6 +10719,10 @@ System &gt;&gt; Other System Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254328</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10487,6 +10837,10 @@ System &gt;&gt; Other System Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254329</ATTRIBUTE_DATA>
@@ -10603,6 +10957,10 @@ System &gt;&gt; Security State Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254330</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10717,6 +11075,10 @@ System &gt;&gt; Security System Extension - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254331</ATTRIBUTE_DATA>
@@ -10833,6 +11195,10 @@ System &gt;&gt; System Integrity - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254332</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10948,6 +11314,10 @@ System &gt;&gt; System Integrity - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254333</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11056,6 +11426,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254334</ATTRIBUTE_DATA>
@@ -11166,6 +11540,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254335</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11274,6 +11652,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254336</ATTRIBUTE_DATA>
@@ -11384,6 +11766,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254337</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11492,6 +11878,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254338</ATTRIBUTE_DATA>
@@ -11602,6 +11992,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254339</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11708,6 +12102,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254340</ATTRIBUTE_DATA>
@@ -11829,6 +12227,10 @@ Value: RequireMutualAuthentication=1, RequireIntegrity=1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254341</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11938,6 +12340,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254342</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12044,6 +12450,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254343</ATTRIBUTE_DATA>
@@ -12189,6 +12599,10 @@ https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard</ATTRIB
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254344</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12308,6 +12722,10 @@ If this needs to be corrected or a more secure setting is desired, configure the
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254345</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12416,6 +12834,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254346</ATTRIBUTE_DATA>
@@ -12526,6 +12948,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254347</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12635,6 +13061,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254348</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12741,6 +13171,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254349</ATTRIBUTE_DATA>
@@ -12849,6 +13283,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254350</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12955,6 +13393,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254351</ATTRIBUTE_DATA>
@@ -13065,6 +13507,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254352</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13171,6 +13617,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254353</ATTRIBUTE_DATA>
@@ -13279,6 +13729,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254354</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13385,6 +13839,10 @@ Value: 0x000000ff (255)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254355</ATTRIBUTE_DATA>
@@ -13493,6 +13951,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254356</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13599,6 +14061,10 @@ Value:  0x00000001 (1), 0x00000003 (3)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254357</ATTRIBUTE_DATA>
@@ -13720,6 +14186,10 @@ Simple (99)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254358</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13828,6 +14298,10 @@ Value: 0x00008000 (32768) (or greater)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254359</ATTRIBUTE_DATA>
@@ -13946,6 +14420,10 @@ Note: The registry entry value in the Check Text is an example; the value must e
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254360</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14054,6 +14532,10 @@ Value: 0x00008000 (32768) (or greater)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254361</ATTRIBUTE_DATA>
@@ -14165,6 +14647,10 @@ Windows Server 2022 includes duplicate policies for this setting. It can also be
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254362</ATTRIBUTE_DATA>
@@ -14281,6 +14767,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254363</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14395,6 +14885,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254364</ATTRIBUTE_DATA>
@@ -14511,6 +15005,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254365</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14620,6 +15118,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254366</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14726,6 +15228,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254367</ATTRIBUTE_DATA>
@@ -14836,6 +15342,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254368</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14944,6 +15454,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254369</ATTRIBUTE_DATA>
@@ -15054,6 +15568,10 @@ Value: 0x00000003 (3)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254370</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15160,6 +15678,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254371</ATTRIBUTE_DATA>
@@ -15276,6 +15798,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254372</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15382,6 +15908,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254373</ATTRIBUTE_DATA>
@@ -15490,6 +16020,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254374</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15596,6 +16130,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254375</ATTRIBUTE_DATA>
@@ -15712,6 +16250,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254376</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15818,6 +16360,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254377</ATTRIBUTE_DATA>
@@ -15928,6 +16474,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254378</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16034,6 +16584,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254379</ATTRIBUTE_DATA>
@@ -16144,6 +16698,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254380</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16251,6 +16809,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254381</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16357,6 +16919,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254382</ATTRIBUTE_DATA>
@@ -16467,6 +17033,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254383</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16575,6 +17145,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254384</ATTRIBUTE_DATA>
@@ -16686,6 +17260,10 @@ Specify the Transcript output directory to point to a Central Log Server or anot
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254385</ATTRIBUTE_DATA>
@@ -16799,6 +17377,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254386</ATTRIBUTE_DATA>
@@ -16915,6 +17497,10 @@ If the "Enforce user logon restrictions" is not set to "Enabled", this is a find
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254387</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17029,6 +17615,10 @@ If the value for "Maximum lifetime for service ticket" is "0" or greater than "6
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254388</ATTRIBUTE_DATA>
@@ -17145,6 +17735,10 @@ If the value for "Maximum lifetime for user ticket" is "0" or greater than "10" 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254389</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17260,6 +17854,10 @@ If the "Maximum lifetime for user ticket renewal" is greater than "7" days, this
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254390</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17374,6 +17972,10 @@ If the "Maximum tolerance for computer clock synchronization" is greater than "5
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254391</ATTRIBUTE_DATA>
@@ -17508,6 +18110,10 @@ BUILTIN\Administrators:(I)(F)
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254392</ATTRIBUTE_DATA>
@@ -17654,6 +18260,10 @@ SYSTEM - Full control - This folder, subfolders, and files</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254393</ATTRIBUTE_DATA>
@@ -17805,6 +18415,10 @@ Document any other access permissions that allow the objects to be updated with 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254394</ATTRIBUTE_DATA>
@@ -17989,6 +18603,10 @@ ENTERPRISE DOMAIN CONTROLLERS - Read, Special permissions</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254395</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18168,6 +18786,10 @@ ENTERPRISE DOMAIN CONTROLLERS - Read, Special permissions</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254396</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18284,6 +18906,10 @@ If user shares are located on the same logical partition as the directory server
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254397</ATTRIBUTE_DATA>
@@ -18410,6 +19036,10 @@ If any applications are installed that are not required for the domain controlle
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254398</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18516,6 +19146,10 @@ If the classification level of the Windows domain controller is higher than the 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254399</ATTRIBUTE_DATA>
@@ -18652,6 +19286,10 @@ The dsHeuristics option is used. This is addressed in check V-8555 in the AD For
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254400</ATTRIBUTE_DATA>
@@ -18803,6 +19441,10 @@ Enter "q" at the "ldap policy:" and "ntdsutil:" prompts to exit.</ATTRIBUTE_DATA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254401</ATTRIBUTE_DATA>
@@ -18982,6 +19624,10 @@ Applies to - Descendant Organization Unit Objects</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254402</ATTRIBUTE_DATA>
@@ -19184,6 +19830,10 @@ Applies to - This object only
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254403</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19358,6 +20008,10 @@ Note: If only one success instance is listed (matching the values above), enter 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254404</ATTRIBUTE_DATA>
@@ -19547,6 +20201,10 @@ Applies to - Descendant Organizational Unit objects</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254405</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19728,6 +20386,10 @@ Note: If only one success instance is listed (matching the values above), enter 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254406</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19899,6 +20561,10 @@ Inherited from - (CN of domain)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254407</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20015,6 +20681,10 @@ Account Management &gt;&gt; Computer Account Management - Success</ATTRIBUTE_DAT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254408</ATTRIBUTE_DATA>
@@ -20133,6 +20803,10 @@ DS Access &gt;&gt; Directory Service Access - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254409</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20250,6 +20924,10 @@ DS Access &gt;&gt; Directory Service Access - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254410</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20366,6 +21044,10 @@ DS Access &gt;&gt; Directory Service Changes - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254412</ATTRIBUTE_DATA>
@@ -20485,6 +21167,10 @@ If no certificate for the domain controller exists in the right pane, this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254413</ATTRIBUTE_DATA>
@@ -20615,6 +21301,10 @@ DoW Public Key Enablement (PKE) Engineering Support maintains the InstallRoot ut
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254414</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20738,6 +21428,10 @@ If the mappings are to certificates issued by a CA authorized by the Component's
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254415</ATTRIBUTE_DATA>
@@ -20871,6 +21565,10 @@ Check "Smart card is required for interactive logon" in the "Account Options" ar
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254416</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20982,6 +21680,10 @@ Value: 0x00000002 (2)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254417</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21090,6 +21792,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254418</ATTRIBUTE_DATA>
@@ -21229,6 +21935,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254419</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21352,6 +22062,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254420</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21474,6 +22188,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254421</ATTRIBUTE_DATA>
@@ -21600,6 +22318,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254422</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21725,6 +22447,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254423</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21843,6 +22569,10 @@ If any SIDs are granted the "SeDenyServiceLogonRight" user right, this is a find
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254424</ATTRIBUTE_DATA>
@@ -21969,6 +22699,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254425</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22094,6 +22828,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254426</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22216,6 +22954,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254427</ATTRIBUTE_DATA>
@@ -22342,6 +23084,10 @@ The system will automatically change this to a system-generated complex password
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254428</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22467,6 +23213,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254429</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22582,6 +23332,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254430</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22690,6 +23444,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254431</ATTRIBUTE_DATA>
@@ -22800,6 +23558,10 @@ Value:  0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254432</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22908,6 +23670,10 @@ Value:  4 (or less)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254433</ATTRIBUTE_DATA>
@@ -23031,6 +23797,10 @@ If an application requires this user right, this would not be a finding. Vendor 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254434</ATTRIBUTE_DATA>
@@ -23165,6 +23935,10 @@ The application account must meet requirements for application account passwords
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254435</ATTRIBUTE_DATA>
@@ -23317,6 +24091,10 @@ Note: These are built-in security groups. "Local account" is more restrictive bu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254436</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23459,6 +24237,10 @@ All Systems:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254437</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23593,6 +24375,10 @@ Domain systems:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254438</ATTRIBUTE_DATA>
@@ -23735,6 +24521,10 @@ All Systems:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254439</ATTRIBUTE_DATA>
@@ -23887,6 +24677,10 @@ Note: "Local account" is referring to the Windows built-in security group.</ATTR
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254440</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24003,6 +24797,10 @@ If any SIDs are granted the "SeEnableDelegationPrivilege" user right, this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254441</ATTRIBUTE_DATA>
@@ -24149,6 +24947,10 @@ The overall number of vulnerabilities that are unmitigated on the network/server
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254442</ATTRIBUTE_DATA>
@@ -24312,6 +25114,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254443</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24465,6 +25271,10 @@ The FBCA Cross-Certificate Remover Tool and User Guide are available on Cyber Ex
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254444</ATTRIBUTE_DATA>
@@ -24620,6 +25430,10 @@ The FBCA Cross-Certificate Remover Tool and User Guide are available on Cyber Ex
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254445</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24731,6 +25545,10 @@ If "EnableGuestAccount" equals "1" in the file, this is a finding.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254446</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24837,6 +25655,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254447</ATTRIBUTE_DATA>
@@ -24949,6 +25771,10 @@ If "NewAdministratorName" is not something other than "Administrator" in the fil
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254448</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25060,6 +25886,10 @@ If "NewGuestName" is not something other than "Guest" in the file, this is a fin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254449</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25166,6 +25996,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254450</ATTRIBUTE_DATA>
@@ -25276,6 +26110,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254451</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25384,6 +26222,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254452</ATTRIBUTE_DATA>
@@ -25494,6 +26336,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254453</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25600,6 +26446,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254454</ATTRIBUTE_DATA>
@@ -25712,6 +26562,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Windows Settings 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254455</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25823,6 +26677,10 @@ This setting may prevent a system from being joined to a domain if not configure
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254456</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25931,6 +26789,10 @@ Value: 0x00000384 (900) (or less, excluding "0" which is effectively disabled)</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254457</ATTRIBUTE_DATA>
@@ -26069,6 +26931,10 @@ By using this IS (which includes any device attached to this IS), you consent to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254458</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26186,6 +27052,10 @@ If an organization-defined title is used, it can in no case contravene or modify
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254459</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26294,6 +27164,10 @@ If configuring this on servers causes issues, such as terminating users' remote 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254460</ATTRIBUTE_DATA>
@@ -26404,6 +27278,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254461</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26513,6 +27391,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254462</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26619,6 +27501,10 @@ Value:  0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254463</ATTRIBUTE_DATA>
@@ -26729,6 +27615,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254464</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26838,6 +27728,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254465</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26942,6 +27836,10 @@ If the value for "Network access: Allow anonymous SID/Name translation" is not s
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254466</ATTRIBUTE_DATA>
@@ -27050,6 +27948,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254467</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27156,6 +28058,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254468</ATTRIBUTE_DATA>
@@ -27264,6 +28170,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254469</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27370,6 +28280,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254470</ATTRIBUTE_DATA>
@@ -27478,6 +28392,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254471</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27585,6 +28503,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254472</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27691,6 +28613,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254473</ATTRIBUTE_DATA>
@@ -27807,6 +28733,10 @@ Note: Organizations with domain controllers running earlier versions of Windows 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254474</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27913,6 +28843,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254475</ATTRIBUTE_DATA>
@@ -28021,6 +28955,10 @@ Value: 0x00000005 (5)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254476</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28127,6 +29065,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254477</ATTRIBUTE_DATA>
@@ -28235,6 +29177,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254478</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28341,6 +29287,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254479</ATTRIBUTE_DATA>
@@ -28455,6 +29405,10 @@ Value:  0x00000002 (2)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254480</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28564,6 +29518,10 @@ Clients with this setting enabled will not be able to communicate via digitally 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254481</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28670,6 +29628,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254482</ATTRIBUTE_DATA>
@@ -28782,6 +29744,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254483</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28890,6 +29856,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254484</ATTRIBUTE_DATA>
@@ -29003,6 +29973,10 @@ The more secure option for this setting, "Prompt for credentials on the secure d
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254485</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29114,6 +30088,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254486</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29223,6 +30201,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254487</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29331,6 +30313,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254488</ATTRIBUTE_DATA>
@@ -29443,6 +30429,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254489</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29551,6 +30541,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254490</ATTRIBUTE_DATA>
@@ -29667,6 +30661,10 @@ If this needs to be corrected, configure the policy value for User Configuration
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254491</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29781,6 +30779,10 @@ If any SIDs are granted the "SeTrustedCredManAccessPrivilege" user right, this i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254492</ATTRIBUTE_DATA>
@@ -29906,6 +30908,10 @@ Passwords for accounts with this user right must be protected as highly privileg
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254493</ATTRIBUTE_DATA>
@@ -30036,6 +31042,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254494</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30165,6 +31175,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254495</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30285,6 +31299,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254496</ATTRIBUTE_DATA>
@@ -30410,6 +31428,10 @@ Passwords for application accounts with this user right must be protected as hig
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254497</ATTRIBUTE_DATA>
@@ -30549,6 +31571,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254498</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30663,6 +31689,10 @@ If any SIDs are granted the "SeCreatePermanentPrivilege" user right, this is a f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254499</ATTRIBUTE_DATA>
@@ -30788,6 +31818,10 @@ Systems that have the Hyper-V role will also have "Virtual Machines" given this 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254500</ATTRIBUTE_DATA>
@@ -30920,6 +31954,10 @@ Passwords for application accounts with this user right must be protected as hig
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254501</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31040,6 +32078,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254502</ATTRIBUTE_DATA>
@@ -31172,6 +32214,10 @@ The application account must meet requirements for application account passwords
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254503</ATTRIBUTE_DATA>
@@ -31311,6 +32357,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254504</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31440,6 +32490,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254505</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31560,6 +32614,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254506</ATTRIBUTE_DATA>
@@ -31685,6 +32743,10 @@ The application account must meet requirements for application account passwords
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254507</ATTRIBUTE_DATA>
@@ -31819,6 +32881,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254508</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31939,6 +33005,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254509</ATTRIBUTE_DATA>
@@ -32061,6 +33131,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254510</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32181,6 +33255,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254511</ATTRIBUTE_DATA>
@@ -32311,6 +33389,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-254512</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32440,6 +33522,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-271427</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32547,6 +33633,10 @@ If "Allow name-based strong mappings for certificates" is not "Enabled", this is
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278944</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32649,6 +33739,10 @@ If "Audit Handle Manipulation" is not set to "Failure", this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278946</ATTRIBUTE_DATA>
@@ -32753,6 +33847,10 @@ If "Audit Registry" is not set to "Failure", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278947</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32856,6 +33954,10 @@ If "Audit Registry" is not set to "Success", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278948</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32958,6 +34060,10 @@ If "Audit Sensitive Privilege Use" is not set to "Success", this is a finding.</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2022 Security Technical Implementation Guide :: v2r10</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278949</ATTRIBUTE_DATA>

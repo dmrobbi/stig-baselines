@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>2</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_CAN_Ubuntu_20-04_LTS_STIG_V2R2_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_CAN_Ubuntu_20-04_LTS_STIG_V2R2_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>a7cc78af-08b2-59ab-a7c5-f02fbd033da3</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 2 Benchmark Date: 02 Apr 2025</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>a7cc78af-08b2-59ab-a7c5-f02fbd033da3</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238196</ATTRIBUTE_DATA>
@@ -181,6 +179,10 @@ $ sudo chage -E $(date -d "+3 days" +%F) system_account_name</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238197</ATTRIBUTE_DATA>
@@ -326,6 +328,10 @@ $ sudo systemctl restart gdm3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238198</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -466,6 +472,10 @@ $ sudo systemctl restart gdm3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238199</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -587,6 +597,10 @@ $ sudo gsettings set org.gnome.desktop.screensaver lock-enabled true</ATTRIBUTE_
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238200</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -696,6 +710,10 @@ $ sudo apt-get install vlock</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238201</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -801,6 +819,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238202</ATTRIBUTE_DATA>
@@ -911,6 +933,10 @@ PASS_MIN_DAYS    1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238203</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1018,6 +1044,10 @@ PASS_MAX_DAYS    60</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238204</ATTRIBUTE_DATA>
@@ -1145,6 +1175,10 @@ $ sudo update-grub</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238205</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1255,6 +1289,10 @@ If output is produced and the accounts listed are interactive user accounts, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238206</ATTRIBUTE_DATA>
@@ -1370,6 +1408,10 @@ $ sudo gpasswd -d &lt;username&gt; sudo</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238207</ATTRIBUTE_DATA>
@@ -1496,6 +1538,10 @@ $ export TMOUT=600</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238208</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1602,6 +1648,10 @@ If any occurrences of "NOPASSWD" or "!authenticate" return from the command, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238209</ATTRIBUTE_DATA>
@@ -1715,6 +1765,10 @@ UMASK 077</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238210</ATTRIBUTE_DATA>
@@ -1852,6 +1906,10 @@ Set the sshd option "PubkeyAuthentication yes" in the "/etc/ssh/sshd_config" fil
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238211</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1964,6 +2022,10 @@ UsePAM yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238212</ATTRIBUTE_DATA>
@@ -2088,6 +2150,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238213</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2206,6 +2272,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238214</ATTRIBUTE_DATA>
@@ -2381,6 +2451,10 @@ $ sudo systemctl -s SIGHUP kill sshd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238215</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2511,6 +2585,10 @@ $ sudo systemctl start sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238216</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2633,6 +2711,10 @@ $ sudo systemctl reload sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238217</ATTRIBUTE_DATA>
@@ -2761,6 +2843,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238218</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2877,6 +2963,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238219</ATTRIBUTE_DATA>
@@ -2995,6 +3085,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238220</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3112,6 +3206,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238221</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3222,6 +3320,10 @@ ucredit=-1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238222</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3331,6 +3433,10 @@ lcredit=-1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238223</ATTRIBUTE_DATA>
@@ -3443,6 +3549,10 @@ dcredit=-1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238224</ATTRIBUTE_DATA>
@@ -3558,6 +3668,10 @@ difok=8</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238225</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3667,6 +3781,10 @@ minlen=15</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238226</ATTRIBUTE_DATA>
@@ -3780,6 +3898,10 @@ ocredit=-1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238227</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3888,6 +4010,10 @@ dictcheck=1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238228</ATTRIBUTE_DATA>
@@ -4028,6 +4154,10 @@ Note: The value of "retry" should be between "1" and "3".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238229</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4149,6 +4279,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238230</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4266,6 +4400,10 @@ $ sudo apt install libpam-pkcs11</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238231</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4379,6 +4517,10 @@ $ sudo apt-get install opensc-pkcs11</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238232</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4489,6 +4631,10 @@ Modify all of the "cert_policy" lines in "/etc/pam_pkcs11/pam_pkcs11.conf" to in
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238233</ATTRIBUTE_DATA>
@@ -4603,6 +4749,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238234</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4713,6 +4863,10 @@ password [success=1 default=ignore] pam_unix.so obscure sha512 shadow remember=5
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238235</ATTRIBUTE_DATA>
@@ -4851,6 +5005,10 @@ unlock_time = 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238236</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4982,6 +5140,10 @@ $  sudo cp -f /usr/share/aide/config/cron.daily/aide /etc/cron.daily/aide</ATTRI
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238237</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5090,6 +5252,10 @@ auth    required    pam_faildelay.so    delay=4000000</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238238</ATTRIBUTE_DATA>
@@ -5212,6 +5378,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238239</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5332,6 +5502,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238240</ATTRIBUTE_DATA>
@@ -5454,6 +5628,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238241</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5574,6 +5752,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238242</ATTRIBUTE_DATA>
@@ -5696,6 +5878,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238243</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5815,6 +6001,10 @@ $ sudo systemctl restart auditd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238244</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5933,6 +6123,10 @@ $ sudo systemctl restart auditd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238245</ATTRIBUTE_DATA>
@@ -6058,6 +6252,10 @@ $ sudo chmod 0600 /var/log/audit/*</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238246</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6182,6 +6380,10 @@ $ sudo chown root /var/log/audit/*</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238247</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6305,6 +6507,10 @@ $ sudo systemctl kill auditd -s SIGHUP</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238248</ATTRIBUTE_DATA>
@@ -6432,6 +6638,10 @@ $ sudo chmod -R  g-w,o-rwx /var/log/audit</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238249</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6554,6 +6764,10 @@ $ sudo chmod -R 0640 /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIB
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238250</ATTRIBUTE_DATA>
@@ -6686,6 +6900,10 @@ $ sudo chown root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238251</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6809,6 +7027,10 @@ $ sudo chown :root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIBUT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238252</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6929,6 +7151,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238253</ATTRIBUTE_DATA>
@@ -7051,6 +7277,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238254</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7171,6 +7401,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238255</ATTRIBUTE_DATA>
@@ -7293,6 +7527,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238256</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7414,6 +7652,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238257</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7534,6 +7776,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238258</ATTRIBUTE_DATA>
@@ -7668,6 +7914,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238264</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7797,6 +8047,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238268</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7925,6 +8179,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238271</ATTRIBUTE_DATA>
@@ -8059,6 +8317,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238277</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8179,6 +8441,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238278</ATTRIBUTE_DATA>
@@ -8301,6 +8567,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238279</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8421,6 +8691,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238280</ATTRIBUTE_DATA>
@@ -8543,6 +8817,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238281</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8663,6 +8941,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238282</ATTRIBUTE_DATA>
@@ -8785,6 +9067,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238283</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8905,6 +9191,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238284</ATTRIBUTE_DATA>
@@ -9027,6 +9317,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238285</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9147,6 +9441,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238286</ATTRIBUTE_DATA>
@@ -9269,6 +9567,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238287</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9389,6 +9691,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238288</ATTRIBUTE_DATA>
@@ -9511,6 +9817,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238289</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9631,6 +9941,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238290</ATTRIBUTE_DATA>
@@ -9753,6 +10067,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238291</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9873,6 +10191,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238292</ATTRIBUTE_DATA>
@@ -9995,6 +10317,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238293</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10116,6 +10442,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238294</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10236,6 +10566,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238295</ATTRIBUTE_DATA>
@@ -10366,6 +10700,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238297</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10492,6 +10830,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238298</ATTRIBUTE_DATA>
@@ -10633,6 +10975,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238299</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10751,6 +11097,10 @@ $ sudo update-grub</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238300</ATTRIBUTE_DATA>
@@ -10872,6 +11222,10 @@ Replace "[audit_tool]" with the audit tool that does not have the correct permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238301</ATTRIBUTE_DATA>
@@ -10996,6 +11350,10 @@ Replace "[audit_tool]" with each audit tool not owned by root.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238302</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11118,6 +11476,10 @@ Replace "[audit_tool]" with each audit tool not group-owned by root.</ATTRIBUTE_
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238303</ATTRIBUTE_DATA>
@@ -11246,6 +11608,10 @@ If any of the seven audit tools do not have appropriate selection lines, this is
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238304</ATTRIBUTE_DATA>
@@ -11378,6 +11744,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238305</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11507,6 +11877,10 @@ where &lt;log mountpoint&gt; is the aforementioned mount point.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238306</ATTRIBUTE_DATA>
@@ -11651,6 +12025,10 @@ $ sudo systemctl restart auditd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238307</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11783,6 +12161,10 @@ Edit "/etc/audit/auditd.conf" and set the "space_left" parameter to be at least 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238308</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11890,6 +12272,10 @@ $ sudo timedatectl set-timezone [ZONE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238309</ATTRIBUTE_DATA>
@@ -12015,6 +12401,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238310</ATTRIBUTE_DATA>
@@ -12143,6 +12533,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238315</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12261,6 +12655,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238316</ATTRIBUTE_DATA>
@@ -12381,6 +12779,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238317</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12500,6 +12902,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238318</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12616,6 +13022,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238319</ATTRIBUTE_DATA>
@@ -12736,6 +13146,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238320</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12855,6 +13269,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238321</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12970,6 +13388,10 @@ The script must be located in the "/etc/cron.weekly" directory.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238323</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13080,6 +13502,10 @@ Add the following line to the top of the "/etc/security/limits.conf" file:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238324</ATTRIBUTE_DATA>
@@ -13199,6 +13625,10 @@ $ sudo systemctl restart rsyslog.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238325</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13310,6 +13740,10 @@ ENCRYPT_METHOD SHA512</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238326</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13414,6 +13848,10 @@ $ sudo apt-get remove telnetd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238327</ATTRIBUTE_DATA>
@@ -13523,6 +13961,10 @@ $ sudo apt-get remove rsh-server</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238328</ATTRIBUTE_DATA>
@@ -13657,6 +14099,10 @@ $ sudo ufw deny &lt;direction&gt; &lt;port/protocol/service&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238329</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13771,6 +14217,10 @@ $ sudo passwd -l root</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238330</ATTRIBUTE_DATA>
@@ -13887,6 +14337,10 @@ Note: DoD recommendation is 35 days, but a lower value is acceptable. The value 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238331</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13998,6 +14452,10 @@ If any temporary accounts have no expiration date set or do not expire within 72
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238332</ATTRIBUTE_DATA>
@@ -14111,6 +14569,10 @@ $ sudo chmod +t  [Public Directory]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238333</ATTRIBUTE_DATA>
@@ -14232,6 +14694,10 @@ net.ipv4.tcp_syncookies = 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238334</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14343,6 +14809,10 @@ If kernel core dumps are required, document the need with the ISSO.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238335</ATTRIBUTE_DATA>
@@ -14476,6 +14946,10 @@ Note: Encrypting a partition in an already-installed system is more difficult be
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238337</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14589,6 +15063,10 @@ $ sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -e
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238338</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14697,6 +15175,10 @@ $ sudo chgrp syslog /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238339</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14804,6 +15286,10 @@ $ sudo chown root /var/log</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238340</ATTRIBUTE_DATA>
@@ -14916,6 +15402,10 @@ $ sudo chmod 0755 /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238341</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15023,6 +15513,10 @@ $ sudo chgrp adm /var/log/syslog</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238342</ATTRIBUTE_DATA>
@@ -15132,6 +15626,10 @@ $ sudo chown syslog /var/log/syslog</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238343</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15240,6 +15738,10 @@ $ sudo chmod 0640 /var/log/syslog</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238344</ATTRIBUTE_DATA>
@@ -15359,6 +15861,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -perm /
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238345</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15476,6 +15982,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -user
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238346</ATTRIBUTE_DATA>
@@ -15595,6 +16105,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -grou
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238347</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15703,6 +16217,10 @@ $ sudo find /lib /lib64 /usr/lib -perm /022 -type f -exec chmod 755 '{}' \;</ATT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238348</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15809,6 +16327,10 @@ $ sudo find /lib /lib64 /usr/lib -perm /022 -type d -exec chmod 755 '{}' \;</ATT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238349</ATTRIBUTE_DATA>
@@ -15917,6 +16439,10 @@ $ sudo find /lib /usr/lib /lib64 ! -user root -type f -exec chown root '{}' \;</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238350</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16023,6 +16549,10 @@ $ sudo find /lib /usr/lib /lib64 ! -user root -type d -exec chown root '{}' \;</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238351</ATTRIBUTE_DATA>
@@ -16131,6 +16661,10 @@ $ sudo chgrp root [FILE]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238352</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16237,6 +16771,10 @@ $ sudo find /lib /usr/lib /lib64 ! -group root -type d -exec chgrp root '{}' \;<
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238353</ATTRIBUTE_DATA>
@@ -16371,6 +16909,10 @@ $ sudo systemctl enable --now rsyslog</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238354</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16483,6 +17025,10 @@ $ sudo apt-get install ufw</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238355</ATTRIBUTE_DATA>
@@ -16602,6 +17148,10 @@ $ sudo systemctl enable --now ufw.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238356</ATTRIBUTE_DATA>
@@ -16732,6 +17282,10 @@ $ sudo systemctl restart chrony.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238357</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16851,6 +17405,10 @@ $ sudo systemctl restart chrony.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238359</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16964,6 +17522,10 @@ APT::Get::AllowUnauthenticated "false";</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238360</ATTRIBUTE_DATA>
@@ -17098,6 +17660,10 @@ Note: AppArmor must have properly configured profiles for applications and home 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238362</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17209,6 +17775,10 @@ Note: It is valid for this configuration to be in a file with a name that ends w
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238363</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17318,6 +17888,10 @@ A subscription to the "Ubuntu Pro" plan is required to obtain the FIPS Kernel cr
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238364</ATTRIBUTE_DATA>
@@ -17431,6 +18005,10 @@ Update the "/etc/ssl/certs" directory with the following command:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238367</ATTRIBUTE_DATA>
@@ -17568,6 +18146,10 @@ $ sudo ufw limit in on eth0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238368</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17680,6 +18262,10 @@ If "nx" is not showing up in "/proc/cpuinfo", and the system's BIOS setup config
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238369</ATTRIBUTE_DATA>
@@ -17804,6 +18390,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238370</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17913,6 +18503,10 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238371</ATTRIBUTE_DATA>
@@ -18077,6 +18671,10 @@ Done.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238372</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18186,6 +18784,10 @@ Modify the "SILENTREPORTS" parameter in the "/etc/default/aide" file with a valu
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238373</ATTRIBUTE_DATA>
@@ -18297,6 +18899,10 @@ session     required      pam_lastlog.so showfailed</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238374</ATTRIBUTE_DATA>
@@ -18410,6 +19016,10 @@ $ sudo systemctl start ufw.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238376</ATTRIBUTE_DATA>
@@ -18527,6 +19137,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -perm /
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238377</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18642,6 +19256,10 @@ $ sudo chown root [FILE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238378</ATTRIBUTE_DATA>
@@ -18759,6 +19377,10 @@ $ sudo chgrp root [FILE]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238379</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18874,6 +19496,10 @@ Update the dconf settings:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-238380</ATTRIBUTE_DATA>
@@ -18991,6 +19617,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251503</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19099,6 +19729,10 @@ $ sudo passwd -l [username]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251504</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19205,6 +19839,10 @@ Remove any instances of the "nullok" option in "/etc/pam.d/common-auth" and "/et
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-251505</ATTRIBUTE_DATA>
@@ -19328,6 +19966,10 @@ Configure the operating system to disable the ability to use USB mass storage de
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252704</ATTRIBUTE_DATA>
@@ -19458,6 +20100,10 @@ $ sudo modprobe -r &lt;module name&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-255912</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19570,6 +20216,10 @@ Restart the "sshd" service for changes to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 20.04 LTS Security Technical Implementation Guide :: v2r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-255913</ATTRIBUTE_DATA>

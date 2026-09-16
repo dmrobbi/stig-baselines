@@ -1,16 +1,18 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <CHECKLIST>
   <ASSET>
-    <ROLE>None</ROLE>
-    <ASSET_TYPE>Workstation</ASSET_TYPE>
+    <ROLE>Workstation</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>1</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_Apple_macOS_26_V1R1_STIG_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_Apple_macOS_26_V1R1_STIG_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>06a72816-e3b3-5d3a-a102-e5f97d9e6809</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 1 Benchmark Date: 11 Sep 2025</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>06a72816-e3b3-5d3a-a102-e5f97d9e6809</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277028</ATTRIBUTE_DATA>
@@ -172,6 +170,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277029</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -279,6 +281,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277030</ATTRIBUTE_DATA>
@@ -395,6 +401,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277031</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -510,6 +520,10 @@ Note: To ensure continued access to the operating system, consult the supplement
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277032</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -614,6 +628,10 @@ If the result is not "4", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277033</ATTRIBUTE_DATA>
@@ -722,6 +740,10 @@ If the result is not "-1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277034</ATTRIBUTE_DATA>
@@ -872,6 +894,10 @@ After saving the file and exiting to the command prompt, run the following comma
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277035</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -982,6 +1008,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277036</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1088,6 +1118,10 @@ If the result is not "pass", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277037</ATTRIBUTE_DATA>
@@ -1228,6 +1262,10 @@ By using this IS (which includes any device attached to this IS), you consent to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277038</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1356,6 +1394,10 @@ done</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277039</ATTRIBUTE_DATA>
@@ -1488,6 +1530,10 @@ Update the permissions of the "/Library/Security/PolicyBanner.rtfd" file with th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277040</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1597,6 +1643,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277041</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1705,6 +1755,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277042</ATTRIBUTE_DATA>
@@ -1817,6 +1871,10 @@ Note: To ensure continued access to the operating system, consult the supplement
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277043</ATTRIBUTE_DATA>
@@ -1947,6 +2005,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277044</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2074,6 +2136,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277045</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2196,6 +2262,10 @@ done</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277046</ATTRIBUTE_DATA>
@@ -2341,6 +2411,10 @@ done</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277047</ATTRIBUTE_DATA>
@@ -2500,6 +2574,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277048</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2606,6 +2684,10 @@ If the result is not "pass", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277049</ATTRIBUTE_DATA>
@@ -2721,6 +2803,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277050</ATTRIBUTE_DATA>
@@ -2856,6 +2942,10 @@ SS_RULE=$(/usr/bin/security -q authorizationdb read system.login.screensaver 2&g
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277051</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2964,6 +3054,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277052</ATTRIBUTE_DATA>
@@ -3109,6 +3203,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277053</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3236,6 +3334,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277054</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3362,6 +3464,10 @@ done</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277055</ATTRIBUTE_DATA>
@@ -3504,6 +3610,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277056</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3617,6 +3727,10 @@ If the result is not "86400", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277057</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3726,6 +3840,10 @@ If the result is not an authoritative time server that is synchronized with redu
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277058</ATTRIBUTE_DATA>
@@ -3838,6 +3956,10 @@ Note: The service "timed" cannot be unloaded or loaded while System Integrity Pr
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277059</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3945,6 +4067,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277060</ATTRIBUTE_DATA>
@@ -4063,6 +4189,10 @@ A text editor may also be used to implement the required updates to the "/etc/se
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277061</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4175,6 +4305,10 @@ A text editor may also be used to implement the required updates to the "/etc/se
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277062</ATTRIBUTE_DATA>
@@ -4303,6 +4437,10 @@ fi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277063</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4413,6 +4551,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277064</ATTRIBUTE_DATA>
@@ -4525,6 +4667,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277065</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4635,6 +4781,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277066</ATTRIBUTE_DATA>
@@ -4747,6 +4897,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277067</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4853,6 +5007,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277068</ATTRIBUTE_DATA>
@@ -4962,6 +5120,10 @@ If the result is not a mode of 700 or less permissive, this is a finding.</ATTRI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277069</ATTRIBUTE_DATA>
@@ -5076,6 +5238,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277070</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5188,6 +5354,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277071</ATTRIBUTE_DATA>
@@ -5302,6 +5472,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277072</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5414,6 +5588,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277073</ATTRIBUTE_DATA>
@@ -5528,6 +5706,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277074</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5634,6 +5816,10 @@ If the result is not "7d", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277075</ATTRIBUTE_DATA>
@@ -5744,6 +5930,10 @@ If the result is not "25", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277076</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5850,6 +6040,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277077</ATTRIBUTE_DATA>
@@ -5961,6 +6155,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277078</ATTRIBUTE_DATA>
@@ -6077,6 +6275,10 @@ Note: To ensure continued access to the operating system, consult the supplement
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277079</ATTRIBUTE_DATA>
@@ -6205,6 +6407,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277080</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6313,6 +6519,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277081</ATTRIBUTE_DATA>
@@ -6423,6 +6633,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277082</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6532,6 +6746,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277083</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6640,6 +6858,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277084</ATTRIBUTE_DATA>
@@ -6767,6 +6989,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277085</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6875,6 +7101,10 @@ The system may need a restart for the update to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277086</ATTRIBUTE_DATA>
@@ -6989,6 +7219,10 @@ The system may need a restart for the update to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277087</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7101,6 +7335,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277088</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7206,6 +7444,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277089</ATTRIBUTE_DATA>
@@ -7330,6 +7572,10 @@ The system may need a restart for the update to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277090</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7437,6 +7683,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277091</ATTRIBUTE_DATA>
@@ -7559,6 +7809,10 @@ The system may need a restart for the update to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277092</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7668,6 +7922,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277093</ATTRIBUTE_DATA>
@@ -7792,6 +8050,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277094</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7899,6 +8161,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277095</ATTRIBUTE_DATA>
@@ -8008,6 +8274,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277096</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8115,6 +8385,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277097</ATTRIBUTE_DATA>
@@ -8224,6 +8498,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277098</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8331,6 +8609,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277099</ATTRIBUTE_DATA>
@@ -8452,6 +8734,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277100</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8559,6 +8845,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277101</ATTRIBUTE_DATA>
@@ -8679,6 +8969,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277102</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8791,6 +9085,10 @@ Note: Systemsetup with -setremoteappleevents flag will fail unless Full Disk Acc
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277103</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8898,6 +9196,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277104</ATTRIBUTE_DATA>
@@ -9007,6 +9309,10 @@ If the result is not "2", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277105</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9114,6 +9420,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277106</ATTRIBUTE_DATA>
@@ -9223,6 +9533,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277107</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9330,6 +9644,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277108</ATTRIBUTE_DATA>
@@ -9456,6 +9774,10 @@ The system may need a restart for the update to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277109</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9563,6 +9885,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277110</ATTRIBUTE_DATA>
@@ -9672,6 +9998,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277111</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9779,6 +10109,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277112</ATTRIBUTE_DATA>
@@ -9888,6 +10222,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277113</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9995,6 +10333,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277114</ATTRIBUTE_DATA>
@@ -10117,6 +10459,10 @@ Note: This will apply to the whole system.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277115</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10222,6 +10568,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277116</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10326,6 +10676,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277117</ATTRIBUTE_DATA>
@@ -10444,6 +10798,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277118</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10556,6 +10914,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277119</ATTRIBUTE_DATA>
@@ -10674,6 +11036,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277120</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10784,6 +11150,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277121</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10893,6 +11263,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277122</ATTRIBUTE_DATA>
@@ -11006,6 +11380,10 @@ unset IFS</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277123</ATTRIBUTE_DATA>
@@ -11171,6 +11549,10 @@ done</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277124</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11283,6 +11665,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277125</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11394,6 +11780,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277126</ATTRIBUTE_DATA>
@@ -11516,6 +11906,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277127</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11636,6 +12030,10 @@ CURRENT_USER=$( /usr/sbin/scutil &lt;&lt;&lt; "show State:/Users/ConsoleUser" | 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277128</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11751,6 +12149,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277129</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11858,6 +12260,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277130</ATTRIBUTE_DATA>
@@ -11967,6 +12373,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277131</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12075,6 +12485,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277132</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12182,6 +12596,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277133</ATTRIBUTE_DATA>
@@ -12304,6 +12722,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277134</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12412,6 +12834,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277135</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12519,6 +12945,10 @@ If the result is not "2", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277136</ATTRIBUTE_DATA>
@@ -12630,6 +13060,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277137</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12738,6 +13172,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277138</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12844,6 +13282,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277139</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12949,6 +13391,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277140</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13051,6 +13497,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277141</ATTRIBUTE_DATA>
@@ -13159,6 +13609,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277142</ATTRIBUTE_DATA>
@@ -13270,6 +13724,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277143</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13374,6 +13832,10 @@ If the result does not contain a list of approved certificate authorities, this 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277144</ATTRIBUTE_DATA>
@@ -13482,6 +13944,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277145</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13589,6 +14055,10 @@ If the result is not "pass" or fewer, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277146</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13695,6 +14165,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277147</ATTRIBUTE_DATA>
@@ -13805,6 +14279,10 @@ If the result is not "pass", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277148</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13912,6 +14390,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277149</ATTRIBUTE_DATA>
@@ -14027,6 +14509,10 @@ done</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277150</ATTRIBUTE_DATA>
@@ -14146,6 +14632,10 @@ Note: To ensure continued access to the operating system, consult the supplement
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277151</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14259,6 +14749,10 @@ Note: To ensure continued access to the operating system, consult the supplement
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277152</ATTRIBUTE_DATA>
@@ -14390,6 +14884,10 @@ LOGIN_END
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277153</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14516,6 +15014,10 @@ SU_END
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277154</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14640,6 +15142,10 @@ SUDO_END
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277155</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14750,6 +15256,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277156</ATTRIBUTE_DATA>
@@ -14883,6 +15393,10 @@ After saving the file and exiting to the command prompt, run the following comma
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277157</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15015,6 +15529,10 @@ After saving the file and exiting to the command prompt, run the following comma
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277158</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15124,6 +15642,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277159</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15232,6 +15754,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277160</ATTRIBUTE_DATA>
@@ -15343,6 +15869,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277161</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15451,6 +15981,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277162</ATTRIBUTE_DATA>
@@ -15561,6 +16095,10 @@ If the result is not "0", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277163</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15669,6 +16207,10 @@ Note: If multiple configuration files in /etc/asl are set to process the file /v
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277164</ATTRIBUTE_DATA>
@@ -15779,6 +16321,10 @@ If the result is not "tty", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277165</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15887,6 +16433,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277166</ATTRIBUTE_DATA>
@@ -16003,6 +16553,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277167</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16110,6 +16664,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277168</ATTRIBUTE_DATA>
@@ -16219,6 +16777,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277169</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16326,6 +16888,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277170</ATTRIBUTE_DATA>
@@ -16435,6 +17001,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277171</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16542,6 +17112,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277172</ATTRIBUTE_DATA>
@@ -16653,6 +17227,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277173</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16761,6 +17339,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277174</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16868,6 +17450,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277175</ATTRIBUTE_DATA>
@@ -16981,6 +17567,10 @@ Note: To reenable "Authenticated Root", boot the affected system into "Recovery"
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277176</ATTRIBUTE_DATA>
@@ -17105,6 +17695,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277177</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17227,6 +17821,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277178</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17335,6 +17933,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277179</ATTRIBUTE_DATA>
@@ -17451,6 +18053,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277180</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17559,6 +18165,10 @@ If the result is not "1", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277181</ATTRIBUTE_DATA>
@@ -17672,6 +18282,10 @@ If the result is not "true", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277182</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17779,6 +18393,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277183</ATTRIBUTE_DATA>
@@ -17888,6 +18506,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277184</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17996,6 +18618,10 @@ If the result is not "false", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-277185</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18101,6 +18727,10 @@ If the installed updates are not the latest, and the latest updates have been av
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278915</ATTRIBUTE_DATA>
@@ -18209,6 +18839,10 @@ If the operating system version is no longer supported by the vendor, this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Apple macOS 26 (Tahoe) Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279329</ATTRIBUTE_DATA>

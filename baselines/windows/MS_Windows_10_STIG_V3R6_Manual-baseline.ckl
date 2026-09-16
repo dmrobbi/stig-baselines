@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>Workstation</ROLE>
-    <ASSET_TYPE>Workstation</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>3</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MS_Windows_10_STIG_V3R6_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MS_Windows_10_STIG_V3R6_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>429abe1c-53cb-521e-aaf6-53e92f0f0704</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 6 Benchmark Date: 05 Jan 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>429abe1c-53cb-521e-aaf6-53e92f0f0704</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220697</ATTRIBUTE_DATA>
@@ -170,6 +168,10 @@ If "System type" is not "64-bit operating system…", this is a finding.</ATTRIB
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220698</ATTRIBUTE_DATA>
@@ -294,6 +296,10 @@ Run "tpm.msc" for configuration options in Windows.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220699</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -399,6 +405,10 @@ Under "System Summary", if "BIOS Mode" does not display "UEFI", this is a findin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220700</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -503,6 +513,10 @@ Under "System Summary", if "Secure Boot State" does not display "On", this is fi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220701</ATTRIBUTE_DATA>
@@ -610,6 +624,10 @@ Note: Example of documentation can be a copy of the site's CCB approved Software
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220702</ATTRIBUTE_DATA>
@@ -727,6 +745,10 @@ NOTE: An alternate encryption application may be used in lieu of BitLocker provi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220703</ATTRIBUTE_DATA>
@@ -865,6 +887,10 @@ https://docs.microsoft.com/en-us/windows/security/information-protection/bitlock
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220704</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -974,6 +1000,10 @@ Value: 0x00000006 (6) or greater</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220705</ATTRIBUTE_DATA>
@@ -1102,6 +1132,10 @@ https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defe
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220706</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1206,6 +1240,10 @@ If the "About Windows" dialog box does not display a version supported by the ve
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220707</ATTRIBUTE_DATA>
@@ -1324,6 +1362,10 @@ If there is no antivirus solution installed on the system, this is a finding.</A
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220708</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1427,6 +1469,10 @@ This does not apply to system partitions such the Recovery and EFI System Partit
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220709</ATTRIBUTE_DATA>
@@ -1532,6 +1578,10 @@ If the drop-down list box "Default operating system:" shows any operating system
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220710</ATTRIBUTE_DATA>
@@ -1652,6 +1702,10 @@ Remove any unnecessary non-system created shares.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220711</ATTRIBUTE_DATA>
@@ -1778,6 +1832,10 @@ Inactive accounts that have been reviewed and deemed to be required must be docu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220712</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1898,6 +1956,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220713</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2004,6 +2066,10 @@ If the group contains any standard user accounts used for performing normal user
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220714</ATTRIBUTE_DATA>
@@ -2117,6 +2183,10 @@ For hosted hypervisors other than Hyper-V, restrict access to create or run virt
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220715</ATTRIBUTE_DATA>
@@ -2232,6 +2302,10 @@ All of the built-in accounts may not exist on a system, depending on the Windows
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220716</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2338,6 +2412,10 @@ Ensure "Password never expires" is not checked on all active accounts.</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220717</ATTRIBUTE_DATA>
@@ -2535,6 +2613,10 @@ Successfully processed 1 files; Failed processing 0 files</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220718</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2640,6 +2722,10 @@ If an application requires IIS or a subset to be installed to function, this nee
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220719</ATTRIBUTE_DATA>
@@ -2748,6 +2834,10 @@ De-select "Simple Network Management Protocol (SNMP)".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220720</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2854,6 +2944,10 @@ De-select "Simple TCPIP Services (i.e. echo, daytime etc)".</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220721</ATTRIBUTE_DATA>
@@ -2963,6 +3057,10 @@ De-select "Telnet Client".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220722</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3071,6 +3169,10 @@ De-select "TFTP Client".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220723</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3176,6 +3278,10 @@ Note: This does not apply to server-based applications that have a requirement f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220724</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3276,6 +3382,10 @@ The configuration requirements will be determined by the applicable firewall STI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220725</ATTRIBUTE_DATA>
@@ -3392,6 +3502,10 @@ If a third-party firewall is used, configure inbound exceptions to only include 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220727</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3504,6 +3618,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220728</ATTRIBUTE_DATA>
@@ -3632,6 +3750,10 @@ De-select "Windows PowerShell 2.0".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220729</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3759,6 +3881,10 @@ De-select "SMB 1.0/CIFS File Sharing Support".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220730</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3873,6 +3999,10 @@ The system must be restarted for the change to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220731</ATTRIBUTE_DATA>
@@ -3989,6 +4119,10 @@ The system must be restarted for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220732</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4091,6 +4225,10 @@ If the "Startup Type" is not "Disabled" or the "Status" is "Running", this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220733</ATTRIBUTE_DATA>
@@ -4197,6 +4335,10 @@ If any unresolved SIDs exist and are not for currently valid accounts or groups,
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220734</ATTRIBUTE_DATA>
@@ -4319,6 +4461,10 @@ Steps to create an Intune policy:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220736</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4424,6 +4570,10 @@ Ensure "Alert me when a new Bluetooth device wants to connect" is checked.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220737</ATTRIBUTE_DATA>
@@ -4538,6 +4688,10 @@ Implement technical measures where feasible such as removal of applications or u
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220738</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4638,6 +4792,10 @@ If no such documented policy or procedure is in place, this is a finding.</ATTRI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220739</ATTRIBUTE_DATA>
@@ -4747,6 +4905,10 @@ A value of "0" is also acceptable, requiring an administrator to unlock the acco
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220740</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4850,6 +5012,10 @@ If the "Account lockout threshold" is "0" or more than "3" attempts, this is a f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220741</ATTRIBUTE_DATA>
@@ -4955,6 +5121,10 @@ If the "Reset account lockout counter after" value is less than "15" minutes, th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220742</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5058,6 +5228,10 @@ If the value for "Enforce password history" is less than "24" passwords remember
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220743</ATTRIBUTE_DATA>
@@ -5163,6 +5337,10 @@ If the value for the "Maximum password age" is greater than "60" days, this is a
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220744</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5267,6 +5445,10 @@ If the value for the "Minimum password age" is less than "1" day, this is a find
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220745</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5370,6 +5552,10 @@ If the value for the "Minimum password length," is less than "14" characters, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220746</ATTRIBUTE_DATA>
@@ -5477,6 +5663,10 @@ If the site is using a password filter that requires this setting be set to "Dis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220747</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5580,6 +5770,10 @@ If the value for "Store password using reversible encryption" is not set to "Dis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220748</ATTRIBUTE_DATA>
@@ -5690,6 +5884,10 @@ Account Logon &gt;&gt; Credential Validation - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220749</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5798,6 +5996,10 @@ Account Logon &gt;&gt; Credential Validation - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220750</ATTRIBUTE_DATA>
@@ -5908,6 +6110,10 @@ Account Management &gt;&gt; Security Group Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220751</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6016,6 +6222,10 @@ Account Management &gt;&gt; User Account Management - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220752</ATTRIBUTE_DATA>
@@ -6126,6 +6336,10 @@ Account Management &gt;&gt; User Account Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220753</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6235,6 +6449,10 @@ Detailed Tracking &gt;&gt; Plug and Play Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220754</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6343,6 +6561,10 @@ Detailed Tracking &gt;&gt; Process Creation - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220755</ATTRIBUTE_DATA>
@@ -6455,6 +6677,10 @@ Logon/Logoff &gt;&gt; Account Lockout - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220756</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6563,6 +6789,10 @@ Logon/Logoff &gt;&gt; Group Membership - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220757</ATTRIBUTE_DATA>
@@ -6673,6 +6903,10 @@ Logon/Logoff &gt;&gt; Logoff - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220758</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6781,6 +7015,10 @@ Logon/Logoff &gt;&gt; Logon - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220759</ATTRIBUTE_DATA>
@@ -6891,6 +7129,10 @@ Logon/Logoff &gt;&gt; Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220760</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6999,6 +7241,10 @@ Logon/Logoff &gt;&gt; Special Logon - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220761</ATTRIBUTE_DATA>
@@ -7113,6 +7359,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220762</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7224,6 +7474,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220763</ATTRIBUTE_DATA>
@@ -7338,6 +7592,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220764</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7451,6 +7709,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220765</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7561,6 +7823,10 @@ Some virtual machines may generate excessive audit events for access to the virt
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220766</ATTRIBUTE_DATA>
@@ -7673,6 +7939,10 @@ Some virtual machines may generate excessive audit events for access to the virt
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220767</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7781,6 +8051,10 @@ Policy Change &gt;&gt; Audit Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220768</ATTRIBUTE_DATA>
@@ -7891,6 +8165,10 @@ Policy Change &gt;&gt; Authentication Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220769</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7999,6 +8277,10 @@ Policy Change &gt;&gt; Authorization Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220770</ATTRIBUTE_DATA>
@@ -8109,6 +8391,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220771</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8217,6 +8503,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220772</ATTRIBUTE_DATA>
@@ -8327,6 +8617,10 @@ System &gt;&gt; IPSec Driver - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220773</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8435,6 +8729,10 @@ System &gt;&gt; Other System Events - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220774</ATTRIBUTE_DATA>
@@ -8545,6 +8843,10 @@ System &gt;&gt; Other System Events - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220775</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8653,6 +8955,10 @@ System &gt;&gt; Security State Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220776</ATTRIBUTE_DATA>
@@ -8763,6 +9069,10 @@ System &gt;&gt; Security System Extension - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220777</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8872,6 +9182,10 @@ System &gt;&gt; System Integrity - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220778</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8980,6 +9294,10 @@ System &gt;&gt; System Integrity - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220779</ATTRIBUTE_DATA>
@@ -9092,6 +9410,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220780</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9203,6 +9525,10 @@ If the system is configured to send audit records directly to an audit server, d
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220781</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9313,6 +9639,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220782</ATTRIBUTE_DATA>
@@ -9431,6 +9761,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220783</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9547,6 +9881,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220784</ATTRIBUTE_DATA>
@@ -9665,6 +10003,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220786</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9773,6 +10115,10 @@ Policy Change  &gt;&gt; Other Policy Change Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220787</ATTRIBUTE_DATA>
@@ -9883,6 +10229,10 @@ Logon/Logoff  &gt;&gt; Other Logon/Logoff Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220788</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9991,6 +10341,10 @@ Logon/Logoff  &gt;&gt; Other Logon/Logoff Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220789</ATTRIBUTE_DATA>
@@ -10103,6 +10457,10 @@ Object Access  &gt;&gt; Detailed File Share - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220790</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10212,6 +10570,10 @@ Policy Change  &gt;&gt; MPSSVC Rule-Level Policy Change - Success</ATTRIBUTE_DAT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220791</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10320,6 +10682,10 @@ Policy Change  &gt;&gt; MPSSVC Rule-Level Policy Change - Failure</ATTRIBUTE_DAT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220792</ATTRIBUTE_DATA>
@@ -10431,6 +10797,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220793</ATTRIBUTE_DATA>
@@ -10561,6 +10931,10 @@ Value Data: Deny</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220794</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10667,6 +11041,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220795</ATTRIBUTE_DATA>
@@ -10777,6 +11155,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220796</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10885,6 +11267,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220797</ATTRIBUTE_DATA>
@@ -10995,6 +11381,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220798</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11103,6 +11493,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220799</ATTRIBUTE_DATA>
@@ -11217,6 +11611,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220800</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11327,6 +11725,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220801</ATTRIBUTE_DATA>
@@ -11442,6 +11844,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220802</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11551,6 +11957,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220803</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11657,6 +12067,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220805</ATTRIBUTE_DATA>
@@ -11767,6 +12181,10 @@ NistP256</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220806</ATTRIBUTE_DATA>
@@ -11885,6 +12303,10 @@ Under "Options", set "Minimize Policy Options" to "3 = Prevent Wi-Fi When on Eth
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220807</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11991,6 +12413,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220808</ATTRIBUTE_DATA>
@@ -12103,6 +12529,10 @@ v1507 LTSB does not include this group policy setting.  It may be configured thr
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220809</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12212,6 +12642,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220810</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12320,6 +12754,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220811</ATTRIBUTE_DATA>
@@ -12474,6 +12912,10 @@ https://technet.microsoft.com/en-us/itpro/windows/keep-secure/credential-guard-r
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220812</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12615,6 +13057,10 @@ https://docs.microsoft.com/en-us/windows/access-protection/credential-guard/cred
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220813</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12734,6 +13180,10 @@ If this needs to be corrected configure the policy value for Computer Configurat
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220814</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12840,6 +13290,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220815</ATTRIBUTE_DATA>
@@ -12948,6 +13402,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220816</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13055,6 +13513,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220817</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13161,6 +13623,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220818</ATTRIBUTE_DATA>
@@ -13280,6 +13746,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220819</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13386,6 +13856,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220820</ATTRIBUTE_DATA>
@@ -13498,6 +13972,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220821</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13604,6 +14082,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220822</ATTRIBUTE_DATA>
@@ -13712,6 +14194,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220823</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13819,6 +14305,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220824</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13925,6 +14415,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220825</ATTRIBUTE_DATA>
@@ -14035,6 +14529,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220826</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14141,6 +14639,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220827</ATTRIBUTE_DATA>
@@ -14249,6 +14751,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220828</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14355,6 +14861,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220829</ATTRIBUTE_DATA>
@@ -14464,6 +14974,10 @@ Note: If the value for NoDriveTypeAutorun is entered manually, it must be entere
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220830</ATTRIBUTE_DATA>
@@ -14577,6 +15091,10 @@ The policy name is "Use enhanced anti-spoofing when available".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220831</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14686,6 +15204,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220832</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14792,6 +15314,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220833</ATTRIBUTE_DATA>
@@ -14904,6 +15430,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220834</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15015,6 +15545,10 @@ If an organization is using v1709 or later of Windows 10, this may be configured
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220835</ATTRIBUTE_DATA>
@@ -15156,6 +15690,10 @@ For standalone or nondomain-joined systems, configure using Settings &gt;&gt; Up
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220836</ATTRIBUTE_DATA>
@@ -15304,6 +15842,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220837</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15418,6 +15960,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220838</ATTRIBUTE_DATA>
@@ -15534,6 +16080,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220839</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15649,6 +16199,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220840</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15761,6 +16315,10 @@ Windows 10 includes duplicate policies for this setting. It can also be configur
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220841</ATTRIBUTE_DATA>
@@ -15875,6 +16433,10 @@ Windows 10 includes duplicate policies for this setting. It can also be configur
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220842</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15986,6 +16548,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220843</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16094,6 +16660,10 @@ Value: no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220844</ATTRIBUTE_DATA>
@@ -16208,6 +16778,10 @@ Windows 10 includes duplicate policies for this setting. It can also be configur
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220845</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16316,6 +16890,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220846</ATTRIBUTE_DATA>
@@ -16428,6 +17006,10 @@ The policy path is Computer Configuration &gt;&gt; Administrative Templates &gt;
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220847</ATTRIBUTE_DATA>
@@ -16542,6 +17124,10 @@ The policy path is Computer Configuration &gt;&gt; Administrative Templates &gt;
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220848</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16648,6 +17234,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220849</ATTRIBUTE_DATA>
@@ -16756,6 +17346,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220850</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16862,6 +17456,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220851</ATTRIBUTE_DATA>
@@ -16970,6 +17568,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220852</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17077,6 +17679,10 @@ Value: 3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220853</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17183,6 +17789,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220854</ATTRIBUTE_DATA>
@@ -17299,6 +17909,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220855</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17405,6 +18019,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220856</ATTRIBUTE_DATA>
@@ -17513,6 +18131,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220857</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17619,6 +18241,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220858</ATTRIBUTE_DATA>
@@ -17735,6 +18361,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220859</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17841,6 +18471,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220860</ATTRIBUTE_DATA>
@@ -17951,6 +18585,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220862</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18058,6 +18696,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220863</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18164,6 +18806,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220865</ATTRIBUTE_DATA>
@@ -18280,6 +18926,10 @@ Use of a Privileged Access Workstation (PAW) and adherence to the Clean Source p
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220866</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18386,6 +19036,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220867</ATTRIBUTE_DATA>
@@ -18494,6 +19148,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220868</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18600,6 +19258,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220869</ATTRIBUTE_DATA>
@@ -18721,6 +19383,10 @@ The requirement is NA if the policy value for Computer Configuration &gt;&gt; Ad
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220870</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18829,6 +19495,10 @@ If this needs to be corrected configure the policy value for Computer Configurat
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220871</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18936,6 +19606,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220872</ATTRIBUTE_DATA>
@@ -19046,6 +19720,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220902</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19153,6 +19831,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220903</ATTRIBUTE_DATA>
@@ -19327,6 +20009,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220904</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19470,6 +20156,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220905</ATTRIBUTE_DATA>
@@ -19619,6 +20309,10 @@ The certificates can be installed using the InstallRoot tool. The tool and user 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220906</ATTRIBUTE_DATA>
@@ -19775,6 +20469,10 @@ The certificates can be installed using the InstallRoot tool. The tool and user 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220907</ATTRIBUTE_DATA>
@@ -19949,6 +20647,10 @@ S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220909</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20052,6 +20754,10 @@ If the value for "Accounts: Guest account status" is not set to "Disabled", this
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220910</ATTRIBUTE_DATA>
@@ -20160,6 +20866,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220911</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20264,6 +20974,10 @@ If the value for "Accounts: Rename administrator account" is set to "Administrat
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220912</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20367,6 +21081,10 @@ If the value for "Accounts: Rename guest account" is set to "Guest", this is a f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220913</ATTRIBUTE_DATA>
@@ -20475,6 +21193,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220914</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20581,6 +21303,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220915</ATTRIBUTE_DATA>
@@ -20689,6 +21415,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220916</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20796,6 +21526,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220917</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20902,6 +21636,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220918</ATTRIBUTE_DATA>
@@ -21014,6 +21752,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Windows Settings 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220919</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21123,6 +21865,10 @@ Warning: This setting may prevent a system from being joined to a domain if not 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220920</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21229,6 +21975,10 @@ Value: 0x00000384 (900) (or less, excluding "0" which is effectively disabled)</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220921</ATTRIBUTE_DATA>
@@ -21364,6 +22114,10 @@ By using this IS (which includes any device attached to this IS), you consent to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220922</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21476,6 +22230,10 @@ If a site-defined title is used, it can in no case contravene or modify the lang
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220923</ATTRIBUTE_DATA>
@@ -21592,6 +22350,10 @@ This setting only applies to domain-joined systems, however, it is configured by
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220924</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21704,6 +22466,10 @@ This can be left not configured or set to "No action" on workstations with the f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220925</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21810,6 +22576,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220926</ATTRIBUTE_DATA>
@@ -21918,6 +22688,10 @@ Value:  0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220927</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22025,6 +22799,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220928</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22128,6 +22906,10 @@ If the value for "Network access: Allow anonymous SID/Name translation" is not s
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220929</ATTRIBUTE_DATA>
@@ -22236,6 +23018,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220930</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22342,6 +23128,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220931</ATTRIBUTE_DATA>
@@ -22450,6 +23240,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220932</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22556,6 +23350,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220933</ATTRIBUTE_DATA>
@@ -22682,6 +23480,10 @@ The "Security descriptor:" must be populated with "O:BAG:BAD:(A;;RC;;;BA) for th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220934</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22789,6 +23591,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220935</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22895,6 +23701,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220936</ATTRIBUTE_DATA>
@@ -23007,6 +23817,10 @@ Future encryption types</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220937</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23113,6 +23927,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220938</ATTRIBUTE_DATA>
@@ -23221,6 +24039,10 @@ Value: 5</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220939</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23327,6 +24149,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220940</ATTRIBUTE_DATA>
@@ -23435,6 +24261,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220941</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23541,6 +24371,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220942</ATTRIBUTE_DATA>
@@ -23651,6 +24485,10 @@ Warning: Clients with this setting enabled will not be able to communicate via d
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220943</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23757,6 +24595,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220944</ATTRIBUTE_DATA>
@@ -23865,6 +24707,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220945</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23971,6 +24817,10 @@ Value: 2 (Prompt for consent on the secure desktop)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220946</ATTRIBUTE_DATA>
@@ -24096,6 +24946,10 @@ Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Cryptography\Calais\SmartCards</A
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220947</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24202,6 +25056,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220948</ATTRIBUTE_DATA>
@@ -24310,6 +25168,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220949</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24416,6 +25278,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220950</ATTRIBUTE_DATA>
@@ -24524,6 +25390,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220951</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24630,6 +25500,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220952</ATTRIBUTE_DATA>
@@ -24752,6 +25626,10 @@ https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview#win
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220954</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24858,6 +25736,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220955</ATTRIBUTE_DATA>
@@ -24974,6 +25856,10 @@ If this needs to be corrected, configure the policy value for User Configuration
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220956</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25079,6 +25965,10 @@ If any groups or accounts are granted the "Access Credential Manager as a truste
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220957</ATTRIBUTE_DATA>
@@ -25200,6 +26090,10 @@ Remote Desktop Users</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220958</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25305,6 +26199,10 @@ If any groups or accounts (to include administrators), are granted the "Act as p
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220959</ATTRIBUTE_DATA>
@@ -25419,6 +26317,10 @@ Users</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220960</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25528,6 +26430,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220961</ATTRIBUTE_DATA>
@@ -25645,6 +26551,10 @@ NT SERVICE\autotimesvc is added in v1909 cumulative update.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220962</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25755,6 +26665,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220963</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25860,6 +26774,10 @@ If any groups or accounts are granted the "Create a token object" user right, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220964</ATTRIBUTE_DATA>
@@ -25977,6 +26895,10 @@ SERVICE</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220965</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26082,6 +27004,10 @@ If any groups or accounts are granted the "Create permanent shared objects" user
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220966</ATTRIBUTE_DATA>
@@ -26195,6 +27121,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220967</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26304,6 +27234,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220968</ATTRIBUTE_DATA>
@@ -26442,6 +27376,10 @@ Note: "Local account" is a built-in security group used to assign user rights an
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220969</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26561,6 +27499,10 @@ Domain Admin Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220970</ATTRIBUTE_DATA>
@@ -26683,6 +27625,10 @@ Domain Admins Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220971</ATTRIBUTE_DATA>
@@ -26812,6 +27758,10 @@ Guests Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220972</ATTRIBUTE_DATA>
@@ -26956,6 +27906,10 @@ Note: "Local account" is a built-in security group used to assign user rights an
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220973</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27061,6 +28015,10 @@ If any groups or accounts are granted the "Enable computer and user accounts to 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220974</ATTRIBUTE_DATA>
@@ -27171,6 +28129,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220975</ATTRIBUTE_DATA>
@@ -27289,6 +28251,10 @@ SERVICE</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220976</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27399,6 +28365,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220977</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27504,6 +28474,10 @@ If any groups or accounts are granted the "Lock pages in memory" user right, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220978</ATTRIBUTE_DATA>
@@ -27617,6 +28591,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220979</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27726,6 +28704,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220980</ATTRIBUTE_DATA>
@@ -27837,6 +28819,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220981</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27946,6 +28932,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220982</ATTRIBUTE_DATA>
@@ -28057,6 +29047,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-220983</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28166,6 +29160,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-250319</ATTRIBUTE_DATA>
@@ -28287,6 +29285,10 @@ Value: RequireMutualAuthentication=1, RequireIntegrity=1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252896</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28397,6 +29399,10 @@ Specify the Transcript output directory to point to a Central Log Server or anot
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-252903</ATTRIBUTE_DATA>
@@ -28533,6 +29539,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-256894</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28642,6 +29652,10 @@ Set the policy value for "Computer Configuration/Administrative Templates/Window
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257589</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28746,6 +29760,10 @@ If "Audit Process Creation" is not set to "Failure", this is a finding.</ATTRIBU
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257593</ATTRIBUTE_DATA>
@@ -28853,6 +29871,10 @@ If the command displays any results, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-268315</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28957,6 +29979,10 @@ Get-AppxPackage -AllUsers *CoPilot* | Remove-AppxPackage -AllUsers</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-268319</ATTRIBUTE_DATA>
@@ -29070,6 +30096,10 @@ This is NA for standalone, nondomain-joined systems.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278918</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29172,6 +30202,10 @@ If "Audit File System" is not set to "Failure", this is a finding.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278919</ATTRIBUTE_DATA>
@@ -29276,6 +30310,10 @@ If "Audit File System" is not set to "Success", this is a finding.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278920</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29378,6 +30416,10 @@ If "Audit Handle Manipulation" is not set to "Failure", this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278921</ATTRIBUTE_DATA>
@@ -29482,6 +30524,10 @@ If "Audit Handle Manipulation" is not set to "Success", this is a finding.</ATTR
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278922</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29584,6 +30630,10 @@ If "Audit Registry" is not set to "Success", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278923</ATTRIBUTE_DATA>
@@ -29688,6 +30738,10 @@ If "Audit Registry" is not set to "Failure", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278924</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29791,6 +30845,10 @@ If "Audit Sensitive Privilege Use" is not set to "Success", this is a finding.</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278925</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29893,6 +30951,10 @@ If "Audit Sensitive Privilege Use" is not set to "Failure", this is a finding.</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 10 Security Technical Implementation Guide :: v3r6</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279687</ATTRIBUTE_DATA>

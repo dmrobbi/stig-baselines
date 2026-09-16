@@ -1,0 +1,22 @@
+---
+# Per-target platform mapping. The role detects the OS and maps the host
+# to the matching stig-baselines artifacts; override with
+# stig_platform_override where auto-detection is wrong (e.g. Rocky).
+
+stig_eval_repo_root: "{{ role_path }}/../../../.."
+# Eval artifacts land OUTSIDE the repo (three dirnames up from the
+# playbook dir = the repo's parent) — evaluated CKLs are environment
+# evidence, never committed to the baseline repo.
+stig_eval_dest_dir: "{{ playbook_dir | realpath }}/../../../stig-eval-results"
+stig_eval_scap_dir: "{{ stig_eval_repo_root }}/sources/scap"
+stig_eval_baselines_dir: "{{ stig_eval_repo_root }}/baselines"
+
+# OSCAP profile for RedHat-family targets (full STIG by mission category).
+# For a quick smoke pass set stig_eval_rules (list of rule ids) instead —
+# oscap evaluates just those and everything else grades Not_Reviewed.
+stig_eval_profile: "xccdf_mil.disa.stig_profile_MAC-2_Public"
+stig_eval_rules: []
+
+# Windows targets need the ansible.windows collection and WinRM setup
+# (see the role README). macOS targets use plain SSH (posix).
+stig_eval_windows_collection_required: true

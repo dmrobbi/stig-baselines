@@ -1,0 +1,22 @@
+---
+# macOS: the DISA macOS STIGs are manual checklists. This workflow is a
+# control-node handoff over plain SSH (posix) — the assessor works the
+# baseline CKL in STIG Viewer. Per-rule evidence collection (security
+# commands, profiles) can be added here when needed.
+
+- name: Hand the assessor the macOS baseline CKLs
+  ansible.builtin.copy:
+    src: "{{ item }}"
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/"
+    mode: "0644"
+  delegate_to: localhost
+  become: false
+  loop:
+    - "{{ stig_eval_baselines_dir }}/macos/Apple_macOS_15_Sequoia_STIG_V1R6_Manual-baseline.ckl"
+    - "{{ stig_eval_baselines_dir }}/macos/Apple_macOS_26_Tahoe_STIG_V1R1_Manual-baseline.ckl"
+
+- name: Note the manual workflow
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      DISA macOS STIGs are manual — two baselines committed (15 Sequoia
+      V1R6, 26 Tahoe V1R1); bulk-apply results with tools/csv2ckl.py.

@@ -231,6 +231,12 @@ def load_results_map(results_path):
         if ln(rr.tag) != "rule-result":
             continue
         rid = rr.get("idref", "")
+        # 2026-09-16: oscap results from a SCAP datastream carry fully-
+        # qualified rule ids (xccdf_mil.disa.stig_rule_SV-…), while the
+        # manual XCCDF's Rule_ID STIG_DATA field is the bare SV id —
+        # normalize so the --results mapping matches either form.
+        if "stig_rule_" in rid:
+            rid = rid.rsplit("stig_rule_", 1)[-1]
         res = text_of(first(rr, "result")).lower()
         if rid and res:
             out[rid] = RESULT_TO_STATUS.get(res, "Not_Reviewed")

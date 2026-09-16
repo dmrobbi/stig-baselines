@@ -1,0 +1,40 @@
+# Cluster inventory example — mixed OS targets for stig-eval.yml.
+#
+# Key-based auth preferred; passwords (SSH/sudo/become) belong in an
+# ansible-vault file, never plaintext in the inventory.
+all:
+  children:
+    rhel:
+      hosts:
+        rhel8-web01:
+          ansible_host: 10.0.0.11
+        rhel9-db01:
+          ansible_host: 10.0.0.12
+      vars:
+        ansible_user: scanuser
+    ubuntu:
+      hosts:
+        ubuntu22-app01:
+          ansible_host: 10.0.0.21
+      vars:
+        ansible_user: scanuser
+    windows:
+      hosts:
+        win2022-dc01:
+          ansible_host: 10.0.0.31
+      vars:
+        ansible_user: administrator
+        ansible_connection: winrm
+        ansible_winrm_server_cert_validation: ignore  # lab only — use a real CA
+    macos:
+      hosts:
+        mac-assessor-01:
+          ansible_host: 10.0.0.41
+      vars:
+        ansible_user: assessor
+    # vSphere targets (ESXi/vCenter) are NOT managed by this role — the
+    # vSphere 6.7 STIGs are manual; see docs/VSPHERE67-EVALUATION.md.
+  vars:
+    # ansible_become: true
+    # ansible_become_method: sudo
+    # ansible_become_pass: from ansible-vault (or NOPASSWD sudoers — see examples/sudoers/)

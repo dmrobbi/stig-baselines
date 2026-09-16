@@ -6,3 +6,4 @@ sources/**/*.zip
 *.zip
 !sources/zips/*.zip
 __pycache__/
+dist/

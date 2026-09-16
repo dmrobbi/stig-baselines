@@ -1,0 +1,70 @@
+---
+# Run an OpenSCAP CIS Level-2 scan on STIGed targets over SSH, with
+# root via `become`, and fetch the XCCDF results + HTML report back.
+#
+# Inventory shape (inventory-example.yml):
+#   stig_targets:
+#     hosts:
+#       target-a:
+#         ansible_host: 192.168.1.50
+#       target-b:
+#         ansible_host: 192.168.1.51
+#   vars:
+#     ansible_user: scanuser
+#     ansible_ssh_pass: <from ansible-vault — never plaintext>
+#     ansible_become_pass: <sudo password, or NOPASSWD in sudoers>
+#
+# Requires on each target: openscap-scanner + the SCAP datastream
+# (dnf install -y openscap-scanner scap-security-guide   # Rocky/RHEL
+#  apt-get install -y openscap-scanner ssg-debian12-ds.xml  # Debian/Ubuntu — package name varies)
+#
+# Run: ansible-playbook -i inventory-example.yml sudo-remote-scan.yml
+- name: OpenSCAP CIS L2 scan over SSH with sudo
+  hosts: stig_targets
+  become: true
+  become_method: sudo
+  gather_facts: false
+  vars:
+    scan_day: "{{ lookup('pipe', 'date -u +%Y-%m-%d') }}"
+    scan_dir: /tmp/soc-remote-scan
+    oscap_profile: xccdf_org.ssgproject.content_profile_cis
+    oscap_ds: /usr/share/xml/scap/ssg/content/ssg-{{ ansible_distribution | lower }}{{ ansible_distribution_major_version }}-ds.xml
+    local_results: scan-results/{{ inventory_hostname }}-results.xml
+    local_report: scan-results/{{ inventory_hostname }}-report.html
+  tasks:
+    - name: ensure the scan dir exists on the target
+      ansible.builtin.file:
+        path: "{{ scan_dir }}"
+        state: directory
+        mode: "0700"
+
+    - name: run oscap XCCDF evaluation as root
+      ansible.builtin.command: >
+        oscap xccdf eval
+        --profile {{ oscap_profile }}
+        --results {{ scan_dir }}/results.xml
+        --report {{ scan_dir }}/report.html
+        {{ oscap_ds }}
+      register: oscap_eval
+      changed_when: false
+      failed_when: false
+
+    - name: fetch the XCCDF results back
+      ansible.builtin.fetch:
+        src: "{{ scan_dir }}/results.xml"
+        dest: "{{ local_results }}/"
+        flat: true
+      vars:
+        local_results: scan-results
+
+    - name: fetch the HTML report back
+      ansible.builtin.fetch:
+        src: "{{ scan_dir }}/report.html"
+        dest: "{{ local_report }}/"
+        flat: true
+      vars:
+        local_report: scan-reports
+
+    - name: show the oscap exit code (0 pass, 1 findings, 2 errors)
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }}: oscap rc={{ oscap_eval.rc }}"

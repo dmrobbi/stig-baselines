@@ -9,7 +9,7 @@ that opens in DISA STIG Viewer 3.x.
 | `baselines/rhel{7,8,9}/U_RHEL_*-baseline.ckl` | OS STIG | `sources/scap/` datastreams (see version skew note) |
 | `baselines/firefox/U_MOZ_Firefox_STIG_V6R8_Manual-baseline.ckl` | Firefox STIG | none — manual only |
 | `baselines/rhel*/U_*_plus_Firefox_V6R8-baseline.ckl` | OS + Firefox merged | OS part via datastream; Firefox manual |
-| `baselines/vsphere67/*.ckl` | ESXi 6.7 / vCenter 6.7 | none — manual only |
+| `baselines/vsphere67/*.ckl` | ESXi 6.7 / vCenter 6.7 | none — manual only; workflow in [docs/VSPHERE67-EVALUATION.md](docs/VSPHERE67-EVALUATION.md) |
 
 ## Option A — Manual assessment (STIG Viewer)
 

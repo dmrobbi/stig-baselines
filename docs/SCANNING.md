@@ -4,6 +4,16 @@ Three ways to work each checklist: manual assessment, OpenSCAP automation, or
 Tenable/Nessus. All paths end with the same artifact: a CKL with per-rule statuses
 that opens in DISA STIG Viewer 3.x.
 
+## Offline / air-gapped use
+
+Everything the workflow needs is committed: baseline CKLs, source XCCDFs, the
+original DISA bundles with PDFs (`sources/zips/`), the SCAP benchmark XMLs
+(`sources/scap/`), the CKL schema (`tools/schema/`), and all tools. Clone the
+repo (from the IDM GitLab over the LAN) and no internet access is required —
+the only external items are the **STIG Viewer installer** (2.x/3.x, DoD-gated
+download — side-load it) and a Java runtime. Regeneration and validation work
+fully offline: `make baselines && make validate`.
+
 | CKL | STIG | Automated check source |
 |-----|------|------------------------|
 | `baselines/rhel{7,8,9}/U_RHEL_*-baseline.ckl` | OS STIG | `sources/scap/` datastreams (see version skew note) |

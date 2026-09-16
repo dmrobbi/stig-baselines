@@ -7,6 +7,11 @@ point for assessment work.
 
 **Repo:** https://idm.wezzel.com/crab-meat-repos/stig-baselines
 
+**vSphere 6.7 assessment:** see
+[docs/VSPHERE67-EVALUATION.md](docs/VSPHERE67-EVALUATION.md) —
+getting the files, prepping ESXi/vCenter targets, the starter command
+kit, and bulk-applying statuses from a CSV.
+
 ## Baselines
 
 | Platform | STIG release | Benchmark date | Rules | CKL |

@@ -1,0 +1,18 @@
+# Inventory example — STIG targets for the sudo-remote-scan playbook
+#
+# ansible_user: the SSH login (NOPASSWD sudo for oscap recommended)
+# ansible_ssh_pass: SSH password (use ansible-vault; key-based auth preferred)
+# ansible_become_pass: sudo password (skip if NOPASSWD)
+#
+# Preferred: key-based auth — put the scanner's PUBLIC key in each
+# target's /home/<user>/.ssh/authorized_keys (see examples/ssh/).
+stig_targets:
+  hosts:
+    target-a:
+      ansible_host: 192.168.1.50
+    target-b:
+      ansible_host: 192.168.1.51
+  vars:
+    ansible_user: scanuser
+    # ansible_ssh_pass: <vaulted>
+    # ansible_become_pass: <vaulted>

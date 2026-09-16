@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>Member Server</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>3</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MS_Windows_Server_2019_STIG_V3R9_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MS_Windows_Server_2019_STIG_V3R9_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>cfdd8a9d-f5eb-533e-b9c4-d80a2efb44eb</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 9 Benchmark Date: 01 Jul 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>cfdd8a9d-f5eb-533e-b9c4-d80a2efb44eb</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205624</ATTRIBUTE_DATA>
@@ -191,6 +189,10 @@ Delete any temporary user accounts that are no longer necessary.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205625</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -305,6 +307,10 @@ Account Management &gt;&gt; Security Group Management - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205626</ATTRIBUTE_DATA>
@@ -421,6 +427,10 @@ Account Management &gt;&gt; User Account Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205627</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -535,6 +545,10 @@ Account Management &gt;&gt; User Account Management - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205628</ATTRIBUTE_DATA>
@@ -653,6 +667,10 @@ Account Management &gt;&gt; Computer Account Management - Success</ATTRIBUTE_DAT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205629</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -763,6 +781,10 @@ If "LockoutBadCount" equals "0" or is greater than "3" in the file, this is a fi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205630</ATTRIBUTE_DATA>
@@ -876,6 +898,10 @@ If "ResetLockoutCount" is less than "15" in the file, this is a finding.</ATTRIB
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205631</ATTRIBUTE_DATA>
@@ -1014,6 +1040,10 @@ By using this IS (which includes any device attached to this IS), you consent to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205632</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1131,6 +1161,10 @@ If an organization-defined title is used, it can in no case contravene or modify
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205633</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1239,6 +1273,10 @@ Value: 0x00000384 (900) (or less, excluding "0" which is effectively disabled)</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205634</ATTRIBUTE_DATA>
@@ -1355,6 +1393,10 @@ Logon/Logoff &gt;&gt; Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205635</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1470,6 +1512,10 @@ Logon/Logoff &gt;&gt; Logon - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205636</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1578,6 +1624,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205637</ATTRIBUTE_DATA>
@@ -1688,6 +1738,10 @@ Value: 0x00000003 (3)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205638</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1797,6 +1851,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205639</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1905,6 +1963,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205640</ATTRIBUTE_DATA>
@@ -2023,6 +2085,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205641</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2140,6 +2206,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205642</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2256,6 +2326,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205643</ATTRIBUTE_DATA>
@@ -2390,6 +2464,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205644</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2497,6 +2575,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205645</ATTRIBUTE_DATA>
@@ -2616,6 +2698,10 @@ If no certificate for the domain controller exists in the right pane, this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205646</ATTRIBUTE_DATA>
@@ -2747,6 +2833,10 @@ https://www.cyber.mil/pki-pke/tools-configuration-files.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205647</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2868,6 +2958,10 @@ If the mappings are to certificates issued by a CA authorized by the Component's
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205648</ATTRIBUTE_DATA>
@@ -3044,6 +3138,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205649</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3196,6 +3294,10 @@ The FBCA Cross-Certificate Remover Tool and User Guide are available on Cyber Ex
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205650</ATTRIBUTE_DATA>
@@ -3360,6 +3462,10 @@ The FBCA Cross-Certificate Remover Tool and User Guide are available on Cyber Ex
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205651</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3472,6 +3578,10 @@ Value:  0x00000002 (2)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205652</ATTRIBUTE_DATA>
@@ -3588,6 +3698,10 @@ Note: If an external password filter is in use that enforces all four character 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205653</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3699,6 +3813,10 @@ If "ClearTextPassword" equals "1" in the file, this is a finding.</ATTRIBUTE_DAT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205654</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3806,6 +3924,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205655</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3912,6 +4034,10 @@ Value:  0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205656</ATTRIBUTE_DATA>
@@ -4023,6 +4149,10 @@ If "MinimumPasswordAge" equals "0" in the file, this is a finding.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205657</ATTRIBUTE_DATA>
@@ -4147,6 +4277,10 @@ https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview#win
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205658</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4266,6 +4400,10 @@ Uncheck "Password never expires" for all enabled user accounts in Active Directo
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205659</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4379,6 +4517,10 @@ If "MaximumPasswordAge" is greater than "60" or equal to "0" in the file, this i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205660</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4490,6 +4632,10 @@ If "PasswordHistorySize" is less than "24" in the file, this is a finding.</ATTR
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205661</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4592,6 +4738,10 @@ If such a policy does not exist or has not been implemented, this is a finding.<
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205662</ATTRIBUTE_DATA>
@@ -4704,6 +4854,10 @@ If "MinimumPasswordLength" is less than "14" in the file, this is a finding.</AT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205663</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4810,6 +4964,10 @@ This does not apply to system partitions such the Recovery and EFI System Partit
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205664</ATTRIBUTE_DATA>
@@ -4927,6 +5085,10 @@ The default is for the "Everyone" group to be given "Print" permission.
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205665</ATTRIBUTE_DATA>
@@ -5066,6 +5228,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205666</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5187,6 +5353,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205667</ATTRIBUTE_DATA>
@@ -5313,6 +5483,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205668</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5438,6 +5612,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205669</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5556,6 +5734,10 @@ If any SIDs are granted the "SeDenyServiceLogonRight" user right, this is a find
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205670</ATTRIBUTE_DATA>
@@ -5681,6 +5863,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205671</ATTRIBUTE_DATA>
@@ -5815,6 +6001,10 @@ The application account must meet requirements for application account passwords
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205672</ATTRIBUTE_DATA>
@@ -5967,6 +6157,10 @@ Note: These are built-in security groups. "Local account" is more restrictive bu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205673</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6109,6 +6303,10 @@ All Systems:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205674</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6243,6 +6441,10 @@ Domain systems:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205675</ATTRIBUTE_DATA>
@@ -6386,6 +6588,10 @@ All Systems:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205676</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6515,6 +6721,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205677</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6619,6 +6829,10 @@ The PowerShell command "Get-WindowsFeature | Where-Object {$_. installstate -eq 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205678</ATTRIBUTE_DATA>
@@ -6739,6 +6953,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205679</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6857,6 +7075,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205680</ATTRIBUTE_DATA>
@@ -6977,6 +7199,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205681</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7095,6 +7321,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205682</ATTRIBUTE_DATA>
@@ -7224,6 +7454,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205683</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7337,6 +7571,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205684</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7449,6 +7687,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205685</ATTRIBUTE_DATA>
@@ -7569,6 +7811,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205686</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7677,6 +7923,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205687</ATTRIBUTE_DATA>
@@ -7787,6 +8037,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205688</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7895,6 +8149,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205689</ATTRIBUTE_DATA>
@@ -8005,6 +8263,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205690</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8111,6 +8373,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205691</ATTRIBUTE_DATA>
@@ -8220,6 +8486,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205692</ATTRIBUTE_DATA>
@@ -8331,6 +8601,10 @@ Windows 2019 includes duplicate policies for this setting. It can also be config
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205693</ATTRIBUTE_DATA>
@@ -8447,6 +8721,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205694</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8553,6 +8831,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205695</ATTRIBUTE_DATA>
@@ -8679,6 +8961,10 @@ If any applications are installed that are not required for the domain controlle
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205696</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8787,6 +9073,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205697</ATTRIBUTE_DATA>
@@ -8911,6 +9201,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205698</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9030,6 +9324,10 @@ Click "Next" and "Remove" as prompted.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205699</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9134,6 +9432,10 @@ Document required shared accounts with the ISSO. Documentation must include the 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205700</ATTRIBUTE_DATA>
@@ -9253,6 +9555,10 @@ The password required flag can be set by entering the following on a command lin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205701</ATTRIBUTE_DATA>
@@ -9387,6 +9693,10 @@ Check "Smart card is required for interactive logon" in the "Account Options" ar
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205702</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9501,6 +9811,10 @@ If the "Enforce user logon restrictions" is not set to "Enabled", this is a find
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205703</ATTRIBUTE_DATA>
@@ -9617,6 +9931,10 @@ If the value for "Maximum lifetime for service ticket" is "0" or greater than "6
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205704</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9731,6 +10049,10 @@ If the value for "Maximum lifetime for user ticket" is "0" or greater than "10" 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205705</ATTRIBUTE_DATA>
@@ -9847,6 +10169,10 @@ If the "Maximum lifetime for user ticket renewal" is greater than "7" days, this
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205706</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9961,6 +10287,10 @@ If the "Maximum tolerance for computer clock synchronization" is greater than "5
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205707</ATTRIBUTE_DATA>
@@ -10096,6 +10426,10 @@ Inactive accounts that have been reviewed and deemed to be required must be docu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205708</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10211,6 +10545,10 @@ Note: Organizations with domain controllers running earlier versions of Windows 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205709</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10321,6 +10659,10 @@ If "EnableGuestAccount" equals "1" in the file, this is a finding.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205710</ATTRIBUTE_DATA>
@@ -10449,6 +10791,10 @@ Local accounts can be configured to expire with the command "Net user [username]
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205711</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10555,6 +10901,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205712</ATTRIBUTE_DATA>
@@ -10663,6 +11013,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205713</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10770,6 +11124,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205714</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10876,6 +11234,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205715</ATTRIBUTE_DATA>
@@ -10992,6 +11354,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205716</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11100,6 +11466,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205717</ATTRIBUTE_DATA>
@@ -11213,6 +11583,10 @@ The more secure option for this setting, "Prompt for credentials on the secure d
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205718</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11321,6 +11695,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205719</ATTRIBUTE_DATA>
@@ -11431,6 +11809,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205720</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11539,6 +11921,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205721</ATTRIBUTE_DATA>
@@ -11657,6 +12043,10 @@ Remove any unnecessary non-system-created shares.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205722</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11763,6 +12153,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205723</ATTRIBUTE_DATA>
@@ -11881,6 +12275,10 @@ If user shares are located on the same logical partition as the directory server
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205724</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11988,6 +12386,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205725</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12094,6 +12496,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205726</ATTRIBUTE_DATA>
@@ -12244,6 +12650,10 @@ Enter "q" at the "ldap policy:" and "ntdsutil:" prompts to exit.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205727</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12348,6 +12758,10 @@ If they do not, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205730</ATTRIBUTE_DATA>
@@ -12463,6 +12877,10 @@ Logon/Logoff &gt;&gt; Account Lockout - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205731</ATTRIBUTE_DATA>
@@ -12582,6 +13000,10 @@ The default location is the "%SystemRoot%\System32" folder.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205732</ATTRIBUTE_DATA>
@@ -12707,6 +13129,10 @@ S-1-5-32-546 (Guests)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205733</ATTRIBUTE_DATA>
@@ -12858,6 +13284,10 @@ Note: "Local account" is referring to the Windows built-in security group.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205734</ATTRIBUTE_DATA>
@@ -13018,6 +13448,10 @@ CREATOR OWNER - Full Control - Subfolders and files only</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205735</ATTRIBUTE_DATA>
@@ -13193,6 +13627,10 @@ ALL RESTRICTED APPLICATION PACKAGES - Read &amp; execute - This folder, subfolde
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205736</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13363,6 +13801,10 @@ ALL RESTRICTED APPLICATION PACKAGES - Read &amp; execute - This folder, subfolde
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205737</ATTRIBUTE_DATA>
@@ -13547,6 +13989,10 @@ S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205738</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13659,6 +14105,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205739</ATTRIBUTE_DATA>
@@ -13791,6 +14241,10 @@ BUILTIN\Administrators:(I)(F)
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205740</ATTRIBUTE_DATA>
@@ -13937,6 +14391,10 @@ SYSTEM - Full control - This folder, subfolders, and files</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205741</ATTRIBUTE_DATA>
@@ -14088,6 +14546,10 @@ Document any other access permissions that allow the objects to be updated with 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205742</ATTRIBUTE_DATA>
@@ -14272,6 +14734,10 @@ ENTERPRISE DOMAIN CONTROLLERS - Read, Special permissions</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205743</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14451,6 +14917,10 @@ ENTERPRISE DOMAIN CONTROLLERS - Read, Special permissions</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205744</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14574,6 +15044,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205745</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14696,6 +15170,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205746</ATTRIBUTE_DATA>
@@ -14822,6 +15300,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205747</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14943,6 +15425,10 @@ The "Security descriptor:" must be populated with "O:BAG:BAD:(A;;RC;;;BA) for th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205748</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15060,6 +15546,10 @@ If any SIDs are granted the "SeEnableDelegationPrivilege" user right, this is a 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205749</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15174,6 +15664,10 @@ If any SIDs are granted the "SeTrustedCredManAccessPrivilege" user right, this i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205750</ATTRIBUTE_DATA>
@@ -15299,6 +15793,10 @@ Passwords for accounts with this user right must be protected as highly privileg
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205751</ATTRIBUTE_DATA>
@@ -15429,6 +15927,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205752</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15549,6 +16051,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205753</ATTRIBUTE_DATA>
@@ -15674,6 +16180,10 @@ Passwords for application accounts with this user right must be protected as hig
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205754</ATTRIBUTE_DATA>
@@ -15813,6 +16323,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205755</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15927,6 +16441,10 @@ If any SIDs are granted the "SeCreatePermanentPrivilege" user right, this is a f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205756</ATTRIBUTE_DATA>
@@ -16052,6 +16570,10 @@ Systems that have the Hyper-V role will also have "Virtual Machines" given this 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205757</ATTRIBUTE_DATA>
@@ -16184,6 +16706,10 @@ Passwords for application accounts with this user right must be protected as hig
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205758</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16304,6 +16830,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205759</ATTRIBUTE_DATA>
@@ -16436,6 +16966,10 @@ The application account must meet requirements for application account passwords
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205760</ATTRIBUTE_DATA>
@@ -16575,6 +17109,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205761</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16704,6 +17242,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205762</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16824,6 +17366,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205763</ATTRIBUTE_DATA>
@@ -16948,6 +17494,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205764</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17068,6 +17618,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205765</ATTRIBUTE_DATA>
@@ -17190,6 +17744,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205766</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17310,6 +17868,10 @@ S-1-5-32-544 (Administrators)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205767</ATTRIBUTE_DATA>
@@ -17440,6 +18002,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205768</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17569,6 +18135,10 @@ The application account must meet requirements for application account passwords
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205769</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17683,6 +18253,10 @@ Account Management &gt;&gt; Other Account Management Events - Success</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205770</ATTRIBUTE_DATA>
@@ -17799,6 +18373,10 @@ Detailed Tracking &gt;&gt; Process Creation - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205771</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17913,6 +18491,10 @@ Policy Change &gt;&gt; Audit Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205772</ATTRIBUTE_DATA>
@@ -18029,6 +18611,10 @@ Policy Change &gt;&gt; Audit Policy Change - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205773</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18143,6 +18729,10 @@ Policy Change &gt;&gt; Authentication Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205774</ATTRIBUTE_DATA>
@@ -18259,6 +18849,10 @@ Policy Change &gt;&gt; Authorization Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205775</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18373,6 +18967,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205776</ATTRIBUTE_DATA>
@@ -18489,6 +19087,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205777</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18603,6 +19205,10 @@ System &gt;&gt; IPsec Driver - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205778</ATTRIBUTE_DATA>
@@ -18719,6 +19325,10 @@ System &gt;&gt; IPsec Driver - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205779</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18833,6 +19443,10 @@ System &gt;&gt; Other System Events - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205780</ATTRIBUTE_DATA>
@@ -18949,6 +19563,10 @@ System &gt;&gt; Other System Events - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205781</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19063,6 +19681,10 @@ System &gt;&gt; Security State Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205782</ATTRIBUTE_DATA>
@@ -19179,6 +19801,10 @@ System &gt;&gt; Security System Extension - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205783</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19294,6 +19920,10 @@ System &gt;&gt; System Integrity - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205784</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19408,6 +20038,10 @@ System &gt;&gt; System Integrity - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205785</ATTRIBUTE_DATA>
@@ -19587,6 +20221,10 @@ Applies to - Descendant Organization Unit Objects</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205786</ATTRIBUTE_DATA>
@@ -19789,6 +20427,10 @@ Applies to - This object only
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205787</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19959,6 +20601,10 @@ Inherited from - (CN of domain)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205788</ATTRIBUTE_DATA>
@@ -20148,6 +20794,10 @@ Applies to - Descendant Organizational Unit objects</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205789</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20325,6 +20975,10 @@ Applies to - Descendant Organizational Unit objects</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205790</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20496,6 +21150,10 @@ Inherited from - (CN of domain)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205791</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20612,6 +21270,10 @@ DS Access &gt;&gt; Directory Service Access - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205792</ATTRIBUTE_DATA>
@@ -20730,6 +21392,10 @@ DS Access &gt;&gt; Directory Service Access - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205793</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20847,6 +21513,10 @@ DS Access &gt;&gt; Directory Service Changes - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205795</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20962,6 +21632,10 @@ A value of "0" is also acceptable, requiring an administrator to unlock the acco
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205796</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21070,6 +21744,10 @@ Value: 0x00008000 (32768) (or greater)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205797</ATTRIBUTE_DATA>
@@ -21184,6 +21862,10 @@ Value:0x49960800 (5120000) (or greater)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205798</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21293,6 +21975,10 @@ Value: 0x00008000 (32768) (or greater)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205799</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21393,6 +22079,10 @@ If it has not, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205800</ATTRIBUTE_DATA>
@@ -21520,6 +22210,10 @@ Time synchronization will occur through a hierarchy of time servers down to the 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205801</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21626,6 +22320,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205802</ATTRIBUTE_DATA>
@@ -21734,6 +22432,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205803</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21836,6 +22538,10 @@ An approved and properly configured solution will contain both a list of baselin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205804</ATTRIBUTE_DATA>
@@ -21944,6 +22650,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205805</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22051,6 +22761,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205806</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22157,6 +22871,10 @@ Value: 0x000000ff (255)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205807</ATTRIBUTE_DATA>
@@ -22291,6 +23009,10 @@ https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defe
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205808</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22399,6 +23121,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205809</ATTRIBUTE_DATA>
@@ -22509,6 +23235,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205810</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22617,6 +23347,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205811</ATTRIBUTE_DATA>
@@ -22729,6 +23463,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205812</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22839,6 +23577,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205813</ATTRIBUTE_DATA>
@@ -22951,6 +23693,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205814</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23060,6 +23806,10 @@ Value:  0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205815</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23166,6 +23916,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205816</ATTRIBUTE_DATA>
@@ -23276,6 +24030,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205817</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23385,6 +24143,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205818</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23491,6 +24253,10 @@ If the classification level of the Windows domain controller is higher than the 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205819</ATTRIBUTE_DATA>
@@ -23600,6 +24366,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205820</ATTRIBUTE_DATA>
@@ -23712,6 +24482,10 @@ Value: 0x00000002 (2)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205821</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23820,6 +24594,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205822</ATTRIBUTE_DATA>
@@ -23930,6 +24708,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205823</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24038,6 +24820,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205824</ATTRIBUTE_DATA>
@@ -24150,6 +24936,10 @@ This setting may prevent a system from being joined to a domain if not configure
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205825</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24258,6 +25048,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205826</ATTRIBUTE_DATA>
@@ -24368,6 +25162,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205827</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24476,6 +25274,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205828</ATTRIBUTE_DATA>
@@ -24586,6 +25388,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205829</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24692,6 +25498,10 @@ If protection methods have not been implemented, this is a finding.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205830</ATTRIBUTE_DATA>
@@ -24808,6 +25618,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205832</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24920,6 +25734,10 @@ Account Logon &gt;&gt; Credential Validation - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205833</ATTRIBUTE_DATA>
@@ -25034,6 +25852,10 @@ Account Logon &gt;&gt; Credential Validation - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205834</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25146,6 +25968,10 @@ Logon/Logoff &gt;&gt; Group Membership - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205835</ATTRIBUTE_DATA>
@@ -25262,6 +26088,10 @@ Logon/Logoff &gt;&gt; Special Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205836</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25375,6 +26205,10 @@ Object Access &gt;&gt; Other Object Access Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205837</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25487,6 +26321,10 @@ Object Access &gt;&gt; Other Object Access Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205838</ATTRIBUTE_DATA>
@@ -25603,6 +26441,10 @@ Logon/Logoff &gt;&gt; Logoff - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205839</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25715,6 +26557,10 @@ Detailed Tracking &gt;&gt; Plug and Play Events - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205840</ATTRIBUTE_DATA>
@@ -25831,6 +26677,10 @@ Virtual machines or systems that use network attached storage may generate exces
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205841</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25946,6 +26796,10 @@ Virtual machines or systems that use network attached storage may generate exces
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205842</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26059,6 +26913,10 @@ If the server is hosting SharePoint, this is not applicable.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205843</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26160,6 +27018,10 @@ If they are not, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205844</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26260,6 +27122,10 @@ If users with administrative privileges do not have separate accounts for admini
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205845</ATTRIBUTE_DATA>
@@ -26372,6 +27238,10 @@ The organization may use technical means such as whitelisting to prevent the use
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205846</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26474,6 +27344,10 @@ If users with accounts in the Backup Operators group do not have separate accoun
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205847</ATTRIBUTE_DATA>
@@ -26598,6 +27472,10 @@ It is recommended that system-managed service accounts be used whenever possible
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205848</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26713,6 +27591,10 @@ Run "tpm.msc" for configuration options in Windows.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205849</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26815,6 +27697,10 @@ If the "About Windows" dialog box does not display a version supported by the ve
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205850</ATTRIBUTE_DATA>
@@ -26941,6 +27827,10 @@ Enter "Uninstall-WindowsFeature -Name Windows-Defender”.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205851</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27043,6 +27933,10 @@ If a HIDS and HIPS are not installed on the system, this is a finding.</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205852</ATTRIBUTE_DATA>
@@ -27148,6 +28042,10 @@ Note: This does not apply to server-based applications that have a requirement f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205853</ATTRIBUTE_DATA>
@@ -27268,6 +28166,10 @@ Select "Disabled" under "Actions".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205854</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27376,6 +28278,10 @@ If the site includes any system areas such as root of the drive, Program Files, 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205855</ATTRIBUTE_DATA>
@@ -27505,6 +28411,10 @@ S-1-5-80-3139157870-2983391045-3678747466-658725712-1809340420 - NT Service\WdiS
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205856</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27609,6 +28519,10 @@ Under "System Summary", if "BIOS Mode" does not display "UEFI", this is a findin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205857</ATTRIBUTE_DATA>
@@ -27719,6 +28633,10 @@ If a value of "True" is not returned, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205858</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27827,6 +28745,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205859</ATTRIBUTE_DATA>
@@ -27937,6 +28859,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205860</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28046,6 +28972,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205861</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28152,6 +29082,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205862</ATTRIBUTE_DATA>
@@ -28273,6 +29207,10 @@ Value: RequireMutualAuthentication=1, RequireIntegrity=1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205863</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28379,6 +29317,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205864</ATTRIBUTE_DATA>
@@ -28524,6 +29466,10 @@ https://technet.microsoft.com/itpro/windows/keep-secure/credential-guard</ATTRIB
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205865</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28643,6 +29589,10 @@ If this needs to be corrected or a more secure setting is desired, configure the
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205866</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28752,6 +29702,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205867</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28858,6 +29812,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205868</ATTRIBUTE_DATA>
@@ -28966,6 +29924,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205869</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29072,6 +30034,10 @@ Value: 0x00000000 (0) (Security), 0x00000001 (1) (Basic)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205870</ATTRIBUTE_DATA>
@@ -29194,6 +30160,10 @@ Simple (99)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205871</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29308,6 +30278,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205872</ATTRIBUTE_DATA>
@@ -29424,6 +30398,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205873</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29530,6 +30508,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205874</ATTRIBUTE_DATA>
@@ -29645,6 +30627,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205875</ATTRIBUTE_DATA>
@@ -29782,6 +30768,10 @@ The dsHeuristics option is used. This is addressed in check V-8555 in the AD For
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205876</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -29890,6 +30880,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205877</ATTRIBUTE_DATA>
@@ -30018,6 +31012,10 @@ The system will automatically change this to a system-generated complex password
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205906</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30126,6 +31124,10 @@ Value:  4 (or less)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205907</ATTRIBUTE_DATA>
@@ -30273,6 +31275,10 @@ The overall number of vulnerabilities that are unmitigated on the network/server
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205908</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30379,6 +31385,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205909</ATTRIBUTE_DATA>
@@ -30491,6 +31501,10 @@ If "NewAdministratorName" is not something other than "Administrator" in the fil
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205910</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30601,6 +31615,10 @@ If "NewGuestName" is not something other than "Guest" in the file, this is a fin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205911</ATTRIBUTE_DATA>
@@ -30713,6 +31731,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Windows Settings 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205912</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30822,6 +31844,10 @@ If configuring this on servers causes issues, such as terminating users' remote 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205913</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -30926,6 +31952,10 @@ If the value for "Network access: Allow anonymous SID/Name translation" is not s
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205914</ATTRIBUTE_DATA>
@@ -31034,6 +32064,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205915</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31140,6 +32174,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205916</ATTRIBUTE_DATA>
@@ -31248,6 +32286,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205917</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31354,6 +32396,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205918</ATTRIBUTE_DATA>
@@ -31462,6 +32508,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205919</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31568,6 +32618,10 @@ Value: 0x00000005 (5)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205920</ATTRIBUTE_DATA>
@@ -31676,6 +32730,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205921</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31782,6 +32840,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205922</ATTRIBUTE_DATA>
@@ -31890,6 +32952,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205923</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -31996,6 +33062,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205924</ATTRIBUTE_DATA>
@@ -32112,6 +33182,10 @@ If this needs to be corrected, configure the policy value for User Configuration
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-205925</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32219,6 +33293,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-214936</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32321,6 +33399,10 @@ The configuration requirements will be determined by the applicable firewall STI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257503</ATTRIBUTE_DATA>
@@ -32432,6 +33514,10 @@ Specify the Transcript output directory to point to a Central Log Server or anot
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-271428</ATTRIBUTE_DATA>
@@ -32548,6 +33634,10 @@ Value: 0x00000001 (1) or 0x00000002 (2)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-271429</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32659,6 +33749,10 @@ If "Allow name-based strong mappings for certificates" is not "Enabled", this is
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278934</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32761,6 +33855,10 @@ If "Audit File System" is not set to "Failure", this is a finding.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278935</ATTRIBUTE_DATA>
@@ -32865,6 +33963,10 @@ If "Audit File System" is not set to "Success", this is a finding.</ATTRIBUTE_DA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278936</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -32967,6 +34069,10 @@ If "Audit Handle Manipulation" is not set to "Failure", this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278937</ATTRIBUTE_DATA>
@@ -33071,6 +34177,10 @@ If "Audit Handle Manipulation" is not set to "Success", this is a finding.</ATTR
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278938</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33173,6 +34283,10 @@ If "Audit Registry" is not set to "Failure", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278939</ATTRIBUTE_DATA>
@@ -33277,6 +34391,10 @@ If "Audit Registry" is not set to "Success", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278940</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -33379,6 +34497,10 @@ If "Audit Sensitive Privilege Use" is not set to "Success", this is a finding.</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows Server 2019 Security Technical Implementation Guide :: v3r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278941</ATTRIBUTE_DATA>

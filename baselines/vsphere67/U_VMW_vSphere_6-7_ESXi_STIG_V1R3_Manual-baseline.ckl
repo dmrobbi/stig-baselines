@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>1</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>a9e7245f-086f-58db-b293-4c10066e9b69</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 3 Benchmark Date: 26 Jul 2023</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>a9e7245f-086f-58db-b293-4c10066e9b69</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239258</ATTRIBUTE_DATA>
@@ -188,6 +186,10 @@ Note: In Strict Lockdown Mode, the DCUI service is stopped. If the connection to
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239259</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -309,6 +311,10 @@ Get-VMHost | Get-AdvancedSetting -Name DCUI.Access | Set-AdvancedSetting -Value 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239260</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -427,6 +433,10 @@ Under "Lockdown Mode", click "Edit" and remove unnecessary users from the except
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239261</ATTRIBUTE_DATA>
@@ -547,6 +557,10 @@ Get-VMHost | Get-AdvancedSetting -Name Syslog.global.logHost | Set-AdvancedSetti
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239262</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -664,6 +678,10 @@ Get-VMHost | Get-AdvancedSetting -Name Security.AccountLockFailures | Set-Advanc
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239263</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -780,6 +798,10 @@ Get-VMHost | Get-AdvancedSetting -Name Security.AccountUnlockTime | Set-Advanced
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239264</ATTRIBUTE_DATA>
@@ -965,6 +987,10 @@ Get-VMHost | Get-AdvancedSetting -Name Annotations.WelcomeMessage | Set-Advanced
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239265</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1086,6 +1112,10 @@ Get-VMHost | Get-AdvancedSetting -Name Config.Etc.issue | Set-AdvancedSetting -V
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239266</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1190,6 +1220,10 @@ Banner /etc/issue</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239267</ATTRIBUTE_DATA>
@@ -1314,6 +1348,10 @@ $esxcli.system.security.fips140.ssh.set.Invoke($arguments)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239268</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1420,6 +1458,10 @@ IgnoreRhosts yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239269</ATTRIBUTE_DATA>
@@ -1528,6 +1570,10 @@ HostbasedAuthentication no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239270</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1635,6 +1681,10 @@ PermitRootLogin no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239271</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1739,6 +1789,10 @@ PermitEmptyPasswords no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239272</ATTRIBUTE_DATA>
@@ -1845,6 +1899,10 @@ PermitUserEnvironment no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239273</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1949,6 +2007,10 @@ GSSAPIAuthentication no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239274</ATTRIBUTE_DATA>
@@ -2055,6 +2117,10 @@ KerberosAuthentication no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239275</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2159,6 +2225,10 @@ StrictModes yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239276</ATTRIBUTE_DATA>
@@ -2265,6 +2335,10 @@ Compression no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239277</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2369,6 +2443,10 @@ GatewayPorts no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239278</ATTRIBUTE_DATA>
@@ -2475,6 +2553,10 @@ X11Forwarding no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239279</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2579,6 +2661,10 @@ AcceptEnv</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239280</ATTRIBUTE_DATA>
@@ -2685,6 +2771,10 @@ PermitTunnel no</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239281</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2789,6 +2879,10 @@ ClientAliveCountMax 3</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239282</ATTRIBUTE_DATA>
@@ -2895,6 +2989,10 @@ ClientAliveInterval 200</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239283</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2999,6 +3097,10 @@ MaxSessions 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239284</ATTRIBUTE_DATA>
@@ -3116,6 +3218,10 @@ or
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239285</ATTRIBUTE_DATA>
@@ -3238,6 +3344,10 @@ Get-VMHost | Get-AdvancedSetting -Name Config.HostAgent.log.level | Set-Advanced
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239286</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3357,6 +3467,10 @@ Get-VMHost | Get-AdvancedSetting -Name Security.PasswordQualityControl | Set-Adv
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239287</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3474,6 +3588,10 @@ Get-VMHost | Get-AdvancedSetting -Name Security.PasswordHistory | Set-AdvancedSe
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239288</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3578,6 +3696,10 @@ password sufficient /lib/security/$ISA/pam_unix.so use_authtok nullok shadow sha
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239289</ATTRIBUTE_DATA>
@@ -3695,6 +3817,10 @@ Get-VMHost | Get-AdvancedSetting -Name Config.HostAgent.plugins.solo.enableMob |
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239290</ATTRIBUTE_DATA>
@@ -3818,6 +3944,10 @@ Get-VMHost | Get-VMHostService | Where {$_.Label -eq "SSH"} | Stop-VMHostService
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239291</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3937,6 +4067,10 @@ Get-VMHost | Get-VMHostService | Where {$_.Label -eq "ESXi Shell"} | Stop-VMHost
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239292</ATTRIBUTE_DATA>
@@ -4063,6 +4197,10 @@ Get-VMHost | Get-VMHostAuthentication | Set-VMHostAuthentication -JoinDomain -Do
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239293</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4181,6 +4319,10 @@ Set the method used to join hosts to a domain to "Use vSphere Authentication Pro
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239294</ATTRIBUTE_DATA>
@@ -4303,6 +4445,10 @@ Get-VMHost | Get-AdvancedSetting -Name Config.HostAgent.plugins.hostsvc.esxAdmin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239295</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4417,6 +4563,10 @@ At the "Certificates" tab, click the green plus sign to import trusted certifica
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239296</ATTRIBUTE_DATA>
@@ -4537,6 +4687,10 @@ Get-VMHost | Get-AdvancedSetting -Name UserVars.ESXiShellInteractiveTimeOut | Se
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239297</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4656,6 +4810,10 @@ Get-VMHost | Get-AdvancedSetting -Name UserVars.ESXiShellTimeOut | Set-AdvancedS
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239298</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4774,6 +4932,10 @@ Get-VMHost | Get-AdvancedSetting -Name UserVars.DcuiTimeOut | Set-AdvancedSettin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239299</ATTRIBUTE_DATA>
@@ -4921,6 +5083,10 @@ $arguments = $esxcli.system.coredump.network.set.Invoke($arguments)</ATTRIBUTE_D
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239300</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5042,6 +5208,10 @@ Get-VMHost | Get-AdvancedSetting -Name Syslog.global.logDir | Set-AdvancedSettin
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239301</ATTRIBUTE_DATA>
@@ -5165,6 +5335,10 @@ Get-VMHost | Get-VMHostService | Where {$_.Label -eq "NTP Daemon"} | Start-VMHos
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239302</ATTRIBUTE_DATA>
@@ -5300,6 +5474,10 @@ Note: "VMwareCertified" or "VMwareAccepted" may be substituted for "PartnerSuppo
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239303</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5416,6 +5594,10 @@ Change the "VLAN Type" to "VLAN" and change the "VLAN ID" to a network allocated
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239304</ATTRIBUTE_DATA>
@@ -5535,6 +5717,10 @@ On the properties tab, enter the appropriate VLAN ID and click "OK".</ATTRIBUTE_
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239305</ATTRIBUTE_DATA>
@@ -5660,6 +5846,10 @@ On the properties tab, enter the appropriate VLAN ID and click "OK".</ATTRIBUTE_
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239306</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5768,6 +5958,10 @@ Enter the appropriate site-specific IP address information for the particular TC
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239307</ATTRIBUTE_DATA>
@@ -5894,6 +6088,10 @@ To configure SNMP for v3 targets, use the "esxcli system snmp set" command set.<
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239308</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6017,6 +6215,10 @@ Get-VMHost | Get-VMHostHba | Where {$_.Type -eq "iscsi"} | Set-VMHostHba -ChapTy
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239309</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6135,6 +6337,10 @@ Get-VMHost | Get-AdvancedSetting -Name Mem.ShareForceSalting | Set-AdvancedSetti
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239310</ATTRIBUTE_DATA>
@@ -6280,6 +6486,10 @@ This must be done for each enabled service.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239311</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6384,6 +6594,10 @@ Get-VMHostFirewallDefaultPolicy | Set-VMHostFirewallDefaultPolicy -AllowIncoming
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239312</ATTRIBUTE_DATA>
@@ -6505,6 +6719,10 @@ Get-VMHost | Get-AdvancedSetting -Name Net.BlockGuestBPDU | Set-AdvancedSetting 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239313</ATTRIBUTE_DATA>
@@ -6629,6 +6847,10 @@ Get-VirtualPortGroup | Get-SecurityPolicy | Set-SecurityPolicy -ForgedTransmitsI
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239314</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6749,6 +6971,10 @@ Get-VirtualPortGroup | Get-SecurityPolicy | Set-SecurityPolicy -MacChangesInheri
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239315</ATTRIBUTE_DATA>
@@ -6871,6 +7097,10 @@ Get-VirtualPortGroup | Get-SecurityPolicy | Set-SecurityPolicy -AllowPromiscuous
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239316</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6989,6 +7219,10 @@ Get-VMHost | Get-AdvancedSetting -Name Net.DVFilterBindIpAddress | Set-AdvancedS
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239317</ATTRIBUTE_DATA>
@@ -7113,6 +7347,10 @@ Get-VirtualPortGroup -Name "portgroup name" | Set-VirtualPortGroup -VLanId "New 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239318</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7232,6 +7470,10 @@ Get-VirtualPortGroup -Name "portgroup name" | Set-VirtualPortGroup -VLanId "New 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239319</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7349,6 +7591,10 @@ Get-VirtualPortGroup -Name "portgroup name" | Set-VirtualPortGroup -VLanId "New 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239320</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7459,6 +7705,10 @@ Update the documentation according to an organization-defined frequency or whene
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239321</ATTRIBUTE_DATA>
@@ -7571,6 +7821,10 @@ Update the documentation on an organization defined frequency or whenever modifi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239322</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7677,6 +7931,10 @@ Remove any VLANs trunked across physical ports connected to ESXi hosts that are 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239323</ATTRIBUTE_DATA>
@@ -7803,6 +8061,10 @@ Click "Add User", select the CIM account from the drop-down list, select the new
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239324</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7910,6 +8172,10 @@ If the physical media is obtained from VMware and the security seal is broken, t
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239325</ATTRIBUTE_DATA>
@@ -8035,6 +8301,10 @@ esxcli software vib update -d &lt;path to offline patch bundle.zip&gt;</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239326</ATTRIBUTE_DATA>
@@ -8171,6 +8441,10 @@ A host reboot is required for changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239327</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8283,6 +8557,10 @@ Temporarily enable SSH, connect to the ESXi host, and run the following command 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239328</ATTRIBUTE_DATA>
@@ -8419,6 +8697,10 @@ Find the "vpxd.certmgmt value" and set it to "custom".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239329</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8542,6 +8824,10 @@ Get-VMHost | Get-AdvancedSetting -Name UserVars.SuppressShellWarning | Set-Advan
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-239331</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8648,6 +8934,10 @@ Ciphers aes256-gcm@openssh.com,aes128-gcm@openssh.com,aes256-ctr,aes192-ctr,aes1
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 ESXi Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257278</ATTRIBUTE_DATA>

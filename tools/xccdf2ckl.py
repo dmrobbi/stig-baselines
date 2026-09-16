@@ -19,6 +19,7 @@ Exit codes: 0 = ok, 1 = error.
 
 import argparse
 import os
+import re
 import sys
 import uuid
 import xml.etree.ElementTree as ET
@@ -34,14 +35,26 @@ STIG_DATA_ORDER = [
 ]
 
 SI_DATA_ORDER = [
-    "version", "class", "title", "description", "planguage", "filename",
-    "uuid", "releaseinfo", "purpose", "notice", "source",
+    # 2026-09-16: names must be members of the SID_NAME enumeration in
+    # DISA's Checklist schema v2.5 (U_Checklist_Schema_V2.xsd): 'class',
+    # 'planguage' and 'purpose' are NOT in the set (schema validation
+    # failed in STIG Viewer 2.18); 'stigid' replaces the missing STIG id.
+    "version", "classification", "stigid", "title", "description",
+    "filename", "releaseinfo", "source", "uuid",
 ]
 
 ASSET_FIELDS = [
+    # Order + required members per the Checklist schema: MARKING,
+    # HOST_GUID and TARGET_COMMENT are optional (omitted); ASSET_GUID is
+    # not in the schema at all (removed); WEB_OR_DATABASE must be a
+    # boolean literal and WEB_DB_SITE/WEB_DB_INSTANCE are required.
     "ROLE", "ASSET_TYPE", "HOST_NAME", "HOST_IP", "HOST_MAC", "HOST_FQDN",
-    "TARGET_KEY", "TECH_AREA", "ASSET_GUID", "STIG_GUID",
+    "TECH_AREA", "TARGET_KEY", "STIG_GUID",
+    "WEB_OR_DATABASE", "WEB_DB_SITE", "WEB_DB_INSTANCE",
 ]
+
+ROLE_ENUM = {"None", "Workstation", "Member Server", "Domain Controller"}
+ASSET_TYPE_ENUM = {"Computing", "Non-Computing"}
 
 # XCCDF <description> escaped-HTML block -> CKL field
 DESC_BLOCKS = {
@@ -199,15 +212,13 @@ def build_stig_info(root, xccdf_path):
     uid = str(uuid.uuid5(uuid.NAMESPACE_URL, f"https://stig-baselines/{bench_id}/{version}"))
     return {
         "version": version,
-        "class": "Unclassified",
+        "classification": "Unclassified",
+        "stigid": os.path.basename(xccdf_path).replace("-xccdf.xml", ""),
         "title": title,
         "description": desc,
-        "planguage": "English",
         "filename": os.path.basename(xccdf_path),
         "uuid": uid,
         "releaseinfo": ptmap.get("release-info", ""),
-        "purpose": ptmap.get("purpose", ""),
-        "notice": "",
         "source": "DISA - DoD Cyber Exchange (STIG content is public domain)",
     }
 
@@ -227,6 +238,14 @@ def load_results_map(results_path):
 
 
 def write_ckl(out_path, asset, si_data, vulns):
+    if asset.get("ROLE", "None") not in ROLE_ENUM:
+        print(f"ERROR: ROLE {asset.get('ROLE')!r} not in schema enum "
+              f"{sorted(ROLE_ENUM)}", file=sys.stderr)
+        return 1
+    if asset.get("ASSET_TYPE", "Computing") not in ASSET_TYPE_ENUM:
+        print(f"ERROR: ASSET_TYPE {asset.get('ASSET_TYPE')!r} not in "
+              f"schema enum {sorted(ASSET_TYPE_ENUM)}", file=sys.stderr)
+        return 1
     root = ET.Element("CHECKLIST")
 
     asset_el = ET.SubElement(root, "ASSET")
@@ -239,10 +258,20 @@ def write_ckl(out_path, asset, si_data, vulns):
     for name in SI_DATA_ORDER:
         sd = ET.SubElement(si, "SI_DATA")
         ET.SubElement(sd, "SID_NAME").text = name
-        ET.SubElement(sd, "SID_DATA").text = si_data.get(name, "")
+        data = si_data.get(name, "")
+        if data:  # SID_DATA is optional — omit when empty
+            ET.SubElement(sd, "SID_DATA").text = data
+
+    stig_ref = f"{si_data.get('title', '')} :: v{si_data.get('version', '')}"
+    m = re.search(r"Release:\s*(\d+)", si_data.get("releaseinfo") or "")
+    if m:
+        stig_ref += f"r{m.group(1)}"
 
     for v in vulns:
         vuln = ET.SubElement(istig, "VULN")
+        sd = ET.SubElement(vuln, "STIG_DATA")
+        ET.SubElement(sd, "VULN_ATTRIBUTE").text = "STIGRef"
+        ET.SubElement(sd, "ATTRIBUTE_DATA").text = stig_ref
         for name in STIG_DATA_ORDER:
             sd = ET.SubElement(vuln, "STIG_DATA")
             ET.SubElement(sd, "VULN_ATTRIBUTE").text = name
@@ -292,8 +321,10 @@ def convert(xccdf_path, out_path, args):
         "HOST_FQDN": args.fqdn,
         "TARGET_KEY": "",
         "TECH_AREA": args.tech_area,
-        "ASSET_GUID": "",
         "STIG_GUID": "",
+        "WEB_OR_DATABASE": "false",
+        "WEB_DB_SITE": "",
+        "WEB_DB_INSTANCE": "",
     }
 
     write_ckl(out_path, asset, si_data, vulns)
@@ -318,8 +349,8 @@ def main():
     p.add_argument("--mac", default="", help="ASSET HOST_MAC")
     p.add_argument("--fqdn", default="", help="ASSET HOST_FQDN")
     p.add_argument("--tech-area", default="", help="ASSET TECH_AREA")
-    p.add_argument("--role", default="None", help="ASSET ROLE")
-    p.add_argument("--asset-type", default="Compute", help="ASSET_TYPE")
+    p.add_argument("--role", default="None", help="ASSET ROLE (None|Workstation|Member Server|Domain Controller)")
+    p.add_argument("--asset-type", default="Computing", help="ASSET_TYPE (Computing|Non-Computing)")
     args = p.parse_args()
     sys.exit(convert(args.xccdf, args.out, args))
 

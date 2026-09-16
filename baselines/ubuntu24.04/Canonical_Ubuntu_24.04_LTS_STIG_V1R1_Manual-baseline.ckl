@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>1</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_CAN_Ubuntu_24-04_LTS_STIG_V1R1_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_CAN_Ubuntu_24-04_LTS_STIG_V1R1_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>6a46cb49-6062-5bfc-b9e8-c67e23ac5d94</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 1 Benchmark Date: 28 Jan 2025</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>6a46cb49-6062-5bfc-b9e8-c67e23ac5d94</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270645</ATTRIBUTE_DATA>
@@ -168,6 +166,10 @@ $ sudo apt-get purge systemd-timesyncd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270646</ATTRIBUTE_DATA>
@@ -280,6 +282,10 @@ $ sudo apt-get purge ntp</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270647</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -389,6 +395,10 @@ $ sudo apt remove telnetd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270648</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -497,6 +507,10 @@ $ sudo apt remove rsh-server</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270649</ATTRIBUTE_DATA>
@@ -608,6 +622,10 @@ $ sudo apt install -y aide</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270650</ATTRIBUTE_DATA>
@@ -737,6 +755,10 @@ Done.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270651</ATTRIBUTE_DATA>
@@ -882,6 +904,10 @@ $  sudo cp -f /usr/share/aide/config/cron.daily/aide /etc/cron.daily/dailyaidech
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270652</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -993,6 +1019,10 @@ SILENTREPORTS=no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270653</ATTRIBUTE_DATA>
@@ -1122,6 +1152,10 @@ $ sudo systemctl enable --now rsyslog</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270654</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1233,6 +1267,10 @@ $ sudo apt install -y ufw</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270655</ATTRIBUTE_DATA>
@@ -1349,6 +1387,10 @@ Note: Enabling the firewall will potentially disrupt ssh sessions.</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270656</ATTRIBUTE_DATA>
@@ -1469,6 +1511,10 @@ $ sudo apt install -y auditd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270657</ATTRIBUTE_DATA>
@@ -1600,6 +1646,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270658</ATTRIBUTE_DATA>
@@ -1743,6 +1793,10 @@ $ sudo systemctl restart auditd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270659</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1857,6 +1911,10 @@ Note: AppArmor must have properly configured profiles for applications and home 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270660</ATTRIBUTE_DATA>
@@ -1981,6 +2039,10 @@ Note: AppArmor must have properly configured profiles for applications and home 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270661</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2086,6 +2148,10 @@ $ sudo apt install -y libpam-pwquality</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270662</ATTRIBUTE_DATA>
@@ -2230,6 +2296,10 @@ $ sudo apt install -y libnss-sss</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270663</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2358,6 +2428,10 @@ $ sudo systemctl start sssd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270664</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2465,6 +2539,10 @@ $ sudo apt install -y chrony</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270665</ATTRIBUTE_DATA>
@@ -2579,6 +2657,10 @@ $ sudo apt install -y ssh</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270666</ATTRIBUTE_DATA>
@@ -2698,6 +2780,10 @@ $ sudo systemctl start ssh.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270667</ATTRIBUTE_DATA>
@@ -2821,6 +2907,10 @@ $ sudo systemctl restart sshd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270668</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2941,6 +3031,10 @@ $ sudo systemctl restart sshd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270669</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3052,6 +3146,10 @@ $ sudo systemctl restart sshd</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270670</ATTRIBUTE_DATA>
@@ -3173,6 +3271,10 @@ $ sudo systemctl restart ssh</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270671</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3289,6 +3391,10 @@ $ sudo systemctl restart ssh</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270672</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3398,6 +3504,10 @@ $ sudo apt install -y opensc-pkcs11</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270673</ATTRIBUTE_DATA>
@@ -3509,6 +3619,10 @@ $ sudo apt install -y libpam-pkcs11</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270674</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3618,6 +3732,10 @@ $ sudo apt install -y vlock</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270675</ATTRIBUTE_DATA>
@@ -3744,6 +3862,10 @@ $ sudo update-grub</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270676</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3857,6 +3979,10 @@ $ sudo update-grub</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270677</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3966,6 +4092,10 @@ Add the following line to the top of the /etc/security/limits.conf or in a ".con
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270678</ATTRIBUTE_DATA>
@@ -4093,6 +4223,10 @@ $ gsettings set org.gnome.desktop.session idle-delay 600</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270679</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4206,6 +4340,10 @@ $ gsettings set org.gnome.desktop.screensaver lock-enabled true</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270680</ATTRIBUTE_DATA>
@@ -4329,6 +4467,10 @@ $ export TMOUT=600</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270681</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4445,6 +4587,10 @@ $ sudo systemctl restart rsyslog.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270682</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4557,6 +4703,10 @@ $ sudo chage -E $(date -d +3days +%Y-%m-%d) &lt;temporary_account_name&gt;</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270683</ATTRIBUTE_DATA>
@@ -4673,6 +4823,10 @@ Note: DOD recommendation is 35 days, but a lower value is acceptable. The value 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270684</ATTRIBUTE_DATA>
@@ -4792,6 +4946,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270685</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4909,6 +5067,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270686</ATTRIBUTE_DATA>
@@ -5028,6 +5190,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270687</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5146,6 +5312,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270688</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5263,6 +5433,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270689</ATTRIBUTE_DATA>
@@ -5391,6 +5565,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270690</ATTRIBUTE_DATA>
@@ -5526,6 +5704,10 @@ unlock_time = 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270691</ATTRIBUTE_DATA>
@@ -5699,6 +5881,10 @@ $ sudo systemctl -s SIGHUP kill sshd</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270692</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5838,6 +6024,10 @@ $ sudo systemctl restart gdm3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270693</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5976,6 +6166,10 @@ $ sudo systemctl restart gdm3</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270694</ATTRIBUTE_DATA>
@@ -6141,6 +6335,10 @@ Note: The "ssh_confirm.sh" script is provided as a supplemental file to this doc
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270695</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6252,6 +6450,10 @@ APT::Get::AllowUnauthenticated "false";</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270696</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6358,6 +6560,10 @@ $ sudo find /lib /lib64 /usr/lib -perm /022 -type f -exec chmod 755 '{}' \;</ATT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270697</ATTRIBUTE_DATA>
@@ -6466,6 +6672,10 @@ $ sudo find /lib /usr/lib /lib64 ! -user root -type f -exec chown root '{}' \;</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270698</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6572,6 +6782,10 @@ $ sudo find /lib /usr/lib /lib64 ! -user root -type d -exec chown root '{}' \;</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270699</ATTRIBUTE_DATA>
@@ -6680,6 +6894,10 @@ $ sudo chgrp root [FILE]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270700</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6786,6 +7004,10 @@ $ sudo find /lib /usr/lib /lib64 ! -group root -type d -exec chgrp root '{}' \;<
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270701</ATTRIBUTE_DATA>
@@ -6894,6 +7116,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -perm /
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270702</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7000,6 +7226,10 @@ $ sudo chown root [FILE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270703</ATTRIBUTE_DATA>
@@ -7110,6 +7340,10 @@ $ sudo chgrp [SYSTEMACCOUNT] [FILE]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270704</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7217,6 +7451,10 @@ dictcheck=1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270705</ATTRIBUTE_DATA>
@@ -7341,6 +7579,10 @@ Note: Ensure the value of "retry" is between "1" and "3".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270706</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7451,6 +7693,10 @@ auth    required    pam_faildelay.so    delay=4000000</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270707</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7555,6 +7801,10 @@ If any occurrences of "NOPASSWD" or "!authenticate" return from the command, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270708</ATTRIBUTE_DATA>
@@ -7670,6 +7920,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270709</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7782,6 +8036,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270710</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7889,6 +8147,10 @@ session     required      pam_lastlog.so showfailed</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270711</ATTRIBUTE_DATA>
@@ -7999,6 +8261,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270712</ATTRIBUTE_DATA>
@@ -8116,6 +8382,10 @@ $ sudo systemctl daemon-reload</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270713</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8225,6 +8495,10 @@ $ sudo passwd -l [username]</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270714</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8329,6 +8603,10 @@ Remove any instances of the "nullok" option in "/etc/pam.d/common-password" to p
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270715</ATTRIBUTE_DATA>
@@ -8446,6 +8724,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270716</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8555,6 +8837,10 @@ UMASK 077</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270717</ATTRIBUTE_DATA>
@@ -8669,6 +8955,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270718</ATTRIBUTE_DATA>
@@ -8790,6 +9080,10 @@ $ sudo su -c "echo blacklist usb-storage &gt;&gt; /etc/modprobe.d/DISASTIG.conf"
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270719</ATTRIBUTE_DATA>
@@ -8920,6 +9214,10 @@ $ sudo ufw deny &lt;direction&gt; &lt;port/protocol/service&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270720</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9030,6 +9328,10 @@ If output is produced and the accounts listed are interactive user accounts, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270721</ATTRIBUTE_DATA>
@@ -9154,6 +9456,10 @@ auth    [success=2 default=ignore] pam_pkcs11.so</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270722</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9277,6 +9583,10 @@ PubkeyAuthentication yes</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270723</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9385,6 +9695,10 @@ Modify all of the "cert_policy" lines in "/etc/pam_pkcs11/pam_pkcs11.conf" to in
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270724</ATTRIBUTE_DATA>
@@ -9500,6 +9814,10 @@ $ sudo passwd -l root</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270725</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9607,6 +9925,10 @@ password [success=1 default=ignore] pam_unix.so obscure sha512 shadow remember=5
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270726</ATTRIBUTE_DATA>
@@ -9720,6 +10042,10 @@ ucredit=-1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270727</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9831,6 +10157,10 @@ lcredit=-1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270728</ATTRIBUTE_DATA>
@@ -9946,6 +10276,10 @@ dcredit=-1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270729</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10060,6 +10394,10 @@ difok=8</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270730</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10170,6 +10508,10 @@ PASS_MIN_DAYS    1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270731</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10279,6 +10621,10 @@ PASS_MAX_DAYS    60</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270732</ATTRIBUTE_DATA>
@@ -10391,6 +10737,10 @@ minlen=15</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270733</ATTRIBUTE_DATA>
@@ -10506,6 +10856,10 @@ ocredit=-1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270734</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10615,6 +10969,10 @@ Note: It is valid for this configuration to be in a file with a name that ends w
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270735</ATTRIBUTE_DATA>
@@ -10762,6 +11120,10 @@ ca_cert = /etc/ssl/certs/ca-certificates.crt</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270736</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10865,6 +11227,10 @@ ldap_user_certificate=userCertificate;binary</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270737</ATTRIBUTE_DATA>
@@ -10989,6 +11355,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270738</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11101,6 +11471,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270739</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11208,6 +11582,10 @@ ENCRYPT_METHOD SHA512</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270740</ATTRIBUTE_DATA>
@@ -11331,6 +11709,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270741</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11438,6 +11820,10 @@ UsePAM yes</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270742</ATTRIBUTE_DATA>
@@ -11557,6 +11943,10 @@ $ sudo systemctl restart ssh.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270743</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11670,6 +12060,10 @@ $ sudo systemctl restart sshd.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270744</ATTRIBUTE_DATA>
@@ -11788,6 +12182,10 @@ $ sudo pro enable fips-updates</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270745</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11904,6 +12302,10 @@ $ sudo update-ca-certificates</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270746</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12013,6 +12415,10 @@ If kernel core dumps are required, document the need with the ISSO.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270747</ATTRIBUTE_DATA>
@@ -12146,6 +12552,10 @@ Note: Encrypting a partition in an already-installed system is more difficult be
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270748</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12259,6 +12669,10 @@ $ sudo gpasswd -d &lt;username&gt; sudo</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270749</ATTRIBUTE_DATA>
@@ -12387,6 +12801,10 @@ Reload settings from all system configuration files with the following command:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270750</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12497,6 +12915,10 @@ $ sudo chmod +t  [Public Directory]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270751</ATTRIBUTE_DATA>
@@ -12618,6 +13040,10 @@ $ sudo systemctl restart chrony.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270752</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12735,6 +13161,10 @@ $ sudo systemctl restart chrony.service</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270753</ATTRIBUTE_DATA>
@@ -12855,6 +13285,10 @@ net.ipv4.tcp_syncookies = 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270754</ATTRIBUTE_DATA>
@@ -13005,6 +13439,10 @@ $ sudo ufw limit in on eth0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270755</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13134,6 +13572,10 @@ $ sudo modprobe -r &lt;module name&gt;</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270756</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13246,6 +13688,10 @@ $ sudo find /var/log -perm /137 ! -name '*[bw]tmp' ! -name '*lastlog' -type f -e
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270757</ATTRIBUTE_DATA>
@@ -13378,6 +13824,10 @@ Note: The system must be restarted for these settings to take effect.</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270758</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13485,6 +13935,10 @@ $ sudo chmod 740 /usr/bin/journalctl</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270759</ATTRIBUTE_DATA>
@@ -13594,6 +14048,10 @@ $ sudo chown root /usr/bin/journalctl</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270760</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13701,6 +14159,10 @@ $ sudo chown :root /usr/bin/journalctl</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270761</ATTRIBUTE_DATA>
@@ -13819,6 +14281,10 @@ Note: The system must be restarted for these settings to take effect.</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270762</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13934,6 +14400,10 @@ Note: The system must be restarted for these settings to take effect.</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270763</ATTRIBUTE_DATA>
@@ -14051,6 +14521,10 @@ Note: The system must be restarted for these settings to take effect.</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270764</ATTRIBUTE_DATA>
@@ -14172,6 +14646,10 @@ Note: The system must be restarted for these settings to take effect.</ATTRIBUTE
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270765</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14280,6 +14758,10 @@ $ sudo chgrp syslog /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270766</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14387,6 +14869,10 @@ $ sudo chown root /var/log</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270767</ATTRIBUTE_DATA>
@@ -14498,6 +14984,10 @@ $ sudo chmod 0755 /var/log</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270768</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14605,6 +15095,10 @@ $ sudo chgrp adm /var/log/syslog</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270769</ATTRIBUTE_DATA>
@@ -14714,6 +15208,10 @@ $ sudo chown syslog /var/log/syslog</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270770</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14821,6 +15319,10 @@ $ sudo chmod 0640 /var/log/syslog</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270771</ATTRIBUTE_DATA>
@@ -14934,6 +15436,10 @@ If "nx" is not showing up in "/proc/cpuinfo", and the system's BIOS setup config
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270772</ATTRIBUTE_DATA>
@@ -15056,6 +15562,10 @@ $ sudo sysctl --system</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270773</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15166,6 +15676,10 @@ Unattended-Upgrade::Remove-Unused-Kernel-Packages "true";</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270774</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15269,6 +15783,10 @@ If the installed version of Ubuntu 24.04 LTS is not supported, this is a finding
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270775</ATTRIBUTE_DATA>
@@ -15389,6 +15907,10 @@ $ sudo chmod -R 0640 /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIB
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270776</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15507,6 +16029,10 @@ $ sudo chown root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270777</ATTRIBUTE_DATA>
@@ -15627,6 +16153,10 @@ $ sudo chown :root /etc/audit/audit*.{rules,conf} /etc/audit/rules.d/*</ATTRIBUT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270778</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15742,6 +16272,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270779</ATTRIBUTE_DATA>
@@ -15859,6 +16393,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270780</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15974,6 +16512,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270781</ATTRIBUTE_DATA>
@@ -16091,6 +16633,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270782</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16207,6 +16753,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270783</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16322,6 +16872,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270784</ATTRIBUTE_DATA>
@@ -16453,6 +17007,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270785</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16579,6 +17137,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270786</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16704,6 +17266,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270787</ATTRIBUTE_DATA>
@@ -16835,6 +17401,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270788</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16950,6 +17520,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270789</ATTRIBUTE_DATA>
@@ -17067,6 +17641,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270790</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17182,6 +17760,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270791</ATTRIBUTE_DATA>
@@ -17299,6 +17881,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270792</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17414,6 +18000,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270793</ATTRIBUTE_DATA>
@@ -17531,6 +18121,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270794</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17647,6 +18241,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270795</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17762,6 +18360,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270796</ATTRIBUTE_DATA>
@@ -17881,6 +18483,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270797</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17999,6 +18605,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270798</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18114,6 +18724,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270799</ATTRIBUTE_DATA>
@@ -18231,6 +18845,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270800</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18346,6 +18964,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270801</ATTRIBUTE_DATA>
@@ -18463,6 +19085,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270802</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18578,6 +19204,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270803</ATTRIBUTE_DATA>
@@ -18695,6 +19325,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270804</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18810,6 +19444,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270805</ATTRIBUTE_DATA>
@@ -18937,6 +19575,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270806</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19061,6 +19703,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270807</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19177,6 +19823,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270808</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19292,6 +19942,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270809</ATTRIBUTE_DATA>
@@ -19417,6 +20071,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270810</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19532,6 +20190,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270811</ATTRIBUTE_DATA>
@@ -19649,6 +20311,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270812</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19764,6 +20430,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270813</ATTRIBUTE_DATA>
@@ -19881,6 +20551,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270814</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19997,6 +20671,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270815</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20112,6 +20790,10 @@ $ sudo augenrules --load</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270816</ATTRIBUTE_DATA>
@@ -20243,6 +20925,10 @@ where &lt;log mountpoint&gt; is the aforementioned mount point.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270817</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20354,6 +21040,10 @@ The script must be located in the "/etc/cron.weekly" directory.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270818</ATTRIBUTE_DATA>
@@ -20481,6 +21171,10 @@ Edit "/etc/audit/auditd.conf" and set the "space_left" parameter to be at least 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270819</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20599,6 +21293,10 @@ $ sudo systemctl restart auditd.service</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270820</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20706,6 +21404,10 @@ $ sudo timedatectl set-timezone [ZONE]</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270821</ATTRIBUTE_DATA>
@@ -20827,6 +21529,10 @@ Replace "[audit_tool]" with the audit tool that does not have the correct permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270822</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20946,6 +21652,10 @@ Replace "[audit_tool]" with each audit tool not owned by root.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270823</ATTRIBUTE_DATA>
@@ -21067,6 +21777,10 @@ Replace "[audit_tool]" with each audit tool not group-owned by root.</ATTRIBUTE_
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270824</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21175,6 +21889,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin -perm /
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270825</ATTRIBUTE_DATA>
@@ -21285,6 +22003,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -user
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270826</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21393,6 +22115,10 @@ $ sudo find /bin /sbin /usr/bin /usr/sbin /usr/local/bin /usr/local/sbin ! -grou
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270827</ATTRIBUTE_DATA>
@@ -21519,6 +22245,10 @@ $ sudo chmod 0600 /var/log/audit/*</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270828</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21643,6 +22373,10 @@ $ sudo chown root /var/log/audit/*</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270829</ATTRIBUTE_DATA>
@@ -21773,6 +22507,10 @@ $ sudo systemctl kill auditd -s SIGHUP</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270830</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21898,6 +22636,10 @@ $ sudo chmod -R  750 /var/log/audit</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270831</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22022,6 +22764,10 @@ If any of the seven audit tools do not have appropriate selection lines, this is
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 24.04 LTS Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-270832</ATTRIBUTE_DATA>

@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>None</ROLE>
-    <ASSET_TYPE>Compute</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>2</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_CAN_Ubuntu_22-04_LTS_STIG_V2R4_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_CAN_Ubuntu_22-04_LTS_STIG_V2R4_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>834ec5a3-33d0-5f24-be02-9602d59bf12f</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 4 Benchmark Date: 02 Apr 2025</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>834ec5a3-33d0-5f24-be02-9602d59bf12f</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260469</ATTRIBUTE_DATA>
@@ -175,6 +173,10 @@ Reload the daemon to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260470</ATTRIBUTE_DATA>
@@ -302,6 +304,10 @@ Generate an updated "grub.conf" file with the new password by using the followin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260471</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -418,6 +424,10 @@ $ sudo update-grub</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260472</ATTRIBUTE_DATA>
@@ -547,6 +557,10 @@ Reload settings from all system configuration files by using the following comma
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260473</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -658,6 +672,10 @@ If kernel core dumps are required, document the need with the ISSO.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260474</ATTRIBUTE_DATA>
@@ -780,6 +798,10 @@ Reload the system configuration files for the changes to take effect by using th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260475</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -893,6 +915,10 @@ If the installed CPU is hardware capable of NX protection, check if the system's
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260476</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1005,6 +1031,10 @@ APT::Get::AllowUnauthenticated "false";</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260477</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1115,6 +1145,10 @@ Unattended-Upgrade::Remove-Unused-Dependencies "true";</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260478</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1220,6 +1254,10 @@ If "libpam-pwquality" is not installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260479</ATTRIBUTE_DATA>
@@ -1329,6 +1367,10 @@ If the "chrony" package is not installed, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260480</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1436,6 +1478,10 @@ If the "systemd-timesyncd" package is installed, this is a finding.</ATTRIBUTE_D
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260481</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1542,6 +1588,10 @@ If the "ntp" package is installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260482</ATTRIBUTE_DATA>
@@ -1652,6 +1702,10 @@ If the "rsh-server" package is installed, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260483</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1760,6 +1814,10 @@ If the "telnetd" package is installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260484</ATTRIBUTE_DATA>
@@ -1887,6 +1945,10 @@ Note: Encrypting a partition in an already-installed system is more difficult be
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260485</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1996,6 +2058,10 @@ If any directories are found to be group-writable or world-writable, this is a f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260486</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2103,6 +2169,10 @@ If any files are found to be group-writable or world-writable, this is a finding
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260487</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2209,6 +2279,10 @@ If any files are found to be group-writable or world-writable, this is a finding
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260488</ATTRIBUTE_DATA>
@@ -2319,6 +2393,10 @@ If a value of "755" or less permissive is not returned, this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260489</ATTRIBUTE_DATA>
@@ -2432,6 +2510,10 @@ Note: The btmp, wtmp, and lastlog files are excluded. Refer to the Discussion fo
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260490</ATTRIBUTE_DATA>
@@ -2561,6 +2643,10 @@ Restart the system for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260491</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2668,6 +2754,10 @@ If a value of "640" or less permissive is not returned, this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260492</ATTRIBUTE_DATA>
@@ -2789,6 +2879,10 @@ Replace "&lt;audit_tool_name&gt;" with the audit tool that does not have the cor
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260493</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2897,6 +2991,10 @@ If any system commands directories are returned, this is a finding.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260494</ATTRIBUTE_DATA>
@@ -3007,6 +3105,10 @@ If any system commands directories are returned that are not Set Group ID up on 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260495</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3113,6 +3215,10 @@ If any system commands are returned and are not owned by a required system accou
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260496</ATTRIBUTE_DATA>
@@ -3223,6 +3329,10 @@ If any system commands are returned that are not Set Group ID upon execution (SG
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260497</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3329,6 +3439,10 @@ If any systemwide library directory is returned, this is a finding.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260498</ATTRIBUTE_DATA>
@@ -3437,6 +3551,10 @@ If any systemwide shared library directory is returned, this is a finding.</ATTR
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260499</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3543,6 +3661,10 @@ If any systemwide library file is returned, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260500</ATTRIBUTE_DATA>
@@ -3652,6 +3774,10 @@ Run the following command, replacing "&lt;command_name&gt;" with any system comm
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260501</ATTRIBUTE_DATA>
@@ -3768,6 +3894,10 @@ Restart the system for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260502</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3882,6 +4012,10 @@ Restart the system for the changes to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260503</ATTRIBUTE_DATA>
@@ -4004,6 +4138,10 @@ Restart the system for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260504</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4125,6 +4263,10 @@ Restart the system for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260505</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4233,6 +4375,10 @@ If "journalctl" is not owned by "root", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260506</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4340,6 +4486,10 @@ If "journalctl" is not group-owned by "root", this is a finding.</ATTRIBUTE_DATA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260507</ATTRIBUTE_DATA>
@@ -4461,6 +4611,10 @@ Replace "&lt;audit_tool_name&gt;" with each audit tool not owned by "root".</ATT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260508</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4568,6 +4722,10 @@ If the "/var/log" directory is not owned by "root", this is a finding.</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260509</ATTRIBUTE_DATA>
@@ -4677,6 +4835,10 @@ If the "/var/log" directory is not group-owned by "syslog", this is a finding.</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260510</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4784,6 +4946,10 @@ If the "/var/log/syslog" file is not owned by "syslog", this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260511</ATTRIBUTE_DATA>
@@ -4893,6 +5059,10 @@ If the "/var/log/syslog" file is not group-owned by "adm", this is a finding.</A
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260512</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5000,6 +5170,10 @@ If "journalctl" is not set to "740", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260513</ATTRIBUTE_DATA>
@@ -5111,6 +5285,10 @@ Set the sticky bit on all public directories using the following command, replac
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260514</ATTRIBUTE_DATA>
@@ -5224,6 +5402,10 @@ If no application firewall is installed, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260515</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5334,6 +5516,10 @@ If the above command returns the status as "inactive" or any type of error, this
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260516</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5441,6 +5627,10 @@ If the ufw is not installed, ask the system administrator if another application
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260517</ATTRIBUTE_DATA>
@@ -5582,6 +5772,10 @@ Rate-limiting can also be done on an interface. An example of adding a rate limi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260518</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5708,6 +5902,10 @@ To deny access to ports, protocols, or services, use:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260519</ATTRIBUTE_DATA>
@@ -5837,6 +6035,10 @@ Restart "chrony.service" for the changes to take effect by using the following c
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260520</ATTRIBUTE_DATA>
@@ -5968,6 +6170,10 @@ Restart the chrony service:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260521</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6075,6 +6281,10 @@ If "Time zone" is not set to UTC, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260522</ATTRIBUTE_DATA>
@@ -6196,6 +6406,10 @@ If "1" is not the system's default value, add or update the following line in "/
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260523</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6309,6 +6523,10 @@ If the "openssh" server package is not installed, this is a finding.</ATTRIBUTE_
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260524</ATTRIBUTE_DATA>
@@ -6424,6 +6642,10 @@ If "ssh.service" is not enabled and active, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260525</ATTRIBUTE_DATA>
@@ -6595,6 +6817,10 @@ Restart the SSH daemon for the changes to take effect and then signal the SSH se
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260526</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6708,6 +6934,10 @@ Restart the SSH daemon for the changes to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260527</ATTRIBUTE_DATA>
@@ -6825,6 +7055,10 @@ Restart the SSH daemon for the changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260528</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6940,6 +7174,10 @@ Restart the SSH daemon for the changes to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260529</ATTRIBUTE_DATA>
@@ -7057,6 +7295,10 @@ Restart the SSH daemon for the changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260530</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7168,6 +7410,10 @@ Restart the SSH daemon for the changes to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260531</ATTRIBUTE_DATA>
@@ -7293,6 +7539,10 @@ Restart the SSH server for the changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260532</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7413,6 +7663,10 @@ Restart the SSH server for the changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260533</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7527,6 +7781,10 @@ Restart the SSH server for changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260534</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7638,6 +7896,10 @@ Restart the SSH server for changes to take effect:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260535</ATTRIBUTE_DATA>
@@ -7776,6 +8038,10 @@ Update GDM with the new configuration by using the following commands:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260536</ATTRIBUTE_DATA>
@@ -7916,6 +8182,10 @@ Update GDM with the new configuration by using the following commands:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260537</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8030,6 +8300,10 @@ lock-enabled=true</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260538</ATTRIBUTE_DATA>
@@ -8160,6 +8434,10 @@ idle-delay=600</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260539</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8274,6 +8552,10 @@ $ sudo dconf update</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260540</ATTRIBUTE_DATA>
@@ -8395,6 +8677,10 @@ Configure Ubuntu 22.04 LTS to disable the ability to use USB mass storage device
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260541</ATTRIBUTE_DATA>
@@ -8523,6 +8809,10 @@ For each module from the system, execute the following command to remove it:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260542</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8637,6 +8927,10 @@ If the output does not contain "L" in the second field to indicate the account i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260543</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8748,6 +9042,10 @@ If output is produced and the accounts listed are interactive user accounts, thi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260545</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8856,6 +9154,10 @@ PASS_MIN_DAYS    1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260546</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8963,6 +9265,10 @@ PASS_MAX_DAYS    60</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260547</ATTRIBUTE_DATA>
@@ -9078,6 +9384,10 @@ Note: DOD recommendation is 35 days, but a lower value is acceptable. The value 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260548</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9192,6 +9502,10 @@ If any temporary accounts have no expiration date set or do not expire within 72
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260549</ATTRIBUTE_DATA>
@@ -9335,6 +9649,10 @@ unlock_time = 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260550</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9442,6 +9760,10 @@ auth     required     pam_faildelay.so     delay=4000000</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260552</ATTRIBUTE_DATA>
@@ -9553,6 +9875,10 @@ Add or modify the following line at the top of the "/etc/security/limits.conf" f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260553</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9662,6 +9988,10 @@ If "vlock" is not installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260554</ATTRIBUTE_DATA>
@@ -9777,6 +10107,10 @@ To set the timeout for the current sessions, execute the following command over 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260555</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9886,6 +10220,10 @@ UMASK 077</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260556</ATTRIBUTE_DATA>
@@ -9998,6 +10336,10 @@ If the "apparmor" package is not installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260557</ATTRIBUTE_DATA>
@@ -10129,6 +10471,10 @@ Note: AppArmor must have properly configured profiles for applications and home 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260558</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10235,6 +10581,10 @@ If any occurrences of "NOPASSWD" or "!authenticate" return from the command, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260559</ATTRIBUTE_DATA>
@@ -10350,6 +10700,10 @@ To remove a user from the sudo group, run:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260560</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10459,6 +10813,10 @@ ucredit = -1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260561</ATTRIBUTE_DATA>
@@ -10570,6 +10928,10 @@ lcredit = -1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260562</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10679,6 +11041,10 @@ dcredit = -1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260563</ATTRIBUTE_DATA>
@@ -10792,6 +11158,10 @@ ocredit = -1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260564</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10899,6 +11269,10 @@ dictcheck = 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260565</ATTRIBUTE_DATA>
@@ -11009,6 +11383,10 @@ minlen = 15</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260566</ATTRIBUTE_DATA>
@@ -11121,6 +11499,10 @@ difok = 8</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260567</ATTRIBUTE_DATA>
@@ -11243,6 +11625,10 @@ Note: The value of "retry" should be between "1" and "3".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260569</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11351,6 +11737,10 @@ password [success=1 default=ignore] pam_unix.so obscure sha512 shadow remember=5
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260570</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11455,6 +11845,10 @@ Remove any instances of the "nullok" option in "/etc/pam.d/common-auth" and "/et
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260571</ATTRIBUTE_DATA>
@@ -11567,6 +11961,10 @@ Or lock the account:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260572</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11674,6 +12072,10 @@ ENCRYPT_METHOD SHA512</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260573</ATTRIBUTE_DATA>
@@ -11791,6 +12193,10 @@ If the "libpam-pkcs11" package is not installed, this is a finding.</ATTRIBUTE_D
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260574</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11898,6 +12304,10 @@ If the "opensc-pcks11" package is not installed, this is a finding.</ATTRIBUTE_D
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260575</ATTRIBUTE_DATA>
@@ -12033,6 +12443,10 @@ PubkeyAuthentication yes</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260576</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12142,6 +12556,10 @@ ocsp_on</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260577</ATTRIBUTE_DATA>
@@ -12261,6 +12679,10 @@ Note: If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260578</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12373,6 +12795,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260579</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12478,6 +12904,10 @@ If the system is missing an "/etc/pam_pkcs11/" directory and an "/etc/pam_pkcs11
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260580</ATTRIBUTE_DATA>
@@ -12597,6 +13027,10 @@ Update the "/etc/ssl/certs" directory by using the following command:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260581</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12709,6 +13143,10 @@ Note: It is valid for this configuration to be in a file with a name that ends w
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260582</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12818,6 +13256,10 @@ If there is no application installed to perform integrity checks, this is a find
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260583</ATTRIBUTE_DATA>
@@ -12967,6 +13409,10 @@ End timestamp: 2024-04-01 04:29:16 +1300 (run time: 9m 16s)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260584</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13078,6 +13524,10 @@ SILENTREPORTS=no</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260585</ATTRIBUTE_DATA>
@@ -13206,6 +13656,10 @@ Copy it to the cron.daily directory:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260586</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13331,6 +13785,10 @@ Add or modify the following lines in the "/etc/aide/aide.conf" file:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260587</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13442,6 +13900,10 @@ The script must be located in the "/etc/cron.weekly" directory.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260588</ATTRIBUTE_DATA>
@@ -13565,6 +14027,10 @@ Enable and activate the log service by using the following command:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260589</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13683,6 +14149,10 @@ Restart "rsyslog.service" for the changes to take effect by using the following 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260590</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13800,6 +14270,10 @@ If the "auditd" package is not installed, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260591</ATTRIBUTE_DATA>
@@ -13921,6 +14395,10 @@ If the "auditd.service" is not enabled and active, this is a finding.</ATTRIBUTE
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260592</ATTRIBUTE_DATA>
@@ -14064,6 +14542,10 @@ Restart the "auditd.service" for the changes to take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260593</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14184,6 +14666,10 @@ Restart the "auditd" service for the changes take effect:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260594</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14303,6 +14789,10 @@ Note: If system availability has been determined to be more important, and this 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260595</ATTRIBUTE_DATA>
@@ -14434,6 +14924,10 @@ where &lt;audit_partition_mountpoint&gt; is the aforementioned mount point.</ATT
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260596</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14554,6 +15048,10 @@ Note: If the "space_left_action" parameter is set to "exec", ensure the command 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260597</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14672,6 +15170,10 @@ Using the path of the directory containing the audit logs, configure the audit l
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260598</ATTRIBUTE_DATA>
@@ -14792,6 +15294,10 @@ Using the path of the directory containing the audit logs, configure the audit l
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260599</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14907,6 +15413,10 @@ Reload the configuration file of the audit service to update the group ownership
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260600</ATTRIBUTE_DATA>
@@ -15027,6 +15537,10 @@ Using the path of the directory containing the audit logs, configure the audit l
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260601</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15136,6 +15650,10 @@ If "/etc/audit/audit.rules", "/etc/audit/auditd.conf", or "/etc/audit/rules.d/*"
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260602</ATTRIBUTE_DATA>
@@ -15247,6 +15765,10 @@ If "/etc/audit/audit.rules", "/etc/audit/auditd.conf", or "/etc/audit/rules.d/*"
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260603</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15356,6 +15878,10 @@ If "/etc/audit/audit.rules", "/etc/audit/auditd.conf", or "/etc/audit/rules.d/*"
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260604</ATTRIBUTE_DATA>
@@ -15475,6 +16001,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260605</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15592,6 +16122,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260606</ATTRIBUTE_DATA>
@@ -15711,6 +16245,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260607</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15828,6 +16366,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260608</ATTRIBUTE_DATA>
@@ -15947,6 +16489,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260609</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16064,6 +16610,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260610</ATTRIBUTE_DATA>
@@ -16183,6 +16733,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260611</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16300,6 +16854,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260612</ATTRIBUTE_DATA>
@@ -16419,6 +16977,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260613</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16536,6 +17098,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260614</ATTRIBUTE_DATA>
@@ -16655,6 +17221,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260615</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16772,6 +17342,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260616</ATTRIBUTE_DATA>
@@ -16891,6 +17465,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260617</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17008,6 +17586,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260618</ATTRIBUTE_DATA>
@@ -17127,6 +17709,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260619</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17244,6 +17830,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260620</ATTRIBUTE_DATA>
@@ -17363,6 +17953,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260621</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17480,6 +18074,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260622</ATTRIBUTE_DATA>
@@ -17599,6 +18197,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260623</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17716,6 +18318,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260624</ATTRIBUTE_DATA>
@@ -17835,6 +18441,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260625</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17952,6 +18562,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260626</ATTRIBUTE_DATA>
@@ -18071,6 +18685,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260627</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18188,6 +18806,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260628</ATTRIBUTE_DATA>
@@ -18309,6 +18931,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260629</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18428,6 +19054,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260630</ATTRIBUTE_DATA>
@@ -18549,6 +19179,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260631</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18669,6 +19303,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260632</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18788,6 +19426,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260633</ATTRIBUTE_DATA>
@@ -18913,6 +19555,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260634</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19036,6 +19682,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260635</ATTRIBUTE_DATA>
@@ -19165,6 +19815,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260636</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19286,6 +19940,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260637</ATTRIBUTE_DATA>
@@ -19410,6 +20068,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260638</ATTRIBUTE_DATA>
@@ -19539,6 +20201,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260639</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19661,6 +20327,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260640</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19778,6 +20448,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260641</ATTRIBUTE_DATA>
@@ -19897,6 +20571,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260642</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20015,6 +20693,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260643</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20132,6 +20814,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260644</ATTRIBUTE_DATA>
@@ -20253,6 +20939,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260645</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20373,6 +21063,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260646</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20491,6 +21185,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260647</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20608,6 +21306,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260648</ATTRIBUTE_DATA>
@@ -20735,6 +21437,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260649</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20858,6 +21564,10 @@ Note: The "-k &lt;keyname&gt;" at the end of the line gives the rule a unique me
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Canonical Ubuntu 22.04 LTS Security Technical Implementation Guide :: v2r4</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-260650</ATTRIBUTE_DATA>

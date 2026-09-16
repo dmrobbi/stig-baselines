@@ -2,15 +2,17 @@
 <CHECKLIST>
   <ASSET>
     <ROLE>Workstation</ROLE>
-    <ASSET_TYPE>Workstation</ASSET_TYPE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
     <HOST_NAME />
     <HOST_IP />
     <HOST_MAC />
     <HOST_FQDN />
-    <TARGET_KEY />
     <TECH_AREA />
-    <ASSET_GUID />
+    <TARGET_KEY />
     <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
   </ASSET>
   <STIGS>
     <iSTIG>
@@ -20,8 +22,12 @@
           <SID_DATA>2</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>class</SID_NAME>
+          <SID_NAME>classification</SID_NAME>
           <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_MS_Windows_11_STIG_V2R9_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -32,35 +38,27 @@
           <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of War (DoW) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>planguage</SID_NAME>
-          <SID_DATA>English</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>filename</SID_NAME>
           <SID_DATA>U_MS_Windows_11_STIG_V2R9_Manual-xccdf.xml</SID_DATA>
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>uuid</SID_NAME>
-          <SID_DATA>374c229e-a2dd-577b-86c3-8aeb323a5b16</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>
           <SID_DATA>Release: 9 Benchmark Date: 10 Aug 2026</SID_DATA>
         </SI_DATA>
         <SI_DATA>
-          <SID_NAME>purpose</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
-          <SID_NAME>notice</SID_NAME>
-          <SID_DATA />
-        </SI_DATA>
-        <SI_DATA>
           <SID_NAME>source</SID_NAME>
           <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
         </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>374c229e-a2dd-577b-86c3-8aeb323a5b16</SID_DATA>
+        </SI_DATA>
       </STIG_INFO>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253254</ATTRIBUTE_DATA>
@@ -170,6 +168,10 @@ If "System type" is not "64-bit operating system...", this is a finding.</ATTRIB
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253255</ATTRIBUTE_DATA>
@@ -281,6 +283,10 @@ Run "tpm.msc" for configuration options in Windows.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253256</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -384,6 +390,10 @@ Under "System Summary", if "BIOS Mode" does not display "UEFI", this is a findin
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253257</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -486,6 +496,10 @@ Under "System Summary", if "Secure Boot State" does not display "On", this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253259</ATTRIBUTE_DATA>
@@ -601,6 +615,10 @@ Note: An alternate encryption application may be used in lieu of BitLocker provi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253260</ATTRIBUTE_DATA>
@@ -741,6 +759,10 @@ If Network Unlock is active, select "Configure TPM startup PIN:" and set to "Req
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253261</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -848,6 +870,10 @@ Value: 0x00000006 (6) or greater</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253262</ATTRIBUTE_DATA>
@@ -976,6 +1002,10 @@ https://docs.microsoft.com/en-us/windows/security/threat-protection/windows-defe
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253263</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1080,6 +1110,10 @@ If the "About Windows" dialog box does not display "Microsoft Windows 11 Version
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253264</ATTRIBUTE_DATA>
@@ -1196,6 +1230,10 @@ If there is no antivirus solution installed on the system, this is a finding.</A
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253265</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1299,6 +1337,10 @@ This does not apply to system partitions such the Recovery and EFI System Partit
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253266</ATTRIBUTE_DATA>
@@ -1404,6 +1446,10 @@ If the drop-down list box "Default operating system:" shows any operating system
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253267</ATTRIBUTE_DATA>
@@ -1524,6 +1570,10 @@ Remove any unnecessary non-system-created shares.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253268</ATTRIBUTE_DATA>
@@ -1652,6 +1702,10 @@ Inactive accounts that have been reviewed and deemed to be required must be docu
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253269</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1772,6 +1826,10 @@ Remove any standard user accounts.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253270</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -1878,6 +1936,10 @@ If the group contains any standard user accounts used for performing normal user
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253271</ATTRIBUTE_DATA>
@@ -1991,6 +2053,10 @@ For hosted hypervisors other than Hyper-V, restrict access to create or run virt
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253272</ATTRIBUTE_DATA>
@@ -2109,6 +2175,10 @@ All of the built-in accounts may not exist on a system, depending on the Windows
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253273</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2215,6 +2285,10 @@ Ensure "Password never expires" is not checked on all active accounts.</ATTRIBUT
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253274</ATTRIBUTE_DATA>
@@ -2412,6 +2486,10 @@ Successfully processed 1 files; Failed processing 0 files</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253275</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2517,6 +2595,10 @@ If an application requires IIS or a subset to be installed to function, this nee
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253276</ATTRIBUTE_DATA>
@@ -2625,6 +2707,10 @@ De-select "Simple Network Management Protocol (SNMP)".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253277</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2731,6 +2817,10 @@ De-select "Simple TCPIP Services (i.e. echo, daytime etc.)".</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253278</ATTRIBUTE_DATA>
@@ -2840,6 +2930,10 @@ De-select "Telnet Client".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253279</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -2947,6 +3041,10 @@ De-select "TFTP Client".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253280</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3052,6 +3150,10 @@ Note: This does not apply to server-based applications that have a requirement f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253281</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3152,6 +3254,10 @@ The configuration requirements will be determined by the applicable firewall STI
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253282</ATTRIBUTE_DATA>
@@ -3268,6 +3374,10 @@ If a third-party firewall is used, configure inbound exceptions to only include 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253284</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3378,6 +3488,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253285</ATTRIBUTE_DATA>
@@ -3508,6 +3622,10 @@ De-select "Windows PowerShell 2.0".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253286</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3635,6 +3753,10 @@ De-select "SMB 1.0/CIFS File Sharing Support".</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253287</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3749,6 +3871,10 @@ The system must be restarted for the change to take effect.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253288</ATTRIBUTE_DATA>
@@ -3865,6 +3991,10 @@ The system must be restarted for the changes to take effect.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253289</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -3967,6 +4097,10 @@ If the "Startup Type" is not "Disabled" or the "Status" is "Running", this is a 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253290</ATTRIBUTE_DATA>
@@ -4073,6 +4207,10 @@ If any unresolved SIDs exist and are not for currently valid accounts or groups,
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253291</ATTRIBUTE_DATA>
@@ -4195,6 +4333,10 @@ Steps to create an Intune policy:
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253293</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4300,6 +4442,10 @@ Ensure "Alert me when a new Bluetooth device wants to connect" is checked.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253294</ATTRIBUTE_DATA>
@@ -4414,6 +4560,10 @@ Implement technical measures where feasible such as removal of applications or u
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253296</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4527,6 +4677,10 @@ The US Naval Observatory operates stratum 1 time servers, identified at https://
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253297</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4635,6 +4789,10 @@ A value of "0" is also acceptable, requiring an administrator to unlock the acco
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253298</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4739,6 +4897,10 @@ If the "Account lockout threshold" is "0" or more than "3" attempts, this is a f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253299</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -4842,6 +5004,10 @@ If the "Reset account lockout counter after" value is less than "15" minutes, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253300</ATTRIBUTE_DATA>
@@ -4962,6 +5128,10 @@ Revise the Intune policy to set password history policy to "24" passwords rememb
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253301</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5065,6 +5235,10 @@ If the value for the "Maximum password age" is greater than "60" days, this is a
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253302</ATTRIBUTE_DATA>
@@ -5170,6 +5344,10 @@ If the value for the "Minimum password age" is less than "1" day, this is a find
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253303</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5273,6 +5451,10 @@ If the value for the "Minimum password length," is less than "14" characters, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253304</ATTRIBUTE_DATA>
@@ -5380,6 +5562,10 @@ If the site is using a password filter that requires this setting be set to "Dis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253305</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5483,6 +5669,10 @@ If the value for "Store password using reversible encryption" is not set to "Dis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253306</ATTRIBUTE_DATA>
@@ -5593,6 +5783,10 @@ Account Logon &gt;&gt; Credential Validation - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253307</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5701,6 +5895,10 @@ Account Logon &gt;&gt; Credential Validation - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253308</ATTRIBUTE_DATA>
@@ -5811,6 +6009,10 @@ Account Management &gt;&gt; Security Group Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253309</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -5919,6 +6121,10 @@ Account Management &gt;&gt; User Account Management - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253310</ATTRIBUTE_DATA>
@@ -6029,6 +6235,10 @@ Account Management &gt;&gt; User Account Management - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253311</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6138,6 +6348,10 @@ Detailed Tracking &gt;&gt; Plug and Play Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253312</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6246,6 +6460,10 @@ Detailed Tracking &gt;&gt; Process Creation - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253313</ATTRIBUTE_DATA>
@@ -6358,6 +6576,10 @@ Logon/Logoff &gt;&gt; Account Lockout - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253314</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6466,6 +6688,10 @@ Logon/Logoff &gt;&gt; Group Membership - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253315</ATTRIBUTE_DATA>
@@ -6576,6 +6802,10 @@ Logon/Logoff &gt;&gt; Logoff - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253316</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6684,6 +6914,10 @@ Logon/Logoff &gt;&gt; Logon - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253317</ATTRIBUTE_DATA>
@@ -6794,6 +7028,10 @@ Logon/Logoff &gt;&gt; Logon - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253318</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -6902,6 +7140,10 @@ Logon/Logoff &gt;&gt; Special Logon - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253319</ATTRIBUTE_DATA>
@@ -7012,6 +7254,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253320</ATTRIBUTE_DATA>
@@ -7125,6 +7371,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253321</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7237,6 +7487,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253322</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7346,6 +7600,10 @@ If the system does not audit the above, this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253323</ATTRIBUTE_DATA>
@@ -7458,6 +7716,10 @@ Some virtual machines may generate excessive audit events for access to the virt
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253324</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7569,6 +7831,10 @@ Some virtual machines may generate excessive audit events for access to the virt
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253325</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7678,6 +7944,10 @@ Policy Change &gt;&gt; Audit Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253326</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -7785,6 +8055,10 @@ Policy Change &gt;&gt; Authentication Policy Change - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253327</ATTRIBUTE_DATA>
@@ -7895,6 +8169,10 @@ Policy Change &gt;&gt; Authorization Policy Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253328</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8003,6 +8281,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253329</ATTRIBUTE_DATA>
@@ -8113,6 +8395,10 @@ Privilege Use &gt;&gt; Sensitive Privilege Use - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253330</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8221,6 +8507,10 @@ System &gt;&gt; IPsec Driver - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253331</ATTRIBUTE_DATA>
@@ -8331,6 +8621,10 @@ System &gt;&gt; Other System Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253332</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8439,6 +8733,10 @@ System &gt;&gt; Other System Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253333</ATTRIBUTE_DATA>
@@ -8549,6 +8847,10 @@ System &gt;&gt; Security State Change - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253334</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8657,6 +8959,10 @@ System &gt;&gt; Security System Extension - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253335</ATTRIBUTE_DATA>
@@ -8767,6 +9073,10 @@ System &gt;&gt; System Integrity - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253336</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -8875,6 +9185,10 @@ System &gt;&gt; System Integrity - Success</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253337</ATTRIBUTE_DATA>
@@ -8986,6 +9300,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253338</ATTRIBUTE_DATA>
@@ -9102,6 +9420,10 @@ If the system is configured to send audit records directly to an audit server, t
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253339</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9212,6 +9534,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253340</ATTRIBUTE_DATA>
@@ -9330,6 +9656,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253341</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9446,6 +9776,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253342</ATTRIBUTE_DATA>
@@ -9564,6 +9898,10 @@ If the location of the logs has been changed, when adding Eventlog to the permis
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253344</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9670,6 +10008,10 @@ Policy Change &gt;&gt; Other Policy Change Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253345</ATTRIBUTE_DATA>
@@ -9778,6 +10120,10 @@ Logon/Logoff &gt;&gt; Other Logon/Logoff Events - Success</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253346</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -9884,6 +10230,10 @@ Logon/Logoff &gt;&gt; Other Logon/Logoff Events - Failure</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253347</ATTRIBUTE_DATA>
@@ -9993,6 +10343,10 @@ Object Access &gt;&gt; Detailed File Share - Failure</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253348</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10100,6 +10454,10 @@ Policy Change &gt;&gt; MPSSVC Rule-Level Policy Change - Success</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253349</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10206,6 +10564,10 @@ Policy Change &gt;&gt; MPSSVC Rule-Level Policy Change - Failure</ATTRIBUTE_DATA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253350</ATTRIBUTE_DATA>
@@ -10317,6 +10679,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253351</ATTRIBUTE_DATA>
@@ -10444,6 +10810,10 @@ Value Name: Value                                                               
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253352</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10550,6 +10920,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253353</ATTRIBUTE_DATA>
@@ -10660,6 +11034,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253354</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10768,6 +11146,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253355</ATTRIBUTE_DATA>
@@ -10878,6 +11260,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253356</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -10986,6 +11372,10 @@ This policy setting requires the installation of the MSS-Legacy custom templates
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253357</ATTRIBUTE_DATA>
@@ -11100,6 +11490,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253358</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11210,6 +11604,10 @@ This policy setting requires the installation of the SecGuide custom templates i
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253359</ATTRIBUTE_DATA>
@@ -11325,6 +11723,10 @@ This policy setting requires the installation of the SecGuide custom templates i
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253360</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11432,6 +11834,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253361</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11538,6 +11944,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253362</ATTRIBUTE_DATA>
@@ -11659,6 +12069,10 @@ Value: RequireMutualAuthentication=1, RequireIntegrity=1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253363</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11768,6 +12182,10 @@ NistP256</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253364</ATTRIBUTE_DATA>
@@ -11880,6 +12298,10 @@ If this needs to be corrected, configure the policy value for Computer Configura
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253365</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -11986,6 +12408,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253367</ATTRIBUTE_DATA>
@@ -12096,6 +12522,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253368</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12202,6 +12632,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253369</ATTRIBUTE_DATA>
@@ -12348,6 +12782,10 @@ https://technet.microsoft.com/en-us/itpro/windows/keep-secure/credential-guard-r
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253370</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12475,6 +12913,10 @@ https://docs.microsoft.com/en-us/windows/access-protection/credential-guard/cred
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253371</ATTRIBUTE_DATA>
@@ -12606,6 +13048,10 @@ Value: 0x00000001 (1) (Enabled with UEFI lock), or 0x00000002 (2) (Enabled witho
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253372</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12725,6 +13171,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253373</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -12831,6 +13281,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253374</ATTRIBUTE_DATA>
@@ -12939,6 +13393,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253375</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13046,6 +13504,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253376</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13152,6 +13614,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253377</ATTRIBUTE_DATA>
@@ -13267,6 +13733,10 @@ To correct this, configured the policy value for Computer Configuration &gt;&gt;
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253378</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13373,6 +13843,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253379</ATTRIBUTE_DATA>
@@ -13485,6 +13959,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Administrative Te
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253380</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13591,6 +14069,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253381</ATTRIBUTE_DATA>
@@ -13699,6 +14181,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253382</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -13805,6 +14291,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253383</ATTRIBUTE_DATA>
@@ -13913,6 +14403,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253384</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14019,6 +14513,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253385</ATTRIBUTE_DATA>
@@ -14127,6 +14625,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253386</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14234,6 +14736,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253387</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14340,6 +14846,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253388</ATTRIBUTE_DATA>
@@ -14449,6 +14959,10 @@ Note: If the value for NoDriveTypeAutorun is entered manually, it must be entere
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253389</ATTRIBUTE_DATA>
@@ -14569,6 +15083,10 @@ Revise the Intune policy to enable enhanced anti-spoofing for Facial Features.</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253391</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -14675,6 +15193,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253392</ATTRIBUTE_DATA>
@@ -14784,6 +15306,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253393</ATTRIBUTE_DATA>
@@ -14898,6 +15424,10 @@ Value: 0x00000000 (0) (Security)
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253394</ATTRIBUTE_DATA>
@@ -15030,6 +15560,10 @@ Simple (99)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253395</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15151,6 +15685,10 @@ Windows 11 includes duplicate policies for this setting. It can also be configur
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253396</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15261,6 +15799,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253397</ATTRIBUTE_DATA>
@@ -15373,6 +15915,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253398</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15484,6 +16030,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253399</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15593,6 +16143,10 @@ Value: 0x00000000 (0)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253400</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15701,6 +16255,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253401</ATTRIBUTE_DATA>
@@ -15819,6 +16377,10 @@ Revise the Intune policy to set the minimum PIN length to "6" or greater.</ATTRI
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253402</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -15925,6 +16487,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253403</ATTRIBUTE_DATA>
@@ -16033,6 +16599,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253404</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16139,6 +16709,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253405</ATTRIBUTE_DATA>
@@ -16247,6 +16821,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253406</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16354,6 +16932,10 @@ Value: 3</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253407</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16460,6 +17042,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253408</ATTRIBUTE_DATA>
@@ -16571,6 +17157,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253409</ATTRIBUTE_DATA>
@@ -16689,6 +17279,10 @@ Revise the Intune policy to disable indexing of encrypted files.</ATTRIBUTE_DATA
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253410</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16796,6 +17390,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253411</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -16902,6 +17500,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253412</ATTRIBUTE_DATA>
@@ -17014,6 +17616,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253413</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17120,6 +17726,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253414</ATTRIBUTE_DATA>
@@ -17229,6 +17839,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253415</ATTRIBUTE_DATA>
@@ -17341,6 +17955,10 @@ Specify the Transcript output directory to point to a Central Log Server or anot
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253416</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17448,6 +18066,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253417</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17554,6 +18176,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253418</ATTRIBUTE_DATA>
@@ -17670,6 +18296,10 @@ Use of a Privileged Access Workstation (PAW) and adherence to the Clean Source p
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253419</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17776,6 +18406,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253420</ATTRIBUTE_DATA>
@@ -17884,6 +18518,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253421</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -17990,6 +18628,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253422</ATTRIBUTE_DATA>
@@ -18102,6 +18744,10 @@ The requirement is NA if the policy value for Computer Configuration &gt;&gt; Ad
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253423</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18209,6 +18855,10 @@ To correct this, configure the policy value for Computer Configuration &gt;&gt; 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253424</ATTRIBUTE_DATA>
@@ -18328,6 +18978,10 @@ Set the Windows Ink Workspace Policy to disallow access above lock.</ATTRIBUTE_D
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253425</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18435,6 +19089,10 @@ Value: 0x00000001 (1)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253426</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18540,6 +19198,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253427</ATTRIBUTE_DATA>
@@ -18701,6 +19363,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253428</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -18853,6 +19519,10 @@ The InstallRoot tool is available on Cyber Exchange at https://cyber.mil/pki-pke
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253429</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19003,6 +19673,10 @@ The certificates can be installed using the InstallRoot tool. The tool and user 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253430</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19150,6 +19824,10 @@ The certificates can be installed using the InstallRoot tool. The tool and user 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253431</ATTRIBUTE_DATA>
@@ -19324,6 +20002,10 @@ S-1-15-3-1024-1065365936-1281604716-3511738428-1654721687-432734479-3232135806-4
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253433</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19427,6 +20109,10 @@ If the value for "Accounts: Guest account status" is not set to "Disabled", this
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253434</ATTRIBUTE_DATA>
@@ -19535,6 +20221,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253435</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19639,6 +20329,10 @@ If the value for "Accounts: Rename administrator account" is set to "Administrat
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253436</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19742,6 +20436,10 @@ If the value for "Accounts: Rename guest account" is set to "Guest", this is a f
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253437</ATTRIBUTE_DATA>
@@ -19850,6 +20548,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253438</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -19956,6 +20658,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253439</ATTRIBUTE_DATA>
@@ -20064,6 +20770,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253440</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20171,6 +20881,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253441</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20277,6 +20991,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253442</ATTRIBUTE_DATA>
@@ -20389,6 +21107,10 @@ Configure the policy value for Computer Configuration &gt;&gt; Windows Settings 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253443</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20498,6 +21220,10 @@ Warning: This setting may prevent a system from being joined to a domain if not 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253444</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20606,6 +21332,10 @@ Value: 0x00000384 (900) (or less, excluding "0" which is effectively disabled)</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253445</ATTRIBUTE_DATA>
@@ -20746,6 +21476,10 @@ Note: For MDM/Intune implementation, when configuring this policy via a Policy C
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253446</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -20858,6 +21592,10 @@ If a site-defined title is used, it can in no case contravene or modify the lang
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253447</ATTRIBUTE_DATA>
@@ -20974,6 +21712,10 @@ This setting only applies to domain-joined systems, however, it is configured by
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253448</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21086,6 +21828,10 @@ This can be left not configured or set to "No action" on workstations with the f
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253449</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21192,6 +21938,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253450</ATTRIBUTE_DATA>
@@ -21300,6 +22050,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253451</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21407,6 +22161,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253452</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21510,6 +22268,10 @@ If the value for "Network access: Allow anonymous SID/Name translation" is not s
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253453</ATTRIBUTE_DATA>
@@ -21618,6 +22380,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253454</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21724,6 +22490,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253455</ATTRIBUTE_DATA>
@@ -21832,6 +22602,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253456</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -21938,6 +22712,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253457</ATTRIBUTE_DATA>
@@ -22062,6 +22840,10 @@ The "Security descriptor:" must be populated with "O:BAG:BAD:(A;;RC;;;BA) for th
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253458</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22169,6 +22951,10 @@ Value: 0</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253459</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22275,6 +23061,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253460</ATTRIBUTE_DATA>
@@ -22387,6 +23177,10 @@ Future encryption types</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253461</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22493,6 +23287,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253462</ATTRIBUTE_DATA>
@@ -22601,6 +23399,10 @@ Value: 5</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253463</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22707,6 +23509,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253464</ATTRIBUTE_DATA>
@@ -22815,6 +23621,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253465</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -22921,6 +23731,10 @@ Value: 0x20080000 (537395200)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253466</ATTRIBUTE_DATA>
@@ -23041,6 +23855,10 @@ Set the Intune System Cryptography Policy to use FIPS-compliant algorithms for e
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253467</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23147,6 +23965,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253468</ATTRIBUTE_DATA>
@@ -23255,6 +24077,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253469</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23361,6 +24187,10 @@ Value: 2 (Prompt for consent on the secure desktop)</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253470</ATTRIBUTE_DATA>
@@ -23488,6 +24318,10 @@ If all of the following settings exist and are populated, this is not a finding.
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253471</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23594,6 +24428,10 @@ Value: 0</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253472</ATTRIBUTE_DATA>
@@ -23702,6 +24540,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253473</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -23808,6 +24650,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253474</ATTRIBUTE_DATA>
@@ -23916,6 +24762,10 @@ Value: 1</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253475</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24022,6 +24872,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253476</ATTRIBUTE_DATA>
@@ -24152,6 +25006,10 @@ https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-overview#win
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253477</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24258,6 +25116,10 @@ Value: 1</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253478</ATTRIBUTE_DATA>
@@ -24370,6 +25232,10 @@ To correct this, configure the policy value for User Configuration &gt;&gt; Admi
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253479</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24475,6 +25341,10 @@ If any groups or accounts are granted the "Access Credential Manager as a truste
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253480</ATTRIBUTE_DATA>
@@ -24596,6 +25466,10 @@ Remote Desktop Users</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253481</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24701,6 +25575,10 @@ If any groups or accounts (to include administrators), are granted the "Act as p
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253482</ATTRIBUTE_DATA>
@@ -24815,6 +25693,10 @@ Users</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253483</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -24924,6 +25806,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253484</ATTRIBUTE_DATA>
@@ -25037,6 +25923,10 @@ LOCAL SERVICE</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253485</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25147,6 +26037,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253486</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25252,6 +26146,10 @@ If any groups or accounts are granted the "Create a token object" user right, th
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253487</ATTRIBUTE_DATA>
@@ -25369,6 +26267,10 @@ SERVICE</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253488</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25474,6 +26376,10 @@ If any groups or accounts are granted the "Create permanent shared objects" user
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253489</ATTRIBUTE_DATA>
@@ -25587,6 +26493,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253490</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25696,6 +26606,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253491</ATTRIBUTE_DATA>
@@ -25834,6 +26748,10 @@ Note: "Local account" is a built-in security group used to assign user rights an
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253492</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -25953,6 +26871,10 @@ Domain Admin Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253493</ATTRIBUTE_DATA>
@@ -26075,6 +26997,10 @@ Domain Admins Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253494</ATTRIBUTE_DATA>
@@ -26204,6 +27130,10 @@ Guests Group</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253495</ATTRIBUTE_DATA>
@@ -26348,6 +27278,10 @@ Note: "Local account" is a built-in security group used to assign user rights an
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253496</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26453,6 +27387,10 @@ If any groups or accounts are granted the "Enable computer and user accounts to 
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253497</ATTRIBUTE_DATA>
@@ -26563,6 +27501,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253498</ATTRIBUTE_DATA>
@@ -26683,6 +27625,10 @@ SERVICE</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253499</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26793,6 +27739,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253500</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -26898,6 +27848,10 @@ If any groups or accounts are granted the "Lock pages in memory" user right, thi
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253501</ATTRIBUTE_DATA>
@@ -27013,6 +27967,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253502</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27122,6 +28080,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253503</ATTRIBUTE_DATA>
@@ -27233,6 +28195,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253504</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27342,6 +28308,10 @@ Administrators</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253505</ATTRIBUTE_DATA>
@@ -27453,6 +28423,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-253506</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27563,6 +28537,10 @@ Administrators</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-256893</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27672,6 +28650,10 @@ Set the policy value for "Computer Configuration/Administrative Templates/Window
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257592</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27778,6 +28760,10 @@ If the command displays any results, this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-257770</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27883,6 +28869,10 @@ If "Audit Process Creation" is not set to "Failure", this is a finding.</ATTRIBU
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-268317</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -27987,6 +28977,10 @@ Get-AppxPackage -AllUsers *CoPilot* | Remove-AppxPackage -AllUsers</ATTRIBUTE_DA
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-268318</ATTRIBUTE_DATA>
@@ -28108,6 +29102,10 @@ If the Windows 11 system is not receiving policy from either group Policy or an 
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278928</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28210,6 +29208,10 @@ If "Audit Handle Manipulation" is not set to "Failure", this is a finding.</ATTR
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278930</ATTRIBUTE_DATA>
@@ -28314,6 +29316,10 @@ If "Audit Registry" is not set to "Failure", this is a finding.</ATTRIBUTE_DATA>
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278931</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28416,6 +29422,10 @@ If "Audit Registry" is not set to "Success", this is a finding.</ATTRIBUTE_DATA>
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278932</ATTRIBUTE_DATA>
@@ -28520,6 +29530,10 @@ If "Audit Sensitive Privilege Use" is not set to "Success", this is a finding.</
       </VULN>
       <VULN>
         <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-278933</ATTRIBUTE_DATA>
         </STIG_DATA>
@@ -28622,6 +29636,10 @@ If "Audit Sensitive Privilege Use" is not set to "Failure", this is a finding.</
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-279688</ATTRIBUTE_DATA>
@@ -28749,6 +29767,10 @@ Steps to create an Intune policy:
         <SEVERITY_JUSTIFICATION />
       </VULN>
       <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Microsoft Windows 11 Security Technical Implementation Guide :: v2r9</ATTRIBUTE_DATA>
+        </STIG_DATA>
         <STIG_DATA>
           <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
           <ATTRIBUTE_DATA>V-288475</ATTRIBUTE_DATA>

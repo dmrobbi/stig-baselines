@@ -140,49 +140,25 @@ rule's own check text; the CKL carries it verbatim.
 
 ## 6. Bulk-updating statuses (scripted path)
 
-If you collect results in a spreadsheet, apply them without the viewer:
+If you collect results in a spreadsheet, apply them without the viewer
+using `tools/csv2ckl.py` (statuses are enum-checked, so the output stays
+schema-valid and opens in STIG Viewer for the final human pass):
 
 ```csv
 rule,status,finding_details,comments
-U_ESXi-67-000010,NotAFinding,Lockdown mode strict per hostd,"checked via client 2026-09-16"
-U_ESXi-67-000020,Open,"SSH PermitRootLogin yes on host esxi02","POA&M: rotate to key-only"
+ESXI-67-000001,NotAFinding,Lockdown mode strict per hostd,"checked via client 2026-09-16"
+ESXI-67-000020,Open,"SSH PermitRootLogin yes on host esxi02","POA&M: rotate to key-only"
 ```
 
-(one row per rule; `rule` accepts the Rule_Ver, Rule_ID, or Vuln_Num)
+(one row per rule; `rule` accepts the Rule_Ver, Rule_ID, or Vuln_Num;
+unknown rules are warned and skipped)
 
-```python
-#!/usr/bin/env python3
-"""csv2ckl.py IN.ckl results.csv OUT.ckl — apply statuses to a baseline."""
-import csv, sys
-import xml.etree.ElementTree as ET
-
-ckl, csv_path, out = sys.argv[1], sys.argv[2], sys.argv[3]
-VALID = {"Open", "NotAFinding", "Not_Applicable", "Not_Reviewed"}
-rows = list(csv.DictReader(open(csv_path, newline="")))
-t = ET.parse(ckl)
-vulns = t.getroot().findall("./STIGS/iSTIG/VULN")
-hit = 0
-for v in vulns:
-    fields = {d.findtext("VULN_ATTRIBUTE"): d.findtext("ATTRIBUTE_DATA")
-              for d in v.findall("STIG_DATA")}
-    keys = {fields.get("Rule_Ver"), fields.get("Rule_ID"),
-            fields.get("Vuln_Num")}
-    for r in rows:
-        if r["rule"].strip() in keys:
-            st = r["status"].strip()
-            if st not in VALID:
-                sys.exit(f"invalid status {st!r} for {key}")
-            v.find("STATUS").text = st
-            v.find("FINDING_DETAILS").text = r.get("finding_details") or ""
-            v.find("COMMENTS").text = r.get("comments") or ""
-            hit += 1
-ET.indent(t, space="  ")
-t.write(out, encoding="UTF-8", xml_declaration=True)
-print(f"updated {hit}/{len(rows)} rules across {len(vulns)} VULNs")
+```bash
+python3 tools/csv2ckl.py \
+  baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl \
+  results.csv \
+  esxi01-eval.ckl
 ```
-
-The output stays schema-valid (statuses are enum-checked) and opens in
-STIG Viewer for the final human pass.
 
 ## 7. Refreshing later
 

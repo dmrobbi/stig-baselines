@@ -16,7 +16,7 @@ validate:
 	@echo "all CKLs schema-valid (DISA Checklist v2.5)"
 
 check-tool:
-	python3 -m py_compile tools/xccdf2ckl.py tools/merge_ckl.py
+	python3 -m py_compile tools/xccdf2ckl.py tools/merge_ckl.py tools/csv2ckl.py
 
 clean:
 	rm -rf tools/__pycache__

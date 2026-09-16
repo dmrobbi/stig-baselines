@@ -3,6 +3,6 @@ sources/**/*.pdf
 sources/**/*.jpg
 sources/**/*.xsl
 sources/**/*.zip
-!sources/zips/*.zip
 *.zip
+!sources/zips/*.zip
 __pycache__/

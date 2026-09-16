@@ -1,0 +1,5 @@
+# /etc/sudoers.d/soc-remote-scan — scoped NOPASSWD for the OpenSCAP scan user.
+# ONLY the oscap eval command; the scan user has no other privileges.
+# Install with: visudo -f /etc/sudoers.d/soc-remote-scan && chmod 440.
+Cmnd_Alias SOC_OSCAP = /usr/bin/oscap xccdf eval *
+scanuser ALL=(root) NOPASSWD: SOC_OSCAP

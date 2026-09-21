@@ -5,7 +5,7 @@ non-Proxmox Ubuntu host, on purpose: it exercises the scanner end-to-end and
 shows how missing PVE tooling becomes SKIPs (a real pilot node will FAIL more
 controls — that is the failing-first baseline T1 wants).
 
-## Human output (stderr; stdout stays clean)
+## Human output (banner on stderr; table on stdout)
 
 ```text
 PVE-STIG baseline scan v0.1.0 — host thing1, Mon Sep 21 07:50:58 PM UTC 2026

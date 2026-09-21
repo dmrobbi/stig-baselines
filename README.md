@@ -5,7 +5,7 @@ ready to open in **DISA STIG Viewer 2.x / 3.x**. Each VULN carries the full rule
 content (check, fix, SRG group, CCI refs) with status `Not_Reviewed` — the starting
 point for assessment work.
 
-**Repo:** https://idm.wezzel.com/crab-meat-repos/stig-baselines
+**Repo:** https://github.com/dmrobbi/stig-baselines
 
 **vSphere 6.7 assessment:** see
 [docs/VSPHERE67-EVALUATION.md](docs/VSPHERE67-EVALUATION.md) —
@@ -73,7 +73,7 @@ Open a CKL in DISA STIG Viewer (File > Open), set ASSET fields, assess rules.
 Regenerate after refreshing sources:
 
 ```bash
-make convert    # regenerate all CKLs from sources/
+make baselines    # regenerate all CKLs from sources/
 make validate   # xmllint well-formedness + count/status integrity
 ```
 

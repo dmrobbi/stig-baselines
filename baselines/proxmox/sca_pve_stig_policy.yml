@@ -1,0 +1,111 @@
+# Wazuh SCA policy — PVE-STIG Proxmox baseline (v0.1.0)
+# Deploy to the thing1 Wazuh manager under:
+#   /var/ossec/etc/shared/proxmox/sca_pve_stig_policy.yml
+# (agent group "proxmox"; ossec.conf <sca> snippet:
+#  examples/proxmox/wazuh-sca-ossec.conf; full wiring:
+#  docs/proxmox/wazuh-sca-integration.md)
+# Each check translates a control from baselines/proxmox/controls.yaml.
+# NOTE: scan cadence (scan_on_start / interval) is configured in the agent's
+# ossec.conf <sca> block — NOT in this file. Policy shape follows the
+# official Wazuh policies (policy / requirements / checks, file and command
+# rules like the wazuh-ruleset cis_debian10 policy).
+
+policy:
+  id: pve_stig
+  file: sca_pve_stig_policy.yml
+  name: "PVE-STIG — Proxmox VE STIG-style baseline"
+  description: "Layered control set: CIS Debian base + hypervisor + Proxmox services"
+  references:
+    - https://www.cisecurity.org/cis-benchmarks/
+    - https://public.cyber.mil/stigs/
+
+requirements:
+  title: "Proxmox VE host baseline"
+  description: "Verify Proxmox VE node hardening (PVE-STIG control set)"
+  condition: all
+
+checks:
+  - id: 100500
+    title: "sshd: root login key-only and MaxAuthTries <= 4 (PVE-STIG-0040)"
+    description: "Management-plane SSH must not allow password root login."
+    rationale: "Root password SSH is the highest-value remote attack path."
+    remediation: "Add sshd_config drop-in with PermitRootLogin prohibit-password and MaxAuthTries 4; systemctl reload ssh."
+    compliance:
+      - cis_debian: "5.2.x"
+      - reference: "PVE-STIG-0040"
+    condition: all
+    rules:
+      - 'f:/etc/ssh/sshd_config.d/10-pve-stig.conf -> r:^PermitRootLogin prohibit-password'
+      - 'f:/etc/ssh/sshd_config.d/10-pve-stig.conf -> r:^MaxAuthTries 4'
+
+  - id: 100501
+    title: "Unattended security updates enabled (PVE-STIG-0060)"
+    description: "Security patches must install automatically between maintenance windows."
+    remediation: "apt install unattended-upgrades; ensure /etc/apt/apt.conf.d/20auto-upgrades sets Unattended-Upgrade \"1\"."
+    compliance:
+      - cis_debian: "1.9"
+      - reference: "PVE-STIG-0060"
+    rules:
+      - 'f:/etc/apt/apt.conf.d/20auto-upgrades -> r:Unattended-Upgrade "1"'
+
+  - id: 100502
+    title: "Kernel network hardening: rp_filter + syncookies (PVE-STIG-0070)"
+    description: "The pve-stig sysctl drop-in must carry the baseline network settings."
+    remediation: "Write /etc/sysctl.d/99-pve-stig.conf (rp_filter, syncookies) and run sysctl --system."
+    compliance:
+      - cis_debian: "3.2.x"
+      - reference: "PVE-STIG-0070"
+    condition: all
+    rules:
+      - 'f:/etc/sysctl.d/99-pve-stig.conf -> r:net\.ipv4\.conf\.all\.rp_filter = 1'
+      - 'f:/etc/sysctl.d/99-pve-stig.conf -> r:net\.ipv4\.tcp_syncookies = 1'
+
+  - id: 100503
+    title: "Time synchronization active (PVE-STIG-0070b)"
+    description: "chronyd or systemd-timesyncd must be running."
+    remediation: "Install and enable chrony (or configure systemd-timesyncd)."
+    compliance:
+      - cis_debian: "2.1"
+      - reference: "PVE-STIG-0070b"
+    condition: any
+    rules:
+      - 'c:systemctl is-active chrony -> r:^active'
+      - 'c:systemctl is-active systemd-timesyncd -> r:^active'
+
+  - id: 100504
+    title: "pveproxy explicit TLS hardening (PVE-STIG-0210)"
+    description: "/etc/default/pveproxy should pin TLS versions and ciphers."
+    remediation: "Set CIPHERS='HIGH:!aNULL:!MD5' and TLS versions in /etc/default/pveproxy; systemctl restart pveproxy."
+    compliance:
+      - reference: "PVE-STIG-0210"
+    rules:
+      - 'f:/etc/default/pveproxy -> r:^CIPHERS'
+
+  - id: 100505
+    title: "Wazuh agent active for log forwarding (PVE-STIG-0290)"
+    description: "The Wazuh agent service must be running for log forwarding and SCA."
+    remediation: "Deploy the Wazuh agent against the thing1 manager (docs/proxmox/wazuh-sca-integration.md)."
+    compliance:
+      - reference: "PVE-STIG-0290"
+    rules:
+      - 'c:systemctl is-active wazuh-agent -> r:^active'
+
+  - id: 100506
+    title: "auditd running with watch rules (PVE-STIG-0030 / PVE-STIG-0260)"
+    description: "auditd must be active and the PVE-STIG watch rules present."
+    remediation: "apt install auditd; write /etc/audit/rules.d/50-pve-stig.rules; augenrules --load."
+    compliance:
+      - cis_debian: "4.1"
+      - reference: "PVE-STIG-0030"
+    condition: all
+    rules:
+      - 'd:/etc/audit/rules.d/ -> r:-w /etc/pve'
+      - 'c:systemctl is-active auditd -> r:^active'
+
+# Notes:
+# - Wazuh SCA file rules use `path -> r:pattern` (f:/d:), command rules use
+#   `c:command -> r:pattern`, matching the official policy format
+#   (wazuh-ruleset cis policies). Command-based checks that need richer
+#   logic (sshd -T, pct config) are implemented in proxmox-scan.sh instead.
+# - Keep this policy to file-state and service checks and grow both sides
+#   together (controls.yaml is the source of truth; scan + SCA implement it).

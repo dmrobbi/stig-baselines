@@ -42,6 +42,14 @@ any public archive; refresh when you have cyber.mil auth (see `sources/README.md
 Merged CKLs contain two `<iSTIG>` blocks (RHEL OS STIG + Firefox STIG) in one
 checklist — DISA STIG Viewer shows both via the STIG dropdown.
 
+**Custom baselines:** where no DISA STIG exists, this repo also carries custom
+STIG-style baselines — a machine-readable control set, a read-only scanner, an
+idempotent fixer (dry-run by default), and a Wazuh SCA policy for continuous
+audit. First up: **Proxmox VE** — artifacts in
+[baselines/proxmox/](baselines/proxmox/README.md), program plan in
+[docs/PROXMOX-PROGRAM.md](docs/PROXMOX-PROGRAM.md), pilot test kit in
+[examples/proxmox/](examples/proxmox/README.md).
+
 **Ansible:** see [examples/ansible/README.md](examples/ansible/README.md) —
 the `stig_eval` role maps a mixed-OS cluster (RHEL family automated via
 the committed SCAP benchmarks; Debian/Ubuntu, Windows, macOS baseline
@@ -51,9 +59,12 @@ handoffs) and produces populated, schema-valid CKLs per host.
 
 ```
 tools/xccdf2ckl.py       XCCDF -> CKL converter (stdlib-only Python 3)
-baselines/<platform>/    generated baseline CKLs (commit these)
+baselines/<platform>/    generated baseline CKLs (commit these); custom baselines also carry
+                         control sets + scanners + Wazuh SCA policies (baselines/README.md)
 sources/<platform>/      official DISA XCCDFs the CKLs were generated from (committed)
 sources/zips/            original DISA STIG zips (local only, not committed)
+docs/                    program + evaluation docs (HARDENING-ROADMAP, SCANNING, VSPHERE67, PROXMOX-PROGRAM)
+examples/                copy-paste artifacts (ansible stig_eval role, ssh/sudoers, proxmox pilot kit)
 ```
 
 ## Provenance

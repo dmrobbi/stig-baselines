@@ -1,0 +1,131 @@
+# PVE-STIG — Proxmox VE baseline control set (v0.1.0, seeded)
+# Source mapping: docs/proxmox/layered-controls.md
+# Each control: id, title, severity (CAT I/II/III), layer, check (evidence
+# command), fix, source. The scanner and fixer parse THIS file.
+
+baseline: proxmox
+version: 0.1.0
+layers:
+  - id: L0
+    name: base-os
+    controls:
+      - id: PVE-STIG-0010
+        title: Separate filesystems for /tmp, /var, /var/log
+        severity: CAT II
+        check: "findmnt -n -o FSTYPE /tmp | grep -qv ext4 || findmnt /tmp"
+        fix: "Add tmpfs entry for /tmp in /etc/fstab (nosuid,nodev,noexec)"
+        source: CIS Debian 12/13 §1.1
+      - id: PVE-STIG-0020
+        title: File-integrity monitoring (Aide) installed and scheduled
+        severity: CAT II
+        check: "dpkg -s aide >/dev/null 2>&1 && systemctl is-active aidecheck.timer 2>/dev/null"
+        fix: "apt install aide aide-common && aideinit && systemctl enable --now aidecheck.timer"
+        source: CIS §1.3
+      - id: PVE-STIG-0030
+        title: auditd running with baseline rules
+        severity: CAT II
+        check: "systemctl is-active auditd"
+        fix: "apt install auditd audispd-plugins && baseline rules"
+        source: CIS §4.1
+      - id: PVE-STIG-0040
+        title: sshd hardening (no password root login, MaxAuthTries <= 4)
+        severity: CAT I
+        check: "sshd -T | grep -E 'permitrootlogin|maxauthtries'"
+        fix: "sshd_config drop-in: PermitRootLogin prohibit-password, MaxAuthTries 4; reload ssh"
+        source: CIS §5.2
+      - id: PVE-STIG-0050
+        title: Password quality policy (pwquality minlen >= 12)
+        severity: CAT II
+        check: "grep -E 'minlen' /etc/security/pwquality.conf"
+        fix: "pwquality.conf + pam_pwquality"
+        source: CIS §5.3
+      - id: PVE-STIG-0060
+        title: Unattended security updates enabled
+        severity: CAT II
+        check: "apt-config dump | grep Unattended-Upgrade && systemctl is-enabled unattended-upgrades"
+        fix: "apt install unattended-upgrades; dpkg-reconfigure -plow unattended-upgrades"
+        source: CIS §1.9
+      - id: PVE-STIG-0070
+        title: Kernel network hardening (rp_filter, syncookies, no unneeded forwarding)
+        severity: CAT II
+        check: "sysctl net.ipv4.conf.all.rp_filter net.ipv4.tcp_syncookies"
+        fix: "sysctl.d drop-in"
+        source: CIS §3.2
+      - id: PVE-STIG-0070b
+        title: Time synchronization active
+        severity: CAT II
+        check: "systemctl is-active chrony || systemctl is-active systemd-timesyncd"
+        fix: "Install + enable chrony"
+        source: CIS §2.1
+  - id: L1
+    name: hypervisor
+    controls:
+      - id: PVE-STIG-0110
+        title: libvirtd TCP listeners disabled (no unauthenticated remote access)
+        severity: CAT I
+        check: "ss -tln | grep -q ':16509 ' && fail || pass"
+        fix: "libvirtd.conf: listen_tls=1, tcp disabled"
+        source: DISA KVM STIG analog
+      - id: PVE-STIG-0120
+        title: LXC containers unprivileged by default
+        severity: CAT II
+        check: "for ct in $(pct list); do pct config $ct | grep -q 'unprivileged: 1' || echo privileged:$ct; done"
+        fix: "Recreate/migrate privileged CTs"
+        source: Proxmox docs
+      - id: PVE-STIG-0130
+        title: AppArmor enabled for libvirt guests
+        severity: CAT II
+        check: "aa-status | grep -q libvirt"
+        fix: "Enable seclabel in guest XML"
+        source: DISA KVM analog
+  - id: L2
+    name: proxmox-services
+    controls:
+      - id: PVE-STIG-0210
+        title: pveproxy TLS configuration (TLSv1.2+, strong ciphers)
+        severity: CAT I
+        check: "grep -E '^(CIPHER|TLS)' /etc/default/pveproxy"
+        fix: "Set CIPHERS/TLS versioning in /etc/default/pveproxy; systemctl restart pveproxy"
+        source: Proxmox admin guide
+      - id: PVE-STIG-0220
+        title: 2FA enforced for root@pam and all UI users
+        severity: CAT II
+        check: "pveum user list | grep -c '@pam.*2' or pvesh get /access/users --output-format json | jq '.[].tfa'"
+        fix: "pveum tfa + realm settings"
+        source: Proxmox user management
+      - id: PVE-STIG-0230
+        title: Automation uses API tokens, not passwords
+        severity: CAT II
+        check: "grep -c 'tokenid' /etc/pve/user.cfg"
+        fix: "pveum user token add"
+        source: Proxmox docs
+      - id: PVE-STIG-0250
+        title: Corosync on dedicated network/VLAN
+        severity: CAT II
+        check: "corosync-cfgtool -s; grep ring /etc/pve/corosync.conf"
+        fix: "Cluster network config"
+        source: Proxmox cluster docs
+      - id: PVE-STIG-0255
+        title: Root SSH between cluster nodes constrained (key-only, Match hosts)
+        severity: CAT II
+        check: "sshd -T | grep permitrootlogin"
+        fix: "Match Host block + accepted-finding (cluster requirement)"
+        source: fawraw deviations model
+      - id: PVE-STIG-0260
+        title: /etc/pve (pmxcfs) changes audited
+        severity: CAT II
+        check: "auditctl -l | grep /etc/pve"
+        fix: "auditd watch rule"
+        source: Wazuh SCA seed
+      - id: PVE-STIG-0280
+        title: pve-firewall active; management port 8006 restricted
+        severity: CAT I
+        check: "pve-firewall status"
+        fix: "datacenter.cfg enable + mgmt rules"
+        source: Proxmox firewall docs
+      - id: PVE-STIG-0290
+        title: Logs forwarded to Wazuh
+        severity: CAT II
+        check: "systemctl is-active wazuh-agent"
+        fix: "Deploy Wazuh agent (see wazuh-sca-integration.md)"
+        source: this plan

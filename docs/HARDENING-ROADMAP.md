@@ -67,6 +67,7 @@ No official DISA GitLab STIG exists. Three-layer approach:
 | Prometheus/Grafana | App SRG (+ Grafana official hardening docs); no DISA product STIG |
 | Tenable SecurityCenter (if exposed) | hardening per vendor guide; check DISA catalog for SCC STIG |
 | Tailscale/WireGuard | OS-level controls + vendor hardening; VPN SRG legacy |
+| Proxmox VE (host fleet) | No DISA STIG or CIS benchmark for PVE — custom layered **PVE-STIG** program underway: [PROXMOX-PROGRAM.md](PROXMOX-PROGRAM.md), [baselines/proxmox/](../baselines/README.md), pilot kit [examples/proxmox/](../examples/proxmox/README.md) |
 
 ## Remediation tooling (pairs with baselines)
 

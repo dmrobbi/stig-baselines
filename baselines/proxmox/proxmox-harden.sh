@@ -41,9 +41,11 @@ if ! systemctl is-active chrony >/dev/null 2>&1 && ! systemctl is-active systemd
   run_fix "install + enable chrony" "apt-get install -y chrony && systemctl enable --now chrony"
 fi
 
-# PVE-STIG-0040 — sshd hardening
+# PVE-STIG-0040 — sshd hardening (accept both spellings in sshd -T: OpenSSH >= 9
+# renders 'prohibit-password' as 'without-password'; guard must accept either or
+# it re-applies on every run and breaks idempotency)
 note "[PVE-STIG-0040] sshd hardening (root key-only, MaxAuthTries 4)"
-if ! sshd -T 2>/dev/null | grep -q '^permitrootlogin prohibit-password'; then
+if ! sshd -T 2>/dev/null | grep -qE '^permitrootlogin (prohibit-password|without-password)'; then
   run_fix "write /etc/ssh/sshd_config.d/10-pve-stig.conf + reload" \
     "mkdir -p /etc/ssh/sshd_config.d && printf 'PermitRootLogin prohibit-password\nMaxAuthTries 4\n' > /etc/ssh/sshd_config.d/10-pve-stig.conf && systemctl reload ssh"
 fi

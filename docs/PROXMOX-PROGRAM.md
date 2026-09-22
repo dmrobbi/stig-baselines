@@ -138,6 +138,14 @@ re-runs (PVE major upgrades re-open the control set).
       non-PVE host)
 - [x] Pilot test kit staged (`examples/proxmox/` + `proxmox/PILOT-TEST-PLAN.md`)
       — **ready for testing once Phase A closes**
+- [x] Pilot validation run (2026-09-22) on a Proxmox VE 9.2.20 VM ("pve-pilot",
+      Wazuh agent 021): T1–T6 + SCA go-live executed — baseline 5/8/1 →
+      post-remediation 11/3/1, idempotency 0 re-applies, SCA summary alert
+      (rule 19003) observed on the manager. Seven kit bugs found and fixed
+      (56ce359..f98ea46); findings register opened at
+      [`proxmox/findings.md`](proxmox/findings.md). Run log:
+      [`proxmox/PILOT-TEST-PLAN.md`](proxmox/PILOT-TEST-PLAN.md).
+      Real-fleet rollout still gated on Phase A (host inventory).
 - [ ] Phase A — host inventory
 - [ ] Phase B — baseline assessment
 - [ ] Phase C — control set authored

@@ -16,5 +16,5 @@ Two kinds of baseline live here, one directory per system:
 
 | Baseline | Status | Artifacts |
 |----------|--------|-----------|
-| `proxmox/` | v0.1 — seeded + smoke-tested; needs host inventory + pilot | `controls.yaml`, `proxmox-scan.sh`, `proxmox-harden.sh`, `sca_pve_stig_policy.yml`, `README.md` |
+| `proxmox/` | v0.1.1 — pilot-validated on a real PVE VE 9.2.20 node (2026-09-22): T1–T6 + SCA go-live green, seven kit fixes; remaining: real-fleet host inventory (Phase A) | `controls.yaml`, `proxmox-scan.sh`, `proxmox-harden.sh`, `sca_pve_stig_policy.yml`, `README.md` |
 | *(next: thing1 (Wazuh manager host), gus2 (llama/app host), sandbox-remote-debug hosts…)* | planned | — |

@@ -48,3 +48,33 @@ Maps to the program acceptance gates ([PROXMOX-PROGRAM.md](../PROXMOX-PROGRAM.md
 - **Raw scan outputs + SCA dashboard state:** referenced from register entries
   (date + command), not committed raw.
 - **Pilot VM bootstrap** (if the pilot is a VM): `examples/proxmox/pilot-vm-bootstrap.sh`.
+
+## Run log — pilot execution 2026-09-22 (pve-pilot)
+
+First execution of this runbook, on a disposable Proxmox VE 9.2.20 node built
+for the purpose ("pve-pilot" — Debian 13 cloud image + the trixie pve repo,
+qemu VM on gus2, TCG-emulated because VT-x is disabled in that host's BIOS;
+Wazuh agent 021 enrolled against the thing1 manager).
+
+| Test | Result | Notes |
+|---|---|---|
+| T1 baseline | 5 PASS / 8 FAIL / 1 SKIP, exit=8 | failing-first baseline recorded; PVE-tool checks ran for real (pct, pvesh 2FA audit, pve-firewall) |
+| T2 JSON | valid | fed the findings pipeline |
+| T3 findings | register opened | [`findings.md`](findings.md) — 4 OPEN findings (all manual-guidance controls) |
+| T4 dry-run | exit=0, applies nothing | verified by re-scan |
+| T5 apply | exit=0 | sysctl + sshd drop-ins, auditd, aide (one transient apt error self-recovered) |
+| T6 idempotency | **0 re-applies** | after the guard fixes — before them the pilot caught the re-apply loops |
+| T7 cluster care | N/A | standalone node, no corosync |
+| T8 SCA go-live | green | policy loaded + scanned (~3s); manager emitted the rule-19003 SCA summary; group shared-file sync lagged the test window — validated quick path documented in [`wazuh-sca-integration.md`](wazuh-sca-integration.md) §6 |
+| T9 drift alert | pending | needs the SCA cadence + a deliberate revert window (next run) |
+
+**Post-remediation scan: 11 PASS / 3 FAIL / 1 SKIP, exit=3.** The pilot also
+found seven kit bugs, all fixed in-repo (56ce359..f98ea46): scanner/harden
+guard OpenSSH `without-password` spelling, sysctl drop-in losing precedence to
+PVE's own `pve-firewall.conf` (renamed `zz-`), SCA policy `requirements` with
+no rules list (silently skipped), a masked `printf -w` failure writing empty
+audit-watch files, the Debian 13 `dailyaidecheck.timer` unit name, and docs.
+
+Exit criteria status: pilot passes 11/14 automated controls; every remaining
+failure is in the register with rationale + compensating control + owner;
+SCA visible in the dashboard; drift alert (T9) is the one open gate.

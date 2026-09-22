@@ -65,8 +65,12 @@ fi
 # PVE-STIG-0020 — aide
 note "[PVE-STIG-0020] Aide integrity monitoring"
 if ! dpkg -s aide >/dev/null 2>&1; then
-  run_fix "install aide + initialize + daily timer" \
-    "DEBIAN_FRONTEND=noninteractive apt-get install -y aide aide-common && aideinit -y -f && systemctl enable --now aidecheck.timer"
+  # The aide-common package postinst already builds the DB during apt configure
+  # (a ~15 min crawl on TCG) — do NOT re-run aideinit here (it doubles the
+  # build). The timer unit is dailyaidecheck.timer on Debian 12+ (trixie);
+  # enable only that name or the step errors on Debian 13.
+  run_fix "install aide + enable the daily integrity check timer" \
+    "DEBIAN_FRONTEND=noninteractive apt-get install -y aide aide-common && systemctl enable --now dailyaidecheck.timer"
 fi
 
 # Manual-guidance controls (not safe to auto-fix — printed for the operator)

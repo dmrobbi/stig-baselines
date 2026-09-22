@@ -81,3 +81,20 @@ The Wazuh agent on Proxmox nodes is itself a Phase A/D deliverable (no Proxmox
 agent exists in the fleet yet). SCA can be tested on the pilot node immediately
 after agent deployment, before the hardening script exists — a failing-first
 baseline is exactly what Phase B wants.
+
+## 6. Pilot-validated deployment notes (2026-09-22)
+
+The first live pilot (PVE 9.2.20 node in a VM on gus2) validated the loop
+end-to-end — agent enrolled, policy loaded, scan ran, rule-19003 SCA summary
+alerts visible on the manager — and surfaced two deployment realities:
+
+- **Policy placement**: agent-group shared-dir sync (the production path in
+  §3) did not materialize `/var/ossec/etc/shared/<group>/` on the pilot agent
+  within the test window. The validated quick path: place the policy in the
+  agent's `/var/ossec/ruleset/sca/` and let SCA auto-discover it (works when
+  the agent's `<sca>` block does not restrict `<policies>`); the requirements
+  rule (`pveversion`) scopes it to PVE hosts. Verify via the manager-side SCA
+  summary alerts (rule 19003).
+- **Requirements section**: a policy whose `requirements:` block has no
+  `rules:` list is skipped by the SCA loader with only a warning — always
+  ship one.

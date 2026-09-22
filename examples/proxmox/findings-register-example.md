@@ -13,7 +13,7 @@ Status values: OPEN · ACCEPTED · REMEDIATED · CLOSED.
 | AF-0001 | PVE-STIG-0255 | Root SSH between cluster nodes constrained | CAT II | ACCEPTED | Corosync/pvec tooling requires node-to-node root access for cluster operations | Key-only + Match-host restriction in sshd; Wazuh alert on new keys | Dawn | 2027-03-01 |
 | AF-0002 | PVE-STIG-0010 | Separate filesystems for /tmp | CAT II | OPEN | Pilot node was installed with a single root LV; repartition deferred to next reinstall window | None yet — proposed: tmpfs on /tmp via fstab in Phase E | Dawn | — |
 | AF-0003 | PVE-STIG-0020 | Aide scheduled integrity monitoring | CAT II | REMEDIATED | — (was: aidecheck.timer inactive on fresh install) | Fixed by `proxmox-harden.sh --apply`; re-scan confirms PASS | Dawn | — |
-| AF-0004 | PVE-STIG-0070 | Kernel network hardening (rp_filter, syncookies) | CAT II | REMEDIATED | — (was: baseline sysctls not set) | Fixed via /etc/sysctl.d/99-pve-stig.conf; SCA check 100502 green | Dawn | — |
+| AF-0004 | PVE-STIG-0070 | Kernel network hardening (rp_filter, syncookies) | CAT II | REMEDIATED | — (was: baseline sysctls not set) | Fixed via /etc/sysctl.d/zz-pve-stig.conf; SCA check 100502 green | Dawn | — |
 | AF-0005 | PVE-STIG-0220 | 2FA enforced for root@pam and all UI users | CAT II | OPEN | Requires realm + TOTP decisions (manual-guidance control); operator action pending | Management network restricted to jump host in the interim | Dawn | — |
 
 Notes:

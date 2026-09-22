@@ -11,7 +11,7 @@ PVE-STIG remediation v0.1.0 — DRY-RUN (pass --apply to change anything)
 
 [PVE-STIG-0060] unattended security updates
 [PVE-STIG-0070] kernel network hardening
-  [DRY-RUN] would: write /etc/sysctl.d/99-pve-stig.conf (rp_filter, syncookies, syncookies retries)
+  [DRY-RUN] would: write /etc/sysctl.d/zz-pve-stig.conf (rp_filter, syncookies, syncookies retries)
 [PVE-STIG-0070b] time synchronization
 [PVE-STIG-0040] sshd hardening (root key-only, MaxAuthTries 4)
   [DRY-RUN] would: write /etc/ssh/sshd_config.d/10-pve-stig.conf + reload
@@ -44,7 +44,7 @@ How to read it:
 ```text
 PVE-STIG remediation v0.1.0 — APPLY MODE (log: /tmp/pve-harden-1763777458.log)
 ...
-  [APPLIED] write /etc/sysctl.d/99-pve-stig.conf (rp_filter, syncookies, syncookies retries)
+  [APPLIED] write /etc/sysctl.d/zz-pve-stig.conf (rp_filter, syncookies, syncookies retries)
   [APPLIED] write /etc/ssh/sshd_config.d/10-pve-stig.conf + reload
 ...
 Done. 2 change(s) applied. Log: /tmp/pve-harden-1763777458.log

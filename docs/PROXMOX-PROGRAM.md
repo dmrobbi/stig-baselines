@@ -117,6 +117,7 @@ re-runs (PVE major upgrades re-open the control set).
 - Baseline artifacts (control set, scanner, fixer, SCA policy) — [`baselines/proxmox/`](../baselines/proxmox/README.md)
 - Pilot test kit (VM bootstrap, example outputs, SCA ossec.conf) — [`examples/proxmox/`](../examples/proxmox/README.md)
 - Pilot runbook — [`proxmox/PILOT-TEST-PLAN.md`](proxmox/PILOT-TEST-PLAN.md)
+- Cluster + HA + Wazuh fleet build guide — [`proxmox/CLUSTER-HA-SETUP.md`](proxmox/CLUSTER-HA-SETUP.md)
 
 ## 9. Decision points for Dawn
 
@@ -146,6 +147,11 @@ re-runs (PVE major upgrades re-open the control set).
       [`proxmox/findings.md`](proxmox/findings.md). Run log:
       [`proxmox/PILOT-TEST-PLAN.md`](proxmox/PILOT-TEST-PLAN.md).
       Real-fleet rollout still gated on Phase A (host inventory).
+- [x] 4-node cluster + HA built (2026-09-22): cluster `pve-lab` (pve-pilot +
+      pve2/3/4 on gus2, quorate), NFS shared storage, watchdog fencing armed,
+      node-affinity rule, test resource ct:100 running under HA, Wazuh agents
+      021-024 in the fleet. Build guide:
+      [`proxmox/CLUSTER-HA-SETUP.md`](proxmox/CLUSTER-HA-SETUP.md).
 - [ ] Phase A — host inventory
 - [ ] Phase B — baseline assessment
 - [ ] Phase C — control set authored

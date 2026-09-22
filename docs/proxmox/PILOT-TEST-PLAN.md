@@ -78,3 +78,8 @@ audit-watch files, the Debian 13 `dailyaidecheck.timer` unit name, and docs.
 Exit criteria status: pilot passes 11/14 automated controls; every remaining
 failure is in the register with rationale + compensating control + owner;
 SCA visible in the dashboard; drift alert (T9) is the one open gate.
+
+**Next phase executed:** the pilot node became cluster node #1 — the full
+4-node cluster + HA build and the Wazuh fleet enrollment are documented in
+[`CLUSTER-HA-SETUP.md`](CLUSTER-HA-SETUP.md) (includes the T9-style live
+failover procedure).

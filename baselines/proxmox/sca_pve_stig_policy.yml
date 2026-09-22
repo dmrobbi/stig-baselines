@@ -21,8 +21,10 @@ policy:
 
 requirements:
   title: "Proxmox VE host baseline"
-  description: "Verify Proxmox VE node hardening (PVE-STIG control set)"
+  description: "Verify Proxmox VE node hardening (PVE-STIG control set). Applies only on Proxmox VE hosts."
   condition: all
+  rules:
+    - 'c:pveversion -> r:pve-manager'
 
 checks:
   - id: 100500
@@ -51,14 +53,14 @@ checks:
   - id: 100502
     title: "Kernel network hardening: rp_filter + syncookies (PVE-STIG-0070)"
     description: "The pve-stig sysctl drop-in must carry the baseline network settings."
-    remediation: "Write /etc/sysctl.d/99-pve-stig.conf (rp_filter, syncookies) and run sysctl --system."
+    remediation: "Write /etc/sysctl.d/zz-pve-stig.conf (rp_filter, syncookies) and run sysctl --system."
     compliance:
       - cis_debian: "3.2.x"
       - reference: "PVE-STIG-0070"
     condition: all
     rules:
-      - 'f:/etc/sysctl.d/99-pve-stig.conf -> r:net\.ipv4\.conf\.all\.rp_filter = 1'
-      - 'f:/etc/sysctl.d/99-pve-stig.conf -> r:net\.ipv4\.tcp_syncookies = 1'
+      - 'f:/etc/sysctl.d/zz-pve-stig.conf -> r:net\.ipv4\.conf\.all\.rp_filter = 1'
+      - 'f:/etc/sysctl.d/zz-pve-stig.conf -> r:net\.ipv4\.tcp_syncookies = 1'
 
   - id: 100503
     title: "Time synchronization active (PVE-STIG-0070b)"

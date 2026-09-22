@@ -28,11 +28,11 @@ if ! systemctl is-enabled unattended-upgrades >/dev/null 2>&1; then
   run_fix "install + enable unattended-upgrades" "DEBIAN_FRONTEND=noninteractive apt-get install -y unattended-upgrades && dpkg-reconfigure -plow unattended-upgrades"
 fi
 
-# PVE-STIG-0070 — sysctl network hardening
+# PVE-STIG-0070 — sysctl network hardening (zz- prefix: must sort AFTER PVE's own /usr/lib/sysctl.d/pve-firewall.conf, which resets rp_filter and would otherwise win the sysctl.d precedence battle)
 note "[PVE-STIG-0070] kernel network hardening"
-if ! grep -qs 'net.ipv4.tcp_syncookies = 1' /etc/sysctl.d/99-pve-stig.conf 2>/dev/null; then
-  run_fix "write /etc/sysctl.d/99-pve-stig.conf (rp_filter, syncookies, syncookies retries)" \
-    "printf 'net.ipv4.conf.all.rp_filter = 1\nnet.ipv4.default.rp_filter = 1\nnet.ipv4.tcp_syncookies = 1\n' > /etc/sysctl.d/99-pve-stig.conf && sysctl --system"
+if ! grep -qs 'net.ipv4.tcp_syncookies = 1' /etc/sysctl.d/zz-pve-stig.conf 2>/dev/null; then
+  run_fix "write /etc/sysctl.d/zz-pve-stig.conf (rp_filter, syncookies, syncookies retries)" \
+    "printf 'net.ipv4.conf.all.rp_filter = 1\nnet.ipv4.default.rp_filter = 1\nnet.ipv4.tcp_syncookies = 1\n' > /etc/sysctl.d/zz-pve-stig.conf && sysctl --system"
 fi
 
 # PVE-STIG-0070b — time sync

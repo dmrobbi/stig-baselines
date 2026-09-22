@@ -25,8 +25,9 @@ c0020() { if dpkg -s aide >/dev/null 2>&1; then local t; t=$(systemctl is-active
 # PVE-STIG-0030 — auditd active
 c0030() { local t; t=$(systemctl is-active auditd 2>/dev/null || echo missing); [ "$t" = active ] && pass "$1" "auditd active" || fail "$1" "auditd $t"; }
 
-# PVE-STIG-0040 — sshd hardening
-c0040() { local pr mt; pr=$(sshd -T 2>/dev/null | awk '/^permitrootlogin/{print $2}'); mt=$(sshd -T 2>/dev/null | awk '/^maxauthtries/{print $2}'); if [ "${pr:-}" = "prohibit-password" ] && [ "${mt:-0}" -le 4 ] 2>/dev/null; then pass "$1" "root=prohibit-password tries=$mt"; else fail "$1" "permitrootlogin=${pr:-?} maxauthtries=${mt:-?}"; fi; }
+# PVE-STIG-0040 — sshd hardening (accept both spellings: OpenSSH >= 9 prints
+# 'without-password' for 'prohibit-password' in sshd -T; older prints 'prohibit-password')
+c0040() { local pr mt; pr=$(sshd -T 2>/dev/null | awk '/^permitrootlogin/{print $2}'); mt=$(sshd -T 2>/dev/null | awk '/^maxauthtries/{print $2}'); if { [ "${pr:-}" = "prohibit-password" ] || [ "${pr:-}" = "without-password" ]; } && [ "${mt:-0}" -le 4 ] 2>/dev/null; then pass "$1" "root=prohibit-password tries=$mt"; else fail "$1" "permitrootlogin=${pr:-?} maxauthtries=${mt:-?}"; fi; }
 
 # PVE-STIG-0050 — pwquality minlen
 c0050() { local m; m=$(grep -oP '^minlen\s*=\s*\K\d+' /etc/security/pwquality.conf 2>/dev/null || echo 0); [ "${m:-0}" -ge 12 ] 2>/dev/null && pass "$1" "minlen=$m" || fail "$1" "minlen=${m:-unset} (want >=12)"; }

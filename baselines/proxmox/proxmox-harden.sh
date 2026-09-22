@@ -58,7 +58,7 @@ fi
 if [ -f /etc/audit/rules.d ] 2>/dev/null || [ -d /etc/audit/rules.d ]; then
   if ! grep -qs '/etc/pve' /etc/audit/rules.d/50-pve-stig.rules 2>/dev/null; then
     run_fix "auditd watch on /etc/pve (PVE-STIG-0260)" \
-      "printf '-w /etc/pve/ -p wa -k pve-cfg\n-w /etc/ssh/sshd_config -p wa -k sshd\n' > /etc/audit/rules.d/50-pve-stig.rules && augenrules --load 2>/dev/null || true"
+      "if printf '%s\n' '-w /etc/pve/ -p wa -k pve-cfg' '-w /etc/ssh/sshd_config -p wa -k sshd' > /etc/audit/rules.d/50-pve-stig.rules; then augenrules --load 2>/dev/null || true; else false; fi"
   fi
 fi
 

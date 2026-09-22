@@ -19,8 +19,9 @@ has() { command -v "$1" >/dev/null 2>&1; }
 # tmpfs or dedicated partition alike — compare mount sources, not fstypes)
 c0010() { local t r; t=$(findmnt -n -o SOURCE /tmp 2>/dev/null); r=$(findmnt -n -o SOURCE / 2>/dev/null); if [ -n "$t" ] && [ "$t" != "$r" ]; then pass "$1" "separate filesystem on /tmp" "source $t"; else fail "$1" "/tmp not a separate filesystem" "/tmp and / share $r"; fi; }
 
-# PVE-STIG-0020 — Aide integrity monitoring
-c0020() { if dpkg -s aide >/dev/null 2>&1; then local t; t=$(systemctl is-active aidecheck.timer 2>/dev/null || echo inactive); if [ "$t" = active ]; then pass "$1" "aide + timer"; else fail "$1" "aide installed but timer $t"; fi; else fail "$1" "aide not installed"; fi; }
+# PVE-STIG-0020 — Aide integrity monitoring (unit name differs by Debian
+# release: aidecheck.timer on older, dailyaidecheck.timer on Debian 12/13)
+c0020() { if dpkg -s aide >/dev/null 2>&1; then local t; t=$(systemctl is-active aidecheck.timer 2>/dev/null); [ "$t" = active ] || t=$(systemctl is-active dailyaidecheck.timer 2>/dev/null || echo inactive); if [ "$t" = active ]; then pass "$1" "aide + timer"; else fail "$1" "aide installed but timer $t"; fi; else fail "$1" "aide not installed"; fi; }
 
 # PVE-STIG-0030 — auditd active
 c0030() { local t; t=$(systemctl is-active auditd 2>/dev/null || echo missing); [ "$t" = active ] && pass "$1" "auditd active" || fail "$1" "auditd $t"; }

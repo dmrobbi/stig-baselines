@@ -6,11 +6,25 @@
 set -u
 VERSION="0.1.0"
 JSON=0; [[ "${1:-}" == "--json" ]] && JSON=1
-RESULTS=(); FAILS=0; PASSES=0; SKIPS=0
+RESULTS=(); FAILS=0; PASSES=0; SKIPS=0; EXCEPT_COUNT=0
+SCRIPT_DIR=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
+IGNORE_LIST="$SCRIPT_DIR/ignore_list.yml"
+# ignore_list: lines like  <control-id>|<reason>|<expiry-or-dash>  make the
+# scanner report that control as EXCEPT instead of FAIL. Excepted controls
+# stay visible as evidence in the output and are excluded from the exit
+# code (they are accepted-risk decisions, not failures).
 
 note() { printf '%s\n' "$*" >&2; }
 pass() { ((PASSES++)); RESULTS+=("PASS|$1|$2|${3:-}"); }
-fail() { ((FAILS++)); RESULTS+=("FAIL|$1|$2|${3:-}"); }
+fail() {
+  if [ -s "$IGNORE_LIST" ] && awk -F'|' -v id="$1" '$1 == id { found=1; exit } END { exit !found }' "$IGNORE_LIST" 2>/dev/null; then
+    ((EXCEPT_COUNT++))
+    local why; why=$(awk -F'|' -v id="$1" '$1 == id { print $2; exit }' "$IGNORE_LIST" 2>/dev/null)
+    RESULTS+=("EXCEPT|$1|$2|excepted: ${why:-see ignore_list}")
+  else
+    ((FAILS++)); RESULTS+=("FAIL|$1|$2|${3:-}")
+  fi
+}
 skip() { ((SKIPS++)); RESULTS+=("SKIP|$1|$2|${3:-tool missing}"); }
 
 has() { command -v "$1" >/dev/null 2>&1; }
@@ -70,10 +84,10 @@ run() {
   c0110 PVE-STIG-0110; c0120 PVE-STIG-0120; c0210 PVE-STIG-0210; c0220 PVE-STIG-0220
   c0280 PVE-STIG-0280; c0290 PVE-STIG-0290
   note ""
-  note "RESULTS: $PASSES pass, $FAILS fail, $SKIPS skip"
+  note "RESULTS: $PASSES pass, $FAILS fail, $SKIPS skip, $EXCEPT_COUNT excepted"
   if [ $JSON -eq 1 ]; then
     printf '{\n'
-    printf '  "host": "%s", "passes": %d, "fails": %d, "skips": %d, "results": [\n' "$(hostname)" "$PASSES" "$FAILS" "$SKIPS"
+    printf '  "host": "%s", "passes": %d, "fails": %d, "skips": %d, "excepted": %d, "results": [\n' "$(hostname)" "$PASSES" "$FAILS" "$SKIPS" "$EXCEPT_COUNT"
     local first=1
     for r in "${RESULTS[@]}"; do IFS='|' read -r st id ev2 ev3 <<< "$r"; [ $first -eq 1 ] && first=0 || printf ',\n'; printf '    {"id":"%s","result":"%s","evidence":"%s"}' "$id" "$st" "$ev2 $ev3"; done
     printf '\n  ]\n}\n'

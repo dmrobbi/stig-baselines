@@ -8,16 +8,19 @@
 # the count is DATA, not an error, so failed_when stays false). Its output
 # is the eval evidence. Remediation is proxmox-harden.sh --apply (run via
 # the proxmox kit, NOT from this role — assessment playbooks stay
-# read-only).
+# read-only). Excepted controls come from baselines/proxmox/ignore_list.yml
+# (the kit's ignore_list) which rides along to the node; add a line there
+# to except a control instead of remediating it.
 
 - name: Push the PVE-STIG kit scanner to the node
   ansible.builtin.copy:
-    src: "{{ stig_eval_repo_root }}/baselines/proxmox/{{ item }}"
+    src: "{{ stig_eval_repo_root }}/baselines/proxmox/{{ item.src }}"
     dest: /root/pve-stig-eval/
-    mode: "0755"
+    mode: "{{ item.mode }}"
   loop:
-    - controls.yaml
-    - proxmox-scan.sh
+    - { src: controls.yaml, mode: "0644" }
+    - { src: ignore_list.yml, mode: "0644" }
+    - { src: proxmox-scan.sh, mode: "0755" }
   become: true
 
 - name: Run the read-only PVE-STIG scan

@@ -1,0 +1,15 @@
+# PVE-STIG ignore_list — excepted controls.
+#
+# A line  <control-id>|<reason>|<expiry-or-dash>  makes proxmox-scan.sh
+# report that control as EXCEPT instead of FAIL. Excepted controls stay
+# visible as evidence in the scan output and are excluded from the exit
+# code — they are accepted-risk decisions, not failures and not passes.
+#
+# Keep reasons specific and set an expiry: an exception without an expiry
+# is a decision to accept the finding permanently. Open findings live in
+# docs/proxmox/findings.md; reference them by AF id in the reason.
+#
+# Examples (inactive — comment lines only):
+# PVE-STIG-0050|pwquality policy pending owner decision (AF-0003)|2026-12-31
+# PVE-STIG-0220|2FA enrollment pending (AF-0001)|2026-12-31
+# PVE-STIG-0280|pve-firewall enablement deferred pending rules review (AF-0002)|2026-12-31

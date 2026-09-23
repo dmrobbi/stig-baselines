@@ -1,0 +1,51 @@
+---
+# Proxmox VE nodes: automated read-only evaluation with the PVE-STIG kit's
+# own scanner (baselines/proxmox). The nodes are Debian-family to ansible
+# (os-release: ID=debian), so this workflow is selected by the
+# pveversion-detection branch in main.yml, not by OS family.
+#
+# The scan is read-only (changes nothing; exit code = FAIL control count —
+# the count is DATA, not an error, so failed_when stays false). Its output
+# is the eval evidence. Remediation is proxmox-harden.sh --apply (run via
+# the proxmox kit, NOT from this role — assessment playbooks stay
+# read-only).
+
+- name: Push the PVE-STIG kit scanner to the node
+  ansible.builtin.copy:
+    src: "{{ stig_eval_repo_root }}/baselines/proxmox/{{ item }}"
+    dest: /root/pve-stig-eval/
+    mode: "0755"
+  loop:
+    - controls.yaml
+    - proxmox-scan.sh
+  become: true
+
+- name: Run the read-only PVE-STIG scan
+  ansible.builtin.command:
+    cmd: /root/pve-stig-eval/proxmox-scan.sh
+    chdir: /root/pve-stig-eval
+  become: true
+  register: pve_scan
+  failed_when: false
+  changed_when: true
+
+- name: Persist the scan output on the node
+  ansible.builtin.copy:
+    content: "{{ pve_scan.stdout }}\n"
+    dest: /root/pve-stig-eval/scan-output.txt
+    mode: "0644"
+  become: true
+
+- name: Fetch the scan output back as the eval artifact
+  ansible.builtin.fetch:
+    src: /root/pve-stig-eval/scan-output.txt
+    dest: "{{ stig_eval_dest_dir }}/{{ inventory_hostname }}/scan-output.txt"
+    flat: true
+  become: false
+
+- name: Record the workflow note
+  ansible.builtin.set_fact:
+    stig_eval_note: >-
+      Proxmox VE node — evaluated with the PVE-STIG kit scanner (read-only);
+      exit code {{ pve_scan.rc }} = FAIL control count. Remediation:
+      baselines/proxmox/proxmox-harden.sh --apply.

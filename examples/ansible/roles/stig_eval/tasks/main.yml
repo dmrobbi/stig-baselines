@@ -8,10 +8,15 @@
       - ansible_hostname
       - ansible_default_ipv4
 
+- name: Detect Proxmox VE nodes (os-release says Debian; pveversion is the tell)
+  ansible.builtin.stat:
+    path: /usr/bin/pveversion
+  register: pveversion_stat
+
 - name: Resolve the platform + workflow for this host
   ansible.builtin.set_fact:
-    stig_platform: "{{ stig_platform_override | default(stig_detected_platform) }}"
-    stig_workflow: "{{ stig_platform_override | default(stig_detected_workflow) }}"
+    stig_platform: "{{ stig_platform_override | default('proxmox' if pveversion_stat.stat.exists else stig_detected_platform) }}"
+    stig_workflow: "{{ stig_platform_override | default('proxmox' if pveversion_stat.stat.exists else stig_detected_workflow) }}"
   vars:
     stig_detected_workflow: >-
       {{ {'RedHat': 'rhel',
@@ -35,10 +40,10 @@
 
 - name: Include the workflow for this platform
   ansible.builtin.include_tasks: "workflow_{{ stig_workflow }}.yml"
-  when: stig_workflow in ['rhel', 'debian', 'windows', 'macos']
+  when: stig_workflow in ['rhel', 'debian', 'windows', 'macos', 'proxmox']
 
 - name: Unmapped platform — record and continue
-  when: stig_workflow not in ['rhel', 'debian', 'windows', 'macos']
+  when: stig_workflow not in ['rhel', 'debian', 'windows', 'macos', 'proxmox']
   ansible.builtin.set_fact:
     stig_eval_note: >-
       No automated or baseline mapping for platform {{ stig_platform }}

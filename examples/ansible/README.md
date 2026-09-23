@@ -11,6 +11,7 @@ matching stig-baselines artifacts:
 |---|---|---|
 | RHEL family (RHEL, Rocky, Alma; 7/8/9) | `workflow_rhel.yml` | **automated**: the committed DISA SCAP benchmark is copied to the target, `oscap xccdf eval` runs (become), results + HTML report are fetched back, and a **populated CKL** is generated on the control node (`tools/xccdf2ckl.py --results`, schema-validated). |
 | Debian/Ubuntu | `workflow_debian.yml` | baseline-CKL handoff — DISA publishes no SCAP content for the Canonical Ubuntu STIGs; assess in STIG Viewer. |
+| Proxmox VE (PVE node; detected via `pveversion`) | `workflow_proxmox.yml` | **automated**: the PVE-STIG kit's read-only scanner (`controls.yaml` + `proxmox-scan.sh`) is copied to the node, the scan runs (become), and its output is fetched back. Remediation stays with `proxmox-harden.sh --apply`. |
 | Windows | `workflow_windows.yml` | baseline-CKL handoff (manual; registry/GPO checks). Needs `ansible.windows` + WinRM only if you add evidence-collection tasks. |
 | macOS | `workflow_macos.yml` | baseline-CKL handoff over SSH (15 Sequoia + 26 Tahoe baselines). |
 | vSphere/ESXi/vCenter | not managed here | manual — see [docs/VSPHERE67-EVALUATION.md](../../docs/VSPHERE67-EVALUATION.md). |

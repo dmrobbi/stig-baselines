@@ -7,6 +7,8 @@
 # stig-baselines artifacts (see roles/stig_eval/tasks/):
 #   RedHat family (incl. Rocky/Alma) -> automated OpenSCAP evaluation
 #     with the committed DISA SCAP benchmark, then a populated CKL.
+#   Proxmox VE (pveversion present) -> automated PVE-STIG kit scan
+#     (read-only; the kit's own scanner runs on the node).
 #   Debian/Ubuntu, Windows, macOS -> baseline-CKL handoff (manual
 #     assessment in STIG Viewer; bulk-apply with tools/csv2ckl.py).
 # Artifacts land in ../stig-eval-results/ (outside the repo).

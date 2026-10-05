@@ -1,0 +1,571 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CHECKLIST>
+  <ASSET>
+    <ROLE>None</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
+    <HOST_NAME />
+    <HOST_IP />
+    <HOST_MAC />
+    <HOST_FQDN />
+    <TECH_AREA />
+    <TARGET_KEY />
+    <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
+  </ASSET>
+  <STIGS>
+    <iSTIG>
+      <STIG_INFO>
+        <SI_DATA>
+          <SID_NAME>version</SID_NAME>
+          <SID_DATA>1</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>classification</SID_NAME>
+          <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_VMW_NSX_4-x_T-0_Gateway_FW_STIG_V1R2_Manual</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>title</SID_NAME>
+          <SID_DATA>VMware NSX 4.x Tier-0 Gateway Firewall Security Technical Implementation Guide</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>description</SID_NAME>
+          <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>filename</SID_NAME>
+          <SID_DATA>U_VMW_NSX_4-x_T-0_Gateway_FW_STIG_V1R2_Manual-xccdf.xml</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>releaseinfo</SID_NAME>
+          <SID_DATA>Release: 2 Benchmark Date: 30 Jan 2025</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>source</SID_NAME>
+          <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>c2179a42-9839-5c25-a908-e2f3ed6201fc</SID_DATA>
+        </SI_DATA>
+      </STIG_INFO>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware NSX 4.x Tier-0 Gateway Firewall Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-265362</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-NET-000074-FW-000009</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-265362r994329_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>NT0F-4X-000004</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The NSX Tier-0 Gateway Firewall must generate traffic log entries.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Without establishing what type of event occurred, it would be difficult to establish, correlate, and investigate the events leading up to an outage or attack.
+
+Audit event content that may be necessary to satisfy this requirement includes, for example, time stamps, source and destination addresses, user/process identifiers, event descriptions, success/fail indications, filenames involved, and access control or flow control rules invoked.
+
+Associating event types with detected events in the network element logs provides a means of investigating an attack, recognizing resource usage or capacity thresholds, or identifying an improperly configured network element.
+
+Satisfies: SRG-NET-000074-FW-000009, SRG-NET-000061-FW-000001, SRG-NET-000075-FW-000010, SRG-NET-000076-FW-000011, SRG-NET-000077-FW-000012, SRG-NET-000078-FW-000013, SRG-NET-000492-FW-000006, SRG-NET-000493-FW-000007</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If the Tier-0 Gateway is deployed in an Active/Active HA mode and no stateless rules exist, this is Not Applicable.
+
+From the NSX Manager web interface, go to Security &gt;&gt; Policy Management &gt;&gt; Gateway Firewall &gt;&gt; Gateway Specific Rules.
+
+For each Tier-0 Gateway and for each rule, click the gear icon and verify the logging setting.
+
+If logging is not enabled, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-69279r994327_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the NSX Manager web interface, go to Security &gt;&gt; Policy Management &gt;&gt; Gateway Firewall &gt;&gt; Gateway Specific Rules.
+
+For each Tier-0 Gateway and for each rule with logging disabled, click the gear icon, enable logging, and then click "Apply".
+
+After all changes are made, click "Publish".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000130 CCI-000067 CCI-000131 CCI-000132 CCI-000133 CCI-000134 CCI-000172</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware NSX 4.x Tier-0 Gateway Firewall Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-265367</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-NET-000193-FW-000030</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-265367r994344_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>NT0F-4X-000015</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The NSX Tier-0 Gateway Firewall must manage excess bandwidth to limit the effects of packet flooding types of denial-of-service (DoS) attacks.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>A firewall experiencing a DoS attack will not be able to handle production traffic load. The high usage and CPU caused by a DoS attack will impact control of keep-alives and timers used for neighbor peering. This will result in route flapping and will eventually black hole production traffic.
+
+The device must be configured to contain and limit a DoS attack's effect on the device's resource usage. The use of redundant components and load balancing are examples of mitigating "flood-type" DoS attacks through increased capacity.
+
+Satisfies: SRG-NET-000193-FW-000030, SRG-NET-000192-FW-000029, SRG-NET-000362-FW-000028</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If the Tier-0 Gateway is deployed in an Active/Active HA mode and no stateless rules exist, this is Not Applicable.
+
+From the NSX Manager web interface, go to Security &gt;&gt; Settings &gt;&gt; General Settings &gt;&gt; Firewall &gt;&gt; Flood Protection to view Flood Protection profiles.
+
+If there are no Flood Protection profiles of type "Gateway", this is a finding.
+
+For each gateway flood protection profile, if TCP Half Open Connection limit, UDP Active Flow Limit, ICMP Active Flow Limit, and Other Active Connection Limit are set to "None", this is a finding.
+
+For each gateway flood protection profile, examine the "Applied To" field to view the Tier-0 Gateways to which it is applied.
+
+If a gateway flood protection profile is not applied to all applicable Tier-0 Gateways through one or more policies, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-69284r994342_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To create a new Flood Protection profile, do the following:
+
+From the NSX Manager web interface, go to Security &gt;&gt; Settings &gt;&gt; General Settings &gt;&gt; Firewall &gt;&gt; Flood Protection &gt;&gt; Add Profile &gt;&gt; Add Edge Gateway Profile.
+
+Enter a name and specify appropriate values for the following: TCP Half Open Connection limit, UDP Active Flow Limit, ICMP Active Flow Limit, and Other Active Connection Limit.
+
+Configure the "Applied To" field to contain Tier-0 Gateways, and then click "Save".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-001095 CCI-001094 CCI-002385</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware NSX 4.x Tier-0 Gateway Firewall Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-265368</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-NET-000202-FW-000039</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-265368r994347_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>NT0F-4X-000016</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The NSX Tier-0 Gateway Firewall must deny network communications traffic by default and allow network communications traffic by exception.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To prevent malicious or accidental leakage of traffic, organizations must implement a deny-by-default security posture at the network perimeter. Such rulesets prevent many malicious exploits or accidental leakage by restricting the traffic to only known sources and only those ports, protocols, or services that are permitted and operationally necessary.
+
+As a managed boundary interface, the firewall must block all inbound and outbound network traffic unless a filter is installed to explicitly allow it. The allow filters must comply with the Ports, Protocols, and Services Management (PPSM) Category Assurance List (CAL) and Vulnerability Assessment (VA).
+
+Satisfies: SRG-NET-000202-FW-000039, SRG-NET-000205-FW-000040, SRG-NET-000235-FW-000133, SRG-NET-000364-FW-000031</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the NSX Manager web interface, go to Security &gt;&gt; Policy Management &gt;&gt; Gateway Firewall &gt;&gt; Gateway Specific Rules.
+
+Choose each Tier-0 Gateway in drop-down, then select Policy_Default_Infra Section &gt;&gt; Action.
+
+If the default_rule is set to "Allow", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-69285r994345_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the NSX Manager web interface, go to Security &gt;&gt; Policy Management &gt;&gt; Gateway Firewall &gt;&gt; Gateway Specific Rules.
+
+Choose each Tier-0 Gateway in drop-down, then select Policy_Default_Infra Section &gt;&gt; Action.
+
+Change the Action to "Drop" or "Reject", and then click "Publish".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-001109 CCI-001097 CCI-001190 CCI-002403</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware NSX 4.x Tier-0 Gateway Firewall Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-265370</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-NET-000333-FW-000014</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-265370r994353_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>NT0F-4X-000020</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The NSX Tier-0 Gateway Firewall must be configured to send traffic log entries to a central log server.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Without the ability to centrally manage the content captured in the traffic log entries, identification, troubleshooting, and correlation of suspicious behavior would be difficult and could lead to a delayed or incomplete analysis of an ongoing attack.
+
+The DOD requires centralized management of all network component audit record content. Network components requiring centralized traffic log management must have the ability to support centralized management. The content captured in traffic log entries must be managed from a central location (necessitating automation). Centralized management of traffic log records and logs provides for efficiency in maintenance and management of records, as well as the backup and archiving of those records. 
+
+Ensure at least one syslog server is configured on the firewall.
+
+If the product inherently has the ability to store log records locally, the local log must also be secured. However, this requirement is not met since it calls for a use of a central audit server.
+
+Satisfies: SRG-NET-000333-FW-000014, SRG-NET-000098-FW-000021</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From an NSX Edge Node shell hosting the Tier-0 Gateway, run the following command:
+
+&gt; get logging-servers
+
+Note: This check must be run from each NSX Edge Node hosting a Tier-0 Gateway, as they are configured individually.
+
+or
+
+If Node Profiles are used, from the NSX Manager web interface, go to System &gt;&gt; Configuration &gt;&gt; Fabric &gt;&gt; Profiles &gt;&gt; Node Profiles.
+
+Click "All NSX Nodes" and verify the syslog servers listed.
+
+If any configured logging servers are configured with a protocol of "udp", this is a finding.
+
+If any logging servers are not configured with a level of "info", this is a finding.
+
+If no logging servers are configured, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-69287r994351_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To configure a profile to apply syslog servers to all NSX Edge Nodes, do the following:
+
+From the NSX Manager web interface, go to System &gt;&gt; Configuration &gt;&gt; Fabric &gt;&gt; Profiles &gt;&gt; Node Profiles.
+
+Click "All NSX Nodes" and then under "Syslog Servers", click "Add".
+
+Enter the syslog server details, choose "Information" for the log level, and click "Add".
+
+or
+
+(Optional) From an NSX Edge Node shell, run the following command to clear any existing incorrect logging servers:
+
+&gt; clear logging-servers
+
+From an NSX Edge Node shell, run the following command to configure a TCP syslog server:
+
+&gt; set logging-server &lt;server-ip or server-name&gt; proto tcp level info
+
+From an NSX Edge Node shell, run the following command to configure a primary and backup TLS syslog server:
+
+&gt; set logging-server &lt;server-ip or server-name&gt; proto tls level info serverca ca.pem clientca ca.pem certificate cert.pem key key.pem
+
+From an NSX Edge Node shell, run the following command to configure an LI-TLS syslog server:
+
+&gt; set logging-server &lt;server-ip or server-name&gt; proto li-tls level info serverca root-ca.crt
+
+Note: If using the protocols TLS or LI-TLS to configure a secure connection to a log server, the server and client certificates must be stored in /var/vmware/nsx/file-store/ on each NSX Edge Node appliance.
+
+Note: Configure the syslog to send an alert if the events server is unable to receive events from the NSX-T and also if denial-of-service (DoS) incidents are detected. This is true if the events server is STIG compliant.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-001851 CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+    </iSTIG>
+  </STIGS>
+</CHECKLIST>

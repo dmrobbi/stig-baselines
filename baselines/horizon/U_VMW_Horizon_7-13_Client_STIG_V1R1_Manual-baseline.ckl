@@ -1,0 +1,856 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CHECKLIST>
+  <ASSET>
+    <ROLE>None</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
+    <HOST_NAME />
+    <HOST_IP />
+    <HOST_MAC />
+    <HOST_FQDN />
+    <TECH_AREA />
+    <TARGET_KEY />
+    <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
+  </ASSET>
+  <STIGS>
+    <iSTIG>
+      <STIG_INFO>
+        <SI_DATA>
+          <SID_NAME>version</SID_NAME>
+          <SID_DATA>1</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>classification</SID_NAME>
+          <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_VMW_Horizon_7-13_Client_STIG_V1R1_Manual</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>title</SID_NAME>
+          <SID_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>description</SID_NAME>
+          <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DoD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>filename</SID_NAME>
+          <SID_DATA>U_VMW_Horizon_7-13_Client_STIG_V1R1_Manual-xccdf.xml</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>releaseinfo</SID_NAME>
+          <SID_DATA>Release: 1 Benchmark Date: 13 Jul 2021</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>source</SID_NAME>
+          <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>698e40a4-3aec-59fa-b278-75b47946ab95</SID_DATA>
+        </SI_DATA>
+      </STIG_INFO>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246875</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246875r768585_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000001</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must not send anonymized usage data.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>By default, the Horizon Client collects anonymized data from the client systems to help improve software and hardware compatibility. To eliminate any possibility of sensitive DoD configurations being known to unauthorized parties, even when anonymized, this setting must be disabled.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration. Double-click the "Allow data sharing" setting.
+
+If "Allow data sharing" is set to "Enabled" or "Not Configured", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50307r768583_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration. Double-click the "Allow data sharing" setting.
+
+Make sure the setting is "Disabled". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246876</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246876r768588_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000002</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must not connect to servers without fully verifying the server certificate.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Preventing the disclosure of transmitted information requires that the application server take measures to employ some form of cryptographic mechanism in order to protect the information during transmission.  This is usually achieved through the use of Transport Layer Security (TLS).
+
+The Horizon Client connects to the Connection Server, UAG or other gateway via a TLS connection. This initial connection must be trusted, otherwise the sensitive information flowing over the tunnel could potentially be open to interception. The Horizon Client can be configured to ignore any certificate validation errors, warn or fail. By default, the Client will warn and let the user decide to proceed or not. This decision must not be left to the end user. In a properly configured, enterprise environment, there should be no trouble with the presented certificate. On the other hand, a TLS connection could be easily intercepted and middle-manned with the assumption that a user will just click away any errors.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Certificate verification mode".
+
+If "Certificate verification mode" is "Not Configured" or "Disabled", this is a finding.
+
+If "Certificate verification mode" is not set to "Full Security", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50308r768586_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Certificate verification mode".
+
+Make sure the setting is "Enabled".
+
+In the dropdown below "Certificate verification mode", select "Full Security". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246877</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246877r768591_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000003</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must not show the Log in as current user option.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Connection Server STIG disabled the "Log in as current user" option, for reasons described there. Displaying this option and allowing users to select it would lead to unnecessary confusion and therefore must be disabled.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Display option to Log in as current user".
+
+If "Display option to Log in as current user" is not set to "Disabled", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50309r768589_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Display option to Log in as current user".
+
+Make sure the setting is "Disabled". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246878</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246878r768594_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000004</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must not ignore certificate revocation problems.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>When the Horizon Client connects to the server, by default, the server TLS certificate will be validated on the client side. If the revocation status cannot be determined or if the certificate is revoked, the connection will fail due to an untrusted connection. This default behavior can be overridden, however, to ignore revocation errors and proceed with revoked or certificates of unknown status. The default, secure, configuration must be validated and maintained.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Ignore certificate revocation problems".
+
+If "Ignore certificate revocation problems" is set to "Enabled", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50310r768592_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Ignore certificate revocation problems".
+
+Make sure the setting is "Disabled". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246879</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246879r768597_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000005</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must require TLS connections.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>In older versions of Horizon, before 5.0, remote desktop connections could be established without TLS encryption. In order to protect data-in-transit when potentially connecting to very old Horizon servers, TLS tunnels must be mandated. The default configuration attempts TLS but will fall back to no encryption if it is not supported. This must be corrected and maintained over time.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Enable SSL encrypted framework channel".
+
+If "Enable SSL encrypted framework channel" is set to "Disabled" or "Not Configured", this is a finding.
+
+In the dropdown beneath "Enable SSL encrypted framework channel", if "Enforce" is not selected, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50311r768595_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Enable SSL encrypted framework channel".
+
+Make sure the setting is "Enabled".
+
+In the dropdown beneath "Enable SSL encrypted framework channel", select "Enforce". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246880</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246880r768600_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000006</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must use approved ciphers.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client disables the older TLS v1.0 protocol and the SSL v2 and SSL v3 protocols by default. TLS v1.1 is still enabled in the default configuration, despite known shortcomings, for the sake of backward compatibility with older servers and clients. The Horizon Connection Server STIG mandates TLS v1.2 in order to protect sensitive data-in-flight and the Client must follow suite.
+
+Note: Mandating TLS 1.2 may affect certain thin and zero clients. Test and implement carefully.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Configures SSL protocols and cryptographic algorithms".
+
+If "Configures SSL protocols and cryptographic algorithms" is set to "Disabled" or "Not Configured", this is a finding.
+
+If the field beneath "Configures SSL protocols and cryptographic algorithms", is not set to "TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50312r768598_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Configures SSL protocols and cryptographic algorithms".
+
+Make sure the setting is "Enabled".
+
+In the field beneath "Configures SSL protocols and cryptographic algorithms", type the following:
+
+TLSv1.2:!aNULL:kECDH+AESGCM:ECDH+AESGCM:RSA+AESGCM:kECDH+AES:ECDH+AES:RSA+AES
+
+Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware Horizon 7.13 Client Security Technical Implementation Guide :: v1r1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-246881</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-246881r768603_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HRZC-7X-000007</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client must not allow command line credentials.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The Horizon Client has a number of command line options including authentication parameters, by default. This can include a smart card PIN, if so configured by the end user. This would normally be implemented by a script, which would mean plain text sensitive authenticators sitting on disk. Hard coding of credentials of any sort, but especially smart card PINs, must be explicitly disallowed.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Allow command line credentials".
+
+If "Allow command line credentials" is "Not Configured" or "Enabled", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-50313r768601_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure the vdm_agent*.admx templates are added. Open the "Group Policy Management" MMC snap-in. Open the site-specific GPO applying Horizon settings to the VDI desktops.
+
+Navigate to Computer Configuration &gt;&gt; Policies &gt;&gt; Administrative Templates &gt;&gt; VMware Horizon Client Configuration &gt;&gt; Security Settings. Double-click "Allow command line credentials".
+
+Make sure the setting is "Disabled". Click "OK".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+    </iSTIG>
+  </STIGS>
+</CHECKLIST>

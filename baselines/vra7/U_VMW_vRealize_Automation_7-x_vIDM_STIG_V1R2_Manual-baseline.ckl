@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CHECKLIST>
+  <ASSET>
+    <ROLE>None</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
+    <HOST_NAME />
+    <HOST_IP />
+    <HOST_MAC />
+    <HOST_FQDN />
+    <TECH_AREA />
+    <TARGET_KEY />
+    <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
+  </ASSET>
+  <STIGS>
+    <iSTIG>
+      <STIG_INFO>
+        <SI_DATA>
+          <SID_NAME>version</SID_NAME>
+          <SID_DATA>1</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>classification</SID_NAME>
+          <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_VMW_vRealize_Automation_7-x_vIDM_STIG_V1R2_Manual</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>title</SID_NAME>
+          <SID_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>description</SID_NAME>
+          <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>filename</SID_NAME>
+          <SID_DATA>U_VMW_vRealize_Automation_7-x_vIDM_STIG_V1R2_Manual-xccdf.xml</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>releaseinfo</SID_NAME>
+          <SID_DATA>Release: 2 Benchmark Date: 25 Oct 2023</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>source</SID_NAME>
+          <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>e7c6f1a0-9087-54dd-816f-f6d23b9d3763</SID_DATA>
+        </SI_DATA>
+      </STIG_INFO>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240969</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000016-AS-000013</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240969r879521_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000020</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM must be configured to log activity to the horizon.log file.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Logging must be utilized in order to track system activity, assist in diagnosing system issues, and provide evidence needed for forensic investigations post security incident. Remote access by administrators requires that the admin activity be logged. Application servers provide a web and command line-based remote management capability for managing the application server. Application servers must ensure that all actions related to administrative functionality such as application server configuration are logged.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>At the command prompt, execute the following command:
+
+grep log4j.appender.rollingFile.file /usr/local/horizon/conf/saas-log4j.properties
+
+If the "log4j.appender.rollingFile.file" is not set to "/opt/vmware/horizon/workspace/logs/horizon.log" or is commented out or is missing, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44202r676166_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Navigate to and open /usr/local/horizon/conf/saas-log4j.properties.
+
+Configure the vIDM policy log file with the following lines:
+
+log4j.appender.rollingFile=org.apache.log4j.RollingFileAppender
+log4j.appender.rollingFile.MaxFileSize=50MB
+log4j.appender.rollingFile.MaxBackupIndex=7
+log4j.appender.rollingFile.Encoding=UTF-8
+log4j.appender.rollingFile.file=/opt/vmware/horizon/workspace/logs/horizon.log
+log4j.appender.rollingFile.append=true
+log4j.appender.rollingFile.layout=org.apache.log4j.PatternLayout
+log4j.appender.rollingFile.layout.ConversionPattern=%d{ISO8601} %-5p (%t) [%X{orgId};%X{userId};%X{ip}] %c - %m%n</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000067</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240970</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000148-AS-000101</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240970r879589_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000195</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM must be configured correctly for the site enterprise user management system.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To assure accountability and prevent unauthorized access, application server users must be uniquely identified and authenticated. This is typically accomplished via the use of a user store which is either local (OS-based) or centralized (LDAP) in nature. To ensure support to the enterprise, the authentication must utilize an enterprise solution.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Interview the ISSO. Obtain the correct configuration for the site's Directory services.
+
+In a browser, log in with Tenant admin privileges and navigate to the Administration page.
+
+Select Directories Management &gt;&gt; Directories.
+
+Click on the configured Directory to review the configuration. 
+
+If the Directory service is not configured correctly, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44203r676169_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Interview the ISSO. Obtain the correct configuration for the site's Directory services.
+
+In a browser, log in with Tenant admin privileges, and navigate to the Administration page.
+
+Select Directories Management &gt;&gt; Directories.
+
+Click on the configured Directory to edit the configuration in accordance with the instructions provided by the ISSO.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000764</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240971</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000172-AS-000121</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240971r879609_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000240</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM must utilize encryption when using LDAP for authentication.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Passwords need to be protected at all times, and encryption is the standard method for protecting passwords during transmission. Application servers have the capability to utilize LDAP directories for authentication. If LDAP connections are not protected during transmission, sensitive authentication credentials can be stolen. When the application server utilizes LDAP, the LDAP traffic must be encrypted.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>In a browser, log in with Tenant admin privileges, and navigate to the Administration page.
+
+Select Directories Management &gt;&gt; Directories.
+
+Click on the configured Directory to review the configuration. 
+
+If the SSL checkbox is not selected, this is a finding.
+
+Note: The checkbox is labeled, "This Directory requires all connections to use SSL".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44204r676172_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>In a browser, log in with Tenant admin privileges, and navigate to the Administration page.
+
+Select Directories Management &gt;&gt; Directories.
+
+Click on the configured Directory to review the configuration. 
+
+Check the checkbox that is labeled, "This Directory requires all connections to use SSL". 
+
+Click "Save".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000197</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240972</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000225-AS-000154</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240972r879640_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000315</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM must be configured to provide clustering.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>This requirement is dependent upon system MAC and confidentiality. If the system MAC and confidentiality levels do not specify redundancy requirements, this requirement is NA. Failure to a known secure state helps prevent a loss of confidentiality, integrity, or availability in the event of a failure of the information system or a component of the system. When application failure is encountered, preserving application state facilitates application restart and return to the operational mode of the organization with less disruption of mission/business processes. Clustering of multiple application servers is a common approach to providing fail-safe application availability when system MAC and confidentiality levels require redundancy.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Interview the ISSO. Obtain the correct configuration for clustering used by the site.
+
+Review the vRealize Automation appliance's installation, environment, and configuration. Determine if vRA clustering has been correctly implemented.
+
+If vRA is not correctly implementing clustering, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44205r676175_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Interview the ISSO. Obtain the correct configuration for clustering used by the site.
+
+Configure vRealize Automation to be in compliance with the clustering design provided by the ISSO.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-001190</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240973</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000266-AS-000168</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240973r879655_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000340</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM must be configured to log activity to the horizon.log file.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The structure and content of error messages need to be carefully considered by the organization and development team. Any application providing too much information in error logs and in administrative messages to the screen risks compromising the data and security of the application and system. The extent to which the application server is able to identify and handle error conditions is guided by organizational policy and operational requirements. Adequate logging levels and system performance capabilities need to be balanced with data protection requirements. The structure and content of error messages needs to be carefully considered by the organization and development team. Application servers must have the capability to log at various levels, which can provide log entries for potential security-related error events. An example is the capability for the application server to assign a criticality level to a failed logon attempt error message, a security-related error message being of a higher criticality.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>At the command prompt, execute the following command:
+
+grep log4j.appender.rollingFile.file /usr/local/horizon/conf/saas-log4j.properties
+
+If the "log4j.appender.rollingFile.file" is not set to "/opt/vmware/horizon/workspace/logs/horizon.log" or is commented out or is missing, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44206r676178_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Navigate to and open /usr/local/horizon/conf/saas-log4j.properties.
+
+Configure the vIDM policy log file with the following lines:
+
+log4j.appender.rollingFile=org.apache.log4j.RollingFileAppender
+log4j.appender.rollingFile.MaxFileSize=50MB
+log4j.appender.rollingFile.MaxBackupIndex=7
+log4j.appender.rollingFile.Encoding=UTF-8
+log4j.appender.rollingFile.file=/opt/vmware/horizon/workspace/logs/horizon.log
+log4j.appender.rollingFile.append=true
+log4j.appender.rollingFile.layout=org.apache.log4j.PatternLayout
+log4j.appender.rollingFile.layout.ConversionPattern=%d{ISO8601} %-5p (%t) [%X{orgId};%X{userId};%X{ip}] %c - %m%n</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-001312</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240974</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000435-AS-000069</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240974r879806_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000550</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vIDM, when installed in a MAC I system, must be in a high-availability (HA) cluster.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>A MAC I system is a system that handles data vital to the organization's operational readiness or effectiveness of deployed or contingency forces. A MAC I system must maintain the highest level of integrity and availability. By HA clustering the application server, the hosted application and data are given a platform that is load-balanced and provided high-availability.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If vRA is not installed in a MAC I system, this is Not Applicable.
+
+Interview the ISSO. Obtain the correct configuration for clustering used by the site.
+
+Review the vRealize Automation appliance's installation, environment, and configuration. Determine if vRA clustering has been correctly implemented.
+
+If vRA is not correctly implementing clustering, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44207r676181_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If vRA is not installed in a MAC I system, this is Not Applicable.
+
+Interview the ISSO. Obtain the correct configuration for clustering used by the site.
+
+Configure vRealize Automation to be in compliance with the clustering design provided by the ISSO.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-002385</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-240975</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516-AS-000237</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-240975r879887_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-000655</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The vRealize Automation appliance must be configured in accordance with the security configuration settings based on DoD security configuration or implementation guidance, including STIGs, NSA configuration guides, CTOs, and DTMs.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Configuring the vRealize Automation application to implement organization-wide security implementation guides and security checklists ensures compliance with federal standards and establishes a common security baseline across DoD that reflects the most restrictive security posture consistent with operational requirements. 
+
+The vRA product is continually under refinement, and patches are regularly released to address vulnerabilities. As a result, the vRA STIG is also subject to a release cycle on a quarterly basis.
+
+Assessors should ensure that they are reviewing the vRealize Automation appliance with the most current STIG.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Obtain the current vRealize Automation STIGs from the ISSO.
+
+Verify that this STIG is the most current STIG available for vRealize Automation. Assess all of the organization's vRA installations to ensure that they are fully compliant with the most current STIG.
+
+If the most current version of the vRA STIG was not used, or if the vRA appliance configuration is not compliant with the most current STIG, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-44208r676184_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Obtain the most current vRealize Automation STIG. Verify that this vRA appliance is configured with all current requirements.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vRealize Automation 7.x vIDM Security Technical Implementation Guide :: v1r2</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-258456</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000456-AS-000266</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-258456r928891_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VRAU-VI-009999</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The version of vRealize Automation 7.x vIDM running on the system must be a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Security flaws with software applications are discovered daily. Vendors are constantly updating and patching their products to address newly discovered security vulnerabilities. Organizations (including any contractor to the organization) are required to promptly install security-relevant software updates (e.g., patches, service packs, and hot fixes). Flaws discovered during security assessments, continuous monitoring, incident response activities, or information system error handling must also be addressed expeditiously.
+
+Organization-defined time periods for updating security-relevant software may vary based on a variety of factors including, for example, the security category of the information system or the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw).
+
+This requirement will apply to software patch management solutions used to install patches across the enclave and to applications themselves that are not part of that patch management solution. For example, many browsers today provide the capability to install their own patch software. Patch criticality, as well as system criticality will vary. Therefore, the tactical situations regarding the patch management process will also vary. This means that the time period used must be a configurable parameter. Time frames for application of security-relevant software updates may be dependent upon the Information Assurance Vulnerability Management (IAVM) process.
+
+The application will be configured to check for and install security-relevant software updates within an identified time period from the availability of the update. The specific time period will be defined by an authoritative source (e.g., IAVM, CTOs, DTMs, and STIGs).</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vRealize Automation 7.x vIDM is no longer supported by the vendor. If the system is running vRealize Automation 7.x vIDM, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-62196r928890_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Upgrade to a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-002605</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+    </iSTIG>
+  </STIGS>
+</CHECKLIST>

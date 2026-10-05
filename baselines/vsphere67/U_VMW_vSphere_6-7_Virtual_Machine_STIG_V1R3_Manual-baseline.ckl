@@ -1,0 +1,3076 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CHECKLIST>
+  <ASSET>
+    <ROLE>None</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
+    <HOST_NAME />
+    <HOST_IP />
+    <HOST_MAC />
+    <HOST_FQDN />
+    <TECH_AREA />
+    <TARGET_KEY />
+    <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
+  </ASSET>
+  <STIGS>
+    <iSTIG>
+      <STIG_INFO>
+        <SI_DATA>
+          <SID_NAME>version</SID_NAME>
+          <SID_DATA>1</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>classification</SID_NAME>
+          <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_VMW_vSphere_6-7_Virtual_Machine_STIG_V1R3_Manual</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>title</SID_NAME>
+          <SID_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>description</SID_NAME>
+          <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>filename</SID_NAME>
+          <SID_DATA>U_VMW_vSphere_6-7_Virtual_Machine_STIG_V1R3_Manual-xccdf.xml</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>releaseinfo</SID_NAME>
+          <SID_DATA>Release: 3 Benchmark Date: 26 Jul 2023</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>source</SID_NAME>
+          <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>34c62666-8b26-53ef-9be1-99f891a1f19c</SID_DATA>
+        </SI_DATA>
+      </STIG_INFO>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239332</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239332r679545_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000001</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Copy operations must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.copy.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.copy.disable
+
+If the virtual machine advanced setting isolation.tools.copy.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42565r679543_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.copy.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen. 
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.copy.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.copy.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239333</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239333r679548_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000002</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Drag and drop operations must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.dnd.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.dnd.disable
+
+If the virtual machine advanced setting isolation.tools.dnd.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42566r679546_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.dnd.disable value is set to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.dnd.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.dnd.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239334</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239334r679551_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000003</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Paste operations must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Copy and paste operations are disabled by default; however, by explicitly disabling this feature it will enable audit controls to check that this setting is correct. Copy, paste, drag and drop, or GUI copy/paste operations between the guest OS and the remote console could provide the means for an attacker to compromise the VM.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.paste.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.paste.disable
+
+If the virtual machine advanced setting isolation.tools.paste.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42567r679549_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.paste.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.paste.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.paste.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239335</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239335r679554_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000004</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Virtual disk shrinking must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Shrinking a virtual disk reclaims unused space in it. If there is empty space in the disk, this process reduces the amount of space the virtual disk occupies on the host drive. Normal users and processes-that is, users and processes without root or administrator privileges-within virtual machines have the capability to invoke this procedure. However, if this is done repeatedly, the virtual disk can become unavailable while this shrinking is being performed, effectively causing a denial-of-service. In most datacenter environments, disk shrinking is not done, so this feature must be disabled. Repeated disk shrinking can make a virtual disk unavailable. The capability to shrink is available to non-administrative users operating within the VMs guest OS.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.diskShrink.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskShrink.disable
+
+If the virtual machine advanced setting isolation.tools.diskShrink.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42568r679552_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.diskShrink.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.diskShrink.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskShrink.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239336</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239336r816834_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000005</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Virtual disk erasure must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Shrinking and wiping (erasing) a virtual disk reclaims unused space in it. If there is empty space in the disk, this process reduces the amount of space the virtual disk occupies on the host drive. Normal users and processes - that is, users and processes without root or administrator privileges - within virtual machines have the capability to invoke this procedure. However, if this is done repeatedly, the virtual disk can become unavailable while this shrinking is being performed, effectively causing a denial-of-service. In most datacenter environments, disk shrinking is not done, so this feature must be disabled. Repeated disk shrinking can make a virtual disk unavailable. The capability to wipe (erase) is available to non-administrative users operating within the VMs guest OS.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client, right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.diskWiper.disable value is set to "true".
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskWiper.disable
+
+If the virtual machine advanced setting isolation.tools.diskWiper.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42569r816832_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client, right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.diskWiper.disable value and set it to "true". If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.diskWiper.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.diskWiper.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239337</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239337r679560_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000006</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Independent, non-persistent disks must be not be used on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The security issue with nonpersistent disk mode is that successful attackers, with a simple shutdown or reboot, might undo or remove any traces that they were ever on the machine. To safeguard against this risk, production virtual machines should be set to use persistent disk mode; additionally, make sure that activity within the VM is logged remotely on a separate server, such as a syslog server or equivalent Windows-based event collector. Without a persistent record of activity on a VM, administrators might never know whether they have been attacked or hacked. 
+
+There can be valid use cases for these types of disks such as with an application presentation solution where read only disks are desired and such cases should be identified and documented.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the attached hard disks and verify they are not configured as independent nonpersistent disks.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-HardDisk | Select Parent, Name, Filename, DiskType, Persistence | FT -AutoSize
+
+If the virtual machine has attached disks that are in independent nonpersistent mode and are not documented, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42570r679558_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the target hard disk and change the mode to persistent or uncheck Independent.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-HardDisk | Set-HardDisk -Persistence IndependentPersistent
+
+or
+
+Get-VM "VM Name" | Get-HardDisk | Set-HardDisk -Persistence Persistent</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239338</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239338r679563_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000007</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>HGFS file transfers must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Setting isolation.tools.hgfsServerSet.disable to true disables registration of the guest's HGFS server with the host. APIs that use HGFS to transfer files to and from the guest operating system, such as some VIX commands, will not function. An attacker could potentially use this to transfer files inside the guest OS.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.tools.hgfsServerSet.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable
+
+If the virtual machine advanced setting isolation.tools.hgfsServerSet.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42571r679561_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.tools.hgfsServerSet.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.tools.hgfsServerSet.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239339</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239339r679566_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000008</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized floppy devices must be disconnected on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no floppy device is connected.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM | Get-FloppyDrive | Select Parent, Name, ConnectionState
+
+If a virtual machine has a floppy drive connected, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42572r679564_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If the floppy drive is required to be present, then from the vSphere Client right-click the Virtual Machine and go to Edit Settings, make sure the drive is not connected and will not "Connect at power on".
+
+If the floppy drive is not required, then from the vSphere Client power off the virtual machine, right-click the Virtual Machine and go to Edit Settings, select the floppy drive and click the circle-x to remove then OK.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-FloppyDrive | Remove-FloppyDrive</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239340</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239340r679569_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000009</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized CD/DVD devices must be disconnected on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no CD/DVD drives are connected.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM | Get-CDDrive | Where {$_.extensiondata.connectable.connected -eq $true} | Select Parent,Name
+
+If a virtual machine has a CD/DVD drive connected other than temporarily, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42573r679567_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the CD/DVD drive and uncheck "Connected" and "Connect at power on" and remove any attached ISOs.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-CDDrive | Set-CDDrive -NoMedia</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239341</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239341r679572_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000010</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized parallel devices must be disconnected on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no parallel devices exist.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "parallel"}
+
+If a virtual machine has a parallel device present, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42574r679570_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The VM must be powered off in order to remove a parallel device.
+
+From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the parallel device and click the circle-x to remove then OK.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239342</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239342r679575_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000011</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized serial devices must be disconnected on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no serial devices exist.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "serial"}
+
+If a virtual machine has a serial device present, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42575r679573_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The VM must be powered off in order to remove a serial device.
+
+From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the serial device and click the circle-x to remove then OK.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239343</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239343r679578_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000012</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized USB devices must be disconnected on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ensure that no device is connected to a virtual machine if it is not required. For example, floppy, serial and parallel ports are rarely used for virtual machines in a datacenter environment, and CD/DVD drives are usually connected only temporarily during software installation.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Review the VMs hardware and verify no USB devices exist.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following commands:
+
+Get-VM | Where {$_.ExtensionData.Config.Hardware.Device.DeviceInfo.Label -match "usb"}
+Get-VM | Get-UsbDevice
+
+If a virtual machine has any USB devices or USB controllers present, this is a finding.
+
+If USB smart card readers are used to pass smart cards through the VM console to a VM then the use of a USB controller and USB devices for that purpose is not a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42576r679576_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings. Select the USB controller and click the circle-x to remove then OK.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-USBDevice | Remove-USBDevice
+
+Note: This will not remove the USB controller just any connected devices.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239344</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239344r679581_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000013</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Console connection sharing must be limited on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>By default, remote console sessions can be connected to by more than one user at a time. When multiple sessions are activated, each terminal window is notified about the new session. If an administrator in the VM logs in using a VMware remote console during their session, a non-administrator in the VM might connect to the console and observe the administrator's actions. Also, this could result in an administrator losing console access to a virtual machine. For example, if a jump box is being used for an open console session and the admin loses connection to that box, then the console session remains open. Allowing two console sessions permits debugging via a shared session. For highest security, only one remote console session at a time should be allowed.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the RemoteDisplay.maxConnections value is set to 1.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections
+
+If the virtual machine advanced setting RemoteDisplay.maxConnections does not exist or is not set to 1, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42577r679579_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the RemoteDisplay.maxConnections value and set it to 1. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name RemoteDisplay.maxConnections -Value 1
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.maxConnections | Set-AdvancedSetting -Value 1</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239345</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239345r679584_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000014</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Console access through the VNC protocol must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The VM console enables connection to the console of a virtual machine, in effect seeing what a monitor on a physical server would show. This console is also available via the VNC protocol and should be disabled.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the RemoteDisplay.vnc.enabled value is set to false.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled
+
+If the virtual machine advanced setting RemoteDisplay.vnc.enabled does not exist or is not set to false, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42578r679582_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the RemoteDisplay.vnc.enabled value and set it to false. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name RemoteDisplay.vnc.enabled -Value false
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name RemoteDisplay.vnc.enabled | Set-AdvancedSetting -Value false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239346</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239346r679587_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000015</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Informational messages from the virtual machine to the VMX file must be limited on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The configuration file containing these name-value pairs is limited to a size of 1MB. If not limited, VMware tools in the guest OS are capable of sending a large and continuous data stream to the host. This 1MB capacity should be sufficient for most cases, but this value can change if necessary. The value can be increased if large amounts of custom information are being stored in the configuration file. The default limit is 1MB.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the tools.setinfo.sizeLimit value is set to 1048576.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit
+
+If the virtual machine advanced setting tools.setinfo.sizeLimit does not exist or is not set to 1048576, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42579r679585_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the tools.setinfo.sizeLimit value and set it to 1048576. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.setinfo.sizeLimit -Value 1048576
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.setinfo.sizeLimit | Set-AdvancedSetting -Value 1048576</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239347</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239347r679590_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000016</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unauthorized removal, connection and modification of devices must be prevented on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>In a virtual machine, users and processes without root or administrator privileges can connect or disconnect devices, such as network adaptors and CD-ROM drives, and can modify device settings. Use the virtual machine settings editor or configuration editor to remove unneeded or unused hardware devices. To use the device again, prevent a user or running process in the virtual machine from connecting, disconnecting, or modifying a device from within the guest operating system. By default, a rogue user with nonadministrator privileges in a virtual machine can: 
+1. Connect a disconnected CD-ROM drive and access sensitive information on the media left in the drive.
+2. Disconnect a network adaptor to isolate the virtual machine from its network, which is a denial of service.
+3. Modify settings on a device.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the isolation.device.connectable.disable value is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.device.connectable.disable
+
+If the virtual machine advanced setting isolation.device.connectable.disable does not exist or is not set to true, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42580r679588_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the isolation.device.connectable.disable value and set it to true. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name isolation.device.connectable.disable -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name isolation.device.connectable.disable | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239348</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239348r679593_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000017</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The virtual machine must not be able to obtain host information from the hypervisor.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>If enabled, a VM can obtain detailed information about the physical host. The default value for the parameter is FALSE. This setting should not be TRUE unless a particular VM requires this information for performance monitoring. An adversary potentially can use this information to inform further attacks on the host.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the tools.guestlib.enableHostInfo value is set to false.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo
+
+If the virtual machine advanced setting tools.guestlib.enableHostInfo does not exist or is not set to false, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42581r679591_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the tools.guestlib.enableHostInfo value and set it to false. If the setting does not exist, add the Name and Value setting at the bottom of screen.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.guestlib.enableHostInfo -Value false
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guestlib.enableHostInfo | Set-AdvancedSetting -Value false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239349</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239349r679596_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000018</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Shared salt values must be disabled on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>When salting is enabled (Mem.ShareForceSalting=1 or 2) in order to share a page between two virtual machines both salt and the content of the page must be same. A salt value is a configurable advanced option for each virtual machine. The salt values can be manually specified in the virtual machine's advanced settings with the new option sched.mem.pshare.salt. If this option is not present in the virtual machine's advanced settings, then the value of the vc.uuid option is taken as the default value. Since the vc.uuid is unique to each virtual machine, by default TPS happens only among the pages belonging to a particular virtual machine (Intra-VM).</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Verify the sched.mem.pshare.salt setting does not exist.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name sched.mem.pshare.salt
+
+If the virtual machine advanced setting sched.mem.pshare.salt exists, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42582r679594_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Delete the sched.mem.pshare.salt setting.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name sched.mem.pshare.salt | Remove-AdvancedSetting</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239350</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239350r679599_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000019</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Access to virtual machines through the dvfilter network APIs must be controlled.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>An attacker might compromise a VM by making use the dvFilter API. Configure only those VMs to use the API that need this access.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Look for settings with the format ethernet*.filter*.name.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name "ethernet*.filter*.name*"
+
+If the virtual machine advanced setting ethernet*.filter*.name exists and dvfilters are not in use, this is a finding.
+
+If the virtual machine advanced setting ethernet*.filter*.name exists and the value is not valid, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42583r679597_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client right-click the Virtual Machine and go to Edit Settings &gt;&gt; VM Options &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Look for settings with the format ethernet*.filter*.name. Ensure only required VMs use this setting.
+
+Note: The VM must be powered off to configure the advanced settings through the vSphere Web Client so it is recommended to configure these settings with PowerCLI as it can be done while the VM is powered on. Settings do not take effect via either method until the virtual machine is cold started, not rebooted.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name ethernetX.filterY.name | Remove-AdvancedSetting
+
+Note:  Change the X and Y values to match the specific setting in your environment.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239351</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239351r679602_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000020</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>System administrators must use templates to deploy virtual machines whenever possible.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>By capturing a hardened base operating system image (with no applications installed) in a template, ensure all virtual machines are created with a known baseline level of security. Then use this template to create other, application-specific templates, or use the application template to deploy virtual machines. Manual installation of the OS and applications into a VM introduces the risk of misconfiguration due to human or process error.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Ask the SA if hardened, patched templates are used for VM creation, properly configured OS deployments, including applications both dependent and non-dependent on VM-specific configurations.
+
+If hardened, patched templates are not used for VM creation, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42584r679600_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Create hardened virtual machine templates to use for OS deployments.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239352</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239352r679605_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000021</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Use of the virtual machine console must be minimized.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The VM console enables a connection to the console of a virtual machine, in effect seeing what a monitor on a physical server would show. The VM console also provides power management and removable device connectivity controls, which might potentially allow a malicious user to bring down a virtual machine. In addition, it also has a performance impact on the service console, especially if many VM console sessions are open simultaneously.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Remote management services, such as terminal services and SSH, must be used to interact with virtual machines. VM console access should only be granted when remote management services are unavailable or insufficient to perform necessary management tasks.
+
+Ask the SA if a VM console is used to perform VM management tasks, other than for troubleshooting VM issues. 
+
+If a VM console is used to perform VM management tasks, other than for troubleshooting VM issues, this is a finding. 
+
+If SSH and/or terminal management services are exclusively used to perform management tasks, this is not a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42585r679603_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Develop a policy prohibiting the use of a VM console for performing management services. This policy should include procedures for the use of SSH and Terminal Management services for VM management. Where SSH and Terminal Management services prove insufficient to troubleshoot a VM, access to the VM console may be temporarily granted.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239353</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239353r679608_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000022</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The virtual machine guest operating system must be locked when the last console connection is closed.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>When accessing the VM console the guest OS must be locked when the last console user disconnects, limiting the possibility of session hijacking. This setting only applies to Windows-based VMs with VMware tools installed.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the tools.guest.desktop.autolock value and verify that it is set to true.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guest.desktop.autolock
+
+If the virtual machine advanced setting tools.guest.desktop.autolock does not exist or is not set to true, this is a finding.
+
+If the VM is not Windows-based, this is not a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42586r679606_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find or create the tools.guest.desktop.autolock value and set it to true.
+
+Note: The VM must be powered off to modify the advanced settings through the vSphere Web Client. It is recommended to configure these settings with PowerCLI as this can be done while the VM is powered on. In this case, the modified settings will not take effect until a cold boot of the VM.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name tools.guest.desktop.autolock -Value true
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name tools.guest.desktop.autolock | Set-AdvancedSetting -Value true</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-239354</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>low</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-239354r679611_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000023</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>3D features on the virtual machine must be disabled when not required.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>It is recommended that 3D acceleration be disabled on virtual machines that do not require 3D functionality, (e.g. most server workloads or desktops not using 3D applications).</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Web Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the "mks.enable3d" value and verify it is set to "false".
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name mks.enable3d
+
+If the virtual machine advanced setting "mks.enable3d" does not exist or is not set to "false", this is a finding.
+
+If a virtual machine requires 3D features, this is not a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-42587r679609_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Advanced &gt;&gt; Configuration Parameters &gt;&gt; Edit Configuration. Find the "mks.enable3d" value and set it to "false".
+
+Note: The VM must be powered off to modify the advanced settings through the vSphere Web Client. It is recommended to configure these settings with PowerCLI as this can be done while the VM is powered on. In this case, the modified settings will not take effect until a cold boot of the VM.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+If the setting does not exist, run:
+
+Get-VM "VM Name" | New-AdvancedSetting -Name mks.enable3d -Value false
+
+If the setting exists, run:
+
+Get-VM "VM Name" | Get-AdvancedSetting -Name mks.enable3d | Set-AdvancedSetting -Value false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-242469</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-242469r717088_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000024</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Encryption must be enabled for vMotion on the virtual machine.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>vMotion migrations in vSphere 6.0 and earlier transferred working memory and CPU state information in clear text over the vMotion network. As of vSphere 6.5 this transfer can be transparently encrypted using 256bit AES-GCM with negligible performance impact. vSphere 6.5 enables encrypted vMotion by default as "Opportunistic", meaning that encrypted channels are used where supported but the operation will continue in plain text where encryption is not supported. For example when vMotioning between two 6.5 hosts encryption will always be utilized but since 6.0 and earlier releases do not support this feature vMotion from a 6.5 host to a 6.0 host would be allowed but would not be encrypted. If this finding is set to "Required" then vMotions to unsupported hosts will fail. This setting must be set to "Opportunistic" or "Required".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Note: If the system does not have vCenter installed and utilizes vMotion, then this is Not Applicable.
+
+From the vSphere Web Client, select the Virtual Machine, right-click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Encryption &gt;&gt; Encrypted vMotion.
+
+or
+
+From a PowerCLI command prompt while connected to the ESXi host or vCenter server, run the following command:
+
+Get-VM | Where {($_.ExtensionData.Config.MigrateEncryption -ne "opportunistic") -and ($_.ExtensionData.Config.MigrateEncryption -ne "required")}
+
+If the setting does not have a value of "Opportunistic" or "Required", this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-40322r802904_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>From the vSphere Client select the Virtual Machine, right click and go to Edit Settings &gt;&gt; VM Options Tab &gt;&gt; Encryption &gt;&gt; Encrypted vMotion. Set the value to "Opportunistic" or "Required".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMware vSphere 6.7 Virtual Machine Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-257287</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-OS-000480-VMM-002000</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-257287r919197_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMCH-67-000999</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The version of VMM running on the server must be a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Security flaws with software applications are discovered daily. Vendors are constantly updating and patching their products to address newly discovered security vulnerabilities. Organizations (including any contractor to the organization) are required to promptly install security-relevant software updates (e.g., patches, service packs, and hot fixes). Flaws discovered during security assessments, continuous monitoring, incident response activities, or information system error handling must also be addressed expeditiously.
+
+Organization-defined time periods for updating security-relevant software may vary based on a variety of factors including, for example, the security category of the information system or the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw).
+
+This requirement will apply to software patch management solutions that are used to install patches across the enclave and to applications that are not part of that patch management solution. For example, many browsers today provide the capability to install their own patch software. Patch criticality, as well as system criticality, will vary. Therefore, the tactical situations regarding the patch management process will also vary. This means the time period used must be a configurable parameter. Time frames for application of security-relevant software updates may be dependent upon the Information Assurance Vulnerability Management (IAVM) process.
+
+The application will be configured to check for and install security-relevant software updates within an identified time period from the availability of the update. The specific time period will be defined by an authoritative source (e.g., IAVM, CTOs, DTMs, and STIGs).</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>VMM 6.7 is no longer supported by the vendor. If the server is running VMM 6.7, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-60972r918900_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Upgrade to a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+    </iSTIG>
+  </STIGS>
+</CHECKLIST>

@@ -1,0 +1,585 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<CHECKLIST>
+  <ASSET>
+    <ROLE>Member Server</ROLE>
+    <ASSET_TYPE>Computing</ASSET_TYPE>
+    <HOST_NAME />
+    <HOST_IP />
+    <HOST_MAC />
+    <HOST_FQDN />
+    <TECH_AREA />
+    <TARGET_KEY />
+    <STIG_GUID />
+    <WEB_OR_DATABASE>false</WEB_OR_DATABASE>
+    <WEB_DB_SITE />
+    <WEB_DB_INSTANCE />
+  </ASSET>
+  <STIGS>
+    <iSTIG>
+      <STIG_INFO>
+        <SI_DATA>
+          <SID_NAME>version</SID_NAME>
+          <SID_DATA>1</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>classification</SID_NAME>
+          <SID_DATA>Unclassified</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>stigid</SID_NAME>
+          <SID_DATA>U_Citrix_VAD_7-x_Delivery_Controller_STIG_V1R3_Manual</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>title</SID_NAME>
+          <SID_DATA>Citrix Virtual Apps and Desktop 7.x Delivery Controller Security Technical Implementation Guide</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>description</SID_NAME>
+          <SID_DATA>This Security Technical Implementation Guide is published as a tool to improve the security of Department of Defense (DOD) information systems. The requirements are derived from the National Institute of Standards and Technology (NIST) 800-53 and related documents. Comments or proposed revisions to this document should be sent via email to the following address: disa.stig_spt@mail.mil.</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>filename</SID_NAME>
+          <SID_DATA>U_Citrix_VAD_7-x_Delivery_Controller_STIG_V1R3_Manual-xccdf.xml</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>releaseinfo</SID_NAME>
+          <SID_DATA>Release: 3 Benchmark Date: 02 Jul 2025</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>source</SID_NAME>
+          <SID_DATA>DISA - DoD Cyber Exchange (STIG content is public domain)</SID_DATA>
+        </SI_DATA>
+        <SI_DATA>
+          <SID_NAME>uuid</SID_NAME>
+          <SID_DATA>1609b533-31a7-5d65-8116-84ffd99756de</SID_DATA>
+        </SI_DATA>
+      </STIG_INFO>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Virtual Apps and Desktop 7.x Delivery Controller Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-234565</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000014</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-234565r960759_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CVAD-DC-000030</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Delivery Controller must implement DoD-approved encryption.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Without confidentiality protection mechanisms, unauthorized individuals may gain access to sensitive information via a remote access session. 
+
+Remote access is access to DoD nonpublic information systems by an authorized user (or an information system) communicating through an external, non-organization-controlled network. Remote access methods include, for example, dial-up, broadband, and wireless. 
+ 
+Encryption provides a means to secure the remote connection to prevent unauthorized access to the data traversing the remote access connection, thereby providing a degree of confidentiality. The encryption strength of mechanism is selected based on the security categorization of the information.
+
+Satisfies: SRG-APP-000014, SRG-APP-000015, SRG-APP-000039, SRG-APP-000142, SRG-APP-000172, SRG-APP-000219, SRG-APP-000224, SRG-APP-000416, SRG-APP-000439, SRG-APP-000440, SRG-APP-000441, SRG-APP-000442, SRG-APP-000514</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Enforcement is via TLS encryption. To verify, open the Registry Editor on each Delivery Controller and find the following key name: HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\DesktopServer 
+
+1. Verify that the XmlServicesSslPort registry key exists with the correct value for SSL port. By default, it is set to "443".
+2. Verify XmlServicesEnableNonSsl is set to "0".
+3. Verify the corresponding registry value to ignore HTTPS traffic, XmlServicesEnableSsl, is not set to "0".
+
+If "XmlServicesSslPort" is not set to the desired port, this is a finding.
+
+If "XmlServicesEnableNonSsl" is not set to "0", this is a finding.
+
+If XmlServicesEnableSsl is not set to "1", this is a finding.
+
+To verify the FIPS Cipher Suites used:
+1. From the Group Policy Management Console, go to Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Networks &gt;&gt; SSL Configuration Settings.
+2. Double-click "SSL Cipher Suite Order" and verify the "Enabled" option is checked. 
+3. Verify the correct Cipher Suites are listed in the correct order per current DoD guidelines.
+
+If the "Enabled" option is not checked or the correct Cipher Suites are not listed in the correct order per current DoD guidelines, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-37750r615785_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Obtain and install root certificate(s) for server certificates installed on VDAs, SQL Server(s), Storefront, and VM Host (VMware VCenter, Hyper-V, XenServer).
+
+To install a TLS server certificate on the Delivery Controller without IIS:
+1. Log on to each Delivery Controller with a domain account that has Administrator rights.
+2. Obtain a TLS server certificate and install it on the Delivery Controller, and assign it to a port using netsh, using Microsoft server instructions.
+3. Configure the Delivery Controller with the certificate.
+
+To install a TLS server certificate on the Delivery Controller with IIS:
+1. Add the server certificate per the Microsoft server instructions.
+2. From IIS Manager, select the IIS site on which HTTPS will be enabled and select "Bindings" under "Edit Site".
+3. Click "Add", select "Type" as https, and port number as "443". Select the SSL Certificate that was installed and click "OK".
+
+To configure the Delivery Controller to use the no configured TLS port:
+1. Change the XML TLS service port use the following command:
+BrokerService –WiSslPort &lt;port number&gt;
+2. Open the Registry Editor on the CVAD Controller and find the following key name:
+HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\DesktopServer
+3. Verify that the "XmlServicesSslPort" DWORD value exists with the correct value for SSL port. By default, it is set to "443". If it does not exist, add it.
+4. Verify that the "XmlServicesEnableSsl" DWORD value exists and is set to "1". If it does not exist, add it.
+5. Reboot the Delivery Controller to ensure all changes take effect.
+
+Perform the following only after ensuring all references to the Delivery Controllers on StoreFront servers and gateway proxy devices are set to use https and working. This includes STA references. Now disable non-TLS communication with the XML port.
+1. Open the Registry Editor on the CVAD Controller and find the following key name:
+HKEY_LOCAL_MACHINE\SOFTWARE\Citrix\DesktopServer
+2. Add the DWORD value "XmlServicesEnableNonSsl" and set it to "1".
+3. Reboot the Delivery Controller.
+
+If XmlServicesEnableSsl is not set to "1", this is a finding.
+
+Notes:
+If the XML service port number on the Delivery Controller needs to be changed, update the IIS port number as well under "Bindings" to match the new value.
+
+To change the default VDA registration port:
+1. Log on to the Delivery Controller server with a domain account that has Administrator rights.
+2. Open the command prompt window and type these commands:
+%SystemDrive%
+Cd %ProgramFiles%\Citrix\Broker\Service
+BrokerService.exe –VDAport 8888
+3. Launch Server Manager from the Start menu.
+4. In the Server Manager, go to the "Local Server" properties window and edit the "Windows Firewall" setting. Click "Advanced Settings".
+5. Click "Inbound Rules".
+6. Create a new inbound rule with the following settings:
+a) In the Rule type screen, click "Port". Click "Next".
+b) In the Protocol and Ports screen, select "Specific local ports" and type "8888". Click "Next".
+c) In the Action screen, accept the default value "Allow the connection" and click "Next".
+d) In the Profile screen, accept the default values and click "Next".
+e) In the Name screen, type a name for the rule (example: Citrix VDA Registration Port) and click "Finish".
+
+To configure the SSL Cipher Suite Order Group Policy setting manually, follow these steps:
+1. At a command prompt, enter "gpedit.msc", and press "Enter". The Local Group Policy Editor is displayed.
+2. Go to Computer Configuration &gt;&gt; Administrative Templates &gt;&gt; Network &gt;&gt; SSL Configuration Settings.
+3. Under SSL Configuration Settings, select "SSL Cipher Suite Order".
+4. In the SSL Cipher Suite Order pane, scroll to the bottom. Follow the instructions that are labeled "How to modify this setting".</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000068 CCI-000197 CCI-000382 CCI-001184 CCI-001188 CCI-001414 CCI-001453 CCI-002418 CCI-002420 CCI-002421 CCI-002422 CCI-002450</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Virtual Apps and Desktop 7.x Delivery Controller Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-234567</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000141</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-234567r960963_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CVAD-DC-000270</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Delivery Controller must be configured to disable non-essential capabilities.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>It is detrimental for applications to provide or install by default functionality exceeding requirements or mission objectives. These unnecessary capabilities or services are often overlooked and therefore may remain unsecured. They increase the risk to the platform by providing additional attack vectors.
+
+Applications are capable of providing a wide variety of functions and services. Some of the functions and services provided by default may not be necessary to support essential organizational operations (e.g., key missions, functions). 
+
+Examples of non-essential capabilities include but are not limited to advertising software or browser plug-ins not related to requirements or providing a wide array of functionality not required for every mission but that cannot be disabled.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Verify Citrix Customer Experience Improvement Program (CEIP) - PHONE HOME is disabled on Delivery Controller.
+
+1. Launch Studio.
+2. Select "Configuration" in the left navigation pane.
+3. Select the Support tab.
+4. Verify CEIP is disabled.
+
+If CEIP is not disabled, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-37752r615788_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To disable Citrix CEIP - Phone Home:
+1. Launch Studio.
+2. Select "Configuration" in the left navigation pane.
+3. Select the Support tab.
+4. Follow the prompts to end participation in CEIP.
+
+This prevents automatic upload of installation experience metrics that are collected locally during installation.
+VADServerStartup.exe /components "CONTROLLER,DESKTOPSTUDIO"
+/disableexperiencemetrics /exclude "Smart Tools Agent" /nosql
+/quiet /verboselog /noreboot</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000381</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Virtual Apps and Desktop 7.x Delivery Controller Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-234569</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>medium</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000516</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-234569r961863_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CVAD-DC-001235</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Delivery Controller must be configured in accordance with the security configuration settings based on DoD security configuration or implementation guidance, including STIGs, NSA configuration guides, CTOs, and DTMs.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Configuring the application to implement organization-wide security implementation guides and security checklists ensures compliance with federal standards and establishes a common security baseline across DoD that reflects the most restrictive security posture consistent with operational requirements. 
+
+Configuration settings are the set of parameters that can be changed that affects the security posture and/or functionality of the system. Security-related parameters are parameters impacting the security state of the application, including the parameters required to satisfy other security control requirements.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To verify that Citrix Delivery Controller and all other infrastructure server components are installable and manageable by authorized administrative accounts, the following policies must be modified:
+
+Go to Computer Configuration Policies &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies/User Rights Assignment.
+
+Verify policy settings "Allow log on locally" and "Shut down the system" are both set to the global security group name containing the XenApp or CVAD administrators.
+
+If they are not, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-37754r615791_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>To ensure that Citrix Delivery Controller and all other infrastructure server components are installable and manageable by authorized administrative accounts, the following policies must be modified:
+
+Go to Computer Configuration Policies &gt;&gt; Windows Settings &gt;&gt; Security Settings &gt;&gt; Local Policies/User Rights Assignment.
+1. Edit "Allow log on locally".
+2. Edit "Shut down the system".
+3. Change both settings to the global security group name containing the XenApp or CVAD administrators.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-000366</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+      <VULN>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>STIGRef</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Citrix Virtual Apps and Desktop 7.x Delivery Controller Security Technical Implementation Guide :: v1r3</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Num</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>V-275967</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Severity</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>high</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Group_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SRG-APP-000456</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_ID</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>SV-275967r1115781_rule</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Ver</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CVAD-DC-999999</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Rule_Title</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>The version of Virtual Apps and Desktop Delivery Controller running on the system must be a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Vuln_Discuss</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Security flaws with software applications are discovered daily. Vendors are constantly updating and patching their products to address newly discovered security vulnerabilities. Organizations (including any contractor to the organization) are required to promptly install security-relevant software updates (e.g., patches, service packs, and hot fixes). Flaws discovered during security assessments, continuous monitoring, incident response activities, or information system error handling must also be addressed expeditiously.
+
+Organization-defined time periods for updating security-relevant software may vary based on a variety of factors including, for example, the security category of the information system or the criticality of the update (i.e., severity of the vulnerability related to the discovered flaw).
+
+This requirement will apply to software patch management solutions that are used to install patches across the enclave and also to applications that are not part of that patch management solution. For example, many browsers provide the capability to install their own patch software. Patch criticality, as well as system criticality, will vary. Therefore, the tactical situations regarding the patch management process will also vary. This means that the time period used must be a configurable parameter. Time frames for application of security-relevant software updates may depend on the Information Assurance Vulnerability Management (IAVM) process.
+
+The application will be configured to check for and install security-relevant software updates within an identified time period from the availability of the update. The specific time period will be defined by an authoritative source (e.g., IAVM, CTOs, DTMs, and STIGs).</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Virtual Apps and Desktop Delivery Controller 7.x is no longer supported by the vendor. If the system is running Virtual Apps and Desktop Delivery Controller 7.x, this is a finding.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Check_Content_Ref</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>C-80085r1111758_chk</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Fix_Text</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Upgrade to a supported version.</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Negatives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>False_Positives</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Documentable</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>false</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigations</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Potential_Impact</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Third_Party_Tools</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Mitigation_Control</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Responsibility</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>IA_Controls</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Security_Override_Guidance</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA />
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Weight</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>10.0</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>Class</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>Unclassified</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STIG_DATA>
+          <VULN_ATTRIBUTE>CCI_REF</VULN_ATTRIBUTE>
+          <ATTRIBUTE_DATA>CCI-002605</ATTRIBUTE_DATA>
+        </STIG_DATA>
+        <STATUS>Not_Reviewed</STATUS>
+        <FINDING_DETAILS />
+        <COMMENTS />
+        <SEVERITY_OVERRIDE />
+        <SEVERITY_JUSTIFICATION />
+      </VULN>
+    </iSTIG>
+  </STIGS>
+</CHECKLIST>

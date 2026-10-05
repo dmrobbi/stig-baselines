@@ -35,6 +35,99 @@ kit, and bulk-applying statuses from a CSV.
 | Microsoft Windows Server 2019 | V3R9 | 2026-07-01 | 282 | `baselines/windows/MS_Windows_Server_2019_STIG_V3R9_Manual-baseline.ckl` |
 | Microsoft Windows Server 2022 | V2R10 | 2026-08-10 | 278 | `baselines/windows/MS_Windows_Server_2022_STIG_V2R10_Manual-baseline.ckl` |
 
+**Added 2026-10-05 — VMware family, Citrix, Microsoft email:**
+
+| VMware vSphere 6.5 ESXi | V2R4 | 2023-06-16 | 74 | `baselines/vsphere65/U_VMW_vSphere_6-5_ESXi_STIG_V2R4_Manual-baseline.ckl` |
+| VMware vSphere 6.5 Virtual Machine | V2R2 | 2023-06-15 | 40 | `baselines/vsphere65/U_VMW_vSphere_6-5_Virtual_Machine_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 6.5 vCenter Server for Windows | V2R3 | 2023-06-16 | 66 | `baselines/vsphere65/U_VMW_vSphere_6-5_vCenter_Server_for_Windows_STIG_V2R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 EAM Tomcat | V1R4 | 2023-07-26 | 31 | `baselines/vsphere67/U_VMW_vSphere_6-7_EAM_Tomcat_STIG_V1R4_Manual-baseline.ckl` |
+| VMware vSphere 7.0 ESXi | V1R4 | 2025-02-11 | 75 | `baselines/vsphere70/U_VMW_vSphere_7-0_ESXi_STIG_V1R4_Manual-baseline.ckl` |
+| VMware vSphere 7.0 VAMI | V1R2 | 2023-06-15 | 28 | `baselines/vsphere70/U_VMW_vSphere_7-0_VAMI_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 7.0 Virtual Machine | V1R4 | 2024-12-16 | 28 | `baselines/vsphere70/U_VMW_vSphere_7-0_Virtual_Machine_STIG_V1R4_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter | V1R3 | 2023-12-21 | 57 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCenter_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance EAM | V1R2 | 2023-06-15 | 33 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_EAM_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance Lookup Service | V1R2 | 2023-06-15 | 31 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_Lookup_Svc_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance Perfcharts | V1R1 | 2023-02-21 | 34 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_Perfcharts_STIG_V1R1_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance Photon OS | V1R4 | 2024-12-16 | 113 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_Photon_OS_STIG_V1R4_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance PostgreSQL | V1R2 | 2023-06-15 | 20 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_PostgreSQL_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance RhttpProxy | V1R1 | 2023-02-21 | 8 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_RhttpProxy_STIG_V1R1_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance STS | V1R2 | 2023-06-15 | 31 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_STS_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 7.0 vCenter Appliance UI | V1R2 | 2023-06-15 | 33 | `baselines/vsphere70/U_VMW_vSphere_7-0_vCA_UI_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 ESXi | V2R4 | 2026-06-04 | 76 | `baselines/vsphere80/U_VMW_vSphere_8-0-ESXi_STIG_V2R4_Manual-baseline.ckl` |
+| VMware vSphere 8.0 Virtual Machine | V2R1 | 2024-07-11 | 25 | `baselines/vsphere80/U_VMW_vSphere_8-0_Virtual_Machine_STIG_V2R1_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter | V2R4 | 2026-05-23 | 67 | `baselines/vsphere80/U_VMW_vSphere_8-0_vCenter_STIG_V2R4_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance ESX Agent Manager (EAM) | V2R3 | 2026-05-23 | 34 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_EAM_STIG_V2R3_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Envoy | V2R2 | 2026-06-02 | 5 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_Envoy_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Lookup Service | V2R2 | 2026-05-23 | 34 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_Lookup_Svc_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Management Interface (VAMI) | V2R2 | 2026-05-23 | 22 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_VAMI_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Perfcharts | V2R2 | 2026-05-23 | 33 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_Perfcharts_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Photon OS 4.0 | V2R2 | 2026-06-02 | 107 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_Photon_OS_4-0_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance PostgreSQL | V2R3 | 2026-06-02 | 18 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_PostgreSQL_STIG_V2R3_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance Secure Token Service (STS) | V2R2 | 2026-05-23 | 33 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_STS_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vSphere 8.0 vCenter Appliance User Interface (UI) | V2R2 | 2026-05-23 | 33 | `baselines/vsphere80/U_VMW_vSphere_8-0_VCSA_UI_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x Application | V1R2 | 2023-09-12 | 8 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_Application_V1R2_STIG_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x HA Proxy | V1R2 | 2023-09-12 | 55 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_HAProxy_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x Lighttpd | V1R2 | 2023-09-12 | 62 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_Lighttpd_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x PostgreSQL | V1R2 | 2023-09-20 | 69 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_PostgreSQL_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x SLES | V2R2 | 2023-09-22 | 209 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_SLES_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x tc Server | V2R3 | 2023-10-03 | 156 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_tc_Server_STIG_V2R3_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x vAMI | V1R2 | 2023-09-12 | 44 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_vAMI_V1R2_STIG_Manual-baseline.ckl` |
+| VMware vRealize Automation 7.x vIDM | V1R2 | 2023-09-12 | 8 | `baselines/vra7/U_VMW_vRealize_Automation_7-x_vIDM_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Operations Manager 6.x Application | V1R2 | 2023-09-12 | 6 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_Application_V1R2_STIG_Manual-baseline.ckl` |
+| VMware vRealize Operations Manager 6.x PostgreSQL | V1R2 | 2023-09-12 | 69 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_PostgreSQL_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Operations Manager 6.x SLES | V2R2 | 2023-09-21 | 212 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_SLES_STIG_V2R2_Manual-baseline.ckl` |
+| VMware vRealize Operations Manager 6.x tc Server | V1R2 | 2023-09-12 | 173 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_tc_Server_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vRealize Ops Mgr - Cassandra | V1R2 | 2023-09-26 | 57 | `baselines/vrops6/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml-baseline.ckl` |
+| VMware NSX 4.x Distributed Firewall | V1R2 | 2024-12-13 | 6 | `baselines/nsx/U_VMW_NSX_4-x_Distributed_FW_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX 4.x Manager NDM | V1R2 | 2024-12-13 | 28 | `baselines/nsx/U_VMW_NSX_4-x_Manager_NDM_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX 4.x Tier-0 Gateway Firewall | V1R2 | 2024-12-13 | 4 | `baselines/nsx/U_VMW_NSX_4-x_T-0_Gateway_FW_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX 4.x Tier-0 Gateway Router | V1R2 | 2024-12-13 | 16 | `baselines/nsx/U_VMW_NSX_4-x_T-0_Gateway_RTR_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX 4.x Tier-1 Gateway Firewall | V1R2 | 2024-12-20 | 5 | `baselines/nsx/U_VMW_NSX_4-x_T-1_Gateway_FW_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX 4.x Tier-1 Gateway Router | V1R2 | 2024-12-20 | 4 | `baselines/nsx/U_VMW_NSX_4-x_T-1_Gateway_RTR_STIG_V1R2_Manual-baseline.ckl` |
+| VMware NSX-T Distributed Firewall | V1R3 | 2023-06-23 | 7 | `baselines/nsx/U_VMW_NSX-T_Distributed_FW_STIG_V1R3_Manual-baseline.ckl` |
+| VMware NSX-T Manager NDM | V1R3 | 2023-06-22 | 23 | `baselines/nsx/U_VMW_NSX-T_Manager_NDM_STIG_V1R3_Manual-baseline.ckl` |
+| VMware NSX-T SDN Controller | V1R1 | 2022-03-09 | 2 | `baselines/nsx/U_VMW_NSX-T_SDN_Controller_STIG_V1R1_Manual-baseline.ckl` |
+| VMware NSX-T Tier 1 Gateway Firewall | V1R3 | 2023-06-22 | 9 | `baselines/nsx/U_VMW_NSX-T_T-1_Gateway_FW_STIG_V1R3_Manual-baseline.ckl` |
+| VMware NSX-T Tier 1 Gateway RTR | V1R1 | 2022-03-09 | 4 | `baselines/nsx/U_VMW_NSX-T_T-1_Gateway_RTR_STIG_V1R1_Manual-baseline.ckl` |
+| VMware NSX-T Tier-0 Gateway Firewall | V1R3 | 2023-06-22 | 7 | `baselines/nsx/U_VMW_NSX-T_T-0_Gateway_FW_STIG_V1R3_Manual-baseline.ckl` |
+| VMware NSX-T Tier-0 Gateway RTR | V1R2 | 2022-09-01 | 16 | `baselines/nsx/U_VMW_NSX-T_T-0_Gateway_RTR_STIG_V1R2_Manual-baseline.ckl` |
+| VMware Horizon 7.13 Agent | V1R1 | 2021-07-30 | 15 | `baselines/horizon/U_VMW_Horizon_7-13_Agent_STIG_V1R1_Manual-baseline.ckl` |
+| VMware Horizon 7.13 Client | V1R1 | 2021-07-22 | 7 | `baselines/horizon/U_VMW_Horizon_7-13_Client_STIG_V1R1_Manual-baseline.ckl` |
+| VMware Horizon 7.13 Connection Server | V1R2 | 2024-02-13 | 35 | `baselines/horizon/U_VMW_Horizon_7-13_Connection_Server_STIG_V1R2_Manual-baseline.ckl` |
+| VMware Workspace ONE UEM | V2R2 | 2024-06-06 | 20 | `baselines/workspace_one/U_VMW_WS1_UEM_STIG_V2R2_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x Delivery Controller | V1R3 | 2025-06-23 | 4 | `baselines/citrix/U_Citrix_VAD_7-x_Delivery_Controller_STIG_V1R3_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x License Server | V1R2 | 2025-06-23 | 8 | `baselines/citrix/U_Citrix_VAD_7-x_License_Server_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x Linux Virtual Delivery Agent | V1R2 | 2025-06-23 | 7 | `baselines/citrix/U_Citrix_VAD_7-x_Linux_VDA_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x StoreFront | V1R2 | 2025-06-23 | 3 | `baselines/citrix/U_Citrix_VAD_7-x_StoreFront_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x Windows Virtual Delivery Agent | V1R2 | 2025-06-23 | 3 | `baselines/citrix/U_Citrix_VAD_7-x_Windows_VDA_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix Virtual Apps and Desktop 7.x Workspace App | V1R3 | 2025-06-23 | 2 | `baselines/citrix/U_Citrix_VAD_7-x_Workspace_App_STIG_V1R3_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x Delivery Controller | V1R3 | 2025-06-23 | 4 | `baselines/citrix/U_Citrix_XenDesktop_7-x_Delivery_Controller_STIG_V1R3_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x License Server | V1R3 | 2019-12-12 | 7 | `baselines/citrix/U_Citrix_XenDesktop_7-x_License_Server_STIG_V1R3_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x Receiver | V1R2 | 2025-06-23 | 3 | `baselines/citrix/U_Citrix_XenDesktop_7-x_Receiver_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x StoreFront | V1R2 | 2025-06-23 | 2 | `baselines/citrix/U_Citrix_XenDesktop_7-x_StoreFront_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x Windows VDA | V1R3 | 2025-06-23 | 3 | `baselines/citrix/U_Citrix_XenDesktop_7-x_Windows_VDA_STIG_V1R3_Manual-baseline.ckl` |
+| Citrix XenDesktop 7.x Windows Virtual Delivery Agent | V1R2 | 2019-03-20 | 2 | `baselines/citrix/U_Citrix_XenDesktop_7-x_Windows_VDA_STIG_V1R2_Manual-baseline.ckl` |
+| Citrix XenDesktop v7.x StoreFront | V1R1 | 2018-08-28 | 1 | `baselines/citrix/U_Citrix_XenDesktop_7-x_StoreFront_STIG_V1R1_Manual-baseline.ckl` |
+| Microsoft Exchange 2013 Client Access Server | V2R2 | 2024-06-10 | 33 | `baselines/exchange/U_MS_Exchange_2013_CAS_STIG_V2R2_Manual-baseline.ckl` |
+| Microsoft Exchange 2013 Edge Transport Server | V1R6 | 2024-06-10 | 63 | `baselines/exchange/U_MS_Exchange_2013_Edge_Transport_Server_STIG_V1R6_Manual-baseline.ckl` |
+| Microsoft Exchange 2013 Mailbox Server | V2R3 | 2024-06-10 | 70 | `baselines/exchange/U_MS_Exchange_2013_Mailbox_STIG_V2R3_Manual-baseline.ckl` |
+| Microsoft Exchange 2016 Edge Transport Server | V2R6 | 2024-12-06 | 68 | `baselines/exchange/U_MS_Exchange_2016_Edge_Transport_Server_STIG_V2R6_Manual-baseline.ckl` |
+| Microsoft Exchange 2016 Mailbox Server | V2R6 | 2023-12-18 | 64 | `baselines/exchange/U_MS_Exchange_2016_Mailbox_Server_STIG_V2R6_Manual-baseline.ckl` |
+| Microsoft Exchange 2019 Edge Server | V2R2 | 2024-12-06 | 68 | `baselines/exchange/U_MS_Exchange_2019_Edge_Server_STIG_V2R2_Manual-baseline.ckl` |
+| Microsoft Exchange 2019 Mailbox Server | V2R3 | 2025-05-14 | 66 | `baselines/exchange/U_MS_Exchange_2019_Mailbox_Server_STIG_V2R3_Manual-baseline.ckl` |
+| Microsoft Outlook 2013 | V1R14 | 2024-12-14 | 82 | `baselines/outlook/U_MS_Outlook_2013_STIG_V1R14_Manual-baseline.ckl` |
+| Microsoft Outlook 2016 | V2R4 | 2025-11-25 | 64 | `baselines/outlook/U_MS_Outlook_2016_STIG_V2R4_Manual-baseline.ckl` |
+
+All current-estate VMware STIGs are covered: vSphere 6.5/6.7/7.0/8.0 (incl. VCSA sub-component
+STIGs — Photon OS, PostgreSQL, STS/UI/EAM/Perfcharts Tomcat, Lookup Service, Envoy, VAMI),
+vRealize Automation 7.x, vRealize Operations Manager 6.x, NSX-T/NSX 4.x, Horizon 7.13,
+Workspace ONE UEM. Citrix covers both DISA lines (Virtual Apps and Desktop 7.x + XenDesktop
+7.x). Microsoft email covers Exchange 2013/2016/2019 + Outlook 2013/2016.
+
+Deliberately excluded legacy relics (EOL products, DISA content frozen ≤2016): ESX 3.x,
+ESXi 5.x/vCenter 5, vCenter/ESXi 6.0, NSX-v 2016-era, AirWatch v9, Exchange 2003/2010,
+Outlook 2003/2007/2010, and the DoD-wide Email_Services_Policy (not a Microsoft product STIG).
+
 † latest release per trackr is newer (Ubuntu 20.04 V2R4 / 22.04 V2R9 / 24.04 V1R6,
 macOS 26 V1R3) — DISA's portal now gates downloads and those exact zips are not yet in
 any public archive; refresh when you have cyber.mil auth (see `sources/README.md`).

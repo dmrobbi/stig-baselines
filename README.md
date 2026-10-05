@@ -41,6 +41,15 @@ kit, and bulk-applying statuses from a CSV.
 | VMware vSphere 6.5 Virtual Machine | V2R2 | 2023-06-15 | 40 | `baselines/vsphere65/U_VMW_vSphere_6-5_Virtual_Machine_STIG_V2R2_Manual-baseline.ckl` |
 | VMware vSphere 6.5 vCenter Server for Windows | V2R3 | 2023-06-16 | 66 | `baselines/vsphere65/U_VMW_vSphere_6-5_vCenter_Server_for_Windows_STIG_V2R3_Manual-baseline.ckl` |
 | VMware vSphere 6.7 EAM Tomcat | V1R4 | 2023-07-26 | 31 | `baselines/vsphere67/U_VMW_vSphere_6-7_EAM_Tomcat_STIG_V1R4_Manual-baseline.ckl` |
+| VMware vSphere 6.7 Perfcharts Tomcat | V1R3 | 2023-06-16 | 32 | `baselines/vsphere67/U_VMW_vSphere_6-7_Perfcharts_Tomcat_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 Photon OS | V1R6 | 2023-06-16 | 124 | `baselines/vsphere67/U_VMW_vSphere_6-7_Photon_OS_STIG_V1R6_Manual-baseline.ckl` |
+| VMware vSphere 6.7 PostgreSQL | V1R2 | 2023-06-20 | 22 | `baselines/vsphere67/U_VMW_vSphere_6-7_PostgreSQL_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 6.7 RhttpProxy | V1R3 | 2023-06-20 | 10 | `baselines/vsphere67/U_VMW_vSphere_6-7_RhttpProxy_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 STS Tomcat | V1R3 | 2023-06-20 | 31 | `baselines/vsphere67/U_VMW_vSphere_6-7_STS_Tomcat_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 UI Tomcat | V1R3 | 2023-06-20 | 33 | `baselines/vsphere67/U_VMW_vSphere_6-7_UI_Tomcat_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 VAMI lighttpd | V1R3 | 2023-06-20 | 28 | `baselines/vsphere67/U_VMW_vSphere_6-7_VAMI-lighttpd_STIG_V1R3_Manual-baseline.ckl` |
+| VMware vSphere 6.7 Virgo Client | V1R2 | 2023-06-20 | 30 | `baselines/vsphere67/U_VMW_vSphere_6-7_Virgo-Client_STIG_V1R2_Manual-baseline.ckl` |
+| VMware vSphere 6.7 Virtual Machine | V1R3 | 2023-06-16 | 25 | `baselines/vsphere67/U_VMW_vSphere_6-7_Virtual_Machine_STIG_V1R3_Manual-baseline.ckl` |
 | VMware vSphere 7.0 ESXi | V1R4 | 2025-02-11 | 75 | `baselines/vsphere70/U_VMW_vSphere_7-0_ESXi_STIG_V1R4_Manual-baseline.ckl` |
 | VMware vSphere 7.0 VAMI | V1R2 | 2023-06-15 | 28 | `baselines/vsphere70/U_VMW_vSphere_7-0_VAMI_STIG_V1R2_Manual-baseline.ckl` |
 | VMware vSphere 7.0 Virtual Machine | V1R4 | 2024-12-16 | 28 | `baselines/vsphere70/U_VMW_vSphere_7-0_Virtual_Machine_STIG_V1R4_Manual-baseline.ckl` |

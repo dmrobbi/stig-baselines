@@ -36,6 +36,15 @@ python3 tools/xccdf2ckl.py "sources/vsphere65/U_VMW_vSphere_6-5_Virtual_Machine_
 python3 tools/xccdf2ckl.py "sources/vsphere65/U_VMW_vSphere_6-5_vCenter_Server_for_Windows_V2R3_Manual_STIG/U_VMW_vSphere_6-5_vCenter_Server_for_Windows_STIG_V2R3_Manual-xccdf.xml" "baselines/vsphere65/U_VMW_vSphere_6-5_vCenter_Server_for_Windows_STIG_V2R3_Manual-baseline.ckl"
 
 echo '== VMware vSphere 6.7 sub-components =='
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_Perfcharts_Tomcat_V1R3_Manual_STIG/U_VMW_vSphere_6-7_Perfcharts_Tomcat_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_Perfcharts_Tomcat_STIG_V1R3_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_Photon_OS_V1R6_Manual_STIG/U_VMW_vSphere_6-7_Photon_OS_STIG_V1R6_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_Photon_OS_STIG_V1R6_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_PostgreSQL_V1R2_Manual_STIG/U_VMW_vSphere_6-7_PostgreSQL_STIG_V1R2_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_PostgreSQL_STIG_V1R2_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_RhttpProxy_V1R3_Manual_STIG/U_VMW_vSphere_6-7_RhttpProxy_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_RhttpProxy_STIG_V1R3_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_STS_Tomcat_V1R3_Manual_STIG/U_VMW_vSphere_6-7_STS_Tomcat_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_STS_Tomcat_STIG_V1R3_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_UI_Tomcat_V1R3_Manual_STIG/U_VMW_vSphere_6-7_UI_Tomcat_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_UI_Tomcat_STIG_V1R3_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_VAMI-lighttpd_V1R3_Manual_STIG/U_VMW_vSphere_6-7_VAMI-lighttpd_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_VAMI-lighttpd_STIG_V1R3_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_Virgo-Client_V1R2_Manual_STIG/U_VMW_vSphere_6-7_Virgo-Client_STIG_V1R2_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_Virgo-Client_STIG_V1R2_Manual-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_Virtual_Machine_V1R3_Manual_STIG/U_VMW_vSphere_6-7_Virtual_Machine_STIG_V1R3_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_Virtual_Machine_STIG_V1R3_Manual-baseline.ckl"
 python3 tools/xccdf2ckl.py "sources/vsphere67/U_VMW_vSphere_6-7_EAM_Tomcat_V1R4_Manual_STIG/VMware_vSphere_6.7_EAM_Tomcat_STIG_V1R4_Manual-xccdf.xml" "baselines/vsphere67/U_VMW_vSphere_6-7_EAM_Tomcat_STIG_V1R4_Manual-baseline.ckl"
 
 echo '== VMware vSphere 7.0 =='

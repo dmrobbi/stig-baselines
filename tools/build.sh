@@ -90,7 +90,7 @@ python3 tools/xccdf2ckl.py "sources/vrops6/VMware_vRealize_Operations_Manager_6.
 python3 tools/xccdf2ckl.py "sources/vrops6/U_VMW_vRealize_Ops_6-x_PostgreSQL_V1R2_Manual_STIG/U_VMW_vRealize_Ops_6-x_PostgreSQL_STIG_V1R2_Manual-xccdf.xml" "baselines/vrops6/U_VMW_vRealize_Ops_6-x_PostgreSQL_STIG_V1R2_Manual-baseline.ckl"
 python3 tools/xccdf2ckl.py "sources/vrops6/U_VMW_vRealize_Ops_6-x_SLES_V2R2_Manual_STIG/U_VMW_vRealize_Ops_6-x_SLES_STIG_V2R2_Manual-xccdf.xml" "baselines/vrops6/U_VMW_vRealize_Ops_6-x_SLES_STIG_V2R2_Manual-baseline.ckl"
 python3 tools/xccdf2ckl.py "sources/vrops6/U_VMW_vRealize_Ops_6-x_tc_Server_V1R2_Manual_STIG/U_VMW_vRealize_Ops_6-x_tc_Server_STIG_V1R2_Manual-xccdf.xml" "baselines/vrops6/U_VMW_vRealize_Ops_6-x_tc_Server_STIG_V1R2_Manual-baseline.ckl"
-python3 tools/xccdf2ckl.py "sources/vrops6/VMware_vRealize_Ops_Mgr_-_Cassandra/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml" "baselines/vrops6/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml-baseline.ckl"
+python3 tools/xccdf2ckl.py "sources/vrops6/VMware_vRealize_Ops_Mgr_-_Cassandra/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual-xccdf.xml" "baselines/vrops6/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual-baseline.ckl"
 
 echo '== VMware NSX =='
 python3 tools/xccdf2ckl.py "sources/nsx/U_VMW_NSX_4-x_Distributed_FW_V1R2_Manual_STIG/U_VMW_NSX_4-x_Distributed_FW_STIG_V1R2_Manual-xccdf.xml" "baselines/nsx/U_VMW_NSX_4-x_Distributed_FW_STIG_V1R2_Manual-baseline.ckl"

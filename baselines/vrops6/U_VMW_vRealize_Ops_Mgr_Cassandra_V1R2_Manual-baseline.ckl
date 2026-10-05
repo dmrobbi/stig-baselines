@@ -27,7 +27,7 @@
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>stigid</SID_NAME>
-          <SID_DATA>U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml</SID_DATA>
+          <SID_DATA>U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>title</SID_NAME>
@@ -39,7 +39,7 @@
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>filename</SID_NAME>
-          <SID_DATA>U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml</SID_DATA>
+          <SID_DATA>U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual-xccdf.xml</SID_DATA>
         </SI_DATA>
         <SI_DATA>
           <SID_NAME>releaseinfo</SID_NAME>

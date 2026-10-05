@@ -86,7 +86,7 @@ kit, and bulk-applying statuses from a CSV.
 | VMware vRealize Operations Manager 6.x PostgreSQL | V1R2 | 2023-09-12 | 69 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_PostgreSQL_STIG_V1R2_Manual-baseline.ckl` |
 | VMware vRealize Operations Manager 6.x SLES | V2R2 | 2023-09-21 | 212 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_SLES_STIG_V2R2_Manual-baseline.ckl` |
 | VMware vRealize Operations Manager 6.x tc Server | V1R2 | 2023-09-12 | 173 | `baselines/vrops6/U_VMW_vRealize_Ops_6-x_tc_Server_STIG_V1R2_Manual-baseline.ckl` |
-| VMware vRealize Ops Mgr - Cassandra | V1R2 | 2023-09-26 | 57 | `baselines/vrops6/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual_STIG.xml-baseline.ckl` |
+| VMware vRealize Ops Mgr - Cassandra | V1R2 | 2023-09-26 | 57 | `baselines/vrops6/U_VMW_vRealize_Ops_Mgr_Cassandra_V1R2_Manual-baseline.ckl` |
 | VMware NSX 4.x Distributed Firewall | V1R2 | 2024-12-13 | 6 | `baselines/nsx/U_VMW_NSX_4-x_Distributed_FW_STIG_V1R2_Manual-baseline.ckl` |
 | VMware NSX 4.x Manager NDM | V1R2 | 2024-12-13 | 28 | `baselines/nsx/U_VMW_NSX_4-x_Manager_NDM_STIG_V1R2_Manual-baseline.ckl` |
 | VMware NSX 4.x Tier-0 Gateway Firewall | V1R2 | 2024-12-13 | 4 | `baselines/nsx/U_VMW_NSX_4-x_T-0_Gateway_FW_STIG_V1R2_Manual-baseline.ckl` |

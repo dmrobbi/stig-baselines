@@ -15,13 +15,13 @@ echo '== ESXi / vCenter 6.7 baselines =='
 python3 tools/xccdf2ckl.py sources/vsphere67/U_VMW_vSphere_6-7_ESXi_V1R3_Manual_STIG/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-xccdf.xml        baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl
 python3 tools/xccdf2ckl.py sources/vsphere67/U_VMW_vSphere_6-7_vCenter_V1R4_Manual_STIG/U_VMW_vSphere_6-7_vCenter_STIG_V1R4_Manual-xccdf.xml  baselines/vsphere67/U_VMW_vSphere_6-7_vCenter_STIG_V1R4_Manual-baseline.ckl
 
-echo '== Ubuntu baselines (Wayback-archived DISA releases; see sources/README skew note) =='
-python3 tools/xccdf2ckl.py sources/ubuntu/20.04/U_CAN_Ubuntu_20-04_LTS_V2R2_Manual_STIG/U_CAN_Ubuntu_20-04_LTS_STIG_V2R2_Manual-xccdf.xml baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R2_Manual-baseline.ckl
-python3 tools/xccdf2ckl.py sources/ubuntu/22.04/U_CAN_Ubuntu_22-04_LTS_V2R4_Manual_STIG/U_CAN_Ubuntu_22-04_LTS_STIG_V2R4_Manual-xccdf.xml baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R4_Manual-baseline.ckl
-python3 tools/xccdf2ckl.py sources/ubuntu/24.04/U_CAN_Ubuntu_24-04_LTS_V1R1_Manual_STIG/U_CAN_Ubuntu_24-04_LTS_STIG_V1R1_Manual-xccdf.xml baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R1_Manual-baseline.ckl
+echo '== Ubuntu baselines (V2R4/V2R9/V1R6 from trackr /download 2026-10-05; older Wayback releases retained in sources/) =='
+python3 tools/xccdf2ckl.py sources/ubuntu/20.04/U_CAN_Ubuntu_20-04_LTS_V2R4_Manual_STIG/U_CAN_Ubuntu_20-04_LTS_STIG_V2R4_Manual-xccdf.xml baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R4_Manual-baseline.ckl
+python3 tools/xccdf2ckl.py sources/ubuntu/22.04/U_CAN_Ubuntu_22-04_LTS_V2R9_Manual_STIG/U_CAN_Ubuntu_22-04_LTS_STIG_V2R9_Manual-xccdf.xml baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R9_Manual-baseline.ckl
+python3 tools/xccdf2ckl.py sources/ubuntu/24.04/U_CAN_Ubuntu_24-04_LTS_V1R6_Manual_STIG/U_CAN_Ubuntu_24-04_LTS_STIG_V1R6_Manual-xccdf.xml baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R6_Manual-baseline.ckl
 
 echo '== macOS baselines =='
-python3 tools/xccdf2ckl.py sources/macos/26-tahoe/U_Apple_macOS_26_V1R1_Manual_STIG/U_Apple_macOS_26_V1R1_STIG_Manual-xccdf.xml baselines/macos/Apple_macOS_26_Tahoe_STIG_V1R1_Manual-baseline.ckl --role Workstation
+python3 tools/xccdf2ckl.py sources/macos/26-tahoe/U_Apple_macOS_26_V1R1_Manual_STIG/U_Apple_macOS_26_V1R1_STIG_Manual-xccdf.xml baselines/macos/Apple_macOS_26_Tahoe_STIG_V1R3_Manual-baseline.ckl --role Workstation
 python3 tools/xccdf2ckl.py sources/macos/15-sequoia/U_Apple_macOS_15_V1R6_Manual_STIG/U_Apple_macOS_15_V1R6_STIG_Manual-xccdf.xml baselines/macos/Apple_macOS_15_Sequoia_STIG_V1R6_Manual-baseline.ckl --role Workstation
 
 echo '== Windows baselines =='

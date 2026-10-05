@@ -7,9 +7,9 @@
 - name: Map the baseline by major version
   ansible.builtin.set_fact:
     stig_baseline_ckl: >-
-      {{ {20: 'baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R2_Manual-baseline.ckl',
-          22: 'baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R4_Manual-baseline.ckl',
-          24: 'baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R1_Manual-baseline.ckl'}[ansible_distribution_major_version | int] | default('') }}
+      {{ {20: 'baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R4_Manual-baseline.ckl',
+          22: 'baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R9_Manual-baseline.ckl',
+          24: 'baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R6_Manual-baseline.ckl'}[ansible_distribution_major_version | int] | default('') }}
 
 - name: No baseline for this Ubuntu/Debian release — record it
   when: stig_baseline_ckl | trim == ''

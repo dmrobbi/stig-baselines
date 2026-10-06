@@ -1,0 +1,4 @@
+# Docker host scan/harden kit — accepted-risk exceptions
+# format: <control-id>|<reason>|<expiry-or-dash>
+# Excepted controls print as EXCEPT rows and leave the exit code unchanged; they stay
+# visible as evidence rather than silently disappearing.

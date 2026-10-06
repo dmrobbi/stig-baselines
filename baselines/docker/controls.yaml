@@ -1,0 +1,53 @@
+# Docker host scan/harden kit — control set (Container Platform SRG-anchored)
+# Source anchor: Container Platform Security Requirements Guide V2R4 (DISA, 2025-09-10):
+# https://cyber.trackr.live/stig/Container_Platform_Security_Requirements_Guide/2/4
+# CTR SRG ids cited per control where the SRG carries a distinct group; the kit's
+# v0.1.0 implements the file/perms/daemon/live-container controls honestly checkable
+# on a docker host without a cluster orchestrator.
+
+daemon:
+  - id: C-01-socket-perms
+    anchor: "SRG-APP-000033-CTR-000095 (access enforcement)"
+    title: "docker socket owned root:docker, 660 or more restrictive"
+    paths: "/var/run/docker.sock"
+    check: socket_perms
+  - id: C-02-remote-api-off
+    anchor: "SRG-APP-000016-CTR-000045 (inbound network access)"
+    title: "docker daemon remote TCP API not enabled"
+    check: remote_api_absent
+  - id: C-03-log-rotation
+    anchor: "SRG-APP-000125-CTR-000320 (audit retention)"
+    title: "containers use json-file log driver with rotation limits"
+    check: log_rotation
+  - id: C-04-live-restore
+    anchor: "SRG-APP-000435-CTR-001500 (order of restoration)"
+    title: "docker daemon live-restore enabled (restart-resilient)"
+    check: live_restore
+  - id: C-05-socket-userns
+    anchor: "SRG-APP-000038-CTR-000110 (isolated execution)"
+    title: "userns-remap decision recorded (on, off, or excepted)"
+    check: userns_decision
+    sev: info
+
+live:
+  - id: C-06-no-privileged
+    anchor: "SRG-APP-000038-CTR-000110 (isolated execution)"
+    title: "no containers running with privileged=true"
+    check: no_privileged_containers
+    sev: high
+  - id: C-07-no-host-network
+    anchor: "SRG-APP-000075-CTR-000230 (port restriction)"
+    title: "no containers on host network (unless excepted)"
+    check: no_host_network_containers
+    sev: medium
+  - id: C-08-no-new-privileges-or-caps
+    anchor: "SRG-APP-000133-CTR-000370 (privilege escalation)"
+    title: "no-new-privileges security-opt present on running containers"
+    check: cap_profile_evidence
+    sev: medium
+
+policy:
+  - id: C-09-image-provenance-note
+    title: "image provenance policy note (digest pulls, registry allowlist)"
+    check: policy_note
+    sev: info

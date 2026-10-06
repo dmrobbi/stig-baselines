@@ -20,7 +20,7 @@ commits = Dawn Robbins; pushes = github main + gitea mirror branch, hash-verifie
     ignore_list.yml, README.md} (all new)
   - Acceptance: scan = read-only (exit = fail count); harden = dry-run default + --apply
     root-gated + backups; fixture self-test green; EXCEPT-mechanism tested.
-- [ ] **PACK-4 · Docker host hardening kit** — [BUILDER][M] (OPT-K13)
+- [x] **PACK-4 · Docker host hardening kit** — [BUILDER][M] (OPT-K13)
   - Owns: baselines/docker/{docker-host-scan.sh, docker-host-harden.sh, controls.yaml,
     ignore_list.yml, README.md} (all new)
   - Acceptance: controls mapped to Container Platform SRG; read-only scan default;

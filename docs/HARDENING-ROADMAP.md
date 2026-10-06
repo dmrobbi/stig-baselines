@@ -7,7 +7,7 @@ Automation column: what actually runs the checks (see docs/SCANNING.md for workf
 
 | Platform | STIG / release | Status |
 |----------|---------------|--------|
-| RHEL 7/8/9 hosts | V3R15 / V2R8 / V2R9 | baselines + oscap datastreams committed |
+| RHEL 8/9 hosts | V2R9 / V2R10 | baselines + oscap datastreams committed (the RHEL 7 V3R15 row retired and archived 2026-10-06 under baselines/archive/rhel7/ — EOL track, owner call) |
 | Mozilla Firefox | V6R8 | baseline + merged CKLs |
 | ESXi 6.7 / vCenter 6.7 | V1R3 / V1R4 (final Y23M07) | baselines committed |
 

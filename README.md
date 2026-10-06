@@ -16,11 +16,9 @@ kit, and bulk-applying statuses from a CSV.
 
 | Platform | STIG release | Benchmark date | Rules | CKL |
 |----------|-------------|----------------|-------|-----|
-| Red Hat Enterprise Linux 7 | V3R15 | 2024-07-24 | 244 | `baselines/rhel7/U_RHEL_7_STIG_V3R15_Manual-baseline.ckl` |
 | Red Hat Enterprise Linux 8 | V2R9 | 2026-09-30 | 371 | `baselines/rhel8/U_RHEL_8_STIG_V2R9_Manual-baseline.ckl` |
 | Red Hat Enterprise Linux 9 | V2R10 | 2026-09-30 | 445 | `baselines/rhel9/U_RHEL_9_STIG_V2R10_Manual-baseline.ckl` |
 | Mozilla Firefox | V6R8 | 2026-07-01 | 33 | `baselines/firefox/` + a copy in each `baselines/rhel*/` |
-| RHEL 7 + Firefox (merged) | V3R15 + V6R8 | — | 277 | `baselines/rhel7/U_RHEL_7_V3R15_plus_Firefox_V6R8-baseline.ckl` |
 | RHEL 8 + Firefox (merged) | V2R9 + V6R8 | — | 404 | `baselines/rhel8/U_RHEL_8_V2R9_plus_Firefox_V6R8-baseline.ckl` |
 | RHEL 9 + Firefox (merged) | V2R10 + V6R8 | — | 478 | `baselines/rhel9/U_RHEL_9_V2R10_plus_Firefox_V6R8-baseline.ckl` |
 | VMware ESXi 6.7 | V1R3 | 2023-07-26 | 74 | `baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl` |

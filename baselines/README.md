@@ -2,7 +2,9 @@
 
 Two kinds of baseline live here, one directory per system:
 
-1. **Generated DISA CKLs** — the platform directories (`rhel7/` … `windows/`)
+1. **Generated DISA CKLs** — the platform directories (`rhel8/` … `windows/`;
+   RHEL 7 retired and archived 2026-10-06 under `archive/rhel7/` — EOL track,
+   owner call, see [archive/README.md](archive/README.md))
    hold checklist files generated from the official DISA XCCDF sources via
    `make baselines`, ready for DISA STIG Viewer. Full table in the
    [root README](../README.md).

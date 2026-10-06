@@ -25,7 +25,7 @@ commits = Dawn Robbins; pushes = github main + gitea mirror branch, hash-verifie
     ignore_list.yml, README.md} (all new)
   - Acceptance: controls mapped to Container Platform SRG; read-only scan default;
     --apply gated; live self-test against this host's docker without breaking it.
-- [ ] **PACK-5 · Lab assessment assets** — [BUILDER][S] (OPT-K21)
+- [x] **PACK-5 · Lab assessment assets** — [BUILDER][S] (OPT-K21)
   - Owns: baselines/kubernetes/{LAB-ASSESSMENT.md, kind-audit-job.yaml} (new)
   - Acceptance: the kind-gms runbook (kube-bench in-container job + the STIG manual-pass
     checklist); precondition documented (no cluster locus confirmed yet).

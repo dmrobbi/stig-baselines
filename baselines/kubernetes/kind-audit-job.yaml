@@ -1,0 +1,48 @@
+# kube-bench audit job for a kubeadm cluster (hostPath mounts; privileged)
+# kind clusters: prefer the docker-exec variant in LAB-ASSESSMENT.md (Track 1)
+# — kind mounts host paths per-node, so this job's hostPaths miss node dirs.
+# For real nodes: apply, watch job logs, collect JSON evidence.
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: kube-bench-audit
+  namespace: kube-system
+spec:
+  backoffLimit: 1
+  template:
+    metadata:
+      labels:
+        app: kube-bench-audit
+    spec:
+      hostPID: true
+      containers:
+        - name: kube-bench
+          image: aquasec/kube-bench:0.16.0
+          imagePullPolicy: IfNotPresent
+          command: ["kube-bench", "run", "--benchmark", "cis-1.11"]
+          volumeMounts:
+            - name: etc-kube
+              mountPath: /etc/kubernetes
+              readOnly: true
+            - name: var-kubelet
+              mountPath: /var/lib/kubelet
+              readOnly: true
+            - name: etc-etcd
+              mountPath: /etc/etcd
+              readOnly: true
+      volumes:
+        - name: etc-kube
+          hostPath:
+            path: /etc/kubernetes
+            type: Directory
+        - name: var-kubelet
+          hostPath:
+            path: /var/lib/kubelet
+            type: Directory
+        - name: etc-etcd
+          hostPath:
+            path: /etc/etcd
+            type: DirectoryOrCreate
+      restartPolicy: Never
+      nodeSelector:
+        kubernetes.io/os: linux

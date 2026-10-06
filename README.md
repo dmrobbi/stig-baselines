@@ -17,12 +17,12 @@ kit, and bulk-applying statuses from a CSV.
 | Platform | STIG release | Benchmark date | Rules | CKL |
 |----------|-------------|----------------|-------|-----|
 | Red Hat Enterprise Linux 7 | V3R15 | 2024-07-24 | 244 | `baselines/rhel7/U_RHEL_7_STIG_V3R15_Manual-baseline.ckl` |
-| Red Hat Enterprise Linux 8 | V2R8 | 2026-07-01 | 369 | `baselines/rhel8/U_RHEL_8_STIG_V2R8_Manual-baseline.ckl` |
-| Red Hat Enterprise Linux 9 | V2R9 | 2026-07-01 | 445 | `baselines/rhel9/U_RHEL_9_STIG_V2R9_Manual-baseline.ckl` |
+| Red Hat Enterprise Linux 8 | V2R9 | 2026-09-30 | 371 | `baselines/rhel8/U_RHEL_8_STIG_V2R9_Manual-baseline.ckl` |
+| Red Hat Enterprise Linux 9 | V2R10 | 2026-09-30 | 445 | `baselines/rhel9/U_RHEL_9_STIG_V2R10_Manual-baseline.ckl` |
 | Mozilla Firefox | V6R8 | 2026-07-01 | 33 | `baselines/firefox/` + a copy in each `baselines/rhel*/` |
 | RHEL 7 + Firefox (merged) | V3R15 + V6R8 | — | 277 | `baselines/rhel7/U_RHEL_7_V3R15_plus_Firefox_V6R8-baseline.ckl` |
-| RHEL 8 + Firefox (merged) | V2R8 + V6R8 | — | 402 | `baselines/rhel8/U_RHEL_8_V2R8_plus_Firefox_V6R8-baseline.ckl` |
-| RHEL 9 + Firefox (merged) | V2R9 + V6R8 | — | 478 | `baselines/rhel9/U_RHEL_9_V2R9_plus_Firefox_V6R8-baseline.ckl` |
+| RHEL 8 + Firefox (merged) | V2R9 + V6R8 | — | 404 | `baselines/rhel8/U_RHEL_8_V2R9_plus_Firefox_V6R8-baseline.ckl` |
+| RHEL 9 + Firefox (merged) | V2R10 + V6R8 | — | 478 | `baselines/rhel9/U_RHEL_9_V2R10_plus_Firefox_V6R8-baseline.ckl` |
 | VMware ESXi 6.7 | V1R3 | 2023-07-26 | 74 | `baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl` |
 | VMware vCenter 6.7 | V1R4 | 2023-07-26 | 62 | `baselines/vsphere67/U_VMW_vSphere_6-7_vCenter_STIG_V1R4_Manual-baseline.ckl` |
 | Canonical Ubuntu 20.04 LTS | V2R4 | 2025-08-27 | 173 | `baselines/ubuntu20.04/Canonical_Ubuntu_20.04_LTS_STIG_V2R4_Manual-baseline.ckl` |
@@ -139,8 +139,12 @@ ESXi 5.x/vCenter 5, vCenter/ESXi 6.0, NSX-v 2016-era, AirWatch v9, Exchange 2003
 Outlook 2003/2007/2010, and the DoD-wide Email_Services_Policy (not a Microsoft product STIG).
 
 Refreshed 2026-10-05 from cyber.trackr.live's per-revision `/download` endpoint
-(all HEAD-200): Ubuntu 20.04 V2R4 / 22.04 V2R9 / 24.04 V1R6, macOS 26 V1R3. RHEL
-7/8/9 baselines keep their committed SCAP provenance (see `sources/README.md`).
+(all HEAD-200): Ubuntu 20.04 V2R4 / 22.04 V2R9 / 24.04 V1R6, macOS 26 V1R3.
+Refreshed 2026-10-06: RHEL 8 manual → V2R9, RHEL 9 manual → V2R10, and the SCAP
+datastreams (previously stale Wayback copies) replaced with trackr's `/scap`
+mirrors — SCAP now matches the manual revisions exactly (zero skew; the
+long-frozen RHEL 7 SCAP line continued to V3R15 and SCAP spec 1.3).
+See `sources/README.md`.
 
 Merged CKLs contain two `<iSTIG>` blocks (RHEL OS STIG + Firefox STIG) in one
 checklist — DISA STIG Viewer shows both via the STIG dropdown.

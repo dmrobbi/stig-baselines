@@ -37,9 +37,9 @@ zips are gone). The current Ubuntu 20.04 V2R4 / 22.04 V2R9 / 24.04 V1R6 and
 macOS 26 V1R3 sources below were fetched straight from
 `cyber.trackr.live /stig/<Title>/<V>/<R>/download` (all HEAD-200); the older
 Wayback-replayed releases remain committed for provenance.
-| RHEL 7 | `rhel7/U_RHEL_7_V3R15_Manual_STIG/U_RHEL_7_STIG_V3R15_Manual-xccdf.xml` | V3R15, 2024-07-24 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_7/3/15/companion.zip` |
-| RHEL 8 | `rhel8/U_RHEL_8_V2R8_Manual_STIG/U_RHEL_8_STIG_V2R8_Manual-xccdf.xml` | V2R8, 2026-07-01 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_8/2/8/companion.zip` |
-| RHEL 9 | `rhel9/U_RHEL_9_V2R9_Manual_STIG/U_RHEL_9_STIG_V2R9_Manual-xccdf.xml` | V2R9, 2026-07-01 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_9/2/9/companion.zip` |
+| RHEL 7 | `rhel7/U_RHEL_7_V3R15_Manual_STIG/U_RHEL_7_STIG_V3R15_Manual-xccdf.xml` | V3R15, 2024-07-24 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_7/3/15/download` (terminal release) |
+| RHEL 8 | `rhel8/U_RHEL_8_V2R9_Manual_STIG/U_RHEL_8_STIG_V2R9_Manual-xccdf.xml` | V2R9, 2026-09-30 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_8/2/9/download` |
+| RHEL 9 | `rhel9/U_RHEL_9_V2R10_Manual_STIG/U_RHEL_9_STIG_V2R10_Manual-xccdf.xml` | V2R10, 2026-09-30 | cyber.trackr.live `/stig/Red_Hat_Enterprise_Linux_9/2/10/download` |
 | ESXi 6.7 | `vsphere67/U_VMW_vSphere_6-7_ESXi_V1R3_Manual_STIG/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-xccdf.xml` | V1R3, 2023-07-26 | Archive.org copy of `U_VMW_vSphere_6-7_Y23M07_STIG.zip` (dl.dod.cyber.mil) |
 | vCenter 6.7 | `vsphere67/U_VMW_vSphere_6-7_vCenter_V1R4_Manual_STIG/U_VMW_vSphere_6-7_vCenter_STIG_V1R4_Manual-xccdf.xml` | V1R4, 2023-07-26 | same vSphere 6.7 bundle |
 | VMware vSphere 6.7 Perfcharts Tomcat | `sources/vsphere67/U_VMW_vSphere_6-7_Perfcharts_Tomcat_V1R3_Manual_STIG/U_VMW_vSphere_6-7_Perfcharts_Tomcat_STIG_V1R3_Manual-xccdf.xml` | V1R3, 2023-06-16 | vSphere 6.7 bundle (committed) |
@@ -145,9 +145,9 @@ Wayback-replayed releases remain committed for provenance.
 | Microsoft Exchange 2019 Mailbox Server | `sources/exchange/U_MS_Exchange_2019_Mailbox_Server_V2R3_Manual_STIG/U_MS_Exchange_2019_Mailbox_Server_STIG_V2R3_Manual-xccdf.xml` | V2R3, 2025-05-14 | cyber.trackr.live `/stig/Exchange_2019_Mailbox_Server/2/3/download` |
 | Microsoft Outlook 2013 | `sources/outlook/U_MS_Outlook_2013_V1R14_Manual_STIG/U_MS_Outlook_2013_STIG_V1R14_Manual-xccdf.xml` | V1R14, 2024-12-14 | cyber.trackr.live `/stig/Outlook_2013/1/14/download` |
 | Microsoft Outlook 2016 | `sources/outlook/U_MS_Outlook_2016_V2R4_Manual_STIG/U_MS_Outlook_2016_STIG_V2R4_Manual-xccdf.xml` | V2R4, 2025-11-25 | cyber.trackr.live `/stig/Outlook_2016/2/4/download` |
-| RHEL 7 (SCAP, automation) | `scap/U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.xml` | V3R2 (stale — RHEL7 SCAP not published after) | Archive.org `U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.zip` |
-| RHEL 8 (SCAP, automation) | `scap/U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.xml` | V2R2 (stale vs manual V2R8) | Archive.org `U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.zip` |
-| RHEL 9 (SCAP, automation) | `scap/U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml` | V2R5 (stale vs manual V2R9) | Archive.org `U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.zip` |
+| RHEL 7 (SCAP, automation) | `scap/U_RHEL_7_V3R15_STIG_SCAP_1-3_Benchmark.xml` | V3R15 (current — matches manual; the old "not published after V3R2" note was wrong, the line continued to V3R15 + SCAP 1.3) | cyber.trackr.live `/scap/Red_Hat_Enterprise_Linux_7_STIG_SCAP_Benchmark/3/15/download`, fetched 2026-10-06 |
+| RHEL 8 (SCAP, automation) | `scap/U_RHEL_8_V2R9_STIG_SCAP_1-3_Benchmark.xml` | V2R9 (current — matches manual V2R9) | cyber.trackr.live `/scap/Red_Hat_Enterprise_Linux_8_STIG_SCAP_Benchmark/2/9/download`, fetched 2026-10-06 |
+| RHEL 9 (SCAP, automation) | `scap/U_RHEL_9_V2R10_STIG_SCAP_1-3_Benchmark.xml` | V2R10 (current — matches manual V2R10) | cyber.trackr.live `/scap/Red_Hat_Enterprise_Linux_9_STIG_SCAP_Benchmark/2/10/download`, fetched 2026-10-06 |
 | Kubernetes (manual) | `kubernetes/U_Kubernetes_V2R6_Manual_STIG/U_Kubernetes_STIG_V2R6_Manual-xccdf.xml` | V2R6 (2026-02-12) | cyber.trackr.live `/stig/Kubernetes/2/6/download`, sha256 `0ca995078bd987a153f5a3238d0812b331883809d11547882bf0cedf0b110e50`, fetched 2026-10-06 via tools/trackr_fetch.py |
 
 ## Refreshing to a newer release

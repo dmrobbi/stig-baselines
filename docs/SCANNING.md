@@ -56,16 +56,19 @@ Committed SCAP datastreams (see `sources/scap/`):
 
 | Host OS | Datastream | Release | Profile (full) |
 |---------|-----------|---------|----------------|
-| RHEL 7 | `sources/scap/U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.xml` | V3R2 (2021) | `xccdf_mil.disa.stig_profile_MAC-2_Public` (pick per your mission category) |
-| RHEL 8 | `sources/scap/U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.xml` | V2R2 | same family |
-| RHEL 9 | `sources/scap/U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml` | V2R5 | same family |
+| RHEL 7 | `sources/scap/U_RHEL_7_V3R15_STIG_SCAP_1-3_Benchmark.xml` | V3R15 (2024) | `xccdf_mil.disa.stig_profile_MAC-2_Public` (pick per your mission category) |
+| RHEL 8 | `sources/scap/U_RHEL_8_V2R9_STIG_SCAP_1-3_Benchmark.xml` | V2R9 (2026) | same family |
+| RHEL 9 | `sources/scap/U_RHEL_9_V2R10_STIG_SCAP_1-3_Benchmark.xml` | V2R10 (2026) | same family |
 
-**Version skew warning:** the archived datastreams lag the latest manual STIGs
-(RHEL 9 datastream is V2R5, manual baseline is V2R9). Rules added after those
-releases scan as `Not_Reviewed` in the converted CKL — fetch the current SCAP
-benchmark from DISA (auth required on cyber.mil) or re-check
-`https://cyber.trackr.live/scap` for updates and drop the newer XML into
-`sources/scap/` to eliminate the skew.
+**No version skew (as of 2026-10-06):** the committed datastreams match the
+manual STIG revisions exactly (RHEL 7 V3R15 — SCAP spec 1.3, RHEL 8 V2R9,
+RHEL 9 V2R10), fetched from `https://cyber.trackr.live/scap` (no cyber.mil
+auth needed). The datastream carries only the OVAL-checkable rule subset
+(161/291/393 of the manuals' 244/371/445); rules without automated checks
+scan as `Not_Reviewed` by design — finish them manually in STIG Viewer.
+When DISA ships new revisions, re-check the
+`https://cyber.trackr.live/scap` listing and drop the newer XMLs into
+`sources/scap/`.
 
 On the RHEL host (oscap 1.3.x):
 
@@ -75,7 +78,7 @@ sudo oscap xccdf eval \
   --profile xccdf_mil.disa.stig_profile_MAC-2_Public \
   --results results.xml \
   --report report.html \
-  sources/scap/U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml
+  sources/scap/U_RHEL_9_V2R10_STIG_SCAP_1-3_Benchmark.xml
 ```
 
 Remote scan over SSH from a scanner box:
@@ -84,7 +87,7 @@ Remote scan over SSH from a scanner box:
 oscap-ssh root@target 22 xccdf eval \
   --profile xccdf_mil.disa.stig_profile_MAC-2_Public \
   --results results.xml --report report.html \
-  sources/scap/U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml
+  sources/scap/U_RHEL_9_V2R10_STIG_SCAP_1-3_Benchmark.xml
 ```
 
 Turn results into a populated CKL (statuses auto-mapped: pass→NotAFinding,
@@ -92,7 +95,7 @@ fail→Open, notapplicable→Not_Applicable):
 
 ```bash
 python3 tools/xccdf2ckl.py \
-  sources/rhel9/U_RHEL_9_V2R9_Manual_STIG/U_RHEL_9_STIG_V2R9_Manual-xccdf.xml \
+  sources/rhel9/U_RHEL_9_V2R10_Manual_STIG/U_RHEL_9_STIG_V2R10_Manual-xccdf.xml \
   rhel9-scan.ckl \
   --results results.xml \
   --hostname web01 --ip 10.0.0.25 --fqdn web.example.com

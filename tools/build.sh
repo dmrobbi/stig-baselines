@@ -6,10 +6,10 @@ cd "$(dirname "$0")/.."
 FF=sources/firefox/U_MOZ_Firefox_V6R8_Manual_STIG/U_MOZ_Firefox_STIG_V6R8_Manual-xccdf.xml
 FF_CKL=U_MOZ_Firefox_STIG_V6R8_Manual-baseline.ckl
 
-echo '== RHEL baselines =='
+echo '== RHEL baselines (V3R15/V2R9/V2R10 from trackr /download 2026-10-06; older releases retained in sources/) =='
 python3 tools/xccdf2ckl.py sources/rhel7/U_RHEL_7_V3R15_Manual_STIG/U_RHEL_7_STIG_V3R15_Manual-xccdf.xml  baselines/rhel7/U_RHEL_7_STIG_V3R15_Manual-baseline.ckl
-python3 tools/xccdf2ckl.py sources/rhel8/U_RHEL_8_V2R8_Manual_STIG/U_RHEL_8_STIG_V2R8_Manual-xccdf.xml    baselines/rhel8/U_RHEL_8_STIG_V2R8_Manual-baseline.ckl
-python3 tools/xccdf2ckl.py sources/rhel9/U_RHEL_9_V2R9_Manual_STIG/U_RHEL_9_STIG_V2R9_Manual-xccdf.xml    baselines/rhel9/U_RHEL_9_STIG_V2R9_Manual-baseline.ckl
+python3 tools/xccdf2ckl.py sources/rhel8/U_RHEL_8_V2R9_Manual_STIG/U_RHEL_8_STIG_V2R9_Manual-xccdf.xml    baselines/rhel8/U_RHEL_8_STIG_V2R9_Manual-baseline.ckl
+python3 tools/xccdf2ckl.py sources/rhel9/U_RHEL_9_V2R10_Manual_STIG/U_RHEL_9_STIG_V2R10_Manual-xccdf.xml  baselines/rhel9/U_RHEL_9_STIG_V2R10_Manual-baseline.ckl
 
 echo '== ESXi / vCenter 6.7 baselines =='
 python3 tools/xccdf2ckl.py sources/vsphere67/U_VMW_vSphere_6-7_ESXi_V1R3_Manual_STIG/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-xccdf.xml        baselines/vsphere67/U_VMW_vSphere_6-7_ESXi_STIG_V1R3_Manual-baseline.ckl
@@ -151,8 +151,8 @@ for r in rhel7 rhel8 rhel9; do cp "baselines/firefox/$FF_CKL" "baselines/$r/$FF_
 
 echo '== merged RHEL + Firefox checklists =='
 python3 tools/merge_ckl.py baselines/rhel7/U_RHEL_7_STIG_V3R15_Manual-baseline.ckl  "baselines/rhel7/$FF_CKL" baselines/rhel7/U_RHEL_7_V3R15_plus_Firefox_V6R8-baseline.ckl
-python3 tools/merge_ckl.py baselines/rhel8/U_RHEL_8_STIG_V2R8_Manual-baseline.ckl    "baselines/rhel8/$FF_CKL" baselines/rhel8/U_RHEL_8_V2R8_plus_Firefox_V6R8-baseline.ckl
-python3 tools/merge_ckl.py baselines/rhel9/U_RHEL_9_STIG_V2R9_Manual-baseline.ckl    "baselines/rhel9/$FF_CKL" baselines/rhel9/U_RHEL_9_V2R9_plus_Firefox_V6R8-baseline.ckl
+python3 tools/merge_ckl.py baselines/rhel8/U_RHEL_8_STIG_V2R9_Manual-baseline.ckl    "baselines/rhel8/$FF_CKL" baselines/rhel8/U_RHEL_8_V2R9_plus_Firefox_V6R8-baseline.ckl
+python3 tools/merge_ckl.py baselines/rhel9/U_RHEL_9_STIG_V2R10_Manual-baseline.ckl    "baselines/rhel9/$FF_CKL" baselines/rhel9/U_RHEL_9_V2R10_plus_Firefox_V6R8-baseline.ckl
 
 echo '== Kubernetes baseline =='
 python3 tools/xccdf2ckl.py sources/kubernetes/U_Kubernetes_V2R6_Manual_STIG/U_Kubernetes_STIG_V2R6_Manual-xccdf.xml baselines/kubernetes/U_Kubernetes_V2R6_Manual-baseline.ckl

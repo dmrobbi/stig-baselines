@@ -1,0 +1,146 @@
+# Kubernetes STIG V2R6 scan/harden kit — control set
+# Source of truth: sources/kubernetes/U_Kubernetes_V2R6_Manual_STIG/U_Kubernetes_STIG_V2R6_Manual-xccdf.xml
+# Controls grouped where the same check command serves several V-IDs.
+# severity: the STIG's mapping (high = the K8s STIG high; medium = the K8s STIG medium)
+
+static:
+  - id: SV-242405r960960
+    title: "The Kubernetes manifests must be owned by root (least privileges)"
+    paths: "${KUBEADM_DIR}/manifests"
+    check: perms_root_owned
+    want: root:root 644
+  - id: SV-242407r960960
+    title: "The Kubernetes KubeletConfiguration file must be 644 or more restrictive"
+    paths: "${KUBELET_CONF},/var/lib/kubelet/config.yaml"
+    check: perms_at_most_644
+  - id: SV-242406r960960
+    title: "The Kubernetes KubeletConfiguration file must be owned by root"
+    paths: "${KUBELET_CONF},/var/lib/kubelet/config.yaml"
+    check: owner_root
+  - id: SV-242452r961863
+    title: "The Kubernetes kubelet KubeConfig must be 644 or more restrictive"
+    paths: "/etc/kubernetes/kubelet.conf"
+    check: perms_at_most_644
+  - id: SV-242453r961863
+    title: "The Kubernetes kubelet KubeConfig must be owned by root"
+    paths: "/etc/kubernetes/kubelet.conf"
+    check: owner_root
+  - id: SV-242447r961863
+    title: "The Kubernetes Kube Proxy kubeconfig must be 644 or more restrictive"
+    paths: "/etc/kubernetes/proxy"
+    check: perms_at_most_644
+  - id: SV-242448r961863
+    title: "The Kubernetes Kube Proxy kubeconfig must be owned by root"
+    paths: "/etc/kubernetes/proxy"
+    check: owner_root
+  - id: SV-242449r961863
+    title: "The Kubernetes Kubelet CA file must be 644 or more restrictive"
+    paths: "${PKI_DIR}/ca.crt,/var/lib/kubelet/pki"
+    check: perms_at_most_644
+  - id: SV-242450r961863
+    title: "The Kubernetes Kubelet CA must be owned by root"
+    paths: "${PKI_DIR}/ca.crt,/var/lib/kubelet/pki"
+    check: owner_root
+  - id: SV-242460r961863
+    title: "The Kubernetes admin kubeconfig must be 644 or more restrictive"
+    paths: "${PKI_DIR}/admin.conf,/etc/kubernetes/admin.conf"
+    check: perms_at_most_644
+  - id: SV-242459r961863
+    title: "The Kubernetes etcd data must be 644 or more restrictive"
+    paths: "/var/lib/etcd"
+    check: perms_at_most_644
+  - id: SV-242451r961863
+    title: "The Kubernetes component PKI must be owned by root"
+    paths: "${PKI_DIR}"
+    check: dir_tree_owner_root
+  - id: SV-242466r961863
+    title: "The Kubernetes PKI CRT must be 644 or more restrictive"
+    paths: "${PKI_DIR}/*.crt"
+    check: perms_at_most_644
+  - id: SV-242467r961863
+    title: "The Kubernetes PKI keys must be 600 or more restrictive"
+    paths: "${PKI_DIR}/*.key"
+    check: perms_keys_600
+
+kubelet:
+  - id: SV-242387r1137639
+    title: "The Kubernetes Kubelet readOnlyPort must be disabled (0)"
+    check: kubelet_readonly_port
+    sev: high
+  - id: SV-242391r1137638
+    title: "The Kubernetes Kubelet anonymous authentication must be disabled"
+    check: kubelet_anonymous_auth
+    sev: high
+  - id: SV-242392r1137639
+    title: "The Kubernetes kubelet must enable explicit authorization (Webhook mode)"
+    check: kubelet_authorization
+    sev: high
+  - id: SV-242397r1137639
+    title: "The Kubernetes kubelet staticPodPath must not be set unless required"
+    check: kubelet_static_pod_path
+    sev: high
+  - id: SV-242399r1137639
+    title: "Kubernetes DynamicKubeletConfig must not be enabled"
+    check: kubelet_dynamic_config
+  - id: SV-242404r960960
+    title: "Kubernetes Kubelet must deny hostname override"
+    check: kubelet_hostname_override
+  - id: SV-245541r1069469
+    title: "Kubernetes Kubelet must not disable timeouts"
+    check: kubelet_timeouts
+  - id: SV-242420r1043178
+    title: "Kubernetes Kubelet must have the SSL CA set (tlsCertFile/tlsPrivateKeyFile present)"
+    check: kubelet_tls_files
+    sev: medium
+
+controlplane:
+  - id: SV-242382r1137638
+    title: "The Kubernetes API Server must enable Node,RBAC as the authorization mode"
+    check: cp_authorization_mode
+    sev: medium
+  - id: SV-242390r1137640
+    title: "The Kubernetes API server anonymous authentication must be disabled"
+    check: cp_anonymous_auth
+    sev: high
+  - id: SV-242400r1137638
+    title: "The Kubernetes API server must have Alpha APIs disabled"
+    check: cp_feature_gate_alpha
+  - id: SV-245542r961632
+    title: "Kubernetes API Server must disable basic authentication"
+    check: cp_basic_auth
+    sev: high
+  - id: SV-245543r961632
+    title: "Kubernetes API Server must disable static token authentication"
+    check: cp_token_auth
+    sev: high
+  - id: SV-254800r961359
+    title: "Kubernetes must have a Pod Security Admission control configured"
+    check: cp_psa_enabled
+    sev: high
+  - id: SV-274882r1137640
+    title: "Kubernetes Secrets must be encrypted at rest"
+    check: cp_etcd_encryption
+    sev: high
+  - id: SV-242378r960759
+    title: "The Kubernetes API Server must use TLS 1.2 at minimum"
+    check: cp_tls_min
+  - id: SV-242377r960759
+    title: "The Kubernetes Scheduler must use TLS 1.2 at minimum"
+    check: sched_tls_min
+  - id: SV-242376r960759
+    title: "The Kubernetes Controller Manager must use TLS 1.2 at minimum"
+    check: cm_tls_min
+
+live_api:
+  - id: SV-242395r1137639
+    title: "Kubernetes dashboard must not be enabled"
+    check: live_dashboard_absent
+    sev: medium
+  - id: SV-242383r1137641
+    title: "User-managed resources must be created in dedicated namespaces"
+    check: live_user_namespaces
+    sev: high
+  - id: SV-242415r1069466
+    title: "Secrets must not be stored as environment variables in pod specs"
+    check: live_secrets_not_env
+    sev: high

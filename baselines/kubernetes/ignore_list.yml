@@ -1,0 +1,3 @@
+# excepted controls: <control-id>|<reason>|<expiry-or-dash>
+# Excepted controls exit as EXCEPT (visible evidence), not FAIL, and are excluded
+# from the scanner's exit code. Re-review anything with an expiry date.

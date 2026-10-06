@@ -148,6 +148,7 @@ Wayback-replayed releases remain committed for provenance.
 | RHEL 7 (SCAP, automation) | `scap/U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.xml` | V3R2 (stale — RHEL7 SCAP not published after) | Archive.org `U_RHEL_7_V3R2_STIG_SCAP_1-2_Benchmark.zip` |
 | RHEL 8 (SCAP, automation) | `scap/U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.xml` | V2R2 (stale vs manual V2R8) | Archive.org `U_RHEL_8_V2R2_STIG_SCAP_1-3_Benchmark.zip` |
 | RHEL 9 (SCAP, automation) | `scap/U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.xml` | V2R5 (stale vs manual V2R9) | Archive.org `U_RHEL_9_V2R5_STIG_SCAP_1-3_Benchmark.zip` |
+| Kubernetes (manual) | `kubernetes/U_Kubernetes_V2R6_Manual_STIG/U_Kubernetes_STIG_V2R6_Manual-xccdf.xml` | V2R6 (2026-02-12) | cyber.trackr.live `/stig/Kubernetes/2/6/download`, sha256 `0ca995078bd987a153f5a3238d0812b331883809d11547882bf0cedf0b110e50`, fetched 2026-10-06 via tools/trackr_fetch.py |
 
 ## Refreshing to a newer release
 

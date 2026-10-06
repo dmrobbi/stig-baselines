@@ -29,6 +29,7 @@ kit, and bulk-applying statuses from a CSV.
 | Canonical Ubuntu 22.04 LTS | V2R9 | 2026-05-14 | 188 | `baselines/ubuntu22.04/Canonical_Ubuntu_22.04_LTS_STIG_V2R9_Manual-baseline.ckl` |
 | Canonical Ubuntu 24.04 LTS | V1R6 | 2026-05-14 | 194 | `baselines/ubuntu24.04/Canonical_Ubuntu_24.04_LTS_STIG_V1R6_Manual-baseline.ckl` |
 | Apple macOS 26 (Tahoe) | V1R3 | 2026-05-23 | 160 | `baselines/macos/Apple_macOS_26_Tahoe_STIG_V1R3_Manual-baseline.ckl` |
+| Kubernetes | V2R6 | 2026-02-12 | 92 | `baselines/kubernetes/U_Kubernetes_V2R6_Manual-baseline.ckl` (+ hardening kit + kube-bench runner) |
 | Apple macOS 15 (Sequoia) | V1R6 | 2026-01-05 | 160 | `baselines/macos/Apple_macOS_15_Sequoia_STIG_V1R6_Manual-baseline.ckl` |
 | Microsoft Windows 10 | V3R6 | 2026-01-05 | 267 | `baselines/windows/MS_Windows_10_STIG_V3R6_Manual-baseline.ckl` |
 | Microsoft Windows 11 | V2R9 | 2026-08-10 | 257 | `baselines/windows/MS_Windows_11_STIG_V2R9_Manual-baseline.ckl` |

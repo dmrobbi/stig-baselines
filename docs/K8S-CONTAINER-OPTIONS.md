@@ -19,7 +19,7 @@ Ground rules inherited from this repo:
 
 ## A. Official DISA baselines (new families through the existing pipeline)
 
-- [ ] **OPT-K01 · Kubernetes STIG V2R6 baseline** — released 2026-02-12,
+- [x] **OPT-K01 · Kubernetes STIG V2R6 baseline** — released 2026-02-12,
   92 rules (18 CAT I / 74 CAT II). Fetch the V2R6 XCCDF via trackr_fetch,
   generate the manual CKL, commit
   `baselines/kubernetes/U_Kubernetes_STIG_V2R6_Manual-baseline.ckl` + the README
@@ -39,7 +39,7 @@ Ground rules inherited from this repo:
 
 ## B. Scanners and wiring (evidence over manual review)
 
-- [ ] **OPT-K06 · kube-bench runner wrapper** — `baselines/kubernetes/` runner:
+- [x] **OPT-K06 · kube-bench runner wrapper** — `baselines/kubernetes/` runner:
   pinned kube-bench release, versioned `--benchmark`, JSON + text output,
   exit-code contract with an OK marker (the house command-payload pattern).
 - [ ] **OPT-K07 · kube-bench ↔ Kubernetes STIG cross-map** — map CIS kube-bench
@@ -56,7 +56,7 @@ Ground rules inherited from this repo:
 
 ## C. Hardening kits (the baselines/proxmox pattern)
 
-- [ ] **OPT-K11 · Kubernetes hardening kit** — `baselines/kubernetes/`:
+- [x] **OPT-K11 · Kubernetes hardening kit** — `baselines/kubernetes/`:
   kubernetes-scan.sh + kubernetes-harden.sh + controls.yaml + ignore_list.yml.
   Control surface: apiserver/kubelet/etcd/controller-manager/scheduler flags —
   anonymous-auth off, authorization-mode, admission plugins, etcd TLS + peer
@@ -67,7 +67,7 @@ Ground rules inherited from this repo:
   NetworkPolicies, resource quotas + LimitRanges, non-root runAs/readonly
   rootfs/dropped caps/seccomp templates, digest-pinned imagePullPolicy,
   no auto-mounted service-account tokens.
-- [ ] **OPT-K13 · Docker host hardening kit** — `baselines/docker/`:
+- [x] **OPT-K13 · Docker host hardening kit** — `baselines/docker/`:
   docker-host-scan.sh + docker-host-harden.sh. Control surface: daemon.json
   (remote API off, log rotation, live-restore), TLS daemon if remote, container
   defaults (no-new-privileges, cap-drop, read-only rootfs), socket ownership,
@@ -97,7 +97,7 @@ Ground rules inherited from this repo:
 
 ## E. Lab fleet tie-ins (run against existing infrastructure)
 
-- [ ] **OPT-K21 · kind-gms cluster assessment** — scan the existing bare-metal
+- [x] **OPT-K21 · kind-gms cluster assessment** — scan the existing bare-metal
   kind lab with kube-bench + a Kubernetes STIG manual pass; produce the first
   evidence-backed CKLs with statuses from a live run.
 - [ ] **OPT-K22 · k3s / RKE2 option row** — if a lab node moves to k3s/RKE2,

@@ -29,7 +29,7 @@ commits = Dawn Robbins; pushes = github main + gitea mirror branch, hash-verifie
   - Owns: baselines/kubernetes/{LAB-ASSESSMENT.md, kind-audit-job.yaml} (new)
   - Acceptance: the kind-gms runbook (kube-bench in-container job + the STIG manual-pass
     checklist); precondition documented (no cluster locus confirmed yet).
-- [ ] **PACK-INT · Integration** — [INTEGRATION][S]
+- [x] **PACK-INT · Integration** — [INTEGRATION][S]
   - Owns (SHARED): README.md, tools/build.sh (K8s line), Makefile (validate wildcard),
     sources/README.md (provenance), docs/K8S-CONTAINER-OPTIONS.md (ticks),
     docs/HARDENING-ROADMAP.md (Tier-1 k8s row in-repo)

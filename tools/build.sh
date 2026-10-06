@@ -154,6 +154,9 @@ python3 tools/merge_ckl.py baselines/rhel7/U_RHEL_7_STIG_V3R15_Manual-baseline.c
 python3 tools/merge_ckl.py baselines/rhel8/U_RHEL_8_STIG_V2R8_Manual-baseline.ckl    "baselines/rhel8/$FF_CKL" baselines/rhel8/U_RHEL_8_V2R8_plus_Firefox_V6R8-baseline.ckl
 python3 tools/merge_ckl.py baselines/rhel9/U_RHEL_9_STIG_V2R9_Manual-baseline.ckl    "baselines/rhel9/$FF_CKL" baselines/rhel9/U_RHEL_9_V2R9_plus_Firefox_V6R8-baseline.ckl
 
+echo '== Kubernetes baseline =='
+python3 tools/xccdf2ckl.py sources/kubernetes/U_Kubernetes_V2R6_Manual_STIG/U_Kubernetes_STIG_V2R6_Manual-xccdf.xml baselines/kubernetes/U_Kubernetes_V2R6_Manual-baseline.ckl
+
 echo '== validate (DISA Checklist schema v2.5) =='
 SCHEMA=tools/schema/U_Checklist_Schema_V2.xsd
 for f in baselines/*/*.ckl; do xmllint --noout --schema "$SCHEMA" "$f" || exit 1; done

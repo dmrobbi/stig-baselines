@@ -16,7 +16,7 @@ Automation column: what actually runs the checks (see docs/SCANNING.md for workf
 | # | Target | STIG | Latest ver | Automation path |
 |---|--------|------|-----------|-----------------|
 | 1 | Ubuntu hosts (trooper2, miner, VMs) | Canonical Ubuntu 20.04 / 22.04 / 24.04 LTS STIG | current | Manual CKL + Tenable DISA-Ubuntu audit file; no DISA SCAP for Ubuntu (SSG CIS profile is the oscap fallback) |
-| 2 | Kubernetes (bare-metal k8s, kind-gms) | Kubernetes STIG | V2R6 | Manual CKL + **kube-bench** (CIS-mapped) + Tenable K8s audit; continuous via Gatekeeper/OPA |
+| 2 | Kubernetes (bare-metal k8s, kind-gms) | Kubernetes STIG | V2R6 | IN REPO 2026-10-06: baseline CKL + scan/harden kit + kube-bench runner (baselines/kubernetes/) |
 | 3 | Docker containers (miner: market, trade, auth, kafka, minio; GitLab bundled) | Container Platform SRG (Docker Enterprise STIG is legacy) | SRG | Custom benchmark from SRG via our pipeline; Docker bench for CIS mapping |
 | 4 | PostgreSQL (Patroni cluster, GitLab bundled PG) | PostgreSQL STIG (9.x-era baseline) / Crunchy Data PostgreSQL STIG V3R2 | — | Manual + Tenable PG audit |
 | 5 | Custom apps (FORGE-C2, market, trade, auth, satellite, cicerone) | **Application Security and Development STIG V6R4** (2025-09-09, 286 findings) | V6R4 | Manual review + Tenable web app checks; maps findings to 800-53 |

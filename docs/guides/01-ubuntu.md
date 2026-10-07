@@ -10,11 +10,13 @@ _Covers thing1 (24.04), trooper2, miner, and lab VMs. Sources: Canonical Ubuntu 
 
 ## SSH (per OS-STIG controls)
 
-Edit `/etc/ssh/sshd_config.d/50-hardening.conf`:
+Edit `/etc/ssh/sshd_config.d/10-hardening.conf`:
+
+(drop-ins load lexically and sshd keeps the FIRST value of a keyword — a `10-` name outranks the cloud-init `50-cloud-init.conf`, which ships `PasswordAuthentication yes` on our fleet; verified live 2026-10-07)
 
 ```
 PermitRootLogin prohibit-password
-PasswordAuthentication no          # ONLY after confirming every host/key path; verify in a second session
+PasswordAuthentication no          # gate first: journalctl -u ssh -S -30d | grep 'Accepted password' — active password access = HOLD that host's flip
 PermitEmptyPasswords no
 MaxAuthTries 4
 LoginGraceTime 30
@@ -49,7 +51,7 @@ net.ipv4.tcp_syncookies = 1
 net.ipv4.conf.all.rp_filter = 1   # set 0 only where asymmetric routing exists (k3s/CNI edges)
 kernel.kptr_restrict = 2
 kernel.dmesg_restrict = 1
-kernel.unprivileged_bpf_disabled = 1
+kernel.unprivileged_bpf_disabled = 2   # fleet-validated 2026-10-07: stricter than the STIG's 1 (2 = disabled until reboot)
 kernel.yama.ptrace_scope = 1
 fs.protected_symlinks = 1
 fs.protected_hardlinks = 1
@@ -72,7 +74,8 @@ Apply with `sudo sysctl --system`. Careful on thing1: docker+k3s need `net.ipv4.
 -a always,exit -F arch=b64 -S execve -k exec -F auid>=1000
 ```
 
-- `sudo augenrules --check && sudo systemctl restart auditd`. Ship logs via the existing soc shippers where available.
+- Fleet apply (verified 2026-10-07): the live template is `/etc/audit/audit.rules` (auto-generated from rules.d; auditd.service loads via `ExecStartPost=augenrules --load`). Copy it to each target as BOTH `/etc/audit/rules.d/50-hard1.rules` AND `/etc/audit/audit.rules`, then `sudo augenrules --load`. The trailing `-e 2` makes the loaded set immutable — any later rule change needs a reboot window. On hosts where auditd is absent, `apt-get install auditd` first, re-push the files, then load.
+- `sudo augenrules --check` to confirm the merge matches the loaded set. Ship logs via the existing soc shippers where available.
 
 ## Fail2ban / ssh throttling
 

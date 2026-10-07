@@ -47,7 +47,7 @@ No official DISA GitLab STIG exists. Three-layer approach:
   (gitlab.rb under version control in this repo = drift detection)
 
 **Layer 2 — bundled components:**
-- Nginx (bundled) → Web Server SRG (no product STIG) → custom checklist
+- Nginx (bundled) → **F5 NGINX STIG V1R1** (real product STIG now — pub. 2025-11-25, F5+DISA, 32 rules; supersedes the old "no product STIG" note) + CIS NGINX Benchmark v3.0.0
 - PostgreSQL (bundled) → PostgreSQL STIG
 - Redis (bundled) → no STIG; Redis hardening guide + SRG
 - Gitaly/containers → Container Platform SRG

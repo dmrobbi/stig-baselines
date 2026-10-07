@@ -34,3 +34,26 @@ commits = Dawn Robbins; pushes = github main + gitea mirror branch, hash-verifie
     sources/README.md (provenance), docs/K8S-CONTAINER-OPTIONS.md (ticks),
     docs/HARDENING-ROADMAP.md (Tier-1 k8s row in-repo)
   - Acceptance: `make all` green; lockstep hashes verified on both remotes.
+
+## Guides → hardening waves (2026-10-07)
+
+Source: `docs/guides/` (24 per-app guides + index; context in `docs/APP-HARDENING-CATALOG.md`). Order = blast radius: host baselines first, identity/user-visible surfaces last. Diffs land in this repo before touching hosts; every exception takes a one-line justification; per-wave owner go-ahead.
+
+- [ ] **HARD-1 · Ubuntu OS baseline apply (thing1 + lab Ubuntu hosts)** — [S]
+  - Owns: guides/01 + the host layer of guides/06 — sshd drop-in, sysctl, ufw/DOCKER-USER, auditd, fail2ban; no other hosts.
+  - Acceptance: two-session lockout rule passed; `sshd -T`/sysctl/auditctl evidence recorded; docker + k3s still functional afterward.
+- [ ] **HARD-2 · Docker kit live pass (thing1 + miner)** — [S]
+  - Owns: runs of the committed `baselines/docker` kit (scan → harden dry-run → reviewed `--apply`), plus per-stack compose edits per guides/06.
+  - Acceptance: kit scan exit 0 or documented EXCEPT list; wazuh stack + gitlab-runner + mc healthy; no unapproved `0.0.0.0` publishes.
+- [ ] **HARD-3 · NGINX baseline (thing1 + mail-host vhosts)** — [S]
+  - Owns: guides/13 — headers, TLS options, systemd override; forge-bundled nginx excluded (owned by HARD-5's gitlab.rb work).
+  - Acceptance: curl header checks green per vhost; testssl.sh shows no TLS < 1.2; `nginx -t` clean; every vhost serves a round-trip.
+- [ ] **HARD-4 · SOC stack pass (Wazuh + custom services)** — [M]
+  - Owns: guides/16 + 12 (rotation-skill pass, binds, compose networks) + guides/17 systemd hardening for the soc-* units.
+  - Acceptance: `filebeat test output` green post-rotation; soc MCP integrations still resolve (soc-manager-container flow); indexer/dashboard not WAN-bound; `systemd-analyze security` scores recorded per unit.
+- [ ] **HARD-5 · Forge wave (GitLab + Runner)** — [M]
+  - Owns: guides/15 — **token inventory FIRST**, then 2FA/PAT enforcement, runner isolation (docker executor), backup + secrets off-host drill.
+  - Acceptance: token inventory table (name/scope/expiry/owner) committed before enforcement; 2FA + PAT expiry live; no shell-executor runner rooted on thing1; `gitlab:doctor:secrets` green.
+- [ ] **HARD-6 · Mail + content wave (postfix/dovecot/rspamd + WordPress)** — [M]
+  - Owns: guides/23 + 14 on the mail VPS; stsphotos WordPress hardening only if the owner decides to keep it.
+  - Acceptance: internet.nl/mail-tester green on SPF/DKIM/DMARC/TLS; fail2ban jails firing on real attempts; wp checksums + perms verified; DMARC stays rua/quarantine until reports reviewed.

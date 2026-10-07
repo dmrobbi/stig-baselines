@@ -42,9 +42,17 @@ Source: `docs/guides/` (24 per-app guides + index; context in `docs/APP-HARDENIN
 - [ ] **HARD-1 · Ubuntu OS baseline apply (thing1 + lab Ubuntu hosts)** — [S]
   - Owns: guides/01 + the host layer of guides/06 — sshd drop-in, sysctl, ufw/DOCKER-USER, auditd, fail2ban; no other hosts.
   - Acceptance: two-session lockout rule passed; `sshd -T`/sysctl/auditctl evidence recorded; docker + k3s still functional afterward.
-- [ ] **HARD-2 · Docker kit live pass (thing1 + miner)** — [S]
-  - Owns: runs of the committed `baselines/docker` kit (scan → harden dry-run → reviewed `--apply`), plus per-stack compose edits per guides/06.
-  - Acceptance: kit scan exit 0 or documented EXCEPT list; wazuh stack + gitlab-runner + mc healthy; no unapproved `0.0.0.0` publishes.
+- [x] **HARD-2 · Docker kit live pass (thing1; miner parked by owner)** — [S] — 3e791
+  - Applied: daemon.json (log rotation + live-restore, restart done once,
+    live-restore now holds containers through restarts), interface binds
+    {127.0.0.1, 192.168.1.106, 100.94.13.51} on agent/API ports and
+    {192.168.1.106, 100.94.13.51} on dashboard/mc (owner-approved), per-service
+    logging blocks (compose overrides daemon defaults), security_opt
+    no-new-privileges on wazuh x3 + mc; runner = EXCEPT row (HARD-5 owns it).
+  - Rehearsal-caught re-encodes committed to the role repo: integration level
+    10 (owner-decision), agentic_loop_mode=live (Phase 4), token via secrets
+    file (fail-loud lookup), bridge MCP hosts (2026-09-27 decision).
+  - Evidence: docs/hard-waves/HARD-2-APPLY.md; re-scan exit=0 (pass 6 / except 1).
 - [ ] **HARD-3 · NGINX baseline (thing1 + mail-host vhosts)** — [S]
   - Owns: guides/13 — headers, TLS options, systemd override; forge-bundled nginx excluded (owned by HARD-5's gitlab.rb work).
   - Acceptance: curl header checks green per vhost; testssl.sh shows no TLS < 1.2; `nginx -t` clean; every vhost serves a round-trip.

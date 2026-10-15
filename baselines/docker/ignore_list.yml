@@ -2,3 +2,5 @@
 # format: <control-id>|<reason>|<expiry-or-dash>
 # Excepted controls print as EXCEPT rows and leave the exit code unchanged; they stay
 # visible as evidence rather than silently disappearing.
+C-05-socket-userns|userns-remap: OFF for now — bind-mount uid semantics (wazuh volumes, agent-key mounts) make it a later-phase move; revisit at HARD-6|2026-11-01
+C-08-no-new-privileges-or-caps|gitlab-runner: docker.sock mount by design (runner architecture); the runner move off root-equivalence is owned by HARD-5 — re-check this control's detail after that lands|2026-11-15

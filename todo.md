@@ -52,7 +52,7 @@ Source: `docs/guides/` (24 per-app guides + index; context in `docs/APP-HARDENIN
   - Rehearsal-caught re-encodes committed to the role repo: integration level
     10 (owner-decision), agentic_loop_mode=live (Phase 4), token via secrets
     file (fail-loud lookup), bridge MCP hosts (2026-09-27 decision).
-  - Evidence: docs/hard-waves/HARD-2-APPLY.md; re-scan exit=0 (pass 6 / except 1).
+  - Evidence: docs/hard-waves/HARD-2-APPLY.md; commit hash: 2e4aca7; re-scan exit=0 (pass 6 / except 1).
 - [ ] **HARD-3 · NGINX baseline (thing1 + mail-host vhosts)** — [S]
   - Owns: guides/13 — headers, TLS options, systemd override; forge-bundled nginx excluded (owned by HARD-5's gitlab.rb work).
   - Acceptance: curl header checks green per vhost; testssl.sh shows no TLS < 1.2; `nginx -t` clean; every vhost serves a round-trip.
